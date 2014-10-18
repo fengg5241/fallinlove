@@ -1,0 +1,86 @@
+/* CSS Document */
+/*
+Copyright (c) 2008, 800hr. All rights reserved.
+version: 1.0.0
+*/
+
+/* RESET */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img{border:0;}
+img{ vertical-align: middle;}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}
+li{list-style:none;}
+caption,th{text-align:left;}
+q:before,q:after{content:'';}
+abbr,acronym {border:0;font-variant:normal;}
+sup {vertical-align:text-top;}
+sub{vertical-align:text-bottom;}
+legend{color:#000;}
+
+/*base*/
+body,span,div,td,th{color:#333; font-size:12px; line-height:20px; text-align:left;font-family:"SimSun",Arial, Helvetica, sans-serif;}
+body{ background:#fff;}
+h1, h2, h3, h4, h5, h6 {font-weight:bold; font-size:12px;line-height:24px;}
+/*ul, ol, dl, dd {margin-left:1em;}*/
+dt { font-weight:bold; }
+ul {list-style:none;}
+ol {list-style:none;}
+strong {font-weight:bold;}
+em {font-style:italic;}
+.clear{visibility: hidden; clear:both;}
+.display_n{display:none;}
+.aa{vertical-align: bottom;}
+.floatleft{float:left;}
+.floatright{float:right;}
+.aligncenter{ margin-left:auto;margin-right:auto;}
+.left{ text-align:left;}
+.textleft{ text-align:left;}
+.right{ text-align:right;}
+.textright{ text-align:right;}
+.center{ text-align:center;}
+a:link,a:active,a:visited{color:#333;text-decoration:none;}
+a:hover{color:#DD1764; text-decoration: underline;}
+/*980宽页面分栏布局*/
+.doc980{width:970px; padding:0 5px; margin:auto;}
+.doc770{width:770px; margin:auto;}
+.grid158left{width:159px; float:left;}
+.grid790right{width:790px; float:right;}
+.grid252right{width:251px; float:right;}
+.grid520left{width:520px; float:left;}
+.grid190left{width:190px; float:left;}
+.grid750right{width:750px; float:right;}
+.grid190right{width:190px; float:right;}
+.grid750left{width:750px; float:left;}
+/*Other*/
+.positionR{position:relative;}
+.positionA{position:absolute;}
+
+/*margin padding*/
+.marginBot0{ margin-bottom:0px;}
+.margin5{ margin:0 5px;}
+.marginBot10{ margin-bottom:10px;}
+.marginAuto{ margin:0 auto;}
+.paddingBot10{padding-bottom:10px;}
+.paddingLeft{padding-left:10px;}
+.paddingLeft15{padding-left:15px;}
+.paddingTop{padding-top:10px;}
+.paddingTop5{padding-top:5px;}
+.paddingRight20{ padding-right:20px;}
+/*color*/
+.color666{color:#666;}
+.color444{color:#444;}
+.colorDD1764{color:#A9164A;}
+
+
+
+
+/*装饰*/
+small.angle_brackets{font-size:9px; font-family:arial;}
+/*列表加点*/
+ul.listlinkb li{list-style:url(images/blacksquare.gif) disc inside;}
+ul.listlinkr li{list-style:url(images/redsquare.gif) disc inside;}
+/*清除浮动*/
+.clear_line{clear:both;}
+/*ie ff区别*/
+

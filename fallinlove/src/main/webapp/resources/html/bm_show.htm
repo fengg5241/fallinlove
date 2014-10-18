@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html><head lang="en">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <title>懂你-世纪佳缘婚恋智能匹配系统</title>
+    <link rel="stylesheet" type="text/css" href="bm_show_data/base.css">
+    <!--<link rel="stylesheet" type="text/css" href="http://images1.jyimg.com/w4/usercp_new/c/matching-process.css" />-->
+    <link rel="stylesheet" type="text/css" href="bm_show_data/matching-process-new.css">
+    <script type="text/javascript" src="bm_show_data/jquery-1.js"></script>
+    <script src="bm_show_data/pv.js" type="text/javascript"></script>
+	<script type="text/javascript">
+            
+	//设置域 为了弹出页面的js操作
+	var reg_host_const_flag = 0;
+	var reg_host_const_test = 0;
+
+	function setDomainForIframe()
+	{ 
+	   if(reg_host_const_flag == 0 || reg_host_const_flag == 7) {
+		  if(reg_host_const_test == 1){ 
+			 document.domain = 'miuu.cn';
+			 mydomain = 'www.miuu'+'.cn';
+		  }else{
+			 document.domain = 'jiayuan.com';
+			 mydomain = 'www.jiayuan.com';
+		  }
+	   }else{
+		  if(reg_host_const_test == 1){ 
+			 document.domain = 'miuu.cn';
+			 mydomain = 'msn.miuu'+'.cn';
+		  }else{
+			 document.domain = 'msn.com.cn';
+			 mydomain = 'jiayuan.msn.com.cn';
+		  }
+	   }
+	}
+
+	setDomainForIframe();
+
+    function thisMovie(movieName) {   
+        if (navigator.appName.indexOf("Microsoft") != -1) {   
+            var agent = navigator.userAgent.toLowerCase() ;
+            var version = navigator.appVersion;
+            var start = version.indexOf("MSIE");
+            var version = version.slice(start+5, start+7);
+            if(version>8){
+                return document[movieName];
+            }else{
+                return window[movieName];   
+            } 
+        }else{   
+            return document[movieName];   
+        }   
+    }  
+
+    function add_bm_log(id,guide){
+        $.get("./dynmatch/ajax/bm_log_up.php?id="+id+"&guide="+guide);
+    }
+	</script> 
+</head>
+<body>
+    <div class="MP-w">
+        <a class="x" href="javascript:;" onclick="parent.pop_closeWindow();">X</a>
+        <div class="xa-c">
+            <h1>懂你-世纪佳缘婚恋智能匹配系统</h1>
+            <dl>
+                <dt>
+                     <div class="flash">
+                        <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" id="FlashVars" align="middle" height="136" width="136">
+                            <param name="allowScriptAccess" value="always">
+                            <param name="movie" value="loading.swf">
+                            <param name="flashvars" value="">
+                            <param name="quality" value="high">
+                            <param name="wmode" value="Transparent">
+                            <embed src="bm_show_data/loading.swf" quality="high" wmode="Transparent" bgcolor="#ffffff" name="FlashVars" allowscriptaccess="always" flashvars="" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" align="middle" height="136" width="136">
+                        </object>
+                    </div>
+                </dt>
+                <dd>
+                    <p class="t1">您的交友效率打败<strong>26%</strong>竞争者，还有上升空间哦！</p>
+                    <p class="t2">想要更多人看到您，要提升曝光机会才行哦！</p>
+					                                            <a class="t3" href="http://www.jiayuan.com/usercp/service/priority.php" onmousedown="send_jy_pv2('|1016537_3|122261858')" target="_blank" onclick="parent.pop_closeWindow();">如何吸引异性</a>
+					                </dd>
+            </dl>
+        </div>
+        <p class="td">以下为您近30天的行为数据。行为越积极，懂你系统的推荐更精准，交友效率越高哦~</p>
+        <div class="wb">
+                <div class="l-c">
+                    <div style="height: 75px;" id="dl" class="list ave"><span>11天</span></div>
+                    <div style="height: 15px;" id="wszl" class="list"><span>12项</span></div>
+                    <div style="height: 2px;" id="wd" class="list"><span>0题</span></div>
+                    <div style="height: 8px;" id="ll" class="list"><span>2人</span></div>
+                    <div style="height: 21px;" id="bll" class="list red"><span>19人</span></div>
+                    <div style="height: 14px;" id="sx" class="list"><span>5封</span></div>
+                    <div style="height: 9px;" id="fx" class="list"><span>1封</span></div>
+                    <div style="height: 15px;" id="kx" class="list"><span>2封</span></div>
+                    <div style="height: 19px;" id="hx" class="list"><span>1封</span></div>
+                    <div id="pjs" class="pjs"><span>平均数</span></div>
+                </div>
+                <ul class="l-it">
+                    <li style="color:#888888">登录<span></span></li>
+                    <li><a href="http://www.jiayuan.com/usercp/profile.php" target="_blank" onmousedown="send_jy_pv2('|1016537_7|122261858')" onclick="parent.pop_closeWindow();">完善资料</a></li>
+                    <li><a href="http://www.jiayuan.com/wenda/?fr=pop" target="_blank" onmousedown="send_jy_pv2('|1016537_21|122261858')" onclick="parent.pop_closeWindow();">参与问答</a><span class="new"></span></li>
+                    <li><a href="http://www.jiayuan.com/usercp/jymatch_matrix.php" target="_blank" onmousedown="send_jy_pv2('|1016537_8|122261858')" onclick="parent.pop_closeWindow();">日均浏览</a></li>
+                    <li><a href="http://www.jiayuan.com/usercp/service/priority.php" target="_blank" onmousedown="send_jy_pv2('|1016537_9|122261858')" onclick="parent.pop_closeWindow();">被浏览</a><span class="a"></span></li>
+                    <li style="color:#888888">收信</li>
+                    <li><a href="http://search.jiayuan.com/v2/" target="_blank" onmousedown="send_jy_pv2('|1016537_10|122261858')" onclick="parent.pop_closeWindow();">日均发信</a></li>
+                    <li><a href="http://www.jiayuan.com/msg/" target="_blank" onmousedown="send_jy_pv2('|1016537_11|122261858')" onclick="parent.pop_closeWindow();">看信</a></li>
+                    <li><a href="http://www.jiayuan.com/msg/" target="_blank" onmousedown="send_jy_pv2('|1016537_12|122261858')" onclick="parent.pop_closeWindow();">回信</a></li>
+                </ul>
+        </div>
+        <p class="wa">
+            <a href="javascript:;" onclick="parent.showPopFull('http://www.jiayuan.com/usercp/bm_show_more.php?pop=pop',672,518);" onmousedown="send_jy_pv2('|1016537_13|122261858')">什么是<span>懂你系统</span>？了解详情&gt;&gt;</a>
+        </p>
+    </div> 
+<script type="text/javascript" src="bm_show_data/matching-process.js"></script>
+<script type="text/javascript">
+window.onload = function(){
+    mp($mp("dl"), 50, 100);
+    mp($mp("wszl"), 9.67741935484, 100);
+    mp($mp("ll"), 5, 100);
+    mp($mp("bll"), 14.1791044776, 100);
+    mp($mp("sx"), 9.61538461538, 100);
+    mp($mp("fx"), 6.25, 100);
+    mp($mp("kx"), 10, 100);
+    mp($mp("hx"), 12.5, 100);
+    mp($mp("wd"), 1, 100);
+};
+var rate = 26;
+//var rate = 80;
+var a = 0;
+var t;
+function add_bm(){
+	//shanf
+    //thisMovie("FlashVars").jsCallAsSetNumber(a);
+//     if(a < rate){ 
+//         a += 0.5;
+//     }else{
+//         clearInterval(t);
+//     }
+}
+
+window.setTimeout("startShow()",500);
+function startShow(){
+    t=setInterval('add_bm()',1);
+}
+send_jy_pv2('|1017693_18|122261858');
+</script>   
+
+</body></html>

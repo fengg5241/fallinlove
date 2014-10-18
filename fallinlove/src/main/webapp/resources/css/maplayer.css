@@ -1,0 +1,7 @@
+@charset "gb2312";
+.map_layer {width:525px; height:381px; background:url(../i/maplayer.png); margin:0 auto;}
+.mapclose{ height:35px; padding:8px 8px 0 0;}
+.mapclose .close{width:20px; height:20px; display:block; float:right;}
+.mapbotton{padding:8px 0 0 0; text-decoration:none; text-align:center;}
+.mapiframe{width:494px; height:263px; margin:0 auto; border:solid 1px #A8AAA7;}
+.clear{clear:both;}

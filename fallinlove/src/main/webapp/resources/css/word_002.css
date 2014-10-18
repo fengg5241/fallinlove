@@ -1,0 +1,14 @@
+.user_left h2{height:40px; line-height:40px; font-size:12px;background:url(../img/index_left_h2_bg.jpg) repeat-x left top; padding-left:15px; text-align:left;}
+.user_pic{width:110px; height:138px; padding:10px 12px 28px; margin:10px auto 0;}
+.user_pic img{border:1px solid #d9d9d9;}
+.user_pic a {width:110px; height:136px; display:block; overflow:hidden;}
+
+.user_right{width:548px; float:left; border-left:1px solid #f8dec3; background:#fff; }
+.user_right h2{height:40px; line-height:40px; padding-left:20px; font-size:14px; color:#333; text-align:left;background:url(../img/index_middle_h2_bg.jpg) repeat-x left top;}
+
+.right_box{border:1px solid #edddd1; background:#fff;}
+.right_box h2{padding-left:13px; line-height:35px; font-size:14px; color:#333; text-align:left;border-bottom:1px solid #edddd1; background:#fffbf4;}
+.right_box h2 a{float:right; font-weight:500; color:#06c; font-size:12px; margin-right:8px; display:inline;}
+
+.vip_tips{width:349px; height:29px; line-height:29px; padding:6px 5px 2px; background:url(../img/vip_tips.jpg) no-repeat; text-indent:1em; color:#d42c6b;text-shadow: 1px 1px 1px #fff;}
+.vip_tips a{color:#06c;}

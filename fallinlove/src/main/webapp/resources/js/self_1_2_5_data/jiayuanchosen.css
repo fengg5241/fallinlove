@@ -1,0 +1,182 @@
+*{
+	margin:0;
+	padding:0;
+}
+html, body{
+	padding: 0;
+	margin: 0;
+	font-size: 12px;
+}
+img{
+	margin: 0;
+	padding: 0;
+}
+img, img a, img a:hover{
+	border: none;
+}
+ul, ol{ list-style: none; }
+.chosenborder{
+	border: 1px solid #E2A3D2;
+}
+.chosentitle{
+	width: 248px;
+	float: left;
+	background: url(../i/jiayuanchosentitlebg.jpg) repeat-x;
+	border-bottom: 1px solid #E2A3D2;
+	height: 20px;
+	line-height: 21px;
+	font-size: 12px;
+	font-weight: bolder;
+	color: #AB0080;
+	overflow: hidden;
+}
+
+.jiayuanachosen{
+	width: 248px;
+	float: left;
+	margin: 0 0 0 0;
+	padding-bottom: 9px;
+}
+.jiayuanachosen h2{
+	width: 208px;
+	float: left;
+	padding: 0 20px;
+}
+.jiayuanachosen ul{
+	width: 228px;
+	float: left;
+	margin: 10px 0 0 20px;
+	list-style: none;
+	display: inline;
+}
+.jiayuanachosen li{
+	width: 208px;
+	float: left;
+	font-size: 12px;
+	color: #393939;
+	height: 21px;
+	line-height: 21px;
+	background: url(../i/li_icon.gif) no-repeat 0 9px;
+	padding-left: 10px;
+	overflow: hidden;
+}
+.jiayuanachosen li a{
+	color: #393939;
+	text-decoration: none;
+}
+.jiayuanachosen li a:hover{
+	color: #F60;
+}
+
+
+
+
+.jiayuanachosen200{
+	width: 198px;
+	float: left;
+	margin: 0 0 0 0;
+	padding-bottom: 9px;
+}
+.jiayuanachosen200 h2{
+	width: 178px;
+	float: left;
+	padding: 0 10px;
+}
+.jiayuanachosen200 ul{
+	width: 188px;
+	float: left;
+	margin: 10px 0 0 10px;
+	list-style: none;
+	display: inline;
+}
+.jiayuanachosen200 li{
+	width: 178px;
+	float: left;
+	font-size: 12px;
+	color: #393939;
+	height: 21px;
+	line-height: 21px;
+	background: url(../i/li_icon.gif) no-repeat 0 9px;
+	padding-left: 10px;
+	overflow: hidden;
+}
+.jiayuanachosen200 li a{
+	color: #393939;
+	text-decoration: none;
+}
+.jiayuanachosen200 li a:hover{
+	color: #F60;
+}
+
+
+.jiayuanachosen950{
+	width: 950px;
+	float: left;
+	margin-top: 10px;
+}
+
+
+
+/*
+==新版==
+
+*/
+
+/*
+ ==圆角边框== 
+*/
+.bill1 {height: 1px; font-size: 1px; overflow: hidden; display: block; background: #DDE0E6; margin: 0 5px;}
+.bill2 {height: 1px; font-size: 1px; overflow: hidden; display: block; background: #F3F3F3; border-right: 2px solid #DDE0E6; border-left: 2px solid #DDE0E6; margin: 0 3px;}
+.bill3 {height: 1px; font-size: 1px; overflow: hidden; display: block; background: #F3F3F3; border-right: 1px solid #DDE0E6; border-left: 1px solid #DDE0E6; margin: 0 2px;}
+.bill4 {height: 2px; font-size: 1px; overflow: hidden; display: block; background: #F3F3F3; border-right: 1px solid #DDE0E6; border-left: 1px solid #DDE0E6; margin: 0 1px;}
+.billb1{ background: white; }
+
+/*  
+
+==300==
+
+*/
+.bill300{ width: 300px; float: left; }
+.bill300 .content{ width: 298px; border-left: 1px solid #dde0e6; border-right: 1px solid #dde0e6; float: left; padding-bottom: 8px; }
+.bill300 .content h2{ width: 278px; float: left; padding: 0 10px; line-height: 25px; background: #f3f3f3; font-size: 12px; font-weight: bolder;color:#636363;}
+.bill300 .content h2 span{ float: right; font-weight: normal; }
+.bill300 .content ul{ width: 278px; float: left; margin: 7px 0 0 10px; display: inline; }
+.bill300 .content li{ width: 268px; float: left; line-height: 24px; padding-left: 10px; border-bottom: 1px dotted #dde0e6;  background: url(../i/icon_billlist.gif) no-repeat 0 10px; }
+.bill300 .content a{ color: #636363; text-decoration: none; }
+.bill300 .content a:hover{ color: #F60; text-decoration: underline; }
+
+
+/*  
+
+==250==
+
+*/
+.bill250{ width: 250px; float: left; }
+.bill250 .content{ width: 248px; border-left: 1px solid #dde0e6; border-right: 1px solid #dde0e6; float: left; padding-bottom: 8px; }
+.bill250 .content h2{ width: 228px; float: left; padding: 0 10px; line-height: 25px; background: #f3f3f3; font-size: 12px; font-weight: bolder;color:#636363;}
+.bill250 .content h2 span{ float: right; font-weight: normal; }
+.bill250 .content ul{ width: 228px; float: left; margin: 7px 0 0 10px; display: inline; }
+.bill250 .content li{ width: 218px; float: left; line-height: 24px; padding-left: 10px; border-bottom: 1px dotted #dde0e6;  background: url(../i/icon_billlist.gif) no-repeat 0 10px; }
+.bill250 .content a{ color: #636363; text-decoration: none; }
+.bill250 .content a:hover{ color: #F60; text-decoration: underline; }
+
+/*  
+==525==
+
+*/
+.bill525{ width: 525px; float: left; }
+.bill525 .content{ width: 523px; border-left: 1px solid #dde0e6; border-right: 1px solid #dde0e6; float: left; }
+.bill525 ul{ width: 500px; float: left; margin: 0 0 0 10px; display: inline; height: 30px; overflow: hidden; }
+.bill525 li{ width: 250px; float: left; line-height: 30px; }
+.bill525 li a{ color: #e8016b; }
+.bill525 li a:hover{ color: #F60; text-decoration: underline; }
+
+/*  
+==500==
+
+*/
+.bill500{ width: 525px; float: left; }
+.bill500 ul{ width: 525px; float: left; line-height: 25px; }
+.bill500 li{ width: 525px; float: left; border-bottom: 1px solid #f3f3f3; text-align: center; }
+.bill500 li a{ color: #e8016b; text-decoration: underline; }
+.bill500 li a:hover{ color: #F60; text-decoration: underline; }

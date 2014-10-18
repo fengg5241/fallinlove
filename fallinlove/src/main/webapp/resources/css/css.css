@@ -1,0 +1,14 @@
+
+.promotion {width:250px;}
+.promotion-1 {background:url(../i/img1.jpg) no-repeat; width:250px; height:89px; position:relative;}
+.promotion-2 {background:url(../i/img2.jpg) no-repeat; width:250px; height:78px;}
+.promotion-3{background:url(../i/img3.jpg) no-repeat; width:250px; height:83px;}
+.promotion-1 p{font-weight:bold; color:#FFFFFF}
+.promotion-1 .hy {width:150px; font-size:18px; float:left; margin:20px 0 0 18px; display:inline; overflow:hidden; }
+.promotion-1 .last {color:#FFFFFF;width:95px; font-size:16px; float:left; margin:10px 0 0 5px;display:inline; position:absolute;left: 152px;top:18px;}
+.promotion-1 .last span{font-size:60px;}
+.promotion-2 p {width:250px; text-align:center; float:left; margin-top:20px;color:#ffd305; font-size:14px; line-height:24px}
+.promotion-2 p span{font-size:20px; font-weight:bold;}
+.promotion-2 em{font-style:normal; color:#fcff00;}
+.promotion-3 p {float:left; width:250px; text-align:center;}
+.promotion-3 .last {color:#dea6a0; margin-top:20px;}

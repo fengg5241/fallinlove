@@ -1,0 +1,59 @@
+@charset "utf-8";
+/* CSS Document */
+/*layer*/
+/*#bg{width:100%; position:absolute; top:0; left:0; z-index:1002; display:none; background:#33393C; filter:Alpha(opacity=70); opacity:0.7;}
+.op_box{padding:3px;position:absolute; background:url(../i/layer_bg.png) repeat left top; z-index:1003;}
+.op_subbg{border:1px solid #fff; background:#fff;}*/
+.op_subbg h4{ height:30px; line-height:30px; text-align:left; font-size:14px; font-weight:700; color:#fff; padding:0 10px; background:url(../i/layer_h2_bg.jpg) repeat-x left top;}
+.op_subbg h4 .op_close{float:right; cursor:pointer;background:url(../i/close.png) no-repeat 0 0;width:15px; height:15px;margin:7px 0;*font-size:0;}
+.op_subbg h4 .op_close:hover{background-position:0 -16px;}
+.degrees-layer{margin:17px 20px 14px; line-height:normal;}
+.btn-center{text-align:center;}
+/*btn*/
+a.btn{overflow:hidden;*zoom:1; display:inline-block; cursor:pointer;}
+a.btn i,a.btn em{background: url(../i/layer_btn.jpg) no-repeat;line-height: 34px;}
+a.btn i{background-position:0 0;display:block;float:left;font-size:12px;height:34px;width:4px;}
+a.btn em{background-position:right -36px;display:block;float:left;height:34px;padding:0 14px 0 10px;color:#fff;font-size:14px;font-weight: bold;}
+a.btn:hover{text-decoration:none;}
+a.btn:hover i{background-position:0 -72px;text-decoration:none;}
+a.btn:hover em{background-position:right -107px;text-decoration:none;}
+a.dis-btn i{background-position: 0 -143px;}
+a.dis-btn:hover i{background-position: 0 -215px;}
+a.dis-btn em{background-position: right -179px;color: #666;}
+a.dis-btn:hover em{background-position: right -251px;}
+/*个人资料拦截层*/
+.width570{width:571px;}
+.uploadContent{padding:17px 0 14px;}
+.uploadbox{width:485px;_height:135px;overflow:hidden;*zoom:1;margin:0 auto;background-color:#f9f9f9;padding:13px 30px 13px 13px;color:#333;font:normal 14px/26px SimSun;}
+.uploadPic{float:left;width:110px;height:135px;margin-right:24px;}
+.uploadTxt{float:left;padding:10px 0;width: 350px;}
+.uploadButton:link,.uploadButton:visited,.uploadButton:active{margin-top:8px;background:url(../i/uploadButton.png) no-repeat 0 0;display:inline-block;width:94px;height:33px;color:#fff;font:bold 14px/33px SimSun;text-align:center;}
+.uploadButton:hover{background-position:0 -37px;text-decoration:none;}
+/*上传照片层*/
+.receptionBox{padding-bottom:10px;}
+.receptionContent{padding:0 0 10px;}
+.reception{width:528px;margin:0 auto;}
+.receptionTxt{background-color:#f9f9f9;color:#333;font:normal 14px/26px SimSun;padding:10px 18px 23px;text-align:center;}
+.receptionTxt p{text-align:left;}
+.receptionTxt .blue{color:#1aa0c7;font-weight:bold;}
+.receptionButton:link,.receptionButton:visited,.receptionButton:active{margin-top:15px;background:url(../i/uploadButton.png) no-repeat 0 -74px;display:inline-block;width:165px;height:40px;color:#fff;font:bold 18px/40px "微软雅黑";text-align:center;}
+.receptionButton:hover{background-position:0 -118px;text-decoration:none;}
+/*开始寻爱之旅层*/
+.width428{width: 426px;background: #fff;margin:0 auto;}
+.loveLayer{padding:20px 24px 22px;color: #2a2929;}
+.loveLayer .blue,.loveLayer .blue:hover{color: #2c7cd7;}
+.prompt{font:bold 12px/22px SimSun;padding-bottom: 24px;}
+.promptList li{margin-bottom: 12px;line-height: normal;}
+.commitment{text-align: center;margin-top:28px;}
+.comButton:link,.comButton:visited,.comButton:active{background:url(../i/comButton.png) no-repeat 0 0;display:inline-block;width:77px;height:31px;color:#fff;font:bold 12px/32px SimSun;text-align:center;}
+.comButton:hover{background-position:0 -33px;text-decoration:none;}
+.pinkPrompt,.blackPrompt{color: #f24175;font:bold 14px/normal SimSun;text-align: center;margin:22px 0 30px;}
+.blackPrompt{color: #585858;margin:43px 0 52px;}
+.textPrompt{text-align: center;margin:30px 0 46px;color: #666;}
+.continue{text-align: center;padding-bottom:24px;}
+.jump{display:inline-block;padding-left: 10px;color: #999;line-height: 40px;position: absolute;}
+.textRight{text-align: right;margin:0 -10px -4px 0;padding-top: 5px;}
+.textRight a.blue{text-decoration: underline;}
+.textRight a.blue:hover{text-decoration: none;}
+.continueButton:link,.continueButton:visited,.continueButton:active{background:url(../i/comButton.png) no-repeat 0 -66px;display:inline-block;width:123px;height:41px;color:#fff;font:bold 14px/40px SimSun;text-align:center;}
+.continueButton:hover{background-position:0 -109px;text-decoration:none;}
