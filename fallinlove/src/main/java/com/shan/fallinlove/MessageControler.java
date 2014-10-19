@@ -12,8 +12,19 @@ public class MessageControler {
 	@RequestMapping(value="/notRead",method=RequestMethod.GET)
 	public String getNotRead(Model model,String userId){
 		//search id info
-		System.out.println("1111");
 		return "message";
+	}
+	
+	@RequestMapping(value="/inbox",method=RequestMethod.GET)
+	public String getInbox(Model model,String userId){
+		//search id info
+		return "messageInbox";
+	}
+	
+	@RequestMapping(value="/outbox",method=RequestMethod.GET)
+	public String getOutbox(Model model,String userId){
+		//search id info
+		return "messageOutbox";
 	}
 
 }

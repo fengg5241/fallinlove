@@ -1996,9 +1996,9 @@ get_app_num();	//获取佳缘应用的数字
 		<!--信件导航 B-->
 				<div class="letter-nav">
 			<ul class="fn-clear">
-				<li class="selected"><a>未读信<i class="number">13</i></a></li>
+				<li><a>未读信<i class="number">13</i></a></li>
 				<li><a href="inbox" >已读信<i class="number"></i></a></li>
-				<li><a href="outbox" >已发信<i class="number"></i></a></li>
+				<li class="selected"><a href="outbox" >已发信<i class="number"></i></a></li>
 <!-- 				<li><a href="http://www.jiayuan.com/msg/recover">信件后悔药<i class="number"></i></a></li> -->
 <!-- 				<li><a href="http://www.jiayuan.com/msg/admin">管理员信<i class="number">1</i></a></li> -->
 <!-- 				<li><a href="http://www.jiayuan.com/helpcenter/postmail2.php?refresh=1&amp;pid=249" target="_blank">我要反馈<i class="number"></i></a></li> -->
