@@ -133,8 +133,8 @@ public class UserManager {
 	public List<User> getUsersByIdList(List<Long> userIdList) {
 		
 		List<User> userList = new ArrayList<User>();
-		if (userList != null && userList.size() > 0) {
-			String sql = "SELECT * FROM " + LoveTable.TABLE_USER + " IN (";
+		if (userIdList != null && userIdList.size() > 0) {
+			String sql = "SELECT * FROM " + LoveTable.TABLE_USER + " WHERE " + LoveTable.COLUMN_USER_ID +" IN (";
 			String idStr = "";
 			for (int i = 0; i < userIdList.size(); i++) {
 				idStr += userIdList.get(i);
@@ -213,29 +213,29 @@ public class UserManager {
 	private User mapUser(ResultSet rs) throws SQLException {
 		// get the row column data
 		User user = new User();
-		user.setUserId(rs.getLong(LoveTable.COLUMN_USER_ID));
-		user.setAddress(rs.getString(LoveTable.COLUMN_ADDRESS));
-		user.setCity(rs.getString(LoveTable.COLUMN_CITY));
-		user.setDay(rs.getString(LoveTable.COLUMN_DAY));
-		user.setEducation(rs.getString(LoveTable.COLUMN_EDUCATION));
-		user.setHeight(rs.getString(LoveTable.COLUMN_HEIGHT));
-		user.setIncome(rs.getString(LoveTable.COLUMN_INCOME));
-		user.setMarriage(rs.getString(LoveTable.COLUMN_MARRIAGE));
-		user.setMobile(rs.getString(LoveTable.COLUMN_MOBILE));
-		user.setMobileVali(rs.getString(LoveTable.COLUMN_MOBILE_VALI));
-		user.setMonth(rs.getString(LoveTable.COLUMN_MONTH));
-		user.setNickname(rs.getString(LoveTable.COLUMN_NICKNAME));
-		user.setNote1(rs.getString(LoveTable.COLUMN_NOTE1));
-		user.setNote2(rs.getString(LoveTable.COLUMN_NOTE2));
-		user.setNote3(rs.getString(LoveTable.COLUMN_NOTE3));
-		user.setNoteFinal(rs.getString(LoveTable.COLUMN_NOTEFINAL));
-		user.setNoteWhich(rs.getString(LoveTable.COLUMN_NOTEWHICH));
-		user.setPhoneNumber(rs.getString(LoveTable.COLUMN_PHONENUMBER));
-		user.setProvince(rs.getString(LoveTable.COLUMN_PROVINCE));
-		user.setRegisterType(rs.getString(LoveTable.COLUMN_REGISTER_TYPE));
-		user.setSalary(rs.getString(LoveTable.COLUMN_SALARY));
-		user.setSex(rs.getString(LoveTable.COLUMN_SEX));
-		user.setYear(rs.getString(LoveTable.COLUMN_YEAR));
+		user.setUserId(rs.getLong("USER_ID"));
+		user.setAddress(rs.getString("ADDRESS"));
+		user.setCity(rs.getString("CITY"));
+		user.setDay(rs.getString("DAY"));
+		user.setEducation(rs.getString("EDUCATION"));
+		user.setHeight(rs.getString("HEIGHT"));
+		user.setIncome(rs.getString("INCOME"));
+		user.setMarriage(rs.getString("MARRIAGE"));
+		user.setMobile(rs.getString("MOBILE"));
+		user.setMobileVali(rs.getString("MOBILE_VALI"));
+		user.setMonth(rs.getString("MONTH"));
+		user.setNickname(rs.getString("NICKNAME"));
+		user.setNote1(rs.getString("NOTE1"));
+		user.setNote2(rs.getString("NOTE2"));
+		user.setNote3(rs.getString("NOTE3"));
+		user.setNoteFinal(rs.getString("NOTEFINAL"));
+		user.setNoteWhich(rs.getString("NOTEWHICH"));
+		user.setPhoneNumber(rs.getString("PHONENUMBER"));
+		user.setProvince(rs.getString("PROVINCE"));
+		user.setRegisterType(rs.getString("REGISTER_TYPE"));
+		user.setSalary(rs.getString("SALARY"));
+		user.setSex(rs.getString("SEX"));
+		user.setYear(rs.getString("YEAR"));
 		return user;
 	}
 	
