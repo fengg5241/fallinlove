@@ -4,6 +4,8 @@ package com.shan.manager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,6 +28,8 @@ public class UserManager {
     
     private RowMapper<LoginForm> rowMapper = new LoginFormRowMapper();
     
+    private RowMapper<User> userRowMapper = new UserRowMapper();
+    
 	public JdbcTemplate getJdbcTemplate() {
 		return jdbcTemplate;
 	}
@@ -45,7 +49,7 @@ public class UserManager {
 		
 		//insert sql
 		//insert user
-		String insertUserSql = "INSERT INTO "+LoveTable.TABLE_LOGIN+"("+
+		String insertUserSql = "INSERT INTO "+LoveTable.TABLE_USER+"("+
 				LoveTable.COLUMN_USER_ID+", "+LoveTable.COLUMN_EMAIL+", "+LoveTable.COLUMN_SEX+", "+LoveTable.COLUMN_YEAR+", "+LoveTable.COLUMN_MONTH+", "+LoveTable.COLUMN_DAY+", "+LoveTable.COLUMN_CITY+", "+LoveTable.COLUMN_PROVINCE+", "+
 				LoveTable.COLUMN_ADDRESS+", "+LoveTable.COLUMN_MARRIAGE+", "+LoveTable.COLUMN_HEIGHT+", "+LoveTable.COLUMN_EDUCATION+", "+LoveTable.COLUMN_INCOME+", "+LoveTable.COLUMN_SALARY+", "+
 				LoveTable.COLUMN_REGISTER_TYPE+", "+LoveTable.COLUMN_PHONENUMBER+", "+LoveTable.COLUMN_MOBILE_VALI+", "+LoveTable.COLUMN_NICKNAME+", "+LoveTable.COLUMN_NOTEWHICH+", "+
@@ -119,8 +123,69 @@ public class UserManager {
 //		getJdbcTemplate().update(delSql,new Object[]{1});
 		return null;
     }
+	
+	public User getUserById(long userId) {
+		User user = new User();
+		
+		return user;
+	}
+	
+	public List<User> getUsersByIdList(List<Long> userIdList) {
+		
+		List<User> userList = new ArrayList<User>();
+		if (userList != null && userList.size() > 0) {
+			String sql = "SELECT * FROM " + LoveTable.TABLE_USER + " IN (";
+			String idStr = "";
+			for (int i = 0; i < userIdList.size(); i++) {
+				idStr += userIdList.get(i);
+				if (i != userIdList.size() - 1) {
+					idStr += ",";
+				}
+			}
+			sql = sql + idStr + ")";
+			
+			userList = getJdbcTemplate().query(sql, userRowMapper);
+		}
+
+		return userList;
+	}
+	
 	/**
-	 * Maps a row returned from a query of T_RESTAURANT to a Restaurant object.
+	 * 点击个人信息按钮后，返回个人基本信息
+	 * @param userId
+	 * @return
+	 */
+	public User getUserBasicInfoById(long userId){
+		return null;
+	}
+	
+	/**
+	 * 显示所有看过的人
+	 * @param userId
+	 * @return
+	 */
+	public List<User> getMeSeeById(long userId){
+		return null;
+	}
+	/*********************************** 对看过和被看过的人的操作*******************************/
+	/**
+	 * 当进入myself后，显示看过自己那些人
+	 * @param userId
+	 * @return
+	 */
+	public List<User> getSeeMeUsersById(long userId){
+		//get see me userId list
+		String sql = "SELECT "+ LoveTable.COLUMN_SEE_USER_ID+" FROM" + 
+				LoveTable.TABLE_SEE_EACH_OTHER +" WHERE " + LoveTable.COLUMN_USER_ID + " = "+ userId;
+		List<Long> seeUserIdList = jdbcTemplate.queryForList(sql, Long.class);
+		
+		List<User> users = getUsersByIdList(seeUserIdList);
+		return users;
+	}
+	
+
+	/**
+	 * Maps a row returned from a query of LOGIN_USER to a Restaurant object.
 	 * 
 	 * @param rs the result set with its cursor positioned at the current row
 	 */
@@ -137,6 +202,46 @@ public class UserManager {
 	private class LoginFormRowMapper implements RowMapper<LoginForm> {
 		public LoginForm mapRow(ResultSet rs, int rowNum) throws SQLException {
 			return mapLoginForm(rs);
+		}
+	}
+	
+	/**
+	 * Maps a row returned from a query of USER to a Restaurant object.
+	 * 
+	 * @param rs the result set with its cursor positioned at the current row
+	 */
+	private User mapUser(ResultSet rs) throws SQLException {
+		// get the row column data
+		User user = new User();
+		user.setUserId(rs.getLong(LoveTable.COLUMN_USER_ID));
+		user.setAddress(rs.getString(LoveTable.COLUMN_ADDRESS));
+		user.setCity(rs.getString(LoveTable.COLUMN_CITY));
+		user.setDay(rs.getString(LoveTable.COLUMN_DAY));
+		user.setEducation(rs.getString(LoveTable.COLUMN_EDUCATION));
+		user.setHeight(rs.getString(LoveTable.COLUMN_HEIGHT));
+		user.setIncome(rs.getString(LoveTable.COLUMN_INCOME));
+		user.setMarriage(rs.getString(LoveTable.COLUMN_MARRIAGE));
+		user.setMobile(rs.getString(LoveTable.COLUMN_MOBILE));
+		user.setMobileVali(rs.getString(LoveTable.COLUMN_MOBILE_VALI));
+		user.setMonth(rs.getString(LoveTable.COLUMN_MONTH));
+		user.setNickname(rs.getString(LoveTable.COLUMN_NICKNAME));
+		user.setNote1(rs.getString(LoveTable.COLUMN_NOTE1));
+		user.setNote2(rs.getString(LoveTable.COLUMN_NOTE2));
+		user.setNote3(rs.getString(LoveTable.COLUMN_NOTE3));
+		user.setNoteFinal(rs.getString(LoveTable.COLUMN_NOTEFINAL));
+		user.setNoteWhich(rs.getString(LoveTable.COLUMN_NOTEWHICH));
+		user.setPhoneNumber(rs.getString(LoveTable.COLUMN_PHONENUMBER));
+		user.setProvince(rs.getString(LoveTable.COLUMN_PROVINCE));
+		user.setRegisterType(rs.getString(LoveTable.COLUMN_REGISTER_TYPE));
+		user.setSalary(rs.getString(LoveTable.COLUMN_SALARY));
+		user.setSex(rs.getString(LoveTable.COLUMN_SEX));
+		user.setYear(rs.getString(LoveTable.COLUMN_YEAR));
+		return user;
+	}
+	
+	private class UserRowMapper implements RowMapper<User> {
+		public User mapRow(ResultSet rs, int rowNum) throws SQLException {
+			return mapUser(rs);
 		}
 	}
 	

@@ -35,5 +35,10 @@ public class LoveTable {
 	public static final String SEQ_USER_ID = "\'\"USER_USER_ID_seq\"\'";
 	
 	
+	//TABLE SEE_EACH_OTHER
+	public static final String TABLE_SEE_EACH_OTHER = "\"SEE_EACH_OTHER\"";
+	public static final String COLUMN_SEE_USER_ID = "\"SEE_USER_ID\"";
+	public static final String SEQ_SEE_USER_ID = "\'\"SEE_EACH_OTHER_SEQ_ID_seq\"\'";
+	
 	
 }
