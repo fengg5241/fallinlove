@@ -15,7 +15,7 @@ public class LoginController {
 	
 	@RequestMapping(value = "login",method = RequestMethod.POST)
 	public String home(LoginForm loginForm) {
-		logger.info(loginForm.getName() +"---"+loginForm.getPassword());
+		logger.info(loginForm.getUserName() +"---"+loginForm.getPassword());
 		return "myself";
 	}
 	

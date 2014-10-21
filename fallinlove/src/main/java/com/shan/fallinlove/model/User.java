@@ -2,6 +2,8 @@ package com.shan.fallinlove.model;
 
 public class User {
 	
+	private long userId;
+	
 	private String password;
 	
 	private String sex;
@@ -52,6 +54,14 @@ public class User {
 	
 	private String mobile;
 	
+	public long getUserId() {
+		return userId;
+	}
+
+	public void setUserId(long userId) {
+		this.userId = userId;
+	}
+
 	public String getSex() {
 		return sex;
 	}
