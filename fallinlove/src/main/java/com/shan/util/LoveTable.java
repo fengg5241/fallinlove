@@ -37,8 +37,20 @@ public class LoveTable {
 	
 	//TABLE SEE_EACH_OTHER
 	public static final String TABLE_SEE_EACH_OTHER = "\"SEE_EACH_OTHER\"";
+	public static final String COLUMN_SEQ_ID = "\"SEQ_ID\"";
 	public static final String COLUMN_SEE_USER_ID = "\"SEE_USER_ID\"";
 	public static final String SEQ_SEE_USER_ID = "\'\"SEE_EACH_OTHER_SEQ_ID_seq\"\'";
+	
+	//TABLE LETTER
+	public static final String TABLE_LETTER = "\"LETTER\"";
+	public static final String COLUMN_CONTENT = "\"CONTENT\"";
+	public static final String COLUMN_TYPE = "\"TYPE\"";
+	public static final String COLUMN_STATUS = "\"STATUS\"";
+	public static final String COLUMN_WITH_STAMP = "\"WITH_STAMP\"";
+	public static final String COLUMN_REPLY_ID = "\"REPLY_ID\"";
+	public static final String COLUMN_FROM_USER_ID = "\"FROM_USER_ID\"";
+	public static final String COLUMN_TO_USER_ID = "\"TO_USER_ID\"";
+	public static final String SEQ_LETTER_ID = "\'\"LETTER_SEQ_ID_seq\"\'";
 	
 	
 }
