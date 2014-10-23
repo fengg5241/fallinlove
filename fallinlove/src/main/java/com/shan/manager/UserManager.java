@@ -20,32 +20,21 @@ import com.shan.fallinlove.model.LoginForm;
 import com.shan.fallinlove.model.User;
 import com.shan.util.LoveTable;
 @Component("usermanager")
-public class UserManager {
+public class UserManager extends BaseManager{
 	
 	private static final Logger logger = LoggerFactory.getLogger(UserManager.class);
 	
-    private JdbcTemplate jdbcTemplate;
-    
     private RowMapper<LoginForm> rowMapper = new LoginFormRowMapper();
     
     private RowMapper<User> userRowMapper = new UserRowMapper();
     
-	public JdbcTemplate getJdbcTemplate() {
-		return jdbcTemplate;
-	}
-	
-	@Autowired
-	public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
-		this.jdbcTemplate = jdbcTemplate;
-	}
-	
 	@Transactional
     public User addUser(final User user){
 		String nextValSql = "select nextval("+LoveTable.SEQ_USER_ID+")";
-		long queryForInt = jdbcTemplate.queryForLong(nextValSql);
+		long queryForInt = getJdbcTemplate().queryForLong(nextValSql);
 		user.setUserId(queryForInt);
 		
-		logger.info("queryForInt"+queryForInt);
+		getLogger().info("queryForInt"+queryForInt);
 		
 		//insert sql
 		//insert user
@@ -88,7 +77,7 @@ public class UserManager {
 		//insert login_user
 		String insertLoginSql = "INSERT INTO " + LoveTable.TABLE_LOGIN + " (" + LoveTable.COLUMN_USER_ID + ","+ LoveTable.COLUMN_USER_NAME + "," +
 					LoveTable.COLUMN_PASSWORD + ")" + "VALUES(?,?,?)";
-		jdbcTemplate.update(insertLoginSql, new PreparedStatementSetter() {  
+		getJdbcTemplate().update(insertLoginSql, new PreparedStatementSetter() {  
 	      @Override  
 	      public void setValues(PreparedStatement pstmt) throws SQLException {  
 	          pstmt.setObject(1, user.getUserId());  
@@ -100,35 +89,11 @@ public class UserManager {
 //		LoginForm queryForObject = jdbcTemplate.queryForObject(nextValSql, rowMapper);
 //		System.out.println("USER_NAME: " + queryForObject.getUserName());
 		
-//		final long id = Long.valueOf(queryForObject.getUserId()) + 1;
-		//insert sql
-//		String insertSql = "INSERT INTO " + LoveTable.TABLE_LOGIN + " (" + LoveTable.COLUMN_USER_ID + ","+ LoveTable.COLUMN_USER_NAME + "," +
-//					LoveTable.COLUMN_PASSWORD + ")" + "VALUES(?,?,?)";
-		//update sql
-//		String updateSql = "UPDATE " + LoveTable.TABLE_LOGIN +
-//		   "SET " +  LoveTable.COLUMN_PASSWORD + "=?, " + LoveTable.COLUMN_USER_NAME + "=? WHERE " +
-//		   LoveTable.COLUMN_USER_ID + "=?";
-//		jdbcTemplate.update(updateSql, new PreparedStatementSetter() {  
-//		      @Override  
-//		      public void setValues(PreparedStatement pstmt) throws SQLException {  
-//		          pstmt.setObject(1, loginForm.getPassword());  
-//		          pstmt.setObject(2, loginForm.getUserName());  
-//		          pstmt.setObject(3, id - 1);  
-//		  }});  
-		
-        //getJdbcTemplate().update(insertSql,new Object[]{id,loginForm.getUserName(), loginForm.getPassword()});
-    	
 		//delete sql
 //		String delSql = "DELETE FROM " + LoveTable.TABLE_LOGIN + "WHERE " + LoveTable.COLUMN_USER_ID + "=?";
 //		getJdbcTemplate().update(delSql,new Object[]{1});
 		return null;
     }
-	
-	public User getUserById(long userId) {
-		User user = new User();
-		
-		return user;
-	}
 	
 	public List<User> getUsersByIdList(List<Long> userIdList) {
 		
@@ -156,8 +121,25 @@ public class UserManager {
 	 * @return
 	 */
 	public User getUserBasicInfoById(long userId){
-		return null;
+		String sql = "SELECT * FROM " + LoveTable.TABLE_USER + " WHERE " + LoveTable.COLUMN_USER_ID +" =?";
+		User user = getJdbcTemplate().queryForObject(sql, new Object[]{userId}, userRowMapper);
+		return user;
 	}
+	
+	/*********************************** 查询LOGIN_USER信息*******************************/
+	/**
+	 * @param userId
+	 * @return
+	 */
+	public LoginForm getLoginUserByName(String userName){
+		String sql = "SELECT * FROM" + 
+				LoveTable.TABLE_LOGIN +" WHERE " + LoveTable.COLUMN_USER_NAME + " = ?";
+		LoginForm loginUser = getJdbcTemplate().queryForObject(sql, new Object[]{userName}, rowMapper);
+		return loginUser;
+	}
+	
+	
+	/*********************************** 对看过和被看过的人的操作*******************************/
 	
 	/**
 	 * 显示所有看过的人
@@ -167,7 +149,7 @@ public class UserManager {
 	public List<User> getMeSeeById(long userId){
 		return null;
 	}
-	/*********************************** 对看过和被看过的人的操作*******************************/
+	
 	/**
 	 * 当进入myself后，显示看过自己那些人
 	 * @param userId
@@ -177,7 +159,7 @@ public class UserManager {
 		//get see me userId list
 		String sql = "SELECT "+ LoveTable.COLUMN_SEE_USER_ID+" FROM" + 
 				LoveTable.TABLE_SEE_EACH_OTHER +" WHERE " + LoveTable.COLUMN_USER_ID + " = "+ userId;
-		List<Long> seeUserIdList = jdbcTemplate.queryForList(sql, Long.class);
+		List<Long> seeUserIdList = getJdbcTemplate().queryForList(sql, Long.class);
 		
 		List<User> users = getUsersByIdList(seeUserIdList);
 		return users;
