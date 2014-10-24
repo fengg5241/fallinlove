@@ -9,8 +9,7 @@ import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.PreparedStatementSetter;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Component;
@@ -136,7 +135,7 @@ public class UserManager extends BaseManager{
 	 * @param userId
 	 * @return
 	 */
-	public User getUserBasicInfoById(long userId){
+	public User getUserBasicInfoById(long userId) throws EmptyResultDataAccessException{
 		String sql = "SELECT * FROM " + LoveTable.TABLE_USER + " WHERE " + LoveTable.COLUMN_USER_ID +" =?";
 		User user = getJdbcTemplate().queryForObject(sql, new Object[]{userId}, userRowMapper);
 		return user;
@@ -147,8 +146,8 @@ public class UserManager extends BaseManager{
 	 * @param userId
 	 * @return
 	 */
-	public LoginForm getLoginUserByName(String userName){
-		String sql = "SELECT * FROM" + 
+	public LoginForm getLoginUserByName(String userName) throws EmptyResultDataAccessException{
+		String sql = "SELECT * FROM " + 
 				LoveTable.TABLE_LOGIN +" WHERE " + LoveTable.COLUMN_USER_NAME + " = ?";
 		LoginForm loginUser = getJdbcTemplate().queryForObject(sql, new Object[]{userName}, rowMapper);
 		return loginUser;

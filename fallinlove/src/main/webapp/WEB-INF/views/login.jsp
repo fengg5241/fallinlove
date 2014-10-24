@@ -428,7 +428,7 @@ common_nav_array[current_nav_flag] = 'head_nav_cur';
                   <label class="lab">登录帐号</label>
                   <div class="login_inpBox">
                     <label style="display: none;" for="login_email" class="login_label">邮箱/ID/手机号</label>
-                    <input class="text" name="name" id="login_email" onfocus="clear_text(this);this.style.imeMode='disabled';" onblur="check_text(this);" value="fengg_5241@163.com" type="text">
+                    <input class="text" name="userName" id="login_email" onfocus="clear_text(this);this.style.imeMode='disabled';" onblur="check_text(this);" value="shan5241@163.com" type="text">
                     <span style="display: inline;" class="btnDel" id="btn_del" href="" onclick="delLoginMsg();" title="删除">删除</span>
                   </div>
                 </div>
