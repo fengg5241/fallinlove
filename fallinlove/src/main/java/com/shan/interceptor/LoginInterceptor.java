@@ -33,7 +33,7 @@ public class LoginInterceptor extends HandlerInterceptorAdapter{
 			return true;
 		}else {
 			Object object = request.getSession().getAttribute("userId");
-			System.out.println(object);
+			System.out.println("userId: "+object);
 			return true;
 //			if (object == null) {
 //				return false;

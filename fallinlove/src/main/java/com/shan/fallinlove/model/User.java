@@ -54,6 +54,8 @@ public class User {
 	
 	private String mobile;
 	
+	private String headPic;
+	
 	public long getUserId() {
 		return userId;
 	}
@@ -260,6 +262,14 @@ public class User {
 
 	public void setMobile(String mobile) {
 		this.mobile = mobile;
+	}
+
+	public String getHeadPic() {
+		return headPic;
+	}
+
+	public void setHeadPic(String headPic) {
+		this.headPic = headPic;
 	}
 
 	@Override

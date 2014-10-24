@@ -31,6 +31,7 @@ public class LoveTable {
 	public static final String COLUMN_NOTE2 = "\"NOTE2\"";
 	public static final String COLUMN_NOTE3 = "\"NOTE3\"";
 	public static final String COLUMN_MOBILE = "\"MOBILE\"";
+	public static final String COLUMN_HEAD_PIC = "\"HEAD_PIC\"";
 	
 	public static final String SEQ_USER_ID = "\'\"USER_USER_ID_seq\"\'";
 	

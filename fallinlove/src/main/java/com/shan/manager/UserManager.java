@@ -66,12 +66,12 @@ public class UserManager extends BaseManager{
 	          pstmt.setString(16, user.getPhoneNumber());  
 	          pstmt.setString(17, user.getMobileVali());  
 	          pstmt.setString(18, user.getNickname()); 
-	          pstmt.setString(19, user.getIncome());  
-	          pstmt.setString(20, user.getSalary());  
-	          pstmt.setString(21, user.getRegisterType()); 
-	          pstmt.setString(22, user.getPhoneNumber());  
-	          pstmt.setString(23, user.getMobileVali());  
-	          pstmt.setString(24, user.getNickname()); 
+	          pstmt.setString(19, user.getNoteWhich());  
+	          pstmt.setString(20, user.getNoteFinal());  
+	          pstmt.setString(21, user.getNote1()); 
+	          pstmt.setString(22, user.getNote2());  
+	          pstmt.setString(23, user.getNote3());  
+	          pstmt.setString(24, user.getMobile()); 
 	  }});  
 		
 		//insert login_user
@@ -94,6 +94,22 @@ public class UserManager extends BaseManager{
 //		getJdbcTemplate().update(delSql,new Object[]{1});
 		return null;
     }
+	
+	/**
+	 * 修改头像
+	 * @param user
+	 */
+	public void updateUserHeadPic(final User user){
+		
+		String sql = "UPDATE " + LoveTable.TABLE_USER + " SET " + LoveTable.COLUMN_HEAD_PIC + "=? WHERE " + LoveTable.COLUMN_USER_ID + " = ?";
+		
+		getJdbcTemplate().update(sql, new PreparedStatementSetter() {  
+		      @Override  
+		      public void setValues(PreparedStatement pstmt) throws SQLException {  
+		          pstmt.setObject(1, user.getHeadPic());  
+		          pstmt.setLong(2, user.getUserId());  
+		  }});
+	}
 	
 	public List<User> getUsersByIdList(List<Long> userIdList) {
 		
