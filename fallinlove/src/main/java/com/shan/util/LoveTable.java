@@ -50,6 +50,7 @@ public class LoveTable {
 	public static final String COLUMN_REPLY_ID = "\"REPLY_ID\"";
 	public static final String COLUMN_FROM_USER_ID = "\"FROM_USER_ID\"";
 	public static final String COLUMN_TO_USER_ID = "\"TO_USER_ID\"";
+	public static final String COLUMN_RECORD_STATUS = "\"RECORD_STATUS\"";
 	public static final String SEQ_LETTER_ID = "\'\"LETTER_SEQ_ID_seq\"\'";
 	
 	
