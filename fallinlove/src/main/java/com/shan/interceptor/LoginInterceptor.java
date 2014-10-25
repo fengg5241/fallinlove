@@ -29,17 +29,18 @@ public class LoginInterceptor extends HandlerInterceptorAdapter{
 	@Override
 	public boolean preHandle(HttpServletRequest request,
 			HttpServletResponse response, Object handler) throws Exception {
-		if (request.getRequestURL().indexOf("login") != -1) {
+		if (request.getRequestURL().indexOf("login") != -1 || request.getRequestURL().indexOf("register") != -1) {
 			return true;
 		}else {
-			Object object = request.getSession().getAttribute("userId");
-			System.out.println("userId: "+object);
-			return true;
-//			if (object == null) {
-//				return false;
-//			}else {
-//				return true;
-//			}
+			Object userId = request.getSession().getAttribute("userId");
+			if (userId == null) {
+				response.sendRedirect(request.getContextPath() + "/login");
+				return false;
+			}else {
+				return true;
+			}
+			
+			
 		}
 	}
 

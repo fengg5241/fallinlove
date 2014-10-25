@@ -1,5 +1,7 @@
 package com.shan.fallinlove;
 
+import java.util.Map;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.slf4j.Logger;
@@ -24,7 +26,7 @@ public class LoginController {
 	private UserManager usermanager;
 	
 	@RequestMapping(value = "login",method = RequestMethod.POST)
-	public String home(LoginForm loginForm,BindingResult result,HttpServletRequest request) {
+	public String home(LoginForm loginForm,BindingResult result,HttpServletRequest request,Map model) {
 		logger.info(loginForm.getUserName() +"---"+loginForm.getPassword());
 		if (result.hasErrors()) {
 			return "login";

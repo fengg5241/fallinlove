@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="keywords" content="交友,交友网,征婚交友,网上交友,征婚,征婚网,征婚交友网,交友中心,婚恋交友">
     <meta name="description" content="青春不常在，抓紧谈恋爱！缘分可遇也可求，该出手时就出手。世纪佳缘是严肃婚恋的交友平台，提供丰富多彩的交友征婚活动，1亿会员，让缘分千万里挑一！">
-    <title>佳缘登录页_世纪佳缘交友网</title>
+    <title>登录</title>
     <link rel="stylesheet" href="resources/css/base.css">
     <link rel="stylesheet" href="resources/css/login.css">
     <script src="resources/js/beacon.js" async=""></script>

@@ -1,8 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE >
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>谁看过我_我的佳缘_世纪佳缘交友网</title>
+<title>自己</title>
 <meta name="keywords" content="交友,交友网,征婚交友,网上交友,征婚,征婚网,征婚交友网,交友中心,婚恋交友">
 <meta name="description" content="青春不常在，抓紧谈恋爱！缘分可遇也可求，该出手时就出手。世纪佳缘是严肃婚恋的交友平台，提供丰富多彩的交友征婚活动，1亿会员，让缘分千万里挑一！">
 <link href="resources/css/reset.css" rel="stylesheet" type="text/css">
@@ -1327,44 +1328,26 @@ DD_belatedPNG.fix(".fix-png");
 	</div>
 	<div id="show_style_01" class="show_style_01">
 		<ul class="cf">
-					<li>
-				<div class="pic">
-					<a href="user/search/1" target="_blank" onmousedown="send_jy_pv2('|clicked_new_fvip_zpdjrc|');send_jy_pv2('|clicked_new_fvip_zpdjrs|122261858');"><img src="resources/img/a4526fa13_2_avatar_p.jpg"></a>
-					<!--<div class="from_bg ie6png">
-						来自<a href="###">缘分速递</a>
-					</div>-->
-				</div>
-								<div class="label_bg label_gsr">
-					高收入
-				</div>
-																<div class="user_info">
-					<a onclick="showProfile('75a4526fa1381d0894b93624d54dfcbb');" href="javascript:;" onmousedown="send_jy_pv2('|clicked_new_fvip_nldqdjrc|');send_jy_pv2('|clicked_new_fvip_nldqdjrs|122261858');">29岁&nbsp;&nbsp;其他国家澳大利亚</a>
-				</div>
-				<div class="date">
-					到访：2014-09-21
-				</div>
-				<div class="check_zl">
-					<a onclick="showProfile('75a4526fa1381d0894b93624d54dfcbb');" href="javascript:;" onmousedown="send_jy_pv2('|clicked_new_fvip_zldjrc|');send_jy_pv2('|clicked_new_fvip_zldjrs|122261858');">查看资料</a>
-				</div>
-			</li>
-					<li>
-				<div class="pic">
-					<a onclick="showProfile('3ed04948317058a3e221d4a3802ad3b7');" href="javascript:;" onmousedown="send_jy_pv2('|clicked_new_fvip_zpdjrc|');send_jy_pv2('|clicked_new_fvip_zpdjrs|122261858');"><img src="resources/img/d04948317_3_avatar_p.jpg"></a>
-					<!--<div class="from_bg ie6png">
-						来自<a href="###">缘分速递</a>
-					</div>-->
-				</div>
-																<div class="user_info">
-					<a  href="javascript:;" >26岁&nbsp;&nbsp;其他国家日本</a>
-				</div>
-				<div class="date">
-					到访：2014-09-22
-				</div>
-				<div class="check_zl">
-					<a href="javascript:;" >查看资料</a>
-				</div>
-			</li>
-			
+		<c:forEach var="user" items="${seeMeUsers}" >
+				<li>
+					<div class="pic">
+						<a href="user/search/${user.userId}" target="_blank">
+<!-- 							onmousedown="send_jy_pv2('|clicked_new_fvip_zpdjrc|');send_jy_pv2('|clicked_new_fvip_zpdjrs|122261858');"> -->
+							<img src="resources/img/a4526fa13_2_avatar_p.jpg"></a>
+						<!--<div class="from_bg ie6png">
+			来自<a href="###">缘分速递</a>
+		</div>-->
+					</div>
+					<div class="label_bg label_gsr">高收入</div>
+					<div class="user_info">
+						<a href="user/search/${user.userId}" target="_blank">29岁&nbsp;&nbsp;${user.address}</a>
+					</div>
+<!-- 					<div class="date">到访：2014-09-21</div> -->
+					<div class="check_zl">
+						<a href="user/search/${user.userId}">查看资料</a>
+					</div>
+				</li>
+		</c:forEach>
 		</ul>
 	</div>
 	</div>

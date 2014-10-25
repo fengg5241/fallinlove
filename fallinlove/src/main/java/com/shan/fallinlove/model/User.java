@@ -56,6 +56,9 @@ public class User {
 	
 	private String headPic;
 	
+	//not in DB
+	private int age;
+	
 	public long getUserId() {
 		return userId;
 	}
@@ -270,6 +273,14 @@ public class User {
 
 	public void setHeadPic(String headPic) {
 		this.headPic = headPic;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
 	}
 
 	@Override
