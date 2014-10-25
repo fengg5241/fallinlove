@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
-<%@taglib uri="http://www.springframework.org/tags/form" prefix="form" %> 
-<!DOCTYPE >
-<html lang="en"><head>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%> 
+<!DOCTYPE html>
+<html><head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -10,9 +10,9 @@
     <title>登录</title>
     <link rel="stylesheet" href="resources/css/base.css">
     <link rel="stylesheet" href="resources/css/login.css">
-    <script src="resources/js/beacon.js" async=""></script>
-    <script src="resources/js/head_common.js" async=""></script>
-    <script src="resources/js/jiayuan_logo_config.js" async=""></script>
+    <script src="resources/js/beacon.js"></script>
+    <script src="resources/js/head_common.js"></script>
+    <script src="resources/js/jiayuan_logo_config.js"></script>
     <script type="text/javascript">
 
 //会员信息对象
@@ -404,7 +404,7 @@ common_nav_array[current_nav_flag] = 'head_nav_cur';
         <div class="w fn-clear">
           <h1 class="logo">
            <script type="text/javascript">
-            document.write('<a class="logo" href="http://www.jiayuan.com/" onmousedown="javascript:send_jy_pv2(\'log_m_to_jy\');" ><img height="70" src="'+head_logo_config['index_logo']+'" alt="世纪佳缘" border="0" /></a>');
+            document.write('<a class="logo" href="http://www.jiayuan.com/"><img height="70" src="'+head_logo_config['index_logo']+'" alt="世纪佳缘" border="0" /></a>');
           </script><a class="logo" href="http://www.jiayuan.com/" onmousedown="javascript:send_jy_pv2('log_m_to_jy');"><img src="resources/img/logo_1395045365.png" alt="世纪佳缘" border="0" height="70"></a>
             <span><img src="resources/img/logo_txt.png" alt="严肃婚恋网站，美国纳斯达克上市"></span>
           </h1>

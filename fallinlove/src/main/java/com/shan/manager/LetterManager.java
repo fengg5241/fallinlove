@@ -21,11 +21,32 @@ public class LetterManager extends BaseManager {
 	
 	private RowMapper<Letter> letterRowMapper = new LetterRowMapper();
 
-	public List<Letter> getLettersByUserId(long userId,String status){
+	/**
+	 * 查发的信
+	 * @param userId
+	 * @return
+	 */
+	public List<Letter> getLettersToUser(long userId){
 		
-		String sql = "SELECT * FROM" + LoveTable.TABLE_LETTER +" WHERE " + 
-				LoveTable.COLUMN_FROM_USER_ID + " = "+ userId + "AND " + LoveTable.COLUMN_STATUS + " = " + status 
-				 + "AND " + LoveTable.COLUMN_RECORD_STATUS + " != 'D'";
+		String sql = "SELECT * FROM " + LoveTable.TABLE_LETTER +" WHERE " + 
+				LoveTable.COLUMN_FROM_USER_ID + " = "+ userId + 
+				  " AND " + LoveTable.COLUMN_RECORD_STATUS + " != 'D'";
+		List<Letter> letters = getJdbcTemplate().query(sql, letterRowMapper);
+		
+		return letters;
+	}
+	
+	/**
+	 * 查询收到的信 status:1 是未读信 2是读过的信
+	 * @param userId
+	 * @param status
+	 * @return
+	 */
+	public List<Letter> getLettersFromUser(long userId,String status){
+		
+		String sql = "SELECT * FROM " + LoveTable.TABLE_LETTER +" WHERE " + 
+				LoveTable.COLUMN_TO_USER_ID + " = "+ userId + " AND " + LoveTable.COLUMN_STATUS + " = '" + status 
+				 + "' AND " + LoveTable.COLUMN_RECORD_STATUS + " != 'D'";
 		List<Letter> letters = getJdbcTemplate().query(sql, letterRowMapper);
 		
 		return letters;
