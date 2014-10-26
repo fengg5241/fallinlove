@@ -34,7 +34,7 @@ public class MessageControler {
 	
 	@RequestMapping(value="/notRead",method=RequestMethod.GET)
 	public String getNotRead(Model model,HttpServletRequest request){
-		long userId = (long)(request.getSession().getAttribute("userId"));
+		long userId = (Long)(request.getSession().getAttribute("userId"));
 		List<Letter> letters = letterManager.getLettersFromUser(userId, "1");
 		Map<Long,User> map = new HashMap<Long,User>();
 		if (letters != null && letters.size() > 0) {
@@ -58,7 +58,7 @@ public class MessageControler {
 	
 	@RequestMapping(value="/inbox",method=RequestMethod.GET)
 	public String getInbox(Model model,HttpServletRequest request){
-		long userId = (long)(request.getSession().getAttribute("userId"));
+		long userId = (Long)(request.getSession().getAttribute("userId"));
 		List<Letter> letters = letterManager.getLettersFromUser(userId, "2");
 		model.addAttribute("inboxLetters", letters);
 		return "messageInbox";
@@ -66,7 +66,7 @@ public class MessageControler {
 	
 	@RequestMapping(value="/outbox",method=RequestMethod.GET)
 	public String getOutbox(Model model,HttpServletRequest request){
-		long userId = (long)(request.getSession().getAttribute("userId"));
+		long userId = (Long)(request.getSession().getAttribute("userId"));
 		List<Letter> letters = letterManager.getLettersToUser(userId);
 		model.addAttribute("outboxLetters", letters);
 		return "messageOutbox";

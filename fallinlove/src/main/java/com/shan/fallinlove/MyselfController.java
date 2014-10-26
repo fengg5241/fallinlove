@@ -33,7 +33,7 @@ public class MyselfController {
 	@RequestMapping(value = "myself", method = RequestMethod.GET)
 	public String goToMyself(Map model,HttpServletRequest request) {
 		
-		long userId = (long)request.getSession().getAttribute("userId");
+		long userId = (Long)(request.getSession().getAttribute("userId"));
 		User user = usermanager.getUserBasicInfoById(userId);
 		//search all the see me users
 		List<User> seeMeUsers = usermanager.getSeeMeUsersById(userId);
