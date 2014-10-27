@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 import org.slf4j.Logger;
@@ -231,6 +232,14 @@ public class UserManager extends BaseManager{
 		user.setSalary(rs.getString(LoveTable.COLUMN_SALARY));
 		user.setSex(rs.getString(LoveTable.COLUMN_SEX));
 		user.setYear(rs.getString(LoveTable.COLUMN_YEAR));
+		
+		int year = Integer.parseInt(user.getYear());
+		int month = Integer.parseInt(user.getMonth());
+		int day = Integer.parseInt(user.getDay());
+		
+		user.setAge(caculateAge(year,month,day));
+		String constellation = getConstellation(Integer.parseInt(user.getMonth()),Integer.parseInt(user.getDay()));
+		user.setConstellation(constellation);
 		return user;
 	}
 	
@@ -240,4 +249,46 @@ public class UserManager extends BaseManager{
 		}
 	}
 	
+	private int caculateAge(int yearBirth, int monthBirth, int dayOfMonthBirth) {
+        Calendar cal = Calendar.getInstance();
+
+//        if (cal.before(birthDay)) {
+//            throw new IllegalArgumentException(
+//                "The birthDay is before Now.It's unbelievable!");
+//        }
+
+        int yearNow = cal.get(Calendar.YEAR);
+        int monthNow = cal.get(Calendar.MONTH)+1;
+        int dayOfMonthNow = cal.get(Calendar.DAY_OF_MONTH);
+       
+//        cal.setTime(birthDay);
+        int age = yearNow - yearBirth;
+
+        if (monthNow <= monthBirth) {
+            if (monthNow == monthBirth) {
+                //monthNow==monthBirth
+                if (dayOfMonthNow < dayOfMonthBirth) {
+                    age--;
+                }
+            } else {
+                //monthNow>monthBirth
+                age--;
+            }
+        }
+
+        return age;
+    }
+	
+	/**
+	 * 计算星座
+	 * @param month
+	 * @param day
+	 * @return
+	 */
+	private String getConstellation(int month, int day) {
+		String s = "魔羯水瓶双鱼牡羊金牛双子巨蟹狮子处女天秤天蝎射手魔羯";
+		int[] arr = { 20, 19, 21, 21, 21, 22, 23, 23, 23, 23, 22, 22 };
+		int num = month * 2 - (day < arr[month - 1] ? 2 : 0);
+		return s.substring(num, num + 2);
+	}
 }

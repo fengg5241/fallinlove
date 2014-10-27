@@ -59,6 +59,8 @@ public class User extends BaseModel{
 	//not in DB
 	private int age;
 	
+	private String constellation;
+	
 	public long getUserId() {
 		return userId;
 	}
@@ -281,6 +283,14 @@ public class User extends BaseModel{
 
 	public void setAge(int age) {
 		this.age = age;
+	}
+
+	public String getConstellation() {
+		return constellation;
+	}
+
+	public void setConstellation(String constellation) {
+		this.constellation = constellation;
 	}
 
 	@Override
