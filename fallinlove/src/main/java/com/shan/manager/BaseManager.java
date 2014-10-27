@@ -10,7 +10,7 @@ import com.shan.util.LoveTable;
 
 @Component("basemanager")
 public class BaseManager {
-	private static final Logger logger = LoggerFactory.getLogger(BaseManager.class);
+	private final Logger logger = LoggerFactory.getLogger(this.getClass());
 	
     private JdbcTemplate jdbcTemplate;
 
@@ -23,7 +23,7 @@ public class BaseManager {
 		this.jdbcTemplate = jdbcTemplate;
 	}
 
-	public static Logger getLogger() {
+	public Logger getLogger() {
 		return logger;
 	}
 	

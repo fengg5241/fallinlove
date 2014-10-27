@@ -17,8 +17,6 @@ import com.shan.util.LoveTable;
 @Component
 public class LetterManager extends BaseManager {
 
-	private static final Logger logger = LoggerFactory.getLogger(LetterManager.class);
-	
 	private RowMapper<Letter> letterRowMapper = new LetterRowMapper();
 
 	/**

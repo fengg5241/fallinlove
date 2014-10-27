@@ -22,8 +22,6 @@ import com.shan.util.LoveTable;
 @Component("usermanager")
 public class UserManager extends BaseManager{
 	
-	private static final Logger logger = LoggerFactory.getLogger(UserManager.class);
-	
     private RowMapper<LoginForm> rowMapper = new LoginFormRowMapper();
     
     private RowMapper<User> userRowMapper = new UserRowMapper();
