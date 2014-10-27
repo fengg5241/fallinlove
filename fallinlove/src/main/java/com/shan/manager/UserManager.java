@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 import org.slf4j.Logger;
@@ -21,8 +22,6 @@ import com.shan.util.LoveTable;
 @Component("usermanager")
 public class UserManager extends BaseManager{
 	
-	private static final Logger logger = LoggerFactory.getLogger(UserManager.class);
-	
     private RowMapper<LoginForm> rowMapper = new LoginFormRowMapper();
     
     private RowMapper<User> userRowMapper = new UserRowMapper();
@@ -32,8 +31,6 @@ public class UserManager extends BaseManager{
 		String nextValSql = "select nextval("+LoveTable.SEQ_USER_ID+")";
 		long queryForInt = getJdbcTemplate().queryForLong(nextValSql);
 		user.setUserId(queryForInt);
-		
-		getLogger().info("queryForInt"+queryForInt);
 		
 		//insert sql
 		//insert user
@@ -188,9 +185,9 @@ public class UserManager extends BaseManager{
 	 */
 	private LoginForm mapLoginForm(ResultSet rs) throws SQLException {
 		// get the row column data
-		long userId = rs.getLong("USER_ID");
-		String username = rs.getString("USER_NAME");
-		String password = rs.getString("PASSWORD");
+		long userId = rs.getLong(LoveTable.COLUMN_USER_ID);
+		String username = rs.getString(LoveTable.COLUMN_USER_NAME);
+		String password = rs.getString(LoveTable.COLUMN_PASSWORD);
 		// map to the object
 		LoginForm loginForm = new LoginForm(userId,username, password);
 		return loginForm;
@@ -210,29 +207,37 @@ public class UserManager extends BaseManager{
 	private User mapUser(ResultSet rs) throws SQLException {
 		// get the row column data
 		User user = new User();
-		user.setUserId(rs.getLong("USER_ID"));
-		user.setAddress(rs.getString("ADDRESS"));
-		user.setCity(rs.getString("CITY"));
-		user.setDay(rs.getString("DAY"));
-		user.setEducation(rs.getString("EDUCATION"));
-		user.setHeight(rs.getString("HEIGHT"));
-		user.setIncome(rs.getString("INCOME"));
-		user.setMarriage(rs.getString("MARRIAGE"));
-		user.setMobile(rs.getString("MOBILE"));
-		user.setMobileVali(rs.getString("MOBILE_VALI"));
-		user.setMonth(rs.getString("MONTH"));
-		user.setNickname(rs.getString("NICKNAME"));
-		user.setNote1(rs.getString("NOTE1"));
-		user.setNote2(rs.getString("NOTE2"));
-		user.setNote3(rs.getString("NOTE3"));
-		user.setNoteFinal(rs.getString("NOTEFINAL"));
-		user.setNoteWhich(rs.getString("NOTEWHICH"));
-		user.setPhoneNumber(rs.getString("PHONENUMBER"));
-		user.setProvince(rs.getString("PROVINCE"));
-		user.setRegisterType(rs.getString("REGISTER_TYPE"));
-		user.setSalary(rs.getString("SALARY"));
-		user.setSex(rs.getString("SEX"));
-		user.setYear(rs.getString("YEAR"));
+		user.setUserId(rs.getLong(LoveTable.COLUMN_USER_ID));
+		user.setAddress(rs.getString(LoveTable.COLUMN_ADDRESS));
+		user.setCity(rs.getString(LoveTable.COLUMN_CITY));
+		user.setDay(rs.getString(LoveTable.COLUMN_DAY));
+		user.setEducation(rs.getString(LoveTable.COLUMN_EDUCATION));
+		user.setHeight(rs.getString(LoveTable.COLUMN_HEIGHT));
+		user.setIncome(rs.getString(LoveTable.COLUMN_INCOME));
+		user.setMarriage(rs.getString(LoveTable.COLUMN_MARRIAGE));
+		user.setMobile(rs.getString(LoveTable.COLUMN_MOBILE));
+		user.setMobileVali(rs.getString(LoveTable.COLUMN_MOBILE_VALI));
+		user.setMonth(rs.getString(LoveTable.COLUMN_MONTH));
+		user.setNickname(rs.getString(LoveTable.COLUMN_NICKNAME));
+		user.setNote1(rs.getString(LoveTable.COLUMN_NOTE1));
+		user.setNote2(rs.getString(LoveTable.COLUMN_NOTE2));
+		user.setNote3(rs.getString(LoveTable.COLUMN_NOTE3));
+		user.setNoteFinal(rs.getString(LoveTable.COLUMN_NOTEFINAL));
+		user.setNoteWhich(rs.getString(LoveTable.COLUMN_NOTEWHICH));
+		user.setPhoneNumber(rs.getString(LoveTable.COLUMN_PHONENUMBER));
+		user.setProvince(rs.getString(LoveTable.COLUMN_PROVINCE));
+		user.setRegisterType(rs.getString(LoveTable.COLUMN_REGISTER_TYPE));
+		user.setSalary(rs.getString(LoveTable.COLUMN_SALARY));
+		user.setSex(rs.getString(LoveTable.COLUMN_SEX));
+		user.setYear(rs.getString(LoveTable.COLUMN_YEAR));
+		
+		int year = Integer.parseInt(user.getYear());
+		int month = Integer.parseInt(user.getMonth());
+		int day = Integer.parseInt(user.getDay());
+		
+		user.setAge(caculateAge(year,month,day));
+		String constellation = getConstellation(Integer.parseInt(user.getMonth()),Integer.parseInt(user.getDay()));
+		user.setConstellation(constellation);
 		return user;
 	}
 	
@@ -242,4 +247,46 @@ public class UserManager extends BaseManager{
 		}
 	}
 	
+	private int caculateAge(int yearBirth, int monthBirth, int dayOfMonthBirth) {
+        Calendar cal = Calendar.getInstance();
+
+//        if (cal.before(birthDay)) {
+//            throw new IllegalArgumentException(
+//                "The birthDay is before Now.It's unbelievable!");
+//        }
+
+        int yearNow = cal.get(Calendar.YEAR);
+        int monthNow = cal.get(Calendar.MONTH)+1;
+        int dayOfMonthNow = cal.get(Calendar.DAY_OF_MONTH);
+       
+//        cal.setTime(birthDay);
+        int age = yearNow - yearBirth;
+
+        if (monthNow <= monthBirth) {
+            if (monthNow == monthBirth) {
+                //monthNow==monthBirth
+                if (dayOfMonthNow < dayOfMonthBirth) {
+                    age--;
+                }
+            } else {
+                //monthNow>monthBirth
+                age--;
+            }
+        }
+
+        return age;
+    }
+	
+	/**
+	 * 计算星座
+	 * @param month
+	 * @param day
+	 * @return
+	 */
+	private String getConstellation(int month, int day) {
+		String s = "魔羯水瓶双鱼牡羊金牛双子巨蟹狮子处女天秤天蝎射手魔羯";
+		int[] arr = { 20, 19, 21, 21, 21, 22, 23, 23, 23, 23, 22, 22 };
+		int num = month * 2 - (day < arr[month - 1] ? 2 : 0);
+		return s.substring(num, num + 2);
+	}
 }

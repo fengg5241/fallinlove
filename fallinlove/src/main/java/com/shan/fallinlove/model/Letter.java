@@ -1,6 +1,6 @@
 package com.shan.fallinlove.model;
 
-public class Letter {
+public class Letter extends BaseModel{
 	private long seqId;
 	
 	private long fromUserId;

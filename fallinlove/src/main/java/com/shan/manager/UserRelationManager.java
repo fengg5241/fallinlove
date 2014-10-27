@@ -12,7 +12,6 @@ import org.springframework.transaction.annotation.Transactional;
 import com.shan.util.LoveTable;
 @Component
 public class UserRelationManager extends BaseManager{
-	private static final Logger logger = LoggerFactory.getLogger(UserRelationManager.class);
 	
 	@Transactional
 	public void addUserSeeRelation(final long userId,final long seeUserId){

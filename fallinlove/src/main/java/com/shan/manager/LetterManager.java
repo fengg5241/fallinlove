@@ -17,8 +17,6 @@ import com.shan.util.LoveTable;
 @Component
 public class LetterManager extends BaseManager {
 
-	private static final Logger logger = LoggerFactory.getLogger(LetterManager.class);
-	
 	private RowMapper<Letter> letterRowMapper = new LetterRowMapper();
 
 	/**
@@ -99,14 +97,14 @@ public class LetterManager extends BaseManager {
 	private Letter mapLetter(ResultSet rs) throws SQLException {
 		// get the row column data
 		Letter letter = new Letter();
-		letter.setContent(rs.getString("CONTENT"));
-		letter.setFromUserId(rs.getLong("FROM_USER_ID"));
-		letter.setReplyLetterId(rs.getLong("REPLY_LETTER_ID"));
-		letter.setSeqId(rs.getLong("SEQ_ID"));
-		letter.setStatus(rs.getString("STATUS"));
-		letter.setToUserId(rs.getLong("TO_USER_ID"));
-		letter.setType(rs.getString("TYPE"));
-		letter.setWithStamp(rs.getString("WITH_STAMP"));
+		letter.setContent(LoveTable.COLUMN_CONTENT);
+		letter.setFromUserId(rs.getLong(LoveTable.COLUMN_CONTENT));
+		letter.setReplyLetterId(rs.getLong(LoveTable.COLUMN_REPLY_ID));
+		letter.setSeqId(rs.getLong(LoveTable.COLUMN_SEQ_ID));
+		letter.setStatus(rs.getString(LoveTable.COLUMN_STATUS));
+		letter.setToUserId(rs.getLong(LoveTable.COLUMN_TO_USER_ID));
+		letter.setType(rs.getString(LoveTable.COLUMN_TYPE));
+		letter.setWithStamp(rs.getString(LoveTable.COLUMN_WITH_STAMP));
 		return letter;
 	}
 	

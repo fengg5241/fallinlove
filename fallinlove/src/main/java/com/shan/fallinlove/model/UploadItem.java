@@ -2,7 +2,7 @@ package com.shan.fallinlove.model;
 
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
 
-public class UploadItem {
+public class UploadItem extends BaseModel{
 	private String filename;
 	private CommonsMultipartFile fileData;
 
