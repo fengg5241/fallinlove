@@ -1340,7 +1340,7 @@ DD_belatedPNG.fix(".fix-png");
 					</div>
 					<div class="label_bg label_gsr">高收入</div>
 					<div class="user_info">
-						<a href="user/search/${user.userId}" target="_blank">29岁&nbsp;&nbsp;${user.address}</a>
+						<a href="user/search/${user.userId}" target="_blank">${user.age}岁&nbsp;&nbsp;${user.address}</a>
 					</div>
 <!-- 					<div class="date">到访：2014-09-21</div> -->
 					<div class="check_zl">
