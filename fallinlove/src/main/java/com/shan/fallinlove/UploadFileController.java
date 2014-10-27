@@ -34,6 +34,12 @@ public class UploadFileController {
 		this.uploadFolderPath = uploadFolderPath;
 	}
 
+	@RequestMapping(value = "uploadHeadPic",method = RequestMethod.GET)
+	public String goToUpload(Model model) {
+		//model.addAttribute(new UploadItem());
+		return "uploadHeadPic";
+	}
+	
 	@RequestMapping(value = "testUpload",method = RequestMethod.GET)
 	public String getUploadForm(Model model) {
 		model.addAttribute(new UploadItem());

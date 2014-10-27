@@ -1,0 +1,252 @@
+@charset "utf-8";
+
+/**
+ * style.css
+ *
+ * @author Romoo 
+ * @version 2013/06/04
+ */
+body{color:#666; font:12px/1.5 Arial;background: url(http://images1.jyimg.com/w4/center/v2_i/bg.jpg) repeat;}
+.change_pic{
+  width: 970px;
+  margin: 0 auto;
+  background: #fff;
+}
+.change_pic_in{
+  padding: 30px 18px 60px;
+  overflow: hidden;
+}
+.change_pic h1{
+  padding: 0 0 29px 10px;
+  line-height: 1;
+  color: #333;
+  font-weight:normal;
+}
+.change_pic h1 * {float:left;}
+.change_pic h1 span,.change_pic h1 b {padding-top: 3px;}
+
+.change_pic h1 img{
+  vertical-align: bottom;
+  margin-right: 12px;
+}
+.change_pic_upload{
+  padding: 29px 0 29px 10px;
+  border-top: 1px solid #E7E7E7;
+}
+.change_pic_upload table{
+  border-collapse: collapse;
+}
+.change_pic_upload table a{
+  vertical-align: middle;
+  color: #2C81D6;
+}
+.change_pic_upload table a.line {
+    text-decoration:underline;
+}
+.change_pic_size{
+  color: #929292;
+  margin-top: 5px;
+}
+.change_pic_upload input{
+  border: 1px solid #D1CFCF;
+  outline: none;
+  width: 230px;
+  height: 25px;
+}
+.btn_choose{
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  background: url('../i/upload_photo/btns.png') no-repeat 0 -31px;
+  width: 81px;
+  height: 31px;
+  text-indent: -8964em;
+}
+.filebox {
+    background: url("../i/upload_photo/btns.png") no-repeat scroll 0 -31px transparent;
+    cursor: pointer;
+    display: inline-block;
+    height: 31px;
+    margin-left: 12px;
+	_margin-top: -8px;
+    overflow: hidden;
+    position: relative;
+    vertical-align: middle;
+    width: 81px;
+	border: none;
+}
+
+.btn_upload{
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  background: url('../i/upload_photo/btns.png') no-repeat -82px -31px;
+  width: 81px;
+  height: 31px;
+  text-indent: -8964em;
+  margin: 0 10px 0 90px;
+  _margin: -8px 10px 0 90px;
+  
+}
+.change_pic_upload input.uploadfile {
+   
+}
+
+.change_pic_upload input.pic {
+   width: 230px;
+   margin-right:10px;
+}
+
+.change_pic h2{
+  font-size: 14px;
+  color: #333;
+  font-weight: bold;
+}
+.change_pic h3{
+  color: #929292;
+  margin-top: 10px;
+  line-height: 1.8;
+}
+.change_pic_tips{
+  color: #929292;
+  margin-right: 100px;
+  line-height: 1.8;
+}
+.change_pic_edit{
+  padding: 29px 0 0 10px;
+  border-top: 1px solid #E7E7E7;
+}
+.change_pic_edit h2{
+  margin-bottom: 25px;
+}
+.change_pic_list {
+
+}
+.change_pic_list li {
+  float: left;
+  margin-right: 30px;
+  height: 145px;
+}
+.change_pic_list div{
+  display: table-cell;
+  vertical-align: middle;
+  height: 122px;
+  width: 122px;
+  font-size: 100px;
+  line-height: 1;
+  /*text-align: center;*/
+  margin-bottom: 5px;
+}
+.change_pic_list label{
+  display: block;
+  cursor: pointer;
+}
+.change_pic_list img{
+  max-width: 110px;
+  max-height: 110px;
+  vertical-align: middle;
+  height: expression(this.height >110 ? 110: true);
+}
+.change_pic_list input{
+  margin-left: 0;
+  vertical-align: middle;
+}
+.change_pic_maker{
+  width: 464px;
+  margin: 30px auto 15px;
+  border: 1px dotted #BFBFBF;
+}
+.change_pic_maker_in{
+  padding: 14px;
+  _padding: 14px 14px 14px 14px;
+  _height:300px;
+  overflow: hidden;
+}
+.change_pic_mask{
+  height: 354px;
+  margin: 0 0 3px;
+}
+.change_pic_maker .btn{
+  display: inline-block;
+  text-indent: -9999px;
+  *zoom: 1;
+  height: 30px;
+  margin-left: 4px;
+  *float:left;
+}
+.change_pic_maker .btn_big{
+  background: url(../i/upload_photo/btns.png) no-repeat 0 0;
+  width: 98px;
+  margin-left: 0;
+}
+.btn_small{
+  background: url(../i/upload_photo/btns.png) no-repeat -99px 0;
+  width: 102px;
+}
+.btn_right{
+  background: url(../i/upload_photo/btns.png) no-repeat -202px 0;
+  width: 111px;
+}
+.btn_left{
+  background: url(../i/upload_photo/btns.png) no-repeat 0 -63px;
+  width: 111px;
+}
+.btn_save{
+  display: block;
+  text-indent: -8964em;
+  background: url('../i/upload_photo/btns.png') no-repeat -164px -31px;
+  width: 166px;
+  height: 43px;
+  margin: 0 auto;
+}
+.footer{
+  text-align: center;
+  line-height: 2;
+  padding: 30px 0;
+  color: #888;
+}
+.footer a{
+  color: #888;
+  text-decoration: none;
+}
+.footer a:hover{
+  text-decoration: underline;
+}
+#Canvas {
+    cursor: pointer;
+    height: 349px;
+    overflow: hidden;
+    position: relative;
+    width: 434px;
+}
+#Crop {
+    cursor: move;
+    height: 349px;
+    left: 0;
+    opacity: 0.75;
+    filter: alpha(opacity=75);
+    position: relative;
+    top: 0;
+    width: 434px;
+    z-index: 7;
+}
+.transbox2 {
+    background-color: #CCCCCC;
+}
+.transbox2in {
+    border: 2px solid #D63101;
+    height: 135px;
+    width: 110px;
+}
+.null{margin-left:568px;width:358px;float:left;border:1px solid #F60;overflow:hidden;display:inline;line-height: 25px; color: #F60; background:url(../i/warning_icon.gif) no-repeat white 2px 2px; text-indent: 25px;}
+ .noneshow{display:none;}
+.fn-clear:before, .fn-clear:after {content:"";display:table;}
+.fn-clear:after {clear:both;}
+.fn-clear {zoom:1;}
+
+.change_pic_maker .btn{margin-left: 3px;}
+.change_pic_maker .btn_big{background: url("http://images2.jyimg.com/w4/register/i/upload_photo/mtxx3_03.png") 0 0 no-repeat; width: 73px; height: 30px; margin-left: 0px;}
+.change_pic_maker .btn_small{background: url("http://images2.jyimg.com/w4/register/i/upload_photo/mtxx3_05.png") 0 0 no-repeat; width: 73px; height: 30px;}
+.change_pic_maker .btn_right{background: url("http://images2.jyimg.com/w4/register/i/upload_photo/mtxx3_07.png") 0 0 no-repeat; width: 104px; height: 30px;}
+.change_pic_maker .btn_left{background: url("http://images2.jyimg.com/w4/register/i/upload_photo/mtxx3_09.png") 0 0 no-repeat; width: 104px; height: 30px;}
+.change_pic_maker .btn_mtxx{background: url("http://images2.jyimg.com/w4/register/i/upload_photo/mtxx3_11.png") 0 0 no-repeat; width: 67px; height: 30px;}
