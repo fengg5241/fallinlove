@@ -1,6 +1,6 @@
 package com.shan.fallinlove.model;
 
-public class UserSeeRelation {
+public class UserSeeRelation extends BaseModel{
 	
 	private long seqId;
 	

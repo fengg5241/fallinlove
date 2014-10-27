@@ -1,6 +1,6 @@
 package com.shan.fallinlove.model;
 
-public class User {
+public class User extends BaseModel{
 	
 	private long userId;
 	

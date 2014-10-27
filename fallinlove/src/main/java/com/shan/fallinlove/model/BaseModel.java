@@ -1,24 +1,26 @@
 package com.shan.fallinlove.model;
 
+import java.sql.Timestamp;
+
 public class BaseModel {
 	
-	private String createTime;
+	private Timestamp createTime;
 	
-	private String updateTime;
+	private Timestamp updateTime;
 
-	public String getCreateTime() {
+	public Timestamp getCreateTime() {
 		return createTime;
 	}
 
-	public void setCreateTime(String createTime) {
+	public void setCreateTime(Timestamp createTime) {
 		this.createTime = createTime;
 	}
 
-	public String getUpdateTime() {
+	public Timestamp getUpdateTime() {
 		return updateTime;
 	}
 
-	public void setUpdateTime(String updateTime) {
+	public void setUpdateTime(Timestamp updateTime) {
 		this.updateTime = updateTime;
 	}
 }

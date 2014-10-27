@@ -1,10 +1,12 @@
 package com.shan.fallinlove.model;
 
+import java.sql.Timestamp;
+
 import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.NotEmpty;
 
-public class LoginForm {
+public class LoginForm extends BaseModel{
 	
 	public LoginForm(){
 		
@@ -25,7 +27,7 @@ public class LoginForm {
 	@NotEmpty
 	@Size(min = 1, max = 20)
 	private String password;
-
+	
 	public void setUserName(String userName) {
 		this.userName = userName;
 	}
