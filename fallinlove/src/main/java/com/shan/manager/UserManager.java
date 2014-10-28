@@ -169,7 +169,7 @@ public class UserManager extends BaseManager{
 	 */
 	public List<User> getSeeMeUsersById(long userId){
 		//get see me userId list
-		String sql = "SELECT "+ LoveTable.COLUMN_SEE_USER_ID+" FROM" + 
+		String sql = "SELECT "+ LoveTable.COLUMN_SEE_USER_ID+" FROM " + 
 				LoveTable.TABLE_SEE_EACH_OTHER +" WHERE " + LoveTable.COLUMN_USER_ID + " = "+ userId;
 		List<Long> seeUserIdList = getJdbcTemplate().queryForList(sql, Long.class);
 		
