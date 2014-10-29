@@ -70,7 +70,7 @@ public class MessageControler {
 		letter.setFromUserId(userId);
 		letter.setReplyLetterId(0L);
 		letterManager.addLetter(letter);
-		return "/sendLetter";
+		return "/sendSuccess";
 	}
 	
 	/** ======================================收件箱功能===================================================*/
