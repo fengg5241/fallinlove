@@ -12,14 +12,17 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.shan.fallinlove.dto.LetterDto;
 import com.shan.fallinlove.model.Letter;
+import com.shan.fallinlove.model.LetterType;
 import com.shan.fallinlove.model.User;
 import com.shan.manager.LetterManager;
 import com.shan.manager.UserManager;
+import com.shan.util.Constant;
 
 @Controller
 @RequestMapping("/msg")
@@ -33,6 +36,44 @@ public class MessageControler {
 	@Autowired
 	private UserManager usermanager;
 	
+	/** ======================================发信模块===================================================*/
+	/**
+	 * @param model
+	 * @param operatingUserId
+	 * @return
+	 */
+	@RequestMapping(value = "/send/{operatingUserId}", method = RequestMethod.GET)
+	public String goToSendLetter(Model model,
+			@PathVariable("operatingUserId") long operatingUserId,
+			HttpServletRequest request) {
+		Letter letter = new Letter();
+		
+		model.addAttribute("operatingUserId", operatingUserId);
+		long userId = (Long) (request.getSession().getAttribute("userId"));
+		boolean withStamp = letterManager.checkEachOtherLetterWithStamp(userId, operatingUserId);
+		if (withStamp) {
+			letter.setType(Constant.LETTER_TYPE_STAMP);
+		}else {
+			letter.setType(Constant.LETTER_TYPE_FREE);
+		}
+		
+		letter.setToUserId(operatingUserId);
+		
+		model.addAttribute("sendingLetter", operatingUserId);
+		return "/sendLetter";
+	}
+	
+	@RequestMapping(value="/send",method=RequestMethod.POST)
+	public String sendLetter(HttpServletRequest request,Letter letter,Model model){
+		
+		long userId = (Long)(request.getSession().getAttribute("userId"));
+		letter.setFromUserId(userId);
+		letter.setReplyLetterId(0L);
+		letterManager.addLetter(letter);
+		return "/sendLetter";
+	}
+	
+	/** ======================================收件箱功能===================================================*/
 	@RequestMapping(value="/notRead",method=RequestMethod.GET)
 	public String getNotRead(Model model,HttpServletRequest request){
 		List<LetterDto> letterDtos = new ArrayList<LetterDto>();

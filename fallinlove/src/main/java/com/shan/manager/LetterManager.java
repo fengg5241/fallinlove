@@ -90,6 +90,27 @@ public class LetterManager extends BaseManager {
 //	}
 	
 	/**
+	 * 查询当前fromUser是否曾经给toUser用邮票发过信，
+	 * 如果用过，双方以后都可以免费看彼此的信
+	 * @param fromUserId
+	 * @param toUserId
+	 * @return
+	 */
+	public boolean checkEachOtherLetterWithStamp(long fromUserId, long toUserId){
+		
+		//insert sql
+//		String insertSql = "select " + LoveTable.TABLE_LETTER + " SET " + LoveTable.COLUMN_STATUS + "=? WHERE " + LoveTable.COLUMN_SEQ_ID + " = ?";
+//		
+//		getJdbcTemplate().update(insertSql, new PreparedStatementSetter() {  
+//		      @Override  
+//		      public void setValues(PreparedStatement pstmt) throws SQLException {  
+//		          pstmt.setObject(1, "2");  
+//		          pstmt.setObject(2, letter.getSeqId());  
+//		  }});
+		return false;
+	}
+	
+	/**
 	 * Maps a row returned from a query of LETTER to a Restaurant object.
 	 * 
 	 * @param rs the result set with its cursor positioned at the current row
