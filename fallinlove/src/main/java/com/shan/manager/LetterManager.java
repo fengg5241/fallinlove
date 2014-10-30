@@ -3,6 +3,7 @@ package com.shan.manager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.slf4j.Logger;
@@ -24,13 +25,25 @@ public class LetterManager extends BaseManager {
 	 * @param userId
 	 * @return
 	 */
-	public List<Letter> getLettersToUser(long userId){
-		
-		String sql = "SELECT * FROM " + LoveTable.TABLE_LETTER +" WHERE " + 
-				LoveTable.COLUMN_FROM_USER_ID + " = "+ userId + 
-				  " AND " + LoveTable.COLUMN_RECORD_STATUS + " != 'D'";
-		List<Letter> letters = getJdbcTemplate().query(sql, letterRowMapper);
-		
+	public List<Letter> getLettersToUser(long userId) {
+
+		String sql = "SELECT * FROM " + LoveTable.TABLE_LETTER + " WHERE "
+				+ LoveTable.COLUMN_FROM_USER_ID + " = " + userId + " AND "
+				+ LoveTable.COLUMN_RECORD_STATUS + " != 'D' order by "
+				+ LoveTable.COLUMN_FROM_USER_ID + " , "
+				+ LoveTable.COLUMN_CREATE_TIME + " desc";
+		List<Letter> tempLetters = getJdbcTemplate()
+				.query(sql, letterRowMapper);
+
+		long tempId = -1;
+		List<Letter> letters = new ArrayList<Letter>();
+		for (Letter letter : tempLetters) {
+			if (tempId != (letter.getToUserId())) {
+				tempId = letter.getToUserId();
+				letters.add(letter);
+			}
+		}
+
 		return letters;
 	}
 	
@@ -40,13 +53,27 @@ public class LetterManager extends BaseManager {
 	 * @param status
 	 * @return
 	 */
-	public List<Letter> getLettersFromUser(long userId,String status){
-		
-		String sql = "SELECT * FROM " + LoveTable.TABLE_LETTER +" WHERE " + 
-				LoveTable.COLUMN_TO_USER_ID + " = "+ userId + " AND " + LoveTable.COLUMN_STATUS + " = '" + status 
-				 + "' AND " + LoveTable.COLUMN_RECORD_STATUS + " != 'D'";
-		List<Letter> letters = getJdbcTemplate().query(sql, letterRowMapper);
-		
+	public List<Letter> getLettersFromUser(long userId, String status) {
+
+		String sql = "SELECT * FROM " + LoveTable.TABLE_LETTER + " WHERE "
+				+ LoveTable.COLUMN_TO_USER_ID + " = " + userId + " AND "
+				+ LoveTable.COLUMN_STATUS + " = '" + status + "' AND "
+				+ LoveTable.COLUMN_RECORD_STATUS + " != 'D' order by "
+				+ LoveTable.COLUMN_TO_USER_ID + " , "
+				+ LoveTable.COLUMN_CREATE_TIME + " desc";
+		List<Letter> tempLetters = getJdbcTemplate()
+				.query(sql, letterRowMapper);
+
+		// need to filter, because fromUser can send lots of letters for the
+		// same toUser, only need show the latest one
+		long tempId = -1;
+		List<Letter> letters = new ArrayList<Letter>();
+		for (Letter letter : tempLetters) {
+			if (tempId != (letter.getFromUserId())) {
+				tempId = letter.getFromUserId();
+				letters.add(letter);
+			}
+		}
 		return letters;
 	}
 	
@@ -108,6 +135,16 @@ public class LetterManager extends BaseManager {
 //		          pstmt.setObject(2, letter.getSeqId());  
 //		  }});
 		return false;
+	}
+	
+	public List<Letter> getAllHistoryLetters(long fromUserId, long toUserId){
+		List<Letter> letters = new ArrayList<Letter>();
+//		select * from letter where record_status != 'D' 
+//				and ((from_user_id = '1' and to_user_id = '2') 
+//						or (from_user_id = '2' and to_user_id = '1')) order by create_time;
+		
+		
+		return letters;
 	}
 	
 	/**

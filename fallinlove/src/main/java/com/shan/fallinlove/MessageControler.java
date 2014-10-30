@@ -73,6 +73,40 @@ public class MessageControler {
 		return "/sendSuccess";
 	}
 	
+	/** ======================================回信模块===================================================*/
+	
+	@RequestMapping(value = "/reply/{operatingUserId}", method = RequestMethod.GET)
+	public String goToReplyLetter(Model model,
+			@PathVariable("operatingUserId") long operatingUserId,
+			HttpServletRequest request) {
+		Letter letter = new Letter();
+		//get all the history chat record
+//		letterManager.
+		model.addAttribute("operatingUserId", operatingUserId);
+		long userId = (Long) (request.getSession().getAttribute("userId"));
+		boolean withStamp = letterManager.checkEachOtherLetterWithStamp(userId, operatingUserId);
+		if (withStamp) {
+			letter.setType(Constant.LETTER_TYPE_STAMP);
+		}else {
+			letter.setType(Constant.LETTER_TYPE_FREE);
+		}
+		
+		letter.setToUserId(operatingUserId);
+		
+		model.addAttribute("sendingLetter", operatingUserId);
+		return "/sendLetter";
+	}
+	
+	@RequestMapping(value="/reply",method=RequestMethod.POST)
+	public String replyLetter(HttpServletRequest request,Letter letter,Model model){
+		
+		long userId = (Long)(request.getSession().getAttribute("userId"));
+		letter.setFromUserId(userId);
+		letter.setReplyLetterId(0L);
+		letterManager.addLetter(letter);
+		return "/sendSuccess";
+	}
+	
 	/** ======================================收件箱功能===================================================*/
 	@RequestMapping(value="/notRead",method=RequestMethod.GET)
 	public String getNotRead(Model model,HttpServletRequest request){
