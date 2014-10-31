@@ -139,9 +139,10 @@ public class LetterManager extends BaseManager {
 	
 	public List<Letter> getAllHistoryLetters(long fromUserId, long toUserId){
 		List<Letter> letters = new ArrayList<Letter>();
-//		select * from letter where record_status != 'D' 
-//				and ((from_user_id = '1' and to_user_id = '2') 
-//						or (from_user_id = '2' and to_user_id = '1')) order by create_time;
+		String sql = "select * from " + LoveTable.TABLE_LETTER + " where " + LoveTable.COLUMN_RECORD_STATUS + " != 'D'" + 
+				"and ((" + LoveTable.COLUMN_FROM_USER_ID +"=" + fromUserId + "and " + LoveTable.COLUMN_TO_USER_ID +"=" + toUserId +
+					")	or (" +LoveTable.COLUMN_FROM_USER_ID +"=" + toUserId + "and " + LoveTable.COLUMN_TO_USER_ID +"=" + fromUserId +
+					")) order by "+LoveTable.COLUMN_CREATE_TIME;
 		
 		
 		return letters;
@@ -163,6 +164,8 @@ public class LetterManager extends BaseManager {
 		letter.setToUserId(rs.getLong(LoveTable.COLUMN_TO_USER_ID));
 		letter.setType(rs.getString(LoveTable.COLUMN_TYPE));
 		letter.setWithStamp(rs.getString(LoveTable.COLUMN_WITH_STAMP));
+		letter.setCreateTime(rs.getTimestamp(LoveTable.COLUMN_CREATE_TIME));
+		letter.setUpdateTime(rs.getTimestamp(LoveTable.COLUMN_UPDATE_TIME));
 		return letter;
 	}
 	
