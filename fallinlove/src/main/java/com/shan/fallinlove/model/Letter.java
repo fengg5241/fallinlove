@@ -92,8 +92,10 @@ public class Letter extends BaseModel{
 
 	@Override
 	public String toString() {
-		return "Letter [seqId=" + seqId + ", content=" + content + ", type="
+		return "Letter [seqId=" + seqId + ", fromUserId=" + fromUserId
+				+ ", toUserId=" + toUserId + ", content=" + content + ", type="
 				+ type + ", status=" + status + ", withStamp=" + withStamp
 				+ ", replyLetterId=" + replyLetterId + "]";
 	}
+
 }

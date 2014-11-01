@@ -889,7 +889,7 @@ document.getElementById('head_red_simple_user').innerHTML = loginstr;	//会员�
 	<!--增加通信记录end-->
 		<div class="letters_content send_content">
 		<dl class="e_clear">
-			<form method="post" id="formform" name="letter" action="/msg/send" commandName="letter" target="_self">
+			<form method="post" id="formform" name="letter" action="../send" commandName="letter" target="_self">
 				<div class="editor"> 
 					<div class="tools2">
 						<ul>

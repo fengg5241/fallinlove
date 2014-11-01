@@ -1541,8 +1541,7 @@
 								<ul>
 
 									<!-- 										<li class="wirte_btn"><a onclick="window.open('http://www.jiayuan.com/msg/send.php?uhash=44ec534301f3a4a313b205115b3b714b&amp;fxly=cp-eexpress&amp;src=none&amp;cnj=profile3&amp;pre_url='+location.href)" href="javascript:;" onmousedown="send_jy_pv2('|buttonMailUpV1|');"></a></li> -->
-									<li class="wirte_btn"><a
-										href="../../msg/send/${operatingUser.userId}"></a></li>
+									<li class="wirte_btn"><a href="../../msg/send/${operatingUser.userId}" target="_blank"></a></li>
 
 									<%-- 										<li class="greet_btn"><a href="../../sendLetter/${operatingUserId}" onclick="openWindow('','','http://www.jiayuan.com/msg/hello.php?type=20&amp;fxly=cp-eexpress&amp;src=none&amp;uhash=44ec534301f3a4a313b205115b3b714b&amp;cnj=profile2',612,600);" onmousedown="send_jy_pv2('|buttonGreetUpV1|');"></a></li> --%>
 									<!-- 																				<li class="gift_btn" id="gift_btn"> -->
