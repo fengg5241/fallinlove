@@ -1,22 +1,25 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ page language="java" contentType="text/html; charset=UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<!DOCTYPE html>
 <html><head>
      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-   <script src="resources/js/beacon.js" async=""></script><script src="resources/js/jquery-1.js" type="text/javascript"></script>
-	 <script src="resources/js/layer.js" type="text/javascript"></script>
-	 <script src="resources/js/common_tools.js" type="text/javascript"></script>	
-	 <script src="resources/js/MaskDiv.js" type="text/javascript"></script>
-	 <script src="resources/js/JY.js" type="text/javascript"></script><!--佳缘桌面弹层开始--><link href="resources/css/layer_002.css" rel="stylesheet" type="text/css"><script src="resources/js/clickonce.js" type="text/javascript"></script></head><body><div class="layerTable" id="layerTable" style="display:none;"><div class="layerTableTop"><a href="javascript:hidelayerTable(0)" class="layerTableClose"></a></div><div class="layerTableBody"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td><a href="javascript:hidelayerTable(2)" class="layerTableButton"></a></td><td><a href="javascript:hidelayerTable(1)" class="layerTableLink">查看详情</a></td><td><a href="javascript:hidelayerTable(0)" class="layerTableLink">以后再说</a></td></tr></tbody></table></div></div><script type="text/javascript">function hidelayerTable(butt){document.getElementById("layerTable").style.display="none";document.getElementById("header_login_pop_mask").style.display="none";location.href=JY.url.getChannelUrl("usercp");if(butt==1){window.open("http://webim.jiayuan.com/client/download.php");}if(butt==2){NavigateTo("jiayuan.com");}}</script><!--佳缘桌面弹层结束-->
-   <script src="resources/js/ajax.js" type="text/javascript"></script>
-   <script src="resources/js/verify_phone.js" type="text/javascript"></script>
-   <script src="resources/js/giftmall_open.js" type="text/javascript"></script>
-	 <link href="resources/css/layer.css" rel="stylesheet" type="text/css">
+   <script src="../../resources/js/beacon.js" async=""></script><script src="../../resources/js/jquery-1.js" type="text/javascript"></script>
+	 <script src="../../resources/js/layer.js" type="text/javascript"></script>
+	 <script src="../../resources/js/common_tools.js" type="text/javascript"></script>	
+	 <script src="../../resources/js/MaskDiv.js" type="text/javascript"></script>
+	 <script src="../../resources/js/JY.js" type="text/javascript"></script><!--佳缘桌面弹层开始--><link href="../../resources/css/layer_002.css" rel="stylesheet" type="text/css"><script src="../../resources/js/clickonce.js" type="text/javascript"></script></head><body><div class="layerTable" id="layerTable" style="display:none;"><div class="layerTableTop"><a href="javascript:hidelayerTable(0)" class="layerTableClose"></a></div><div class="layerTableBody"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td><a href="javascript:hidelayerTable(2)" class="layerTableButton"></a></td><td><a href="javascript:hidelayerTable(1)" class="layerTableLink">查看详情</a></td><td><a href="javascript:hidelayerTable(0)" class="layerTableLink">以后再说</a></td></tr></tbody></table></div></div><script type="text/javascript">function hidelayerTable(butt){document.getElementById("layerTable").style.display="none";document.getElementById("header_login_pop_mask").style.display="none";location.href=JY.url.getChannelUrl("usercp");if(butt==1){window.open("http://webim.jiayuan.com/client/download.php");}if(butt==2){NavigateTo("jiayuan.com");}}</script><!--佳缘桌面弹层结束-->
+   <script src="../../resources/js/ajax.js" type="text/javascript"></script>
+   <script src="../../resources/js/verify_phone.js" type="text/javascript"></script>
+   <script src="../../resources/js/giftmall_open.js" type="text/javascript"></script>
+	 <link href="../../resources/css/layer.css" rel="stylesheet" type="text/css">
 	 <!-- <link href="http://images1zw.jyimg.com/w4/usercp_new/c/myjiayuan.css" rel="stylesheet" type="text/css" />  -->
-	 <link href="resources/css/myjiayuan.css" rel="stylesheet" type="text/css">	 
+	 <link href="../../resources/css/myjiayuan.css" rel="stylesheet" type="text/css">	 
    <!-- 上线改回<link href="http://images1zw.jyimg.com/w4/msg/style/word_2012.css?20130821" rel="stylesheet" type="text/css" />  --> 
-   <link href="resources/css/word_2012.css" rel="stylesheet" type="text/css">    
-	 <link href="resources/css/tinyeditor.css" rel="stylesheet" type="text/css">
-	 <link type="text/css" rel="stylesheet" href="resources/css/jy_ad.css">
-	<script type="text/javascript"  href="resources//jy_ad.js"></script>
+   <link href="../../resources/css/word_2012.css" rel="stylesheet" type="text/css">    
+	 <link href="../../resources/css/tinyeditor.css" rel="stylesheet" type="text/css">
+	 <link type="text/css" rel="stylesheet" href="../../resources/css/jy_ad.css">
+	<script type="text/javascript"  href="../../resources//jy_ad.js"></script>
 	
 	 <title>发信页面 </title>
 	 <!--[if lte IE 6]>
@@ -43,13 +46,13 @@ var reg_host_const_test = 0;
 var reg_host_domain = document.domain;
 var mobanList =new Array();
    
-   mobanList.push( '：）你好~我今年29，典型的魔羯座人，我是个爱思考，处事冷静的人。我们蛮有缘分的，期待你的回复。');
+   mobanList.push( '：）你好~我们蛮有缘分的，期待你的回复。');
    if(reg_host_const_flag == 0 || reg_host_const_flag == 7) {
-      if(reg_host_const_test == 1){ 
-	     document.domain = 'miuu.cn';
-	  }else{
-	     document.domain = 'jiayuan.com';
-	  }
+//       if(reg_host_const_test == 1){ 
+// 	     document.domain = 'miuu.cn';
+// 	  }else{
+// 	     document.domain = 'jiayuan.com';
+// 	  }
    }
   
 function str_trim(str){
@@ -375,8 +378,10 @@ function loadMap(){
 
 
  <!-- letters_head start-->
-<script type="text/javascript" src="resources/js/head_common.js"></script> 
-<script type="text/javascript" src="resources/js/head_red_simple.js"></script><script type="text/javascript" src="resources/js/head_pink.js"></script><script type="text/javascript">
+<script type="text/javascript" src="../../resources/js/head_common.js"></script> 
+<!-- <script type="text/javascript" src="../../resources/js/head_red_simple.js"></script> -->
+<!-- <script type="text/javascript" src="../../resources/js/head_pink.js"></script> -->
+<script type="text/javascript">
 //会员信息对象
 window.HEAD_USER = {};
 HEAD_USER.uid = 0;
@@ -758,8 +763,8 @@ var current_nav_flag = jy_head_function.get_channel() + '_css';
 //设置当前频道导航选中样式
 common_nav_array[current_nav_flag] = 'head_nav_cur';
 </script>
-<script type="text/javascript" src="resources/js/jiayuan_logo_config.js"></script>
-<script type="text/javascript" src="resources/js/JY_Alert.js"></script>
+<script type="text/javascript" src="../../resources/js/jiayuan_logo_config.js"></script>
+<script type="text/javascript" src="../../resources/js/JY_Alert.js"></script>
 <!--[if lte IE 6]>
 <script type="text/javascript" src="http://images1.jyimg.com/w4/common/j/DD_belatedPNG_0.0.8a_IE6.js"></script>
 <![endif]--> <style type="text/css">
@@ -830,14 +835,14 @@ document.getElementById('head_red_simple_user').innerHTML = loginstr;	//会员�
 		<div class="recipient_top" style="height:200px;">
 			 <div class="avatar_send">
 				 <a onmousedown="send_jy_pv2('msg_fx_zp');" target="_blank" href="http://www.jiayuan.com//105784980?fxly=cp-msg-ym" title="尧利">
-					<img src="resources/img/97f60e629_1_avatar_n.jpg" alt="尧利" height="90px" width="74px">
+					<img src="../../resources/img/97f60e629_1_avatar_n.jpg" alt="尧利" height="90px" width="74px">
 				 </a>									
 			 </div>
 			 <div class="info">
 			 	  <div class="status"> 
 						<a target="_blank" href="http://www.jiayuan.com//105784980?fxly=cp-msg-ym" onmousedown="send_jy_pv2('msg_fx_nc');" title="尧利">尧利</a>
 						<span>
-																														<img src="resources/img/senior_member_icon.png" title="VIP会员">
+																														<img src="../../resources/img/senior_member_icon.png" title="VIP会员">
 														
 						</span>
 						<a href="javascript:void(0);" onclick="window.open('http://www.jiayuan.com/msgapp/ems/?uid_hash=8d97f60e62955ad0183d29bac647df5f&amp;from=msg');return false;" class="a_blue12">给她发特快专递</a>
@@ -876,18 +881,19 @@ document.getElementById('head_red_simple_user').innerHTML = loginstr;	//会员�
 	</style>
 
 		<p class="e_clear messageRecord">
-		<img src="resources/img/safe_icon.jpg" height="15" width="14">&nbsp;&nbsp;<span>安全提示：请不要轻易透露您的联系方式，不要借钱给陌生人。</span>&nbsp;&nbsp;&nbsp;&nbsp;<a class="c_lblue" href="http://www.jiayuan.com/subject/2011Q3/safeinfo/index.html" target="_blank">交友安全提示</a>
+		<img src="../../resources/img/safe_icon.jpg" height="15" width="14">&nbsp;&nbsp;<span>安全提示：请不要轻易透露您的联系方式，不要借钱给陌生人。</span>&nbsp;&nbsp;&nbsp;&nbsp;<a class="c_lblue" href="http://www.jiayuan.com/subject/2011Q3/safeinfo/index.html" target="_blank">交友安全提示</a>
 	</p>
 	<!--增加通信记录end-->
 		<div class="letters_content send_content">
 		<dl class="e_clear">
-			<form method="post" id="formform" name="formform" action="/dosend.php" target="_self">
+			<form method="post" id="formform" name="formform" action="/msg/send" commandName="letter" target="_self">
 				<div class="editor"> 
 					<div class="tools2">
 						<ul>
-							<li class="templates" onclick="custom_onclick();" onmousedown="send_jy_pv2('msg_fx_mb');">使用模板</li>
+<!-- 						shanf -->
+<!-- 							<li class="templates" onclick="custom_onclick();">使用模板</li> -->
 														
-							<li id="zhaohuati_tag" class="help"><a onclick="templates_close();onEditerClick();stationery_close();" href="http://www.jiayuan.com/msg/draft.php?zhaohuati=1&amp;to_uid=105784980" onmousedown="send_jy_pv2('msg_fx_zht');" target="tmptmp_iframe">帮我找话题</a></li>																
+<!-- 							<li id="zhaohuati_tag" class="help"><a onclick="templates_close();onEditerClick();stationery_close();" href="http://www.jiayuan.com/msg/draft.php?zhaohuati=1&amp;to_uid=105784980" onmousedown="send_jy_pv2('msg_fx_zht');" target="tmptmp_iframe">帮我找话题</a></li>																 -->
 					<!-- 		<li class="fonts" onmousedown="send_jy_pv2('msg_fx_zt');" onclick="custom_close();onEditerClick();dispToolbar()"><a>字体</a></li>
 							<li class="stationery" id="stationery" onmousedown="send_jy_pv2('msg_fx_xz');" onclick="onEditerClick();stationery_onclick();"><a>信纸</a></li>
 					 -->		
@@ -900,22 +906,22 @@ document.getElementById('head_red_simple_user').innerHTML = loginstr;	//会员�
 				<div class="custom_layer" id="custom_layer" style="display: none;"><a class="custom_close" href="#" onclick="custom_close(); return false;">关闭</a>
 				<ul>
               	              	
-                <li id="moban_li_1"><span id="text_1">：）你好~我今年29，典型的魔羯座人，我是个爱思考，处事冷静的人。我…</span>
+                <li id="moban_li_1"><span id="text_1">：）你好~我们蛮有缘分的，期待你的回复。</span>
                 	<input id="moban_1_subject" value="发信模板" type="hidden">
-									<input id="moban_1_content" value="：）你好~我今年29，典型的魔羯座人，我是个爱思考，处事冷静的人。我们蛮有缘分的，期待你的回复。" type="hidden">
+									<input id="moban_1_content" value="：）你好~我们蛮有缘分的，期待你的回复。" type="hidden">
 									<input id="moban_1_nowid" value="17982468" type="hidden">
-                  <textarea class="edit" style="display:none" id="edit_1" onblur="javascript:this.style.height='14px';this.rows = '1';this.style.color='#AAA';" onfocus="javascript:this.style.height='122px';this.rows = '5';this.style.color='#000'">：）你好~我今年29，典型的魔羯座人，我是个爱思考，处事冷静的人。我们蛮有缘分的，期待你的回复。</textarea>
-                  <a class="a_blue12" href="javascript:void(0)" onclick="insert_moban(1)" onmousedown="send_jy_pv2('msg_fx_mb_sy')">使用</a>
-                  <a class="a_blue12" href="javascript:void(0)" onclick="change(1)">修改</a>
-                  <span class="limit_count" style="display:none">（限100字内）</span>
-                  <a class="a_blue12" href="javascript:void(0)" style="display:none" onclick="save_moban(1)" onmousedown="send_jy_pv2('msg_fx_mb_bc')">保存</a>
-                  <a class="a_blue12" href="javascript:void(0)" style="display:none" onclick="reset_moban(1)">取消</a>
+                  <textarea class="edit" style="display:none" id="edit_1" onblur="javascript:this.style.height='14px';this.rows = '1';this.style.color='#AAA';" onfocus="javascript:this.style.height='122px';this.rows = '5';this.style.color='#000'">：）你好~我们蛮有缘分的，期待你的回复。</textarea>
+<!--                   <a class="a_blue12" href="javascript:void(0)" onclick="insert_moban(1)" onmousedown="send_jy_pv2('msg_fx_mb_sy')">使用</a> -->
+<!--                   <a class="a_blue12" href="javascript:void(0)" onclick="change(1)">修改</a> -->
+<!--                   <span class="limit_count" style="display:none">（限100字内）</span> -->
+<!--                   <a class="a_blue12" href="javascript:void(0)" style="display:none" onclick="save_moban(1)" onmousedown="send_jy_pv2('msg_fx_mb_bc')">保存</a> -->
+<!--                   <a class="a_blue12" href="javascript:void(0)" style="display:none" onclick="reset_moban(1)">取消</a> -->
                    </li>               
                             
               </ul>
             </div>
 
-				<textarea id="f_content" name="contents" style="border:none;border:1px solid none;width:664px;padding:2px 10px;height:200px;line-height:24px;font-size:14px;color:#666;resize: none;">：）你好~我今年29，典型的魔羯座人，我是个爱思考，处事冷静的人。我们蛮有缘分的，期待你的回复。</textarea>
+				<textarea id="f_content" name="contents" style="border:none;border:1px solid none;width:664px;padding:2px 10px;height:200px;line-height:24px;font-size:14px;color:#666;resize: none;">：）你好~我们蛮有缘分的，期待你的回复。</textarea>
 
 			</div>
 						
@@ -951,7 +957,7 @@ document.getElementById('head_red_simple_user').innerHTML = loginstr;	//会员�
 			<div class="letters_btn_layer_bottom"></div>
 		</div>
 				
-		<a href="javascript:void(0);" onmouseover="get_id('anniu_tishi_1').style.display=''" onmouseout="get_id('anniu_tishi_1').style.display='none';" style="cursor:pointer;" class="stamps" id="anniu_1" onmousedown="send_jy_pv2('msg_fx_typfs');" onclick='get_id("liwu_nofree").value=0;get_id("self_pay").value=1; get_id("fxbc").value=0; get_id("cai_xin").value=0;;is_save_available(1);return false;'></a></li> 
+		<a href="javascript:void(0);" onmouseover="get_id('anniu_tishi_1').style.display=''" onmouseout="get_id('anniu_tishi_1').style.display='none';" style="cursor:pointer;" class="stamps" id="anniu_1"  onclick='get_id("liwu_nofree").value=0;get_id("self_pay").value=1; get_id("fxbc").value=0; get_id("cai_xin").value=0;;is_save_available(1);return false;'></a></li> 
 
 
 
@@ -1025,7 +1031,7 @@ document.getElementById('head_red_simple_user').innerHTML = loginstr;	//会员�
             	<div class="head"></div>
                 <div class="center">
                 	<div class="tips">贴邮票发信，免费赠送此款礼物</div>
-                    <div class="pic" id="msg_giftmall_showpic"><a href="javascript:void(0);"><img src="resources/img/1351244875.gif"><span>魅力值20点</span></a></div>
+                    <div class="pic" id="msg_giftmall_showpic"><a href="javascript:void(0);"><img src="../../resources/img/1351244875.gif"><span>魅力值20点</span></a></div>
                     <div class="title" id="msg_giftmall_show"> 
                     	<input name="liwu_checkbox" id="liwu_checkbox" checked="checked" type="checkbox">
                         <span>星座转盘<br><i>2张佳缘邮票</i></span>
@@ -1045,7 +1051,7 @@ document.getElementById('head_red_simple_user').innerHTML = loginstr;	//会员�
 		<!-- 广告系统 广告 结束 -->		
  </div>
 
- <script type="text/javascript" src="resources/js/w4-simple.js"></script><style type="text/css">
+ <script type="text/javascript" src="../../resources/js/w4-simple.js"></script><style type="text/css">
 *{padding:0;margin:0}
 .hf_wapper {width:950px;margin:0 auto;clear:both;font-family:SimSun,Arial,Helvetica,sans-serif}
 .hf_wapper img, .hf_wapper img a{border:none}
@@ -1250,7 +1256,7 @@ var s = document.createElement("script"), el = document.getElementsByTagName("sc
 s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js"; 
 el.parentNode.insertBefore(s, el); 
 })(); 
-</script><img src="resources/img/a.gif" style="display:none"> 
+</script><img src="../../resources/img/a.gif" style="display:none"> 
 <noscript> 
 <img src="http://b.scorecardresearch.com/p?c1=2&c2=15205083&cv=2.0&cj=1" /> 
 </noscript> 
@@ -1485,13 +1491,13 @@ DD_belatedPNG.fix('.fixPNG');
 <!--弹出层 start-->
 <div class="layer" id="open_window" style="display:none;">
 	<div class="layer_box">
-		<div class="layer_title" id="open_window_head"><h2><img src="resources/img/op_but_close.gif" onclick="closeWindow()" title="关闭"><span id="open_window_title"></span></h2></div>
+		<div class="layer_title" id="open_window_head"><h2><img src="../../resources/img/op_but_close.gif" onclick="closeWindow()" title="关闭"><span id="open_window_title"></span></h2></div>
 		<div class="layer_content" id="open_window_content"></div>
-		<div id="iframe_loading" style="position: absolute;"><img id="loading_focus" src="resources/img/loading.gif"></div>
+		<div id="iframe_loading" style="position: absolute;"><img id="loading_focus" src="../../resources/img/loading.gif"></div>
 	</div>
 </div>
 <!--弹出层 end-->
-<script type="text/javascript" src="resources/html/ad.htm"></script>
+<script type="text/javascript" src="../../resources/html/ad.htm"></script>
  
 
 </body></html>

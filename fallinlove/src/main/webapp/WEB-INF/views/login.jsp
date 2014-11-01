@@ -436,7 +436,7 @@ common_nav_array[current_nav_flag] = 'head_nav_cur';
                   <label class="lab">密<i class="f_white">密码</i>码</label>
                   <div class="login_inpBox">
                     <label style="display: inline;" for="login_password" class="login_label">密码</label>
-                    <input class="text" name="password" autocomplete="off" id="login_password" type="password">
+                    <input class="text" name="password" autocomplete="off" id="login_password" value="123456" type="password">
                   </div>
                 </div>
                                 <p class="loginSelf mT10">
