@@ -4,11 +4,13 @@
 <!DOCTYPE html>
 <html><head>
      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-   <script src="../../resources/js/beacon.js" async=""></script><script src="../../resources/js/jquery-1.js" type="text/javascript"></script>
+   <script src="../../resources/js/beacon.js"></script><script src="../../resources/js/jquery-1.js" type="text/javascript"></script>
 	 <script src="../../resources/js/layer.js" type="text/javascript"></script>
 	 <script src="../../resources/js/common_tools.js" type="text/javascript"></script>	
 	 <script src="../../resources/js/MaskDiv.js" type="text/javascript"></script>
-	 <script src="../../resources/js/JY.js" type="text/javascript"></script><!--佳缘桌面弹层开始--><link href="../../resources/css/layer_002.css" rel="stylesheet" type="text/css"><script src="../../resources/js/clickonce.js" type="text/javascript"></script></head><body><div class="layerTable" id="layerTable" style="display:none;"><div class="layerTableTop"><a href="javascript:hidelayerTable(0)" class="layerTableClose"></a></div><div class="layerTableBody"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td><a href="javascript:hidelayerTable(2)" class="layerTableButton"></a></td><td><a href="javascript:hidelayerTable(1)" class="layerTableLink">查看详情</a></td><td><a href="javascript:hidelayerTable(0)" class="layerTableLink">以后再说</a></td></tr></tbody></table></div></div><script type="text/javascript">function hidelayerTable(butt){document.getElementById("layerTable").style.display="none";document.getElementById("header_login_pop_mask").style.display="none";location.href=JY.url.getChannelUrl("usercp");if(butt==1){window.open("http://webim.jiayuan.com/client/download.php");}if(butt==2){NavigateTo("jiayuan.com");}}</script><!--佳缘桌面弹层结束-->
+	 <script src="../../resources/js/JY.js" type="text/javascript"></script><!--佳缘桌面弹层开始-->
+	 <link href="../../resources/css/layer_002.css" rel="stylesheet" type="text/css">
+	 <script src="../../resources/js/clickonce.js" type="text/javascript"></script></head><body><div class="layerTable" id="layerTable" style="display:none;"><div class="layerTableTop"><a href="javascript:hidelayerTable(0)" class="layerTableClose"></a></div><div class="layerTableBody"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td><a href="javascript:hidelayerTable(2)" class="layerTableButton"></a></td><td><a href="javascript:hidelayerTable(1)" class="layerTableLink">查看详情</a></td><td><a href="javascript:hidelayerTable(0)" class="layerTableLink">以后再说</a></td></tr></tbody></table></div></div><script type="text/javascript">function hidelayerTable(butt){document.getElementById("layerTable").style.display="none";document.getElementById("header_login_pop_mask").style.display="none";location.href=JY.url.getChannelUrl("usercp");if(butt==1){window.open("http://webim.jiayuan.com/client/download.php");}if(butt==2){NavigateTo("jiayuan.com");}}</script><!--佳缘桌面弹层结束-->
    <script src="../../resources/js/ajax.js" type="text/javascript"></script>
    <script src="../../resources/js/verify_phone.js" type="text/javascript"></script>
    <script src="../../resources/js/giftmall_open.js" type="text/javascript"></script>
@@ -19,7 +21,7 @@
    <link href="../../resources/css/word_2012.css" rel="stylesheet" type="text/css">    
 	 <link href="../../resources/css/tinyeditor.css" rel="stylesheet" type="text/css">
 	 <link type="text/css" rel="stylesheet" href="../../resources/css/jy_ad.css">
-	<script type="text/javascript"  href="../../resources//jy_ad.js"></script>
+	<script type="text/javascript"  href="../../resources/jy_ad.js"></script>
 	
 	 <title>发信页面 </title>
 	 <!--[if lte IE 6]>
@@ -34,7 +36,7 @@
 		 
 
 
-<script>
+<script type="text/javascript">
 send_jy_pv2('msg_xinban_send_pv');
 var is_submit = false;
 var check_tanchu_kaiguan = 0;
@@ -82,23 +84,24 @@ function check_content(anniu_id, if_click_mobile){
 	var vlength =str_trim(words).length; 
 	
 	if(vlength==0){
-		JY_Alert('温馨提示','您还没有填写任何信件内容，如果不知道如何开口，可以使用“帮我找话题”');
+		JY_Alert('温馨提示','您还没有填写任何信件内容');
 		return false;
 	}else if(vlength > 5000)	{
 		JY_Alert('温馨提示',"请将信件内容精简至5000字以内");
 		return false;
 	}	
-	now_if_click_mobile = if_click_mobile;	
-	if(get_id('self_pay').value == 1)	{
-		check_need_tanchu(1, anniu_id);
-	}else if(get_id('cai_xin').value == 1){
-		check_need_tanchu(2, anniu_id);
-	}else if(get_id('liwu_nofree').value == 1){
-		check_need_tanchu(3, anniu_id);
-	}else	{
-		deal_liwu_free();
-		do_no_tanchu(anniu_id);
-	}
+// 	now_if_click_mobile = if_click_mobile;	
+	do_no_tanchu(anniu_id);
+// 	if(get_id('self_pay').value == 1)	{
+// 		check_need_tanchu(1, anniu_id);
+// 	}else if(get_id('cai_xin').value == 1){
+// 		check_need_tanchu(2, anniu_id);
+// 	}else if(get_id('liwu_nofree').value == 1){
+// 		check_need_tanchu(3, anniu_id);
+// 	}else	{
+// 		deal_liwu_free();
+// 		do_no_tanchu(anniu_id);
+// 	}
 	return true;
 }
 function check_need_tanchu(tanchu_type, anniu_id){
@@ -143,9 +146,9 @@ function check_need_tanchu(tanchu_type, anniu_id){
 	}
 }
 function deal_liwu_free(){
-	if('1' == 1 && get_id('liwu_checkbox').checked == true)		{
-		document.getElementById('liwu_free').value = 1;
-	}
+// 	if('1' == 1 && get_id('liwu_checkbox').checked == true)		{
+// 		document.getElementById('liwu_free').value = 1;
+// 	}
 }
 function do_tanchu(){
 	var cx = get_id('cai_xin').value;
@@ -168,11 +171,11 @@ function do_tanchu_liwu(){
 }
 function do_no_tanchu(anniu_id){
 	window.onbeforeunload = '';		
-	if(get_id('liwu_checkbox').checked != true){
-		send_jy_pv2('liwu_msg_01');
-	}		
-	document.getElementById('formform').action='http://www.jiayuan.com/msg/dosend.php';
-	document.getElementById('formform').target='_self';
+// 	if(get_id('liwu_checkbox').checked != true){
+// 		send_jy_pv2('liwu_msg_01');
+// 	}		
+// 	document.getElementById('formform').action='http://www.jiayuan.com/msg/dosend.php';
+// 	document.getElementById('formform').target='_self';
 	try{	
 		if(is_submit)
 				return false;
@@ -182,11 +185,11 @@ function do_no_tanchu(anniu_id){
 
 	words = get_Html_content();
 	
-	for(var i=0;i<mobanList.length;i++){
-		if(words == mobanList[i]){
-			send_jy_pv2('msg_fx_mbsycs')
-		}
-	}
+// 	for(var i=0;i<mobanList.length;i++){
+// 		if(words == mobanList[i]){
+// 			send_jy_pv2('msg_fx_mbsycs')
+// 		}
+// 	}
 	get_id('formform').submit();
 	return true;
 }
@@ -886,7 +889,7 @@ document.getElementById('head_red_simple_user').innerHTML = loginstr;	//会员�
 	<!--增加通信记录end-->
 		<div class="letters_content send_content">
 		<dl class="e_clear">
-			<form method="post" id="formform" name="formform" action="/msg/send" commandName="letter" target="_self">
+			<form method="post" id="formform" name="letter" action="/msg/send" commandName="letter" target="_self">
 				<div class="editor"> 
 					<div class="tools2">
 						<ul>
@@ -921,7 +924,7 @@ document.getElementById('head_red_simple_user').innerHTML = loginstr;	//会员�
               </ul>
             </div>
 
-				<textarea id="f_content" name="contents" style="border:none;border:1px solid none;width:664px;padding:2px 10px;height:200px;line-height:24px;font-size:14px;color:#666;resize: none;">：）你好~我们蛮有缘分的，期待你的回复。</textarea>
+				<textarea id="f_content" name="content" style="border:none;border:1px solid none;width:664px;padding:2px 10px;height:200px;line-height:24px;font-size:14px;color:#666;resize: none;">：）你好~我们蛮有缘分的，期待你的回复。</textarea>
 
 			</div>
 						
@@ -957,7 +960,7 @@ document.getElementById('head_red_simple_user').innerHTML = loginstr;	//会员�
 			<div class="letters_btn_layer_bottom"></div>
 		</div>
 				
-		<a href="javascript:void(0);" onmouseover="get_id('anniu_tishi_1').style.display=''" onmouseout="get_id('anniu_tishi_1').style.display='none';" style="cursor:pointer;" class="stamps" id="anniu_1"  onclick='get_id("liwu_nofree").value=0;get_id("self_pay").value=1; get_id("fxbc").value=0; get_id("cai_xin").value=0;;is_save_available(1);return false;'></a></li> 
+		<a href="javascript:void(0);" onmouseover="get_id('anniu_tishi_1').style.display=''" onmouseout="get_id('anniu_tishi_1').style.display='none';" style="cursor:pointer;" class="stamps" id="anniu_1"  onclick='get_id("withStamp").value=2;get_id("letterType").value=2;is_save_available(1);return false;'></a></li> 
 
 
 
@@ -970,11 +973,11 @@ document.getElementById('head_red_simple_user').innerHTML = loginstr;	//会员�
 			<div class="letters_btn_layer_bottom"></div>
 		</div> 
 		
-		<a href="###" onmouseover="get_id('anniu_tishi_2').style.display=''" onmouseout="get_id('anniu_tishi_2').style.display='none';" style="cursor:pointer;" class="free" id="anniu_2" onmousedown="send_jy_pv2('msg_fx_mffs');" onclick='get_id("liwu_nofree").value=0;get_id("self_pay").value=0; get_id("fxbc").value=0; get_id("cai_xin").value=0;get_id("need_fxtyp_tanchu").value=0;;is_save_available(2);return false;'></a></li>
+		<a href="###" onmouseover="get_id('anniu_tishi_2').style.display=''" onmouseout="get_id('anniu_tishi_2').style.display='none';" style="cursor:pointer;" class="free" id="anniu_2"  onclick='get_id("withStamp").value=1;get_id("letterType").value=1;is_save_available(2);return false;'></a></li>
 
 
 
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 	var newuser = '0';
 		//有3个按钮 手机贴邮票 并且是新会员时 默认显示贴邮票
 	if(get_id('anniu_3')!=null&&newuser==1&&get_id('anniu_2').className=='stamps'){
@@ -986,8 +989,11 @@ document.getElementById('head_red_simple_user').innerHTML = loginstr;	//会员�
 	}
 		
 
-</script>
+</script> -->
 								<!--隐藏元素-->
+									<input name="type" id="letterType" value="1" type="hidden">
+									<input name="withStamp" id="withStamp" value="1" type="hidden">
+									
 									<input name="ok_xinzhi_id" id="ok_xinzhi_id" value="" type="hidden">
 									<input name="fxly" id="fxly" value="cp-eexpress" type="hidden">
 									<input name="tj_wz" id="tj_wz" value="none" type="hidden">
@@ -1033,8 +1039,8 @@ document.getElementById('head_red_simple_user').innerHTML = loginstr;	//会员�
                 	<div class="tips">贴邮票发信，免费赠送此款礼物</div>
                     <div class="pic" id="msg_giftmall_showpic"><a href="javascript:void(0);"><img src="../../resources/img/1351244875.gif"><span>魅力值20点</span></a></div>
                     <div class="title" id="msg_giftmall_show"> 
-                    	<input name="liwu_checkbox" id="liwu_checkbox" checked="checked" type="checkbox">
-                        <span>星座转盘<br><i>2张佳缘邮票</i></span>
+<!--                     	<input name="liwu_checkbox" id="liwu_checkbox" checked="checked" type="checkbox"> -->
+<!--                         <span>星座转盘<br><i>2张佳缘邮票</i></span> -->
 					</div>
 					
 																						<div class="more" style="display:none;"><a href="javascript:void(0);" id="inv_send3" onclick="return false;">选择更多礼物&gt;&gt;</a></div>

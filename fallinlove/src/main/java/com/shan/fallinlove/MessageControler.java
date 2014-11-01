@@ -59,13 +59,13 @@ public class MessageControler {
 		
 		letter.setToUserId(operatingUserId);
 		
-		model.addAttribute("sendingLetter", operatingUserId);
+		model.addAttribute("sendingLetter", letter);
 		return "/sendLetter";
 	}
 	
 	@RequestMapping(value="/send",method=RequestMethod.POST)
 	public String sendLetter(HttpServletRequest request,Letter letter,Model model){
-		
+		System.out.println(letter.toString());
 		long userId = (Long)(request.getSession().getAttribute("userId"));
 		letter.setFromUserId(userId);
 		letter.setReplyLetterId(0L);
