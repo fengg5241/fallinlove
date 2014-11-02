@@ -1,400 +1,28 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-<!DOCTYPE html>
-<html><head>
-     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-   <script src="../../resources/js/beacon.js"></script><script src="../../resources/js/jquery-1.js" type="text/javascript"></script>
-	 <script src="../../resources/js/layer.js" type="text/javascript"></script>
-	 <script src="../../resources/js/common_tools.js" type="text/javascript"></script>	
-	 <script src="../../resources/js/MaskDiv.js" type="text/javascript"></script>
-	 <script src="../../resources/js/JY.js" type="text/javascript"></script><!--佳缘桌面弹层开始-->
-	 <link href="../../resources/css/layer_002.css" rel="stylesheet" type="text/css">
-	 <script src="../../resources/js/clickonce.js" type="text/javascript"></script></head><body><div class="layerTable" id="layerTable" style="display:none;"><div class="layerTableTop"><a href="javascript:hidelayerTable(0)" class="layerTableClose"></a></div><div class="layerTableBody"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td><a href="javascript:hidelayerTable(2)" class="layerTableButton"></a></td><td><a href="javascript:hidelayerTable(1)" class="layerTableLink">查看详情</a></td><td><a href="javascript:hidelayerTable(0)" class="layerTableLink">以后再说</a></td></tr></tbody></table></div></div><script type="text/javascript">function hidelayerTable(butt){document.getElementById("layerTable").style.display="none";document.getElementById("header_login_pop_mask").style.display="none";location.href=JY.url.getChannelUrl("usercp");if(butt==1){window.open("http://webim.jiayuan.com/client/download.php");}if(butt==2){NavigateTo("jiayuan.com");}}</script><!--佳缘桌面弹层结束-->
-   <script src="../../resources/js/ajax.js" type="text/javascript"></script>
-   <script src="../../resources/js/verify_phone.js" type="text/javascript"></script>
-   <script src="../../resources/js/giftmall_open.js" type="text/javascript"></script>
-	 <link href="../../resources/css/layer.css" rel="stylesheet" type="text/css">
-	 <!-- <link href="http://images1zw.jyimg.com/w4/usercp_new/c/myjiayuan.css" rel="stylesheet" type="text/css" />  -->
-	 <link href="../../resources/css/myjiayuan.css" rel="stylesheet" type="text/css">	 
-   <!-- 上线改回<link href="http://images1zw.jyimg.com/w4/msg/style/word_2012.css?20130821" rel="stylesheet" type="text/css" />  --> 
-   <link href="../../resources/css/word_2012.css" rel="stylesheet" type="text/css">    
-	 <link href="../../resources/css/tinyeditor.css" rel="stylesheet" type="text/css">
-	 <link type="text/css" rel="stylesheet" href="../../resources/css/jy_ad.css">
-	<script type="text/javascript"  href="../../resources/jy_ad.js"></script>
-	
-	 <title>发信页面 </title>
-	 <!--[if lte IE 6]>
-		<script type="text/javascript" src="http://images1zw.jyimg.com/w4/msg/js/dd_belatedpng.js?09153"></script>
-        <script>
-			DD_belatedPNG.fix('letters_btn_layer_top,.letters_btn_layer_bottom,#tip_close,#templates_layer_close:hover,#tip_close:hover,#templates_layer_close,#expression_layer_close,.letters_content .pic em,.op_giftlist .op_giftlist_main li .gift_check,.op_giftlist .op_giftlist_main li.boble_gift span,.reply_content .head,.reply_content .center,.reply_content .bottom,.letters_content .head,.letters_content .center,.letters_content .bottom,.typ');
-        </script>
-     <![endif]-->
-		<script>
-	  var bigdomain="jiayuan.com";
-	</script>
-		 
-
-
-<script type="text/javascript">
-send_jy_pv2('msg_xinban_send_pv');
-var is_submit = false;
-var check_tanchu_kaiguan = 0;
-var check_tanchu_result = 0;
-var now_if_click_mobile = 0;
-//设置域 为了弹出页面的js操作
-var reg_host_const_flag = 0;
-var reg_host_const_test = 0;
-var reg_host_domain = document.domain;
-var mobanList =new Array();
-   
-   mobanList.push( '：）你好~我们蛮有缘分的，期待你的回复。');
-   if(reg_host_const_flag == 0 || reg_host_const_flag == 7) {
-//       if(reg_host_const_test == 1){ 
-// 	     document.domain = 'miuu.cn';
-// 	  }else{
-// 	     document.domain = 'jiayuan.com';
-// 	  }
-   }
-  
-function str_trim(str){
-	str = str.replace('<P>&nbsp;<\/P>', "");
-	return str.replace(/(^\s*)|(\s*$)/g, "");
-}
-function str_trim2(str){
-	str = str.replace(/(&nbsp;*)|(\s)*/g, "")
-	str = str.replace(/(<br>)|(<[\/]?div>)/g,'')
-	return str;
-}
-
-function get_id(xx) {
-	return document.getElementById(xx);
-}
-
-
-function get_Html_content(){
-	return $("#f_content").val();
-}
-function setEditorContent(content) 
-{
-	$("#f_content").val(content);
-}
-function check_content(anniu_id, if_click_mobile){
-	words = $('#f_content').val();
-	var vlength =str_trim(words).length; 
-	
-	if(vlength==0){
-		JY_Alert('温馨提示','您还没有填写任何信件内容');
-		return false;
-	}else if(vlength > 5000)	{
-		JY_Alert('温馨提示',"请将信件内容精简至5000字以内");
-		return false;
-	}	
-// 	now_if_click_mobile = if_click_mobile;	
-	if(anniu_id == 1){
-		$.ajax({
-			url: "test.html",
-			context: document.body
-			}).done(function() {
-			$( this ).addClass( "done" );
-			});
-	}else {
-		do_no_tanchu(anniu_id);
-	}
-	
-// 	if(get_id('self_pay').value == 1)	{
-// 		check_need_tanchu(1, anniu_id);
-// 	}else if(get_id('cai_xin').value == 1){
-// 		check_need_tanchu(2, anniu_id);
-// 	}else if(get_id('liwu_nofree').value == 1){
-// 		check_need_tanchu(3, anniu_id);
-// 	}else	{
-// 		deal_liwu_free();
-// 		do_no_tanchu(anniu_id);
-// 	}
-	return true;
-}
-function check_need_tanchu(tanchu_type, anniu_id){
-	var tanchu_test_url = '';
-	if(tanchu_type == 1)	{
-		tanchu_test_url = 'http://www.jiayuan.com/msg/draft.php?check_tanchu=1&tanchu_type=1&to_uid=104784980';
-		JY.tool.ajax.get(tanchu_test_url, null, function(data) {
-			if(data == '1') {
-				deal_liwu_free();
-				do_tanchu();
-			}else	{
-				deal_liwu_free();
-				do_no_tanchu(anniu_id);
-			}
-		});
-	}	
-	if(tanchu_type == 2)	{
-		tanchu_test_url = 'http://www.jiayuan.com/msg/draft.php?check_tanchu=1&tanchu_type=2&to_uid=104784980';
-		JY.tool.ajax.get(tanchu_test_url, null, function(data) 	{
-			if(data == '1') {
-				deal_liwu_free();
-				do_tanchu();
-			}else	{
-				deal_liwu_free();
-				do_no_tanchu(anniu_id);
-			}
-		});
-	}
-	if(tanchu_type == 3)	{
-		var liwu_nofree_id = get_id("liwu_nofree_id").value;
-		tanchu_test_url = 'http://www.jiayuan.com/msg/draft.php?check_tanchu=1&tanchu_type=3&to_uid=104784980&liwu_nofree_id='+liwu_nofree_id;
-		JY.tool.ajax.get(tanchu_test_url, null, function(data) {
-			if(data == 'BAD'){
-				JY_Alert('温馨提示',"请选择礼物");
-				return true;
-			}else if(data == '1') {
-				do_tanchu_liwu(); 
-			}else{
-				do_no_tanchu(anniu_id);
-			}
-		});
-	}
-}
-function deal_liwu_free(){
-// 	if('1' == 1 && get_id('liwu_checkbox').checked == true)		{
-// 		document.getElementById('liwu_free').value = 1;
-// 	}
-}
-function do_tanchu(){
-	var cx = get_id('cai_xin').value;
-	var lw_f = get_id('liwu_free').value;
-	var lw_f_id = get_id('liwu_free_id').value;	
-	document.getElementById('formform').action='http://www.jiayuan.com/msg/draft.php?fxtyp=1&setdomain=1&fxly=cp-eexpress&to_uid=104784980&yz=121261858&is_hello=0&cai_xin='+cx+'&if_click_mobile='+now_if_click_mobile+'&liwu_free='+lw_f+'&liwu_free_id='+lw_f_id;
-	document.getElementById('formform').target='fxtyp_iframe';
-	get_id('formform').submit(); 
-	openMaskDiv('fxtyp_iframe',600,600,0,0);
-	return true;
-}
-function do_tanchu_liwu(){
-	var liwu_nofree_id = get_id("liwu_nofree_id").value;
-	var cx = get_id('cai_xin').value;
-	document.getElementById('formform').action='http://www.jiayuan.com/msg/draft.php?fxtyp=1&setdomain=1&liwu=1&liwu_nofree_id='+liwu_nofree_id+'&fxly=cp-eexpress&to_uid=104784980&yz=121261858&is_hello=0&cai_xin='+cx+'&if_click_mobile=0';
-	document.getElementById('formform').target='fxtyp_iframe_liwu';
-	get_id('formform').submit(); 
-	openMaskDiv('fxtyp_iframe_liwu',600,600,0,0);
-	return true;
-}
-function do_no_tanchu(anniu_id){
-	window.onbeforeunload = '';		
-// 	if(get_id('liwu_checkbox').checked != true){
-// 		send_jy_pv2('liwu_msg_01');
-// 	}		
-// 	document.getElementById('formform').action='http://www.jiayuan.com/msg/dosend.php';
-// 	document.getElementById('formform').target='_self';
-	try{	
-		if(is_submit)
-				return false;
-		get_id('anniu_'+anniu_id).onclick="";
-		is_submit = true;
-	}catch(err){}
-
-	words = get_Html_content();
-	
-// 	for(var i=0;i<mobanList.length;i++){
-// 		if(words == mobanList[i]){
-// 			send_jy_pv2('msg_fx_mbsycs')
-// 		}
-// 	}
-	get_id('formform').submit();
-	return true;
-}
-function closeMask(_id){
-    var m = "mask";
-    if(document.getElementById(m)) document.body.removeChild(document.getElementById(m));
-    showDiv = document.getElementById(_id);
-    showDiv.style.display = "none";
-}
-
-
-function check_words_sum(){
-	words =  get_Html_content();
-	
-	if(words.length > 1000)	{
-		setEditorContent(words.substr(0,1000));
-	}else{
-		var lastwords = 1000 - words.length;
-		document.getElementById('hai_ke_shu_ru').innerHTML = lastwords.toString();
-	}
-}
-function onIFrameFocus() {
-//	expression_layer_close();	
-	stationery_close();	
-	setDomainForIframe();  
-	loadMap();
-}
-function onEditerClick(){	
-//	expression_layer_close();
-	custom_close();	
-	stationery_close();
-	$('#tips_0502').hide();
-}
-function insert_moban(xi){	
-	var content = get_id('moban_'+xi+'_content').value;	
-	var reg=new RegExp("<br />","g"); 	
-	content = content.replace(reg,"\r\n");
-	var xxx='';	
-	custom_close();	
-	setEditorContent(content);
-	$('#tips_0502').hide();
-	send_jy_pv2('msg_fx_mbsycs');
-}
-function doClickButton(){$('#formform a.free').click();}
-function lingcunweimoban(){
-	send_jy_pv2('msg_fx_lcwmb ');
-//	DoProcess(); 
-	
-	words = get_Html_content();
-	
-	words = str_trim(words);	
-	var tmp = words;
-	tmp = tmp.replace("&nbsp;", "");
-	if(words.length == 0 || tmp == '<P></P>' || tmp == '<br>')	{
-		JY_Alert('温馨提示','您还没有填写任何信件内容');
-	}else	{
-		document.getElementById('formform').action='http://www.jiayuan.com/msg/save_draft.php?from=send';
-		document.getElementById('formform').target='tmptmp_iframe';
-		document.getElementById('moban_type').value=9;
-		get_id('formform').submit();
-	}
-}
-function disgiftmallmsg(data){
-	$("#msg_giftmall_show").empty();
-	$("#msg_giftmall_show").append(data);
-}
-function modhiddenmsg(giftid){
-	$('#liwu_nofree_id').val(giftid);
-}
-function disgiftmallmsgpic(data){
-	$("#msg_giftmall_showpic").empty();
-	$("#msg_giftmall_showpic").append(data);
-}
-function refreshThis(){
-	window.location.reload();
-}
-
-window.onbeforeunload = function() {
-	words = get_Html_content();
-	
-	if(words.length>0 ){
-		if(event.clientX > document.body.clientWidth && event.clientY < 0 || event.altKey){
-			var warning = "您已经填写了信件内容，确定要关闭此页，不发送信件吗？"; 
-			return warning;
-		}
-	}
-}
-function display_icon() {
-//	var aa = document.getElementById('mutb_icons');
-//	aa.style.zIndex.value = (aa.style.display == 'none') ? 100 : 99;
-//	aa.style.display = (aa.style.display == 'none') ? '' : 'none';
-}
-
-
-mobannum = '1';
-function change(cursel){
-	if(mobannum==0) mobannum=1;
-	for(i=1;i<=mobannum;i++){
-		var con=document.getElementById('edit'+"_"+i);
-		var text=document.getElementById('text'+"_"+i);
-		con.style.display=i==cursel?"block":"none";
-		text.style.display=i==cursel?"none":"";
-		con.style.height="14px";
-		con.rows="1";
-		if(i==cursel){
-			$('#moban_li_'+i+' a' ).slice(0,2).hide();	
-			$('#moban_li_'+i+' .limit_count' ).show();		
-			$('#moban_li_'+i+' a' ).slice(2,4).show();
-		}else{
-			$('#moban_li_'+i+' a' ).slice(0,2).show();			
-			$('#moban_li_'+i+' .limit_counts' ).hide();
-			$('#moban_li_'+i+' a' ).slice(2,4).hide();
-		}
-	}								
-}
-function save_moban(n){
-	send_jy_pv2('msg_kx_mbbc');
-	var contents = $("#edit_"+n).val();
-	var nowid = $("#moban_"+n+"_nowid").val();
-	contents = str_trim(contents);
-	if(contents.length>100){
-		JY_Alert('温馨提示','字数超出限制');
-		$("#edit_"+n).focus();
-		return false;
-	}
-	if(contents=='不超出100个字符'||contents==''){
-		JY_Alert('温馨提示','模板内容不能为空');
-		$("#edit_"+n).focus();
-		return false;
-	}
-	custom_close();
-	if(nowid==''){
-		send_jy_pv2('msg_fx_jsbcmb');
-	}
-	$.post('save_draft.php',{contents:contents,moban_type:'9',now_id:nowid,from:'show_msg'},function(data){
-		 $("#moban_"+n+"_content").val(contents);
-		  $("#moban_"+n+"_nowid").val(data);
-		 $("#text_"+n).html( contents.length>40?contents.substring(0,40)+'...':contents);
-		 $("#text_"+n).show();
-		 $("#edit_"+n).hide();		
-		 $('#moban_li_'+n+' a' ).slice(0,2).show();		
-		 $('#moban_li_'+n+' .limit_count' ).hide();	
-		 $('#moban_li_'+n+' a' ).slice(2,4).hide();
-		 custom_onclick();
-		//insert_moban(n)
-	})							
-}
-function reset_moban(n){
-	$("#edit_"+n).val($("#moban_"+n+"_content").val());
-	$("#text_"+n).show();
-	$("#edit_"+n).hide();	
-	$('#moban_li_'+n+' a' ).slice(0,2).show();
-	$('#moban_li_'+n+' .limit_count' ).hide();			
-	$('#moban_li_'+n+' a' ).slice(2,4).hide();		
-}
-
-/**
-* window for jiayuan.com profile page by Yaosine
-*/
-
-function showMap(obj){			
-	position = $(obj).position()
-	left= position.left+6;
-	$("#show_map").css("left",left);	
-	document.getElementById('show_map').style.top='105px';
-}
-function setDistance(value){
-		$("#distance").html(value);
-}
-function sendSetLocal(){
-	$("#distance_span").html("距离：已发送邀请");
-}
-var loadmap = false;
-function loadMap(){  
-	if(loadmap == false){
-		$('#show_map').html('<iframe src="http://www.jiayuan.com/map/profile.php?tohash=8d97f60e62955ad0183d29bac647df5f&f=showmsg&width=398&height=246"   id="map_iframe"  name="map_iframe"  scrolling="no" width="398" height="246" allowTransparency="true" frameborder="0" ></iframe>	');  	
-		loadmap = true;
-	}
-}
- $(function(){
-	$(".simplify").click(function(){
-		str = window.location.href;
-		str = str.replace("send.php?","basic/?a=send&");
-		window.location.href = str;
-		return false;
-	});
-})
-</script>
-
-
- <!-- letters_head start-->
-<script type="text/javascript" src="../../resources/js/head_common.js"></script> 
-<!-- <script type="text/javascript" src="../../resources/js/head_red_simple.js"></script> -->
-<!-- <script type="text/javascript" src="../../resources/js/head_pink.js"></script> -->
-<script type="text/javascript">
+<!DOCTYPE >
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>发送成功_世纪佳缘交友网</title>
+    <meta name="author" content="dell">
+    <link rel="stylesheet" href="sendSuccess_files/base.css">
+    <link rel="stylesheet" href="sendSuccess_files/sendok.css">
+    <link rel="stylesheet" type="text/css" href="sendSuccess_files/word_2012.css">
+    <script src="sendSuccess_files/beacon.js" async=""></script><script type="text/javascript" src="sendSuccess_files/jquery.js"></script>
+    <script type="text/javascript" src="sendSuccess_files/JY_Alert.js"></script>
+    <script type="text/javascript" src="sendSuccess_files/verify_phone.js"></script>
+    <script src="sendSuccess_files/pv.js" type="text/javascript"></script>
+    <script src="sendSuccess_files/MaskDiv.js"></script>
+    <script type="text/javascript">document.domain = "jiayuan.com"; </script>
+    <!--[if lte IE 6]>
+    <script type="text/javascript" src="http://images.jiayuan.com/w4/msg/js/dd_belatedpng.js"></script>
+    <script>DD_belatedPNG.fix('img,.set_top-1,span');</script>
+    <![endif]-->
+  </head>
+  <body>
+    <div id="wrapper" class="wrapper">
+        
+        <script type="text/javascript" src="sendSuccess_files/head_common.js"></script> 
+        <script type="text/javascript" src="sendSuccess_files/head_red_simple.js"></script><script type="text/javascript" src="sendSuccess_files/head_pink.js"></script><script type="text/javascript">
 //会员信息对象
 window.HEAD_USER = {};
 HEAD_USER.uid = 0;
@@ -776,8 +404,8 @@ var current_nav_flag = jy_head_function.get_channel() + '_css';
 //设置当前频道导航选中样式
 common_nav_array[current_nav_flag] = 'head_nav_cur';
 </script>
-<script type="text/javascript" src="../../resources/js/jiayuan_logo_config.js"></script>
-<script type="text/javascript" src="../../resources/js/JY_Alert.js"></script>
+<script type="text/javascript" src="sendSuccess_files/jiayuan_logo_config.js"></script>
+<script type="text/javascript" src="sendSuccess_files/JY_Alert.js"></script>
 <!--[if lte IE 6]>
 <script type="text/javascript" src="http://images1.jyimg.com/w4/common/j/DD_belatedPNG_0.0.8a_IE6.js"></script>
 <![endif]--> <style type="text/css">
@@ -834,241 +462,341 @@ document.getElementById('head_red_simple_user').innerHTML = loginstr;	//会员�
 </script>
 <!-- released time 2014-10-22 15:04:56 -->
  
-<script type="text/javascript">
-	document.getElementById('head_red_simple').innerHTML = '给她写信';
-</script>
-  <!-- letters_head end-->
-<div class="letters_main mt20">  	
-	<div class="show_map" id="show_map" onmouseover="document.getElementById('show_map').style.top='105px'" onmouseout="document.getElementById('show_map').style.top='-999px'">
-  		<iframe src="" id="map_iframe" name="map_iframe" scrolling="no" allowtransparency="true" frameborder="0" height="246" width="398"></iframe>
-  	</div>  	
-  	
-	<!-- recipient start-->
-	<div class="recipient e_clear" style="border-bottom:none;">
-		<div class="recipient_top" style="height:200px;">
-			 <div class="avatar_send">
-				 <a onmousedown="send_jy_pv2('msg_fx_zp');" target="_blank" href="http://www.jiayuan.com//105784980?fxly=cp-msg-ym" title="尧利">
-					<img src="../../resources/img/97f60e629_1_avatar_n.jpg" alt="尧利" height="90px" width="74px">
-				 </a>									
-			 </div>
-			 <div class="info">
-			 	  <div class="status"> 
-						<a target="_blank" href="http://www.jiayuan.com//105784980?fxly=cp-msg-ym" onmousedown="send_jy_pv2('msg_fx_nc');" title="尧利">尧利</a>
-						<span>
-																														<img src="../../resources/img/senior_member_icon.png" title="VIP会员">
-														
-						</span>
-						<a href="javascript:void(0);" onclick="window.open('http://www.jiayuan.com/msgapp/ems/?uid_hash=8d97f60e62955ad0183d29bac647df5f&amp;from=msg');return false;" class="a_blue12">给她发特快专递</a>
-			 	   </div>
-			 	   <div class="about">
-			 	   	<p>26岁，未婚，160cm，本科，其他国家新加坡，5000～10000元</p>			 	   	
-			 	   	<p> 
-			 	   			
-				 	   		<span>照片：<a onmousedown="send_jy_pv2('msg_fx_zplj');" href="http://www.jiayuan.com/photo/index.php?uidhash=8d97f60e62955ad0183d29bac647df5f&amp;fxly=cp-msg-ym" target="_blank" title="照片" alt="照片" class="a_blue12">2张</a></span>
-				 	   		<span id="distance_span">距离：
-				 	   											TA未标注位置				 	   			
-				 	   					
-				 	   							 	   		</span> 
-				 	   		<span>最后登录时间：<a onmousedown="send_jy_pv2('msg_fx_vipkj');" href="javascript:;" onclick="openWindow('','','http://www.jiayuan.com/usercp/service/vip_tstc.php?type=1&amp;to_uid=105784980',600,358);" class="a_blue12">点击查看</a> </span> 
-					</p>				 	   	
-			 	  	</div>
-			 </div>		
-							<div class="tips_yp" style="display:block">
-                 <div class="text">Ta是本站<strong onmouseover="document.getElementById('ml_tips2').style.display='block'" onmouseout="document.getElementById('ml_tips2').style.display='none'">魅力会员</strong>，很受异性喜欢哦！<br>
-    •Ta的看信率：<i>5%（不贴邮票）</i>，<strong>94%（ 贴邮票）</strong>；贴邮票发信给Ta，回信机率能暴增18倍哦！</div>
-                <div class="ml_tips2" id="ml_tips2">
-                    <strong>什么是魅力会员？</strong>
-                    <p>在本网站深受异性关注和喜欢，并且收到很多来信，其综合排名在该地区排在前20%的女生，被网站评为魅力会员。</p>
-                </div>
-    			<span></span>
-			</div>
-					</div>	
-	</div>
-	<!-- recipient end-->
-	<style>
-		.letters_content{padding-top:0}
-		.messageRecord{padding-top:10px; padding-left:35px; height:24px; background-color:#fff; border-left:1px solid #d9d9d9; border-right:1px solid #d9d9d9; }
-		.messageRecord img{float:left; display:inline;}
-		.messageRecord span{color:#666}
-		.letters_content .tips2{margin-left:16px; padding-left:21px; padding-bottom:7px;}
-	</style>
-
-		<p class="e_clear messageRecord">
-		<img src="../../resources/img/safe_icon.jpg" height="15" width="14">&nbsp;&nbsp;<span>安全提示：请不要轻易透露您的联系方式，不要借钱给陌生人。</span>&nbsp;&nbsp;&nbsp;&nbsp;<a class="c_lblue" href="http://www.jiayuan.com/subject/2011Q3/safeinfo/index.html" target="_blank">交友安全提示</a>
-	</p>
-	<!--增加通信记录end-->
-		<div class="letters_content send_content">
-		<dl class="e_clear">
-			<form method="post" id="formform" name="letter" action="../send" commandName="letter" target="_self">
-				<div class="editor"> 
-					<div class="tools2">
-						<ul>
-<!-- 						shanf -->
-<!-- 							<li class="templates" onclick="custom_onclick();">使用模板</li> -->
-														
-<!-- 							<li id="zhaohuati_tag" class="help"><a onclick="templates_close();onEditerClick();stationery_close();" href="http://www.jiayuan.com/msg/draft.php?zhaohuati=1&amp;to_uid=105784980" onmousedown="send_jy_pv2('msg_fx_zht');" target="tmptmp_iframe">帮我找话题</a></li>																 -->
-					<!-- 		<li class="fonts" onmousedown="send_jy_pv2('msg_fx_zt');" onclick="custom_close();onEditerClick();dispToolbar()"><a>字体</a></li>
-							<li class="stationery" id="stationery" onmousedown="send_jy_pv2('msg_fx_xz');" onclick="onEditerClick();stationery_onclick();"><a>信纸</a></li>
-					 -->		
-					 	</ul>
-					</div>
-						<a href="javascript:void(0);" class="simplify">如果不能正常发信，请点击这里</a>
-						<div class="textarea" id="textarea">
-					<!--templates_layer start-->								
-					
-				<div class="custom_layer" id="custom_layer" style="display: none;"><a class="custom_close" href="#" onclick="custom_close(); return false;">关闭</a>
-				<ul>
-              	              	
-                <li id="moban_li_1"><span id="text_1">：）你好~我们蛮有缘分的，期待你的回复。</span>
-                	<input id="moban_1_subject" value="发信模板" type="hidden">
-									<input id="moban_1_content" value="：）你好~我们蛮有缘分的，期待你的回复。" type="hidden">
-									<input id="moban_1_nowid" value="17982468" type="hidden">
-                  <textarea class="edit" style="display:none" id="edit_1" onblur="javascript:this.style.height='14px';this.rows = '1';this.style.color='#AAA';" onfocus="javascript:this.style.height='122px';this.rows = '5';this.style.color='#000'">：）你好~我们蛮有缘分的，期待你的回复。</textarea>
-<!--                   <a class="a_blue12" href="javascript:void(0)" onclick="insert_moban(1)" onmousedown="send_jy_pv2('msg_fx_mb_sy')">使用</a> -->
-<!--                   <a class="a_blue12" href="javascript:void(0)" onclick="change(1)">修改</a> -->
-<!--                   <span class="limit_count" style="display:none">（限100字内）</span> -->
-<!--                   <a class="a_blue12" href="javascript:void(0)" style="display:none" onclick="save_moban(1)" onmousedown="send_jy_pv2('msg_fx_mb_bc')">保存</a> -->
-<!--                   <a class="a_blue12" href="javascript:void(0)" style="display:none" onclick="reset_moban(1)">取消</a> -->
-                   </li>               
-                            
-              </ul>
+        <script type="text/javascript">
+            document.getElementById('head_red_simple').innerHTML = '给她写信';
+        </script>
+      
+      <div class="w">
+        <div class="main cf">
+          <div class="succBox">
+            <p>
+              <strong>发送成功！</strong>
+                          </p>
+          </div>
+                    <div>
+            <br>
+            <p id="mobile_tip">
+              验证手机可免费查看异性发来的手机情书，随时随地收获缘分。<a href="#" style="color:#2b81d4; text-decoration:underline;" onclick="phone_verify.begin(0,600);" onmousedown="send_jy_pv2('msg_fxcg_yzsj');">马上验证手机</a>
+            </p>
+          </div>
+                     
+          <div class="tips">
+            <p>
+              上传一张照片，即可将信件被读几率提升到<b>24%</b>！<a href="http://www.jiayuan.com/usercp/photo.php?no_photo=1&amp;from_type=sendok" onmousedown="send_jy_pv2('|send_ok_button|121261858')" target="_blank">立即上传</a>
+            </p>
+          </div>
+                    <div class="uList">
+            <div class="z_loading" id="loading" style="display:none;"></div>
+            <div class="tit">
+              <h2>您可能也会喜欢的人</h2><a class="hiAll" href="javascript:;" onclick="say_hello_all();">全部打招呼</a><a class="change" href="javascript:;" onmousedown="send_jy_pv2('msg_fxcg_hyz');" onclick="next_page();">换一组</a>
             </div>
-
-				<textarea id="f_content" name="content" style="border:none;border:1px solid none;width:664px;padding:2px 10px;height:200px;line-height:24px;font-size:14px;color:#666;resize: none;">：）你好~我们蛮有缘分的，期待你的回复。</textarea>
-
-			</div>
-						
-		</div>
-					
-		<div class="letters_btn e_clear">
-
-							<ul> 
-								<script type="text/javascript">
-	function is_save_available(n){
-		if(typeof(save_hello_cus) == "function"){
-				var result = save_hello_cus(n);
-				if(!result){
-					return;
-				}
-		}
-		if(n==1){
-			check_content(1, '0');
-		}else if(n==2){
-			check_content(2, '0');
-		}else if(n==3){
-			check_content(3, '');
-		}
-	}
-</script>
-	<li>
-		
-				<div class="letters_btn_layer" id="anniu_tishi_1" style="display: none;">
-			<div class="letters_btn_layer_top"></div>
-			<div class="letters_btn_layer_content">
-				<p>为她贴一张邮票，回复率可提升13倍，以后通信全免费！</p>
-			</div>
-			<div class="letters_btn_layer_bottom"></div>
-		</div>
-				
-		<a href="javascript:void(0);" onmouseover="get_id('anniu_tishi_1').style.display=''" onmouseout="get_id('anniu_tishi_1').style.display='none';" style="cursor:pointer;" class="stamps" id="anniu_1"  onclick='get_id("withStamp").value=2;get_id("letterType").value=2;is_save_available(1);return false;'></a></li> 
-
-
-
-	<li>
-		<div class="letters_btn_layer" id="anniu_tishi_2" style="display: none;">
-			<div class="letters_btn_layer_top"></div>
-			<div class="letters_btn_layer_content">
-				<p>对方需花费一张邮票方可查看您的来信。您也可以选择贴邮票发信，让对方免费看。今后双方即可免费发信和看信，不再收费。</p>
-			</div>
-			<div class="letters_btn_layer_bottom"></div>
-		</div> 
-		
-		<a href="###" onmouseover="get_id('anniu_tishi_2').style.display=''" onmouseout="get_id('anniu_tishi_2').style.display='none';" style="cursor:pointer;" class="free" id="anniu_2"  onclick='get_id("withStamp").value=1;get_id("letterType").value=1;is_save_available(2);return false;'></a></li>
-
-
-
-<!-- <script type="text/javascript">
-	var newuser = '0';
-		//有3个按钮 手机贴邮票 并且是新会员时 默认显示贴邮票
-	if(get_id('anniu_3')!=null&&newuser==1&&get_id('anniu_2').className=='stamps'){
-		get_id('anniu_tishi_2').style.display='';
-		window.setTimeout(function(){get_id('anniu_tishi_2').style.display='none'},5000);
-	}else{
-		get_id('anniu_tishi_1').style.display=''
-		window.setTimeout(function(){get_id('anniu_tishi_1').style.display='none'},5000);
-	}
-		
-
-</script> -->
-								<!--隐藏元素-->
-									<input name="type" id="letterType" value="1" type="hidden">
-									<input name="withStamp" id="withStamp" value="1" type="hidden">
-									<input name="toUserId" id="toUserId" value="${sendingLetter.toUserId}" type="hidden">
-									
-									<input name="ok_xinzhi_id" id="ok_xinzhi_id" value="" type="hidden">
-									<input name="fxly" id="fxly" value="cp-eexpress" type="hidden">
-									<input name="tj_wz" id="tj_wz" value="none" type="hidden">
-									<input name="reply_msgid" value="0" type="hidden">
-									<input name="reply_send_time" value="0" type="hidden">
-									<input name="to_hash" value="8d97f60e62955ad0183d29bac647df5f" type="hidden">
-									<input name="now_draft_id" id="now_draft_id" value="0" type="hidden">
-									<input name="need_fxtyp_tanchu" id="need_fxtyp_tanchu" value="1" type="hidden">
-									<input name="self_pay" id="self_pay" value="1" type="hidden">
-									<input name="fxbc" id="fxbc" value="0" type="hidden">
-									<input name="cai_xin" id="cai_xin" value="0" type="hidden">
-									
-									<input name="liwu_nofree" id="liwu_nofree" value="0" type="hidden">
-									<input name="liwu_nofree_id" id="liwu_nofree_id" value="920" type="hidden">
-									<input name="liwu_free" id="liwu_free" value="0" type="hidden">
-									<input name="liwu_free_id" id="liwu_free_id" value="1045" type="hidden">
-									<input name="uqjm_code" id="uqjm_code" value="359e37b92755e39cc9ff5bd56b0d9141" type="hidden">
-									<input name="moban_type" id="moban_type" value="9" type="hidden">
-									<input name="zhuanti" id="zhuanti" value="0" type="hidden">
-									<!--<li><a href="#" class="stamps" id="stamps"></a></li>
-									<li><a href="#" class="stamps" id="stamps"></a></li>
-									<li><a href="#" onclick="javascript:formSubmit();" class="ipone_stamps"></a></li>
-									<li><a href="#" onclick="javascript:formSubmit();" class="free"></a></li>-->
-							</ul>
-					</div>
-			
-	<div class="letters_tip" id="letters_tip">
-		<b class="tl"></b>
-		<b class="tr"></b>
-		<b class="bl"></b>
-		<b class="br"></b>
-		<a href="###" id="tip_close" onclick="letters_tip_close(); return false;"></a>
-		<p><span class="channel_13">&nbsp;贴邮票信件被看几率更高哦~~成为钻石会员免费为对方贴邮票，拥有畅行佳缘最高特权特权！开通包年服务，<span style="color: #ff0000"><strong>专享1.9折</strong></span>！<a target="_blank" onclick="send_jy_pv2('channel_13_click_488|121261858')" href="http://www.jiayuan.com/usercp/service/do_package_service.php?rid=70?src_key=ad_41"> 查看详情&gt;&gt;</a></span> </p>
-	</div>
-						
-	</form>
-	</dl>
-			
-				     <!-- 2011-07-05亲加发信关礼物 start -->
-				<div class="gift" style="top:-2px;">
-            	<div class="head"></div>
-                <div class="center">
-                	<div class="tips">贴邮票发信，免费赠送此款礼物</div>
-                    <div class="pic" id="msg_giftmall_showpic"><a href="javascript:void(0);"><img src="../../resources/img/1351244875.gif"><span>魅力值20点</span></a></div>
-                    <div class="title" id="msg_giftmall_show"> 
-<!--                     	<input name="liwu_checkbox" id="liwu_checkbox" checked="checked" type="checkbox"> -->
-<!--                         <span>星座转盘<br><i>2张佳缘邮票</i></span> -->
-					</div>
-					
-																						<div class="more" style="display:none;"><a href="javascript:void(0);" id="inv_send3" onclick="return false;">选择更多礼物&gt;&gt;</a></div>
-
-                    <div class="more"></div>                </div>
-                <div class="bottom"></div>
+            <div class="con cf">
+              <ul>
+                                <li uid_disp="96059450" alg="personalmatch_send_ok_c">
+                  <div class="uHead">
+                    <a target="_blank" href="http://www.jiayuan.com/96059450?lchang=gwxx&amp;src=personalmatch_send_ok_c&amp;fxly=tj-ymtj-fxcgytj&amp;tid=15">
+                        <img src="sendSuccess_files/yzphykj_f.jpg">
+                    </a>
+                                      </div>
+                  <div class="uName">
+                                        <a target="_blank" href="http://www.jiayuan.com/96059450?lchang=gwxx&amp;src=personalmatch_send_ok_c&amp;fxly=tj-ymtj-fxcgytj&amp;tid=15">夜猫子</a>
+                  </div>
+                  <div class="uInfo">
+                    24，其他国家新加坡
+                  </div>
+                  <div class="uAppr">
+                    <p>
+                      独白真诚，既然都很忙绝不谈着玩
+                    </p>
+                  </div>
+                  <div id="cnm_p_96059450" style="text-align:center;">
+                  <a class="btnSayHi" onmousedown="send_jy_pv2('msg_fxcg_dzh');" href="javascript:;" onclick="check_content('10', '95059450', '4a1ed547aca70ffe052070d3a68e8663', 'personalmatch_send_ok_c','tj-ymtj-fxcgytj');">打招呼</a>
+                  </div>
+                </li>
+                                <li uid_disp="65298177" alg="personalmatch_send_ok_c">
+                  <div class="uHead">
+                    <a target="_blank" href="http://www.jiayuan.com/65298177?lchang=gwxx&amp;src=personalmatch_send_ok_c&amp;fxly=tj-ymtj-fxcgytj&amp;tid=91">
+                        <img src="sendSuccess_files/f52bf9f9d_avatar_p.jpg">
+                    </a>
+                                      </div>
+                  <div class="uName">
+                                        <a target="_blank" href="http://www.jiayuan.com/65298177?lchang=gwxx&amp;src=personalmatch_send_ok_c&amp;fxly=tj-ymtj-fxcgytj&amp;tid=91">valen</a>
+                  </div>
+                  <div class="uInfo">
+                    30，其他国家澳大利亚
+                  </div>
+                  <div class="uAppr">
+                    <p>
+                      入职名企前途不错，素质很好
+                    </p>
+                  </div>
+                  <div id="cnm_p_65298177" style="text-align:center;">
+                  <a class="btnSayHi" onmousedown="send_jy_pv2('msg_fxcg_dzh');" href="javascript:;" onclick="check_content('6', '64298177', 'a7f52bf9f9d6735dd8f20ee6be17d0a7', 'personalmatch_send_ok_c','tj-ymtj-fxcgytj');">打招呼</a>
+                  </div>
+                </li>
+                                <li uid_disp="28769131" alg="personalmatch_send_ok_c">
+                  <div class="uHead">
+                    <a target="_blank" href="http://www.jiayuan.com/28769131?lchang=gwxx&amp;src=personalmatch_send_ok_c&amp;fxly=tj-ymtj-fxcgytj&amp;tid=8">
+                        <img src="sendSuccess_files/a73e56afc_10_avatar_p.jpg">
+                    </a>
+                                      </div>
+                  <div class="uName">
+                                        <a target="_blank" href="http://www.jiayuan.com/28769131?lchang=gwxx&amp;src=personalmatch_send_ok_c&amp;fxly=tj-ymtj-fxcgytj&amp;tid=8">彩蝶儿</a>
+                  </div>
+                  <div class="uInfo">
+                    30，其他国家新加坡
+                  </div>
+                  <div class="uAppr">
+                    <p>
+                      TA在努力看信中，快让TA认出你吧
+                    </p>
+                  </div>
+                  <div id="cnm_p_28769131" style="text-align:center;">
+                  <a class="btnSayHi" onmousedown="send_jy_pv2('msg_fxcg_dzh');" href="javascript:;" onclick="check_content('7', '27769131', 'e6a73e56afc87b271fbffc9dbc87d2b3', 'personalmatch_send_ok_c','tj-ymtj-fxcgytj');">打招呼</a>
+                  </div>
+                </li>
+                                <li uid_disp="44755190" alg="personalmatch_send_ok_c">
+                  <div class="uHead">
+                    <a target="_blank" href="http://www.jiayuan.com/44755190?lchang=gwxx&amp;src=personalmatch_send_ok_c&amp;fxly=tj-ymtj-fxcgytj&amp;tid=15">
+                        <img src="sendSuccess_files/20073d05c_2_avatar_p.jpg">
+                    </a>
+                                      </div>
+                  <div class="uName">
+                    <img title="手机来信提醒" src="sendSuccess_files/mobile_icon.png">                    <a target="_blank" href="http://www.jiayuan.com/44755190?lchang=gwxx&amp;src=personalmatch_send_ok_c&amp;fxly=tj-ymtj-fxcgytj&amp;tid=15">hotmail</a>
+                  </div>
+                  <div class="uInfo">
+                    32，其他国家新加坡
+                  </div>
+                  <div class="uAppr">
+                    <p>
+                      独白真诚，既然都很忙绝不谈着玩
+                    </p>
+                  </div>
+                  <div id="cnm_p_44755190" style="text-align:center;">
+                  <a class="btnSayHi" onmousedown="send_jy_pv2('msg_fxcg_dzh');" href="javascript:;" onclick="check_content('4', '43755190', '1d20073d05cf5046eb3e55484af965ef', 'personalmatch_send_ok_c','tj-ymtj-fxcgytj');">打招呼</a>
+                  </div>
+                </li>
+                                <li uid_disp="33015166" alg="personalmatch_send_ok_c">
+                  <div class="uHead">
+                    <a target="_blank" href="http://www.jiayuan.com/33015166?lchang=gwxx&amp;src=personalmatch_send_ok_c&amp;fxly=tj-ymtj-fxcgytj&amp;tid=15">
+                        <img src="sendSuccess_files/689d90908_4_avatar_p.jpg">
+                    </a>
+                                      </div>
+                  <div class="uName">
+                                        <a target="_blank" href="http://www.jiayuan.com/33015166?lchang=gwxx&amp;src=personalmatch_send_ok_c&amp;fxly=tj-ymtj-fxcgytj&amp;tid=15">婉琴</a>
+                  </div>
+                  <div class="uInfo">
+                    27，其他国家加拿大
+                  </div>
+                  <div class="uAppr">
+                    <p>
+                      独白真诚，既然都很忙绝不谈着玩
+                    </p>
+                  </div>
+                  <div id="cnm_p_33015166" style="text-align:center;">
+                  <a class="btnSayHi" onmousedown="send_jy_pv2('msg_fxcg_dzh');" href="javascript:;" onclick="check_content('8', '32015166', 'd9689d90908e0ab3ce073bd0ec5d30d3', 'personalmatch_send_ok_c','tj-ymtj-fxcgytj');">打招呼</a>
+                  </div>
+                </li>
+                                <li uid_disp="123124786" alg="personalmatch_send_ok_c">
+                  <div class="uHead">
+                    <a target="_blank" href="http://www.jiayuan.com/123124786?lchang=gwxx&amp;src=personalmatch_send_ok_c&amp;fxly=tj-ymtj-fxcgytj&amp;tid=29">
+                        <img src="sendSuccess_files/231928e14_1_avatar_p.jpg">
+                    </a>
+                                      </div>
+                  <div class="uName">
+                                        <a target="_blank" href="http://www.jiayuan.com/123124786?lchang=gwxx&amp;src=personalmatch_send_ok_c&amp;fxly=tj-ymtj-fxcgytj&amp;tid=29">简 爱</a>
+                  </div>
+                  <div class="uInfo">
+                    32，其他国家新加坡
+                  </div>
+                  <div class="uAppr">
+                    <p>
+                      不吸烟不喝酒的女人适合当老婆
+                    </p>
+                  </div>
+                  <div id="cnm_p_123124786" style="text-align:center;">
+                  <a class="btnSayHi" onmousedown="send_jy_pv2('msg_fxcg_dzh');" href="javascript:;" onclick="check_content('1', '122124786', '37231928e149a5786e2254d122b61331', 'personalmatch_send_ok_c','tj-ymtj-fxcgytj');">打招呼</a>
+                  </div>
+                </li>
+                                <li uid_disp="122185731" alg="personalmatch_send_ok_c">
+                  <div class="uHead">
+                    <a target="_blank" href="http://www.jiayuan.com/122185731?lchang=gwxx&amp;src=personalmatch_send_ok_c&amp;fxly=tj-ymtj-fxcgytj&amp;tid=98">
+                        <img src="sendSuccess_files/570286c1b_1_avatar_p.jpg">
+                    </a>
+                                      </div>
+                  <div class="uName">
+                    <img title="手机验证" src="sendSuccess_files/mobile.png">                    <a target="_blank" href="http://www.jiayuan.com/122185731?lchang=gwxx&amp;src=personalmatch_send_ok_c&amp;fxly=tj-ymtj-fxcgytj&amp;tid=98">逆思维</a>
+                  </div>
+                  <div class="uInfo">
+                    29，其他国家其他
+                  </div>
+                  <div class="uAppr">
+                    <p>
+                      从属相上看很合适，喜欢就带走吧
+                    </p>
+                  </div>
+                  <div id="cnm_p_122185731" style="text-align:center;">
+                  <a class="btnSayHi" onmousedown="send_jy_pv2('msg_fxcg_dzh');" href="javascript:;" onclick="check_content('0', '121185731', 'd8570286c1b1cb4b154b2a7157a52230', 'personalmatch_send_ok_c','tj-ymtj-fxcgytj');">打招呼</a>
+                  </div>
+                </li>
+                                <li uid_disp="86607695" alg="personalmatch_send_ok_c">
+                  <div class="uHead">
+                    <a target="_blank" href="http://www.jiayuan.com/86607695?lchang=gwxx&amp;src=personalmatch_send_ok_c&amp;fxly=tj-ymtj-fxcgytj&amp;tid=15">
+                        <img src="sendSuccess_files/89879873f_2_avatar_p.jpg">
+                    </a>
+                                      </div>
+                  <div class="uName">
+                                        <a target="_blank" href="http://www.jiayuan.com/86607695?lchang=gwxx&amp;src=personalmatch_send_ok_c&amp;fxly=tj-ymtj-fxcgytj&amp;tid=15">taoqurufei</a>
+                  </div>
+                  <div class="uInfo">
+                    27，其他国家新加坡
+                  </div>
+                  <div class="uAppr">
+                    <p>
+                      独白真诚，既然都很忙绝不谈着玩
+                    </p>
+                  </div>
+                  <div id="cnm_p_86607695" style="text-align:center;">
+                  <a class="btnSayHi" onmousedown="send_jy_pv2('msg_fxcg_dzh');" href="javascript:;" onclick="check_content('5', '85607695', '3e89879873fa57abf40262c64370d1c9', 'personalmatch_send_ok_c','tj-ymtj-fxcgytj');">打招呼</a>
+                  </div>
+                </li>
+                                <li uid_disp="27140624" alg="personalmatch_send_ok_c">
+                  <div class="uHead">
+                    <a target="_blank" href="http://www.jiayuan.com/27140624?lchang=gwxx&amp;src=personalmatch_send_ok_c&amp;fxly=tj-ymtj-fxcgytj&amp;tid=28">
+                        <img src="sendSuccess_files/3df090b74_1_avatar_p.jpg">
+                    </a>
+                                      </div>
+                  <div class="uName">
+                    <img title="手机验证" src="sendSuccess_files/mobile.png">                    <a target="_blank" href="http://www.jiayuan.com/27140624?lchang=gwxx&amp;src=personalmatch_send_ok_c&amp;fxly=tj-ymtj-fxcgytj&amp;tid=28">岩宝</a>
+                  </div>
+                  <div class="uInfo">
+                    30，其他国家韩国
+                  </div>
+                  <div class="uAppr">
+                    <p>
+                      不吸烟不喝酒，她是乖乖女
+                    </p>
+                  </div>
+                  <div id="cnm_p_27140624" style="text-align:center;">
+                  <a class="btnSayHi" onmousedown="send_jy_pv2('msg_fxcg_dzh');" href="javascript:;" onclick="check_content('2', '26140624', 'd53df090b746b9e8ac1ad145b019ef6b', 'personalmatch_send_ok_c','tj-ymtj-fxcgytj');">打招呼</a>
+                  </div>
+                </li>
+                                <li uid_disp="91500547" alg="personalmatch_send_ok_c">
+                  <div class="uHead">
+                    <a target="_blank" href="http://www.jiayuan.com/91500547?lchang=gwxx&amp;src=personalmatch_send_ok_c&amp;fxly=tj-ymtj-fxcgytj&amp;tid=15">
+                        <img src="sendSuccess_files/d7c7de141_8_avatar_p.jpg">
+                    </a>
+                                      </div>
+                  <div class="uName">
+                    <img title="VIP会员" src="sendSuccess_files/senior_member_icon.png">                    <a target="_blank" href="http://www.jiayuan.com/91500547?lchang=gwxx&amp;src=personalmatch_send_ok_c&amp;fxly=tj-ymtj-fxcgytj&amp;tid=15">雨源</a>
+                  </div>
+                  <div class="uInfo">
+                    26，其他国家韩国
+                  </div>
+                  <div class="uAppr">
+                    <p>
+                      独白真诚，既然都很忙绝不谈着玩
+                    </p>
+                  </div>
+                  <div id="cnm_p_91500547" style="text-align:center;">
+                  <a class="btnSayHi" onmousedown="send_jy_pv2('msg_fxcg_dzh');" href="javascript:;" onclick="check_content('3', '90500547', 'e7d7c7de1412e8143572ebd45563b798', 'personalmatch_send_ok_c','tj-ymtj-fxcgytj');">打招呼</a>
+                  </div>
+                </li>
+                                <li uid_disp="106357843" alg="personalmatch_send_ok_c">
+                  <div class="uHead">
+                    <a target="_blank" href="http://www.jiayuan.com/106357843?lchang=gwxx&amp;src=personalmatch_send_ok_c&amp;fxly=tj-ymtj-fxcgytj&amp;tid=98">
+                        <img src="sendSuccess_files/2e658726b_avatar_p.jpg">
+                    </a>
+                                      </div>
+                  <div class="uName">
+                    <img title="钻石会员" src="sendSuccess_files/diamond_icon.png">                    <a target="_blank" href="http://www.jiayuan.com/106357843?lchang=gwxx&amp;src=personalmatch_send_ok_c&amp;fxly=tj-ymtj-fxcgytj&amp;tid=98">kei</a>
+                  </div>
+                  <div class="uInfo">
+                    26，其他国家日本
+                  </div>
+                  <div class="uAppr">
+                    <p>
+                      从属相上看很合适，喜欢就带走吧
+                    </p>
+                  </div>
+                  <div id="cnm_p_106357843" style="text-align:center;">
+                  <a class="btnSayHi" onmousedown="send_jy_pv2('msg_fxcg_dzh');" href="javascript:;" onclick="check_content('13', '105357843', '6b2e658726b633c9007ce3ffd97548c3', 'personalmatch_send_ok_c','tj-ymtj-fxcgytj');">打招呼</a>
+                  </div>
+                </li>
+                                <li uid_disp="28181916" alg="personalmatch_send_ok_c">
+                  <div class="uHead">
+                    <a target="_blank" href="http://www.jiayuan.com/28181916?lchang=gwxx&amp;src=personalmatch_send_ok_c&amp;fxly=tj-ymtj-fxcgytj&amp;tid=91">
+                        <img src="sendSuccess_files/yzphykj_f.jpg">
+                    </a>
+                                      </div>
+                  <div class="uName">
+                                        <a target="_blank" href="http://www.jiayuan.com/28181916?lchang=gwxx&amp;src=personalmatch_send_ok_c&amp;fxly=tj-ymtj-fxcgytj&amp;tid=91">Lira</a>
+                  </div>
+                  <div class="uInfo">
+                    31，其他国家新加坡
+                  </div>
+                  <div class="uAppr">
+                    <p>
+                      入职名企前途不错，素质很好
+                    </p>
+                  </div>
+                  <div id="cnm_p_28181916" style="text-align:center;">
+                  <a class="btnSayHi" onmousedown="send_jy_pv2('msg_fxcg_dzh');" href="javascript:;" onclick="check_content('12', '27181916', '77f26b962cd94822959896e3c856a4b8', 'personalmatch_send_ok_c','tj-ymtj-fxcgytj');">打招呼</a>
+                  </div>
+                </li>
+                                <li uid_disp="85876892" alg="personalmatch_send_ok_c">
+                  <div class="uHead">
+                    <a target="_blank" href="http://www.jiayuan.com/85876892?lchang=gwxx&amp;src=personalmatch_send_ok_c&amp;fxly=tj-ymtj-fxcgytj&amp;tid=22">
+                        <img src="sendSuccess_files/191c64cd9_1_avatar_p.jpg">
+                    </a>
+                                      </div>
+                  <div class="uName">
+                                        <a target="_blank" href="http://www.jiayuan.com/85876892?lchang=gwxx&amp;src=personalmatch_send_ok_c&amp;fxly=tj-ymtj-fxcgytj&amp;tid=22">觅2</a>
+                  </div>
+                  <div class="uInfo">
+                    30，其他国家新加坡
+                  </div>
+                  <div class="uAppr">
+                    <p>
+                      你们在同一个城市，不用异地恋！
+                    </p>
+                  </div>
+                  <div id="cnm_p_85876892" style="text-align:center;">
+                  <a class="btnSayHi" onmousedown="send_jy_pv2('msg_fxcg_dzh');" href="javascript:;" onclick="check_content('9', '84876892', '7f191c64cd91ae4f2b2c1339c55295ef', 'personalmatch_send_ok_c','tj-ymtj-fxcgytj');">打招呼</a>
+                  </div>
+                </li>
+                                <li uid_disp="75184447" alg="personalmatch_send_ok_c">
+                  <div class="uHead">
+                    <a target="_blank" href="http://www.jiayuan.com/75184447?lchang=gwxx&amp;src=personalmatch_send_ok_c&amp;fxly=tj-ymtj-fxcgytj&amp;tid=12">
+                        <img src="sendSuccess_files/e4c4cb961_1_avatar_p.jpg">
+                    </a>
+                                      </div>
+                  <div class="uName">
+                    <img title="手机验证" src="sendSuccess_files/mobile.png">                    <a target="_blank" href="http://www.jiayuan.com/75184447?lchang=gwxx&amp;src=personalmatch_send_ok_c&amp;fxly=tj-ymtj-fxcgytj&amp;tid=12">Crystal~~le</a>
+                  </div>
+                  <div class="uInfo">
+                    25，其他国家英国
+                  </div>
+                  <div class="uAppr">
+                    <p>
+                      TA是佳缘最受欢迎的会员之一哦
+                    </p>
+                  </div>
+                  <div id="cnm_p_75184447" style="text-align:center;">
+                  <a class="btnSayHi" onmousedown="send_jy_pv2('msg_fxcg_dzh');" href="javascript:;" onclick="check_content('11', '74184447', '4ee4c4cb961889a5728688edbf35072a', 'personalmatch_send_ok_c','tj-ymtj-fxcgytj');">打招呼</a>
+                  </div>
+                </li>
+                              </ul>
+              <div class="btnsBox">
+                <a class="hiAll" href="javascript:;" onclick="say_hello_all();">全部打招呼</a><a class="change" href="javascript:;" onmousedown="send_jy_pv2('msg_fxcg_hyz');" onclick="next_page();">换一组</a>
+              </div>
             </div>
-            <!-- 2011-07-05亲加发信关礼物 end -->
-            
-                        
-		</div>
-		<!-- 广告系统 广告 开始 -->
-		<div id="ad_pos_41"></div>				
-		<!-- 广告系统 广告 结束 -->		
- </div>
-
- <script type="text/javascript" src="../../resources/js/w4-simple.js"></script><style type="text/css">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+        <script type="text/javascript" src="sendSuccess_files/w4-simple.js"></script><style type="text/css">
 *{padding:0;margin:0}
 .hf_wapper {width:950px;margin:0 auto;clear:both;font-family:SimSun,Arial,Helvetica,sans-serif}
 .hf_wapper img, .hf_wapper img a{border:none}
@@ -1273,7 +1001,7 @@ var s = document.createElement("script"), el = document.getElementsByTagName("sc
 s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js"; 
 el.parentNode.insertBefore(s, el); 
 })(); 
-</script><img src="../../resources/img/a.gif" style="display:none"> 
+</script><img src="sendSuccess_files/a.gif" style="display:none"> 
 <noscript> 
 <img src="http://b.scorecardresearch.com/p?c1=2&c2=15205083&cv=2.0&cj=1" /> 
 </noscript> 
@@ -1480,41 +1208,152 @@ DD_belatedPNG.fix('.fixPNG');
 <![endif]-->
 <!-- released time 2014-10-20 18:24:31 -->
 
-<!--   <div class="footer">
-		<ul class="e_clear">
-			<li><a target="_blank" href="http://www.jiayuan.com/helpcenter/postmail.php">联系客服</a></li>
-			<li><a target="_blank" href="http://www.jiayuan.com/bottom/index.html">关于我们</a></li>
-			<li><a target="_blank" href="http://www.jiayuan.com/bottom/connect.html">联系我们</a></li>
-			<li><a target="_blank" href="http://www.jiayuan.com/bottom/business.html">广告服务</a></li>
-			<li><a target="_blank" href="http://www.jiayuan.com/bottom/declare.html">法律声明</a></li>
-			<li><a target="_blank" href="http://www.jiayuan.com/bottom/jobs.html">招聘信息</a></li>
-			<li><a target="_blank" href="http://www.jiayuan.com/bottom/notice.html">交友信息</a></li>
-			<li><a target="_blank" href="http://www.jiayuan.com/bottom/private.html">隐私保护</a></li>
-			<li><a target="_blank" href="http://www.jiayuan.com/helpcenter/">帮助中心</a></li>
-			<li><a target="_blank" href="http://www.jiayuan.com/wap/clients/">手机版</a></li>
-		</ul>
-		<p>中文实名：　世纪佳缘　ICP证书：沪B2-20040371　Copyright　2003-2012 　版权所有</p>
-  </div> -->
- 
-  <script type="text/javascript">var gFrame = 1; var gContentId = "f_content"; //OutputEditorLoading();</script>
-   <iframe style="display:none;" name="fxtyp_iframe" id="fxtyp_iframe" scrolling="no" allowtransparency="true" frameborder="0" height="600" width="495"></iframe>
-    <iframe style="display:none;" name="fxtyp_iframe_liwu" id="fxtyp_iframe_liwu" scrolling="no" allowtransparency="true" frameborder="0" height="777" width="495"></iframe>
-  <iframe style="display:none;" name="test_iframe" id="test_iframe" scrolling="no" allowtransparency="true" src="" frameborder="0" height="600" width="654"></iframe>
-  <iframe name="tmptmp_iframe" id="tmptmp_iframe" scrolling="no" allowtransparency="true" frameborder="0" height="0" width="0"></iframe>
-  
- <!-- op_peoinfo start -->
-<!-- op_peoinfo end --> 
-<div id="bg"></div>
-<!--弹出层 start-->
-<div class="layer" id="open_window" style="display:none;">
-	<div class="layer_box">
-		<div class="layer_title" id="open_window_head"><h2><img src="../../resources/img/op_but_close.gif" onclick="closeWindow()" title="关闭"><span id="open_window_title"></span></h2></div>
-		<div class="layer_content" id="open_window_content"></div>
-		<div id="iframe_loading" style="position: absolute;"><img id="loading_focus" src="../../resources/img/loading.gif"></div>
-	</div>
-</div>
-<!--弹出层 end-->
-<script type="text/javascript" src="../../resources/html/ad.htm"></script>
- 
+    </div>
+    <script type="text/javascript">
+    
+    //遮罩层
+    var _scrollWidth = Math.max(document.body.scrollWidth,document.documentElement.scrollWidth);
+    var _scrollHeight = Math.max(document.body.scrollHeight,document.documentElement.scrollHeight);
+    document.write('<div id="bgdiv" style="position:absolute;display:none; left:0px; top:0px; width:'+_scrollWidth+'px; height:'+_scrollHeight+'px; filter:alpha(opacity=30); opacity:0.3; background-color:#000000; z-index:1000;"></div>');
 
+    //iframe容器
+    document.write('<div class="dragdiv" id="bg_div_float" style="z-index:1001;position:absolute;top:0px;left:0px;display:none"></div>');  
+
+    //设定容器层位置居中
+    </script><div id="bgdiv" style="position:absolute;display:none; left:0px; top:0px; width:1263px; height:1106px; filter:alpha(opacity=30); opacity:0.3; background-color:#000000; z-index:1000;"></div><div class="dragdiv" id="bg_div_float" style="z-index:1001;position:absolute;top:0px;left:0px;display:none"></div>
+    <script type="text/javascript">
+        
+        send_jy_pv2('msg_xinban_send_ok_pv');
+        send_jy_pv2('zhuanti_0_1');
+        var cupid = 0;
+        var uid = 121261858;
+        if(cupid==2) send_jy_pv2('cupid_mffx_ip|'+uid);
+        if(cupid==1) send_jy_pv2('cupid_fffx_ip|'+uid);
+ 
+        
+        phone_verify = new phoneVerify(80, true,function(data){
+            if(data['regcode'] == 200){
+                phone_verify.closeDiv();
+                send_jy_pv2('msg_fxcg_yzsj_ok');
+                document.getElementById('mobile_tip').innerHTML = '恭喜您成功验证手机，可免费接收其他会员发给您手机短信。';
+            }
+        });
+        phone_verify.showDivHeight = 2;
+
+        function get_id(objId)
+        {
+            if(document.getElementById)
+            {
+                return eval('document.getElementById("'+objId+'")')
+            }
+            else
+            {
+                return eval('document.all.'+objId)
+            }
+        }
+
+        function check_content(i, to_uid, to_uid_hash, src,fxly) 
+        {
+            popup_bgdiv('http://www.jiayuan.com/msg/hello.php?randomfrom=3&type=20&uhash='+to_uid_hash+'&cnj=profile2&src='+src+'&fxly='+fxly,'',1, 610, 600, 1);
+            return true;
+        }
+
+        function popup_bgdiv(url, msg, flag, _width, _height, type)
+        { 
+            if(!_width){
+                _width = 435;
+            }
+
+            if(!_height){
+                _height = 900;
+            }
+
+            //设定容器层高度居中
+            var scrolltop = document.documentElement.scrollTop || window.pageYOffset || 0; //for webkit
+            var __scroll = (scrolltop + 30) + "px";
+
+            if(url != '')
+            {
+                get_id('bg_div_float').innerHTML = '<iframe id="bg_div_iframe" scrolling="no" width="'+_width+'" height="'+_height+'" allowTransparency="true" frameborder="0"></iframe>';
+                get_id('bg_div_iframe').src = url; 
+            }
+            else if(msg != '')
+            {
+                get_id('bg_div_float').innerHTML = msg;
+            }
+            else
+            {
+                alert('参数错误');
+                return false;
+            }
+            get_id('bgdiv').style.display = '';   
+            get_id('bg_div_float').style.top  = __scroll; 
+            get_id('bg_div_float').style.left = (document.body.clientWidth/2-_width/2) + "px";
+            get_id('bg_div_float').style.display = '';
+            
+        }
+        //关闭弹出窗 清空iframe的url    
+        function close_popup(flag)
+        {
+            
+            get_id('bgdiv').style.display = 'none';   
+            get_id('bg_div_float').style.display = 'none';
+            if(!flag)
+            {
+                get_id('bg_div_iframe').src = ''; 
+            }
+            window.onscroll = ''; 
+        }
+
+        function next_page(){
+            var next_group = "http://www.jiayuan.com/msg/dosend_ok.php?zhuanti=0&send_ok=1&to=105784980&page=1";
+            window.location.href=next_group;
+            window.event.returnValue = false;
+        }
+
+        //全部打招呼
+        function say_hello_all()
+        {
+            var c_uids = c_algs = '';
+            $(".uList li").each(function(){
+               c_uids += $(this).attr("uid_disp") + '|';
+               c_algs += $(this).attr("alg") + '|';
+            });
+            
+            $.ajax({
+                url:'say_hello_all.php',
+                dataType:'json',
+                type:'post',
+                data: "uids="+c_uids+"&fxly=tj-ymtj-fxcgytj"+"&algs="+c_algs,
+                beforeSend:function(xhr){ 
+                    $("#loading").show();
+                    $(".hiAll").attr("onclick",'javascript:;');
+                    $(".hiAll").text('正在打招呼...');
+                },
+                success:function(data){
+                    $("#loading").hide();
+                    $(".hiAll").attr("onclick",'say_hello_all()');
+                    $(".hiAll").text('全部打招呼');
+                    var data_length = data.data.length;
+                    for(var i=0; i<data_length; i++){
+                        var status = data.data[i].status;
+                        var disp_uid = data.data[i].disp_uid;
+                        if(status == 1)
+                        {
+                            var avatar_class = "ok_ico";
+                        }else{
+                            var avatar_class = "no_ico"; 
+                        }
+                        $("#cnm_p_"+disp_uid).addClass(avatar_class).html("");
+                    }
+                    if(data.is_all == 1){
+                        setTimeout("next_page()",1000);
+                    }else if(data.is_all == 2){
+                        alert("世纪佳缘不提倡广种薄收的策略，每天只能和200个会员建立联系关系,已经联系过的会员不在此限制。");
+                    }
+                }
+            });
+        }
+    </script>
+  
 </body></html>

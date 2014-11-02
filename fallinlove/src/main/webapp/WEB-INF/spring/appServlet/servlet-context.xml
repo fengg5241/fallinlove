@@ -81,8 +81,8 @@
         <beans:property name="password" value="${jdbc.password}" />
         <beans:property name="idleConnectionTestPeriodInMinutes" value="60" />
         <beans:property name="idleMaxAgeInMinutes" value="120" />
-        <beans:property name="maxConnectionsPerPartition" value="60" />
-        <beans:property name="minConnectionsPerPartition" value="20" />
+        <beans:property name="maxConnectionsPerPartition" value="5" />
+        <beans:property name="minConnectionsPerPartition" value="2" />
         <beans:property name="partitionCount" value="3" />
         <beans:property name="acquireIncrement" value="10" />
         <beans:property name="statementsCacheSize" value="50" />

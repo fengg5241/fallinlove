@@ -177,6 +177,15 @@ public class UserManager extends BaseManager{
 		return users;
 	}
 	
+	public int getStampCount(long userId){
+		//get see me userId list
+		String sql = "SELECT "+ LoveTable.COLUMN_SEE_USER_ID+" FROM " + 
+				LoveTable.TABLE_SEE_EACH_OTHER +" WHERE " + LoveTable.COLUMN_USER_ID + " = "+ userId;
+		List<Long> seeUserIdList = getJdbcTemplate().queryForList(sql, Long.class);
+		
+		List<User> users = getUsersByIdList(seeUserIdList);
+		return 0;
+	}
 
 	/**
 	 * Maps a row returned from a query of LOGIN_USER to a Restaurant object.

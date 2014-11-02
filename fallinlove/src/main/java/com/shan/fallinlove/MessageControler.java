@@ -68,9 +68,14 @@ public class MessageControler {
 		System.out.println(letter.toString());
 		long userId = (Long)(request.getSession().getAttribute("userId"));
 		letter.setFromUserId(userId);
-		letter.setReplyLetterId(0L);
-		letterManager.addLetter(letter);
-		return "/sendSuccess";
+//		letter.setReplyLetterId(0L);
+//		letterManager.addLetter(letter);
+		return "redirect:/msg/sendSuccess";
+	}
+	
+	@RequestMapping(value="/sendSuccess",method=RequestMethod.GET)
+	public String goToSuccessPage(HttpServletRequest request,Letter letter,Model model){
+		return "sendSuccess";
 	}
 	
 	/** ======================================回信模块===================================================*/
