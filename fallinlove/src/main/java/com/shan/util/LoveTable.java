@@ -34,6 +34,7 @@ public class LoveTable {
 	public static final String COLUMN_NOTE3 = "note3";
 	public static final String COLUMN_MOBILE = "mobile";
 	public static final String COLUMN_HEAD_PIC = "head_pic";
+	public static final String COLUMN_STAMP_COUNT = "stamp_count";
 	
 	public static final String SEQ_USER_ID = "\'userinfo_user_id_seq\'";
 	

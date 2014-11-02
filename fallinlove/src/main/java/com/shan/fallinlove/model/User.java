@@ -56,6 +56,8 @@ public class User extends BaseModel{
 	
 	private String headPic;
 	
+	private long stampCount;
+	
 	//not in DB
 	private int age;
 	
@@ -291,6 +293,14 @@ public class User extends BaseModel{
 
 	public void setConstellation(String constellation) {
 		this.constellation = constellation;
+	}
+
+	public long getStampCount() {
+		return stampCount;
+	}
+
+	public void setStampCount(long stampCount) {
+		this.stampCount = stampCount;
 	}
 
 	@Override

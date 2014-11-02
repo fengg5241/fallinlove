@@ -92,12 +92,21 @@ function check_content(anniu_id, if_click_mobile){
 	}	
 // 	now_if_click_mobile = if_click_mobile;	
 	if(anniu_id == 1){
-		$.ajax({
-			url: "test.html",
-			context: document.body
-			}).done(function() {
-			$( this ).addClass( "done" );
-			});
+		 $.ajax({type : "POST",  
+		       url : "../../user/stampcount",   
+		       contentType : 'application/json',
+		       data : {time : new Date()},
+		       dataType : 'json',  
+		       success : function (data){
+		    	   var count = 0;
+		    	   if(data != null){
+		    		   count = data["count"];
+		    	   }
+		    	   if(count > 0){
+		    		   do_no_tanchu(anniu_id);
+		    	   }
+		       }  
+		}); 
 	}else {
 		do_no_tanchu(anniu_id);
 	}
