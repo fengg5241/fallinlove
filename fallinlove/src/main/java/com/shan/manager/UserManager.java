@@ -107,6 +107,28 @@ public class UserManager extends BaseManager{
 		  }});
 	}
 	
+
+	/**
+	 * 修改
+	 * @param userId
+	 * @param stampCount
+	 */
+	public void updateStampCount(final long userId, final long stampCount) {
+		String sql = "UPDATE " + LoveTable.TABLE_USER + " SET "
+				+ LoveTable.COLUMN_STAMP_COUNT + "=?, "
+				+ LoveTable.COLUMN_UPDATE_TIME + "=now() WHERE "
+				+ LoveTable.COLUMN_USER_ID + " = ?";
+
+		getJdbcTemplate().update(sql, new PreparedStatementSetter() {
+			@Override
+			public void setValues(PreparedStatement pstmt) throws SQLException {
+				pstmt.setLong(1, stampCount);
+				pstmt.setLong(2, userId);
+			}
+		});
+	}
+	
+	
 	public List<User> getUsersByIdList(List<Long> userIdList) {
 		
 		List<User> userList = new ArrayList<User>();

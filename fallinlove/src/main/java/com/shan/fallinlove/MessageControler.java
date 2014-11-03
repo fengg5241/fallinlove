@@ -48,8 +48,8 @@ public class MessageControler {
 			HttpServletRequest request) {
 		Letter letter = new Letter();
 		
-		model.addAttribute("operatingUserId", operatingUserId);
 		long userId = (Long) (request.getSession().getAttribute("userId"));
+		//set up letter info
 		boolean withStamp = letterManager.checkEachOtherLetterWithStamp(userId, operatingUserId);
 		if (withStamp) {
 			letter.setType(Constant.LETTER_TYPE_STAMP);
@@ -58,8 +58,12 @@ public class MessageControler {
 		}
 		
 		letter.setToUserId(operatingUserId);
-		
 		model.addAttribute("sendingLetter", letter);
+		
+		//TODO maybe can use cache
+		//set user info ,..
+		User toUser = usermanager.getUserBasicInfoById(operatingUserId);
+		model.addAttribute("toUser", toUser);
 		return "/sendLetter";
 	}
 	
@@ -68,8 +72,15 @@ public class MessageControler {
 		System.out.println(letter.toString());
 		long userId = (Long)(request.getSession().getAttribute("userId"));
 		letter.setFromUserId(userId);
-//		letter.setReplyLetterId(0L);
-//		letterManager.addLetter(letter);
+		
+		//letterManager.addLetter(letter);
+		
+		if (letter.getWithStamp().equals(Constant.LETTER_TYPE_STAMP)) {
+			String stampCountStr = request.getParameter("stampCount");
+			long stampCount = Long.parseLong(stampCountStr);
+			usermanager.updateStampCount(userId,stampCount - 1);
+		}
+		
 		return "redirect:/msg/sendSuccess";
 	}
 	

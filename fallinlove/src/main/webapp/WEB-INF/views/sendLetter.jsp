@@ -103,6 +103,7 @@ function check_content(anniu_id, if_click_mobile){
 		    		   count = data["count"];
 		    	   }
 		    	   if(count > 0){
+		    		   get_id("stampCount").value = count;
 		    		   do_no_tanchu(anniu_id);
 		    	   }
 		       }  
@@ -1013,6 +1014,7 @@ document.getElementById('head_red_simple_user').innerHTML = loginstr;	//会员�
 									<input name="type" id="letterType" value="1" type="hidden">
 									<input name="withStamp" id="withStamp" value="1" type="hidden">
 									<input name="toUserId" id="toUserId" value="${sendingLetter.toUserId}" type="hidden">
+									<input name="stampCount" id="stampCount" value="0" type="hidden">
 									
 									<input name="ok_xinzhi_id" id="ok_xinzhi_id" value="" type="hidden">
 									<input name="fxly" id="fxly" value="cp-eexpress" type="hidden">
