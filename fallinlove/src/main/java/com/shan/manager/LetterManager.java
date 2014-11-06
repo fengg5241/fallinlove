@@ -157,7 +157,7 @@ public class LetterManager extends BaseManager {
 		// get the row column data
 		Letter letter = new Letter();
 		letter.setContent(LoveTable.COLUMN_CONTENT);
-		letter.setFromUserId(rs.getLong(LoveTable.COLUMN_CONTENT));
+		letter.setFromUserId(rs.getLong(LoveTable.COLUMN_FROM_USER_ID));
 		letter.setReplyLetterId(rs.getLong(LoveTable.COLUMN_REPLY_ID));
 		letter.setSeqId(rs.getLong(LoveTable.COLUMN_SEQ_ID));
 		letter.setStatus(rs.getString(LoveTable.COLUMN_STATUS));
