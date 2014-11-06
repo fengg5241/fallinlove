@@ -73,7 +73,7 @@ public class MessageControler {
 		long userId = (Long)(request.getSession().getAttribute("userId"));
 		letter.setFromUserId(userId);
 		
-		//letterManager.addLetter(letter);
+		letterManager.addLetter(letter);
 		
 		if (letter.getWithStamp().equals(Constant.LETTER_TYPE_STAMP)) {
 			String stampCountStr = request.getParameter("stampCount");
@@ -228,7 +228,7 @@ public class MessageControler {
 				}
 			}
 		}
-		
+		logger.info(letterDtos.toString());
 		model.addAttribute("outboxLetters", letterDtos);
 		
 		return "messageOutbox";
