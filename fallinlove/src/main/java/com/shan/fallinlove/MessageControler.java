@@ -222,13 +222,13 @@ public class MessageControler {
 					
 					LetterDto letterDto = new LetterDto();
 					letterDto.setLetter(letter);
-					letterDto.setFromUser(toUser);
+					letterDto.setToUser(toUser);
 					
 					letterDtos.add(letterDto);
 				}
 			}
 		}
-		logger.info(letterDtos.toString());
+		logger.info(letterDtos.size()+"");
 		model.addAttribute("outboxLetters", letterDtos);
 		
 		return "messageOutbox";
