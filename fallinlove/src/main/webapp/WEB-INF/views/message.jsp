@@ -1074,7 +1074,12 @@ document.all?window.external.AddFavorite(a,b):window.sidebar&&window.sidebar.add
 <div class="doc980"> 
 
     <!--广告 B-->
-    <div class="ad-mod" id="ad_pos_66"><div id="jy_ad_703"><ul><li style="display: none;"><a href="http://www.jiayuan.com/advert/click.php?pos_id=66&amp;mr_id=6258&amp;ad_id=795&amp;m_id=703&amp;userid=121261858&amp;ip=1951866301&amp;url=http://www.jiayuan.com/usercp/service/do_package_service.php?rid=70&amp;src_key=ad_41_66_795_703_6258" target="_blank"><img src="../resources/img/20140925054943777.jpg" alt=""></a></li><li style="display: block;"><a href="http://www.jiayuan.com/advert/click.php?pos_id=66&amp;mr_id=6259&amp;ad_id=795&amp;m_id=703&amp;userid=121261858&amp;ip=1951866301&amp;url=http://www.jiayuan.com/parties/2012/dafuweng/index.php&amp;src_key=ad_41_66_795_703_6259" target="_blank"><img src="../resources/img/20140613111332980.gif" alt=""></a></li><li style="display: none;"><a href="http://www.jiayuan.com/advert/click.php?pos_id=66&amp;mr_id=6260&amp;ad_id=795&amp;m_id=703&amp;userid=121261858&amp;ip=1951866301&amp;url=http://case.jiayuan.com/2012/fishingjoy/&amp;src_key=ad_41_66_795_703_6260" target="_blank"><img src="../resources/img/20140528100430449.gif" alt=""></a></li></ul></div><script>new jy_ad("#jy_ad_703");</script>
+    <div class="ad-mod" id="ad_pos_66"><div id="jy_ad_703">
+    <ul><li style="display: none;"><a href="http://www.jiayuan.com/advert/click.php?pos_id=66&amp;mr_id=6258&amp;ad_id=795&amp;m_id=703&amp;userid=121261858&amp;ip=1951866301&amp;url=http://www.jiayuan.com/usercp/service/do_package_service.php?rid=70&amp;src_key=ad_41_66_795_703_6258" target="_blank"><img src="../resources/img/20140925054943777.jpg" alt=""></a></li>
+    <li style="display: block;"><a href="http://www.jiayuan.com/advert/click.php?pos_id=66&amp;mr_id=6259&amp;ad_id=795&amp;m_id=703&amp;userid=121261858&amp;ip=1951866301&amp;url=http://www.jiayuan.com/parties/2012/dafuweng/index.php&amp;src_key=ad_41_66_795_703_6259" target="_blank">
+    	<img src="../resources/img/20140613111332980.gif" alt=""></a></li><li style="display: none;"><a href="http://www.jiayuan.com/advert/click.php?pos_id=66&amp;mr_id=6260&amp;ad_id=795&amp;m_id=703&amp;userid=121261858&amp;ip=1951866301&amp;url=http://case.jiayuan.com/2012/fishingjoy/&amp;src_key=ad_41_66_795_703_6260" target="_blank"><img src="../resources/img/20140528100430449.gif" alt=""></a></li></ul></div>
+<!--     	shanf -->
+<!--     	<script>new jy_ad("#jy_ad_703");</script> -->
     </div>
     <!--广告 B-->
 
