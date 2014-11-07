@@ -17,6 +17,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.shan.fallinlove.model.LoginForm;
+import com.shan.fallinlove.model.MarriageType;
 import com.shan.fallinlove.model.User;
 import com.shan.util.LoveTable;
 @Component("usermanager")
@@ -243,7 +244,7 @@ public class UserManager extends BaseManager{
 		user.setEducation(rs.getString(LoveTable.COLUMN_EDUCATION));
 		user.setHeight(rs.getString(LoveTable.COLUMN_HEIGHT));
 		user.setIncome(rs.getString(LoveTable.COLUMN_INCOME));
-		user.setMarriage(rs.getString(LoveTable.COLUMN_MARRIAGE));
+		user.setMarriage(MarriageType.getName(rs.getInt(LoveTable.COLUMN_MARRIAGE)));
 		user.setMobile(rs.getString(LoveTable.COLUMN_MOBILE));
 		user.setMobileVali(rs.getString(LoveTable.COLUMN_MOBILE_VALI));
 		user.setMonth(rs.getString(LoveTable.COLUMN_MONTH));
@@ -267,6 +268,7 @@ public class UserManager extends BaseManager{
 		user.setAge(caculateAge(year,month,day));
 		String constellation = getConstellation(Integer.parseInt(user.getMonth()),Integer.parseInt(user.getDay()));
 		user.setConstellation(constellation);
+		
 		return user;
 	}
 	
