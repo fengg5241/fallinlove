@@ -580,7 +580,7 @@ document.getElementById('head_red_simple_user').innerHTML = loginstr;	//会员�
 						</span>
 						<span class="time" onmousedown="send_jy_pv2('|1015752_6|');"><a onclick="send_jy_pv2('msg_kx_vipkj');send_jy_pv2('|vip_entry_zjdl_click|');" href="http://www.jiayuan.com/usercp/service/upgrade.php?src_key=vip_entry_zjdl" target="_blank" class="a_blue12">最近登录时间：VIP会员可见</a></span>
 					</div>
-					<p class="data">27岁，未婚，162cm，其他国家，大专，独自租房，医疗/护理，10000～20000元</p>
+					<p class="data">${operatingUser.age}岁,${operatingUser.marriage},${operatingUser.height},${operatingUser.address},${operatingUser.education},${operatingUser.salary}</p>
 					<div class="member-like clearfix">
 						<div class="like"> 
 							个人独白：一个人在外走得久了，总有种流浪的感觉。来到这里真的是偶然的，...
@@ -612,62 +612,70 @@ document.getElementById('head_red_simple_user').innerHTML = loginstr;	//会员�
 								</p>
 				
 				<!--详细列表-->
-								<div class="letter-detail" id="msg_list">
-															<!--右-->
-					<div class="item right clearfix">
-						<div class="lt-face"><a target="_blank" href="http://www.jiayuan.com/122261858?lt=msgbox" onmousedown="send_jy_pv2('|1015752_15|121261858');"><img src="../../resources/img/zwzp_m_s.jpg" alt=""></a></div>
-						<div class="lt-detail">
-							<div class="lt-time">10月26日 23:30</div>
-							<div class="lt-txt-mod clearfix">
-								<div class="lt-txt">
-									<span class="tarr"></span>
-									<p>感谢您的来信！很高兴能和您相识。</p>
-									<a href="http://www.jiayuan.com/msg/inbox/delete.php?msgids=c5d000000025b3b4&amp;box=_F&amp;out_encode=XaqD4gL3jtXGjVBPJeu3dw95BV7CgFS2V7O1V4dZUnkPeCXFBD82YxQDuWjlcM*PA1Mm4YX-ldHJzY1j6w.." class="close" onmousedown="send_jy_pv2('|1015752_17|121261858');"></a>
+						<div class="letter-detail" id="msg_list">
+						<c:forEach var="letter" items="${historyLetters}" >
+							<c:if test="${letter.fromUserId == operatingUser.userId}">  <!--对方的信-->
+								<!--左-->
+								<div class="item left clearfix">
+									<div class="lt-face"><a target="_blank" href="http://www.jiayuan.com/35307408?lt=msgbox" onmousedown="send_jy_pv2('|1015752_15|121261858');"><img src="../../resources/img/59064b09c_1_avatar_s.jpg" alt=""></a></div>
+									<div class="lt-detail">
+										<div class="lt-time">${letter.createTime}</div>
+										<div class="lt-txt-mod clearfix">
+																			<div class="lt-txt">
+												<span class="tarr" type=""></span>
+												<p>${letter.content}</p>
+												<a href="http://www.jiayuan.com/msg/inbox/delete.php?msgids=c5d10000002959a3&amp;box=_T&amp;out_encode=qIpULDAAhHdoY5at3D1ysLWDCQwonwEALFsEDa*GJXxKBzHLyrni6PewEZKO6yVkvODxYB1KfTegnk-4FA.." class="close" onmousedown="send_jy_pv2('|1015752_17|121261858');"></a>
+											</div>
+																												<div class="unread"><i class="point" title="未读"></i></div>
+																											<div class="stars" msgid="c5d10000002959a3">
+												<a class="star_gray" style="display: none;"></a>
+												<a class="star_cur" style="display:none;"></a>
+											</div>
+										</div>
+									</div>
 								</div>
-							</div>
-													</div>
-					</div>
+							</c:if>
+							<c:if test="${letter.fromUserId != operatingUser.userId}">  <!--自己发的信-->
+								<!--右-->
+								<div class="item right clearfix">
+									<div class="lt-face"><a target="_blank" href="http://www.jiayuan.com/122261858?lt=msgbox" onmousedown="send_jy_pv2('|1015752_15|121261858');"><img src="../../resources/img/zwzp_m_s.jpg" alt=""></a></div>
+									<div class="lt-detail">
+										<div class="lt-time">${letter.createTime}</div>
+										<div class="lt-txt-mod clearfix">
+											<div class="lt-txt">
+												<span class="tarr"></span>
+												<p>${letter.content}</p>
+												<a href="http://www.jiayuan.com/msg/inbox/delete.php?msgids=c5d000000025b3b4&amp;box=_F&amp;out_encode=XaqD4gL3jtXGjVBPJeu3dw95BV7CgFS2V7O1V4dZUnkPeCXFBD82YxQDuWjlcM*PA1Mm4YX-ldHJzY1j6w.." class="close" onmousedown="send_jy_pv2('|1015752_17|121261858');"></a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</c:if>
+						</c:forEach>
+															
+
+
 																				<!--左-->
-					<div class="item left clearfix">
-						<div class="lt-face"><a target="_blank" href="http://www.jiayuan.com/35307408?lt=msgbox" onmousedown="send_jy_pv2('|1015752_15|121261858');"><img src="../../resources/img/59064b09c_1_avatar_s.jpg" alt=""></a></div>
-						<div class="lt-detail">
-							<div class="lt-time">10月28日 14:35</div>
-							<div class="lt-txt-mod clearfix">
-																<div class="lt-txt">
-									<span class="tarr" type=""></span>
-									<p>一万个人有一万种生活，我向往相依相偎的简单生活，你呢？</p>
-									<a href="http://www.jiayuan.com/msg/inbox/delete.php?msgids=c5d10000002959a3&amp;box=_T&amp;out_encode=qIpULDAAhHdoY5at3D1ysLWDCQwonwEALFsEDa*GJXxKBzHLyrni6PewEZKO6yVkvODxYB1KfTegnk-4FA.." class="close" onmousedown="send_jy_pv2('|1015752_17|121261858');"></a>
-								</div>
-																									<div class="unread"><i class="point" title="未读"></i></div>
-																								<div class="stars" msgid="c5d10000002959a3">
-									<a class="star_gray" style="display: none;"></a>
-									<a class="star_cur" style="display:none;"></a>
-								</div>
-															</div>
+<!-- 					<div class="item left clearfix"> -->
+<!-- 						<div class="lt-face"><a target="_blank" href="http://www.jiayuan.com/35307408?lt=msgbox" onmousedown="send_jy_pv2('|1015752_15|121261858');"><img src="../../resources/img/59064b09c_1_avatar_s.jpg" alt=""></a></div> -->
+<!-- 						<div class="lt-detail"> -->
+<!-- 							<div class="lt-time">11月01日 21:17</div> -->
+<!-- 							<div class="lt-txt-mod clearfix"> -->
+<!-- 																<div class="lt-txt"> -->
+<!-- 									<span class="tarr" type=""></span> -->
+<!-- 									<p>能够与你在这里相遇即是缘分，希望能够携手同行。</p> -->
+<!-- 									<a href="http://www.jiayuan.com/msg/inbox/delete.php?msgids=c5d1000000297b4e&amp;box=_T&amp;out_encode=WlOmuJcg37mGWTsrhu2mqVpoCyhypPsfqjznM2zR1KA3oq194*pyXwgRxZHJYq4-fs37nUHtCT1AGS29eQ.." class="close" onmousedown="send_jy_pv2('|1015752_17|121261858');"></a> -->
+<!-- 								</div> -->
+<!-- 																									<div class="unread"><i class="point" title="未读"></i></div> -->
+<!-- 																								<div class="stars" msgid="c5d1000000297b4e"> -->
+<!-- 									<a class="star_gray" style="display: none;"></a> -->
+<!-- 									<a class="star_cur" style="display:none;"></a> -->
+<!-- 								</div> -->
+<!-- 															</div> -->
 							
-													</div>
-					</div>
-																				<!--左-->
-					<div class="item left clearfix">
-						<div class="lt-face"><a target="_blank" href="http://www.jiayuan.com/35307408?lt=msgbox" onmousedown="send_jy_pv2('|1015752_15|121261858');"><img src="../../resources/img/59064b09c_1_avatar_s.jpg" alt=""></a></div>
-						<div class="lt-detail">
-							<div class="lt-time">11月01日 21:17</div>
-							<div class="lt-txt-mod clearfix">
-																<div class="lt-txt">
-									<span class="tarr" type=""></span>
-									<p>能够与你在这里相遇即是缘分，希望能够携手同行。</p>
-									<a href="http://www.jiayuan.com/msg/inbox/delete.php?msgids=c5d1000000297b4e&amp;box=_T&amp;out_encode=WlOmuJcg37mGWTsrhu2mqVpoCyhypPsfqjznM2zR1KA3oq194*pyXwgRxZHJYq4-fs37nUHtCT1AGS29eQ.." class="close" onmousedown="send_jy_pv2('|1015752_17|121261858');"></a>
-								</div>
-																									<div class="unread"><i class="point" title="未读"></i></div>
-																								<div class="stars" msgid="c5d1000000297b4e">
-									<a class="star_gray" style="display: none;"></a>
-									<a class="star_cur" style="display:none;"></a>
-								</div>
-															</div>
-							
-													</div>
-					</div>
-														</div>
+<!-- 													</div> -->
+<!-- 					</div> -->
+				</div>
 								
 			</div>
 			<!--发信框-->
@@ -757,27 +765,30 @@ document.getElementById('head_red_simple_user').innerHTML = loginstr;	//会员�
 							</li>
 						</ul>
 					</div>
-				<form id="sendmsg" action="http://www.jiayuan.com/msg/dosend.php" method="post">
-					<input name="cai_xin" id="cai_xin" value="0" type="hidden">
-					<input name="liwu_nofree" id="liwu_nofree" value="0" type="hidden">
-					<input name="reply_msgid" value="c5d1000000297b4e" type="hidden">
-					<input name="liwu_nofree_id" id="liwu_nofree_id" value="0" type="hidden">
-					<input name="to_hash" value="5459064b09c2200a149bd0294ad48718" type="hidden">
-					<input name="uqjm_code" id="uqjm_code" value="df25e0bc3a34b4da228b62edca99a6fe" type="hidden">
+				<form id="sendmsg" action="../send"  name="letter" method="post">
+					<input name="toUserId" id="toUserId" value="${operatingUser.userId}" type="hidden">
+					<input name="withStamp" id="withStamp" value="1" type="hidden">
+					
+<!-- 					<input name="cai_xin" id="cai_xin" value="0" type="hidden"> -->
+<!-- 					<input name="liwu_nofree" id="liwu_nofree" value="0" type="hidden"> -->
+<!-- 					<input name="reply_msgid" value="c5d1000000297b4e" type="hidden"> -->
+<!-- 					<input name="liwu_nofree_id" id="liwu_nofree_id" value="0" type="hidden"> -->
+<!-- 					<input name="to_hash" value="5459064b09c2200a149bd0294ad48718" type="hidden"> -->
+<!-- 					<input name="uqjm_code" id="uqjm_code" value="df25e0bc3a34b4da228b62edca99a6fe" type="hidden"> -->
 					<div class="replay-txt">
-						<textarea id="txt" name="contents" class="input-txt"></textarea>
+						<textarea id="txt" name="content" class="input-txt"></textarea>
 					</div>
 					<div class="replay-btn">
 	<ul class="clearfix">
 			<li id="liwu_anniu" style="display:none;">
-			<a id="liwu" class="btn gift" href="javascript:;" onmousedown="send_jy_pv2('|1015896_27|121261858');">礼物发信</a>
+			<a id="liwu" class="btn gift" href="javascript:;">礼物发信</a>
 			<div class="replay-btn-layer width158">
 				<span class="tarr-icon"></span>
 				<p>赠送礼物，该信息将被置顶显示</p>
 			</div>	
 		</li>	
 		<li class="mr0">
-			<a id="free" class="btn free" href="javascript:;" onmousedown="send_jy_pv2('|1015896_29|121261858');">免费回复</a>
+			<a id="free" class="btn free" href="javascript:;">免费回复</a>
 		</li> 
 </ul></div>				</form>
 				</div>
@@ -787,16 +798,17 @@ document.getElementById('head_red_simple_user').innerHTML = loginstr;	//会员�
 	</div>
 </div>
 <!--快捷方式-->
-<div class="shortcuts">
-	<ul> 
-		<li><a href="http://www.jiayuan.com/msg/" onmousedown="send_jy_pv2('|1015896_31|121261858');"><i class="inbox"></i>收件箱</a></li>
-		<li><a id="prev" jump="1" href="" onmousedown="send_jy_pv2('|1015896_33|121261858');"><i class="upon"></i>上一位</a></li>
-		<li><a id="delete" href="javascript:;" onmousedown="send_jy_pv2('|1015896_35|121261858');"><i class="del"></i>删　除</a></li>
-		<li><a id="next" jump="1" href="http://www.jiayuan.com/msg/showmsg.php?obj_uid_disp=aicZfAVHdOZLyXTTAgRTyGmbHyAzmsKDjXVOhobcAOzrYfzvUMjpWyw.&amp;page_index=&amp;box_type=outbox&amp;prev_next=prev&amp;sort=201&amp;other=" onmousedown="send_jy_pv2('|1015896_37|121261858');"><i class="underneath"></i>下一位</a></li>
-		<li class="refusal-letter"><a id="refused_next" jump="1" href="http://www.jiayuan.com/msg/showmsg.php?obj_uid_disp=aicZfAVHdOZLyXTTAgRTyGmbHyAzmsKDjXVOhobcAOzrYfzvUMjpWyw.&amp;page_index=&amp;box_type=outbox&amp;prev_next=prev&amp;sort=201&amp;other=" onmousedown="send_jy_pv2('|1015896_39|121261858');"><i class="underneath"></i>拒绝并下一位</a></li>
-		<li style="display: none;" class="reply"><a href="javascript:;" onmousedown="send_jy_pv2('|1015896_41|121261858');"><i class="heart"></i>回复TA</a></li>
-	</ul>
-</div>
+<!-- shanf -->
+<!-- <div class="shortcuts"> -->
+<!-- 	<ul>  -->
+<!-- 		<li><a href="http://www.jiayuan.com/msg/" onmousedown="send_jy_pv2('|1015896_31|121261858');"><i class="inbox"></i>收件箱</a></li> -->
+<!-- 		<li><a id="prev" jump="1" href="" onmousedown="send_jy_pv2('|1015896_33|121261858');"><i class="upon"></i>上一位</a></li> -->
+<!-- 		<li><a id="delete" href="javascript:;" onmousedown="send_jy_pv2('|1015896_35|121261858');"><i class="del"></i>删　除</a></li> -->
+<!-- 		<li><a id="next" jump="1" href="http://www.jiayuan.com/msg/showmsg.php?obj_uid_disp=aicZfAVHdOZLyXTTAgRTyGmbHyAzmsKDjXVOhobcAOzrYfzvUMjpWyw.&amp;page_index=&amp;box_type=outbox&amp;prev_next=prev&amp;sort=201&amp;other=" onmousedown="send_jy_pv2('|1015896_37|121261858');"><i class="underneath"></i>下一位</a></li> -->
+<!-- 		<li class="refusal-letter"><a id="refused_next" jump="1" href="http://www.jiayuan.com/msg/showmsg.php?obj_uid_disp=aicZfAVHdOZLyXTTAgRTyGmbHyAzmsKDjXVOhobcAOzrYfzvUMjpWyw.&amp;page_index=&amp;box_type=outbox&amp;prev_next=prev&amp;sort=201&amp;other=" onmousedown="send_jy_pv2('|1015896_39|121261858');"><i class="underneath"></i>拒绝并下一位</a></li> -->
+<!-- 		<li style="display: none;" class="reply"><a href="javascript:;" onmousedown="send_jy_pv2('|1015896_41|121261858');"><i class="heart"></i>回复TA</a></li> -->
+<!-- 	</ul> -->
+<!-- </div> -->
 <!--补贴邮票弹层 B-->
 <div class="bg" id="bg"></div>
 <div class="ly_subbg width570" id="popup_box" style="margin:0; width:495px;height:500px">
@@ -895,9 +907,9 @@ $("#mobile,#liwu,#free").click(function(){
 		});
 		$("#liwu_nofree").val('1');
 	}else if(id == 'free'){
-		$("#cai_xin").val('0');
-		$("#liwu_nofree").val('0'); 
-		$("#sendmsg").attr({'action':'http://www.jiayuan.com/msg/dosend.php',"target":"_self"});
+// 		$("#cai_xin").val('0');
+// 		$("#liwu_nofree").val('0'); 
+		$("#sendmsg").attr({'action':'../send',"target":"_self"});
 	}
 
 	$("#sendmsg").submit();

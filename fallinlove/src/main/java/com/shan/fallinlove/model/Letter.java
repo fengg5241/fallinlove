@@ -95,7 +95,9 @@ public class Letter extends BaseModel{
 		return "Letter [seqId=" + seqId + ", fromUserId=" + fromUserId
 				+ ", toUserId=" + toUserId + ", content=" + content + ", type="
 				+ type + ", status=" + status + ", withStamp=" + withStamp
-				+ ", replyLetterId=" + replyLetterId + "]";
+				+ ", replyLetterId=" + replyLetterId + ", getCreateTime()="
+				+ getCreateTime() + ", getUpdateTime()=" + getUpdateTime()
+				+ "]";
 	}
 
 }

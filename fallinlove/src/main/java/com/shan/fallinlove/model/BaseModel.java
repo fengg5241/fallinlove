@@ -4,23 +4,23 @@ import java.sql.Timestamp;
 
 public class BaseModel {
 	
-	private Timestamp createTime;
+	private String createTime;
 	
-	private Timestamp updateTime;
+	private String updateTime;
 
-	public Timestamp getCreateTime() {
+	public String getCreateTime() {
 		return createTime;
 	}
 
-	public void setCreateTime(Timestamp createTime) {
+	public void setCreateTime(String createTime) {
 		this.createTime = createTime;
 	}
 
-	public Timestamp getUpdateTime() {
+	public String getUpdateTime() {
 		return updateTime;
 	}
 
-	public void setUpdateTime(Timestamp updateTime) {
+	public void setUpdateTime(String updateTime) {
 		this.updateTime = updateTime;
 	}
 }

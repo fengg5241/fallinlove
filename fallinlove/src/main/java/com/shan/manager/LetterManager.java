@@ -3,11 +3,12 @@ package com.shan.manager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.PreparedStatementSetter;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Component;
@@ -144,7 +145,12 @@ public class LetterManager extends BaseManager {
 					")	or (" +LoveTable.COLUMN_FROM_USER_ID +"=" + toUserId + "and " + LoveTable.COLUMN_TO_USER_ID +"=" + fromUserId +
 					")) order by "+LoveTable.COLUMN_CREATE_TIME;
 		
-		
+		try {
+			letters = getJdbcTemplate().query(sql, letterRowMapper);
+		} catch (DataAccessException e) {
+			//no letter 
+			e.printStackTrace();
+		}
 		return letters;
 	}
 	
@@ -156,7 +162,7 @@ public class LetterManager extends BaseManager {
 	private Letter mapLetter(ResultSet rs) throws SQLException {
 		// get the row column data
 		Letter letter = new Letter();
-		letter.setContent(LoveTable.COLUMN_CONTENT);
+		letter.setContent(rs.getString(LoveTable.COLUMN_CONTENT));
 		letter.setFromUserId(rs.getLong(LoveTable.COLUMN_FROM_USER_ID));
 		letter.setReplyLetterId(rs.getLong(LoveTable.COLUMN_REPLY_ID));
 		letter.setSeqId(rs.getLong(LoveTable.COLUMN_SEQ_ID));
@@ -164,8 +170,12 @@ public class LetterManager extends BaseManager {
 		letter.setToUserId(rs.getLong(LoveTable.COLUMN_TO_USER_ID));
 		letter.setType(rs.getString(LoveTable.COLUMN_TYPE));
 		letter.setWithStamp(rs.getString(LoveTable.COLUMN_WITH_STAMP));
-		letter.setCreateTime(rs.getTimestamp(LoveTable.COLUMN_CREATE_TIME));
-		letter.setUpdateTime(rs.getTimestamp(LoveTable.COLUMN_UPDATE_TIME));
+		
+		SimpleDateFormat dateformat=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		String ct=dateformat.format(rs.getTimestamp(LoveTable.COLUMN_CREATE_TIME));
+		String ut=dateformat.format(rs.getTimestamp(LoveTable.COLUMN_UPDATE_TIME));
+		letter.setCreateTime(ct);
+		letter.setUpdateTime(ut);
 		return letter;
 	}
 	

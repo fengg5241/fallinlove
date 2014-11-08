@@ -239,38 +239,23 @@ public class MessageControler {
 	public String goToReadLetterPage(Model model,HttpServletRequest request,
 			@PathVariable("operatingUserId") long operatingUserId){
 		long userId = (Long)(request.getSession().getAttribute("userId"));
-		letterManager.getAllHistoryLetters(userId, operatingUserId);
-		List<Letter> letters = letterManager.getLettersToUser(userId);
+		User operatingUser = usermanager.getUserBasicInfoById(operatingUserId);
+		model.addAttribute("operatingUser", operatingUser);
 		
-//		List<LetterDto> letterDtos = new ArrayList<LetterDto>();
-//		
-//		if (letters != null && letters.size() > 0) {
-//			List<Long> toUserIds = new ArrayList<Long>();
-//			for (Letter letter : letters) {
-//				toUserIds.add(letter.getToUserId());
-//			}
-//			
-//			List<User> toUsers = usermanager.getUsersByIdList(toUserIds);
-//			Map<Long,User> map = new HashMap<Long,User>();
-//			if (toUsers != null && toUsers.size() > 0) {
-//				for (User user : toUsers) {
-//					map.put(user.getUserId(), user);
-//				}
-//				
-//				for (Letter letter : letters) {
-//					User toUser = map.get(letter.getToUserId());
-//					
-//					LetterDto letterDto = new LetterDto();
-//					letterDto.setLetter(letter);
-//					letterDto.setToUser(toUser);
-//					
-//					letterDtos.add(letterDto);
-//				}
-//			}
-//		}
-//		logger.info(letterDtos.size()+"");
-//		model.addAttribute("outboxLetters", letterDtos);
+		List<Letter> historyLetters = letterManager.getAllHistoryLetters(userId, operatingUserId);
+		model.addAttribute("historyLetters", historyLetters);
+
+		Letter letter = new Letter();
+		boolean withStamp = letterManager.checkEachOtherLetterWithStamp(userId, operatingUserId);
+		if (withStamp) {
+			letter.setType(Constant.LETTER_TYPE_STAMP);
+		}else {
+			letter.setType(Constant.LETTER_TYPE_FREE);
+		}
 		
+		model.addAttribute("operatingLetter", letter);
+		
+		logger.info(historyLetters.toString());
 		return "readLetter";
 	}
 
