@@ -766,7 +766,7 @@ common_nav_array[current_nav_flag] = 'head_nav_cur';
                     <dd>
                         <div class="i-w">
                             <form:input id="income" path="income" name="income" value="20" type="hidden"/>
-                            <form:input id="salary" path="income" class="te w_input" value="2000-5000元" will="20" readonly="readonly" type="text"/>
+                            <form:input id="salary" path="salary" class="te w_input" value="2000-5000元" will="20" readonly="readonly" type="text"/>
                             <span class="re right sh w_icon"> </span>
                             <div class="jy-sel-o jy-sel-oh" id="salary-o">
                                 <ul>
@@ -858,7 +858,7 @@ common_nav_array[current_nav_flag] = 'head_nav_cur';
                     <dt>验证码</dt>
                     <dd>
                         <div class="i-w">
-                            <form:input id="mobile_vali" path="mobileVali" name="mobile_vali" class="te" maxlength="" type="text"/>
+                            <form:input id="mobile_vali" path="mobileVali" name="mobileVali" class="te" maxlength="" type="text"/>
                             <span class="re right"> </span>
                         </div>
                     </dd>

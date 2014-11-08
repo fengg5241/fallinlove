@@ -16,6 +16,7 @@ import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.shan.fallinlove.model.EducationType;
 import com.shan.fallinlove.model.LoginForm;
 import com.shan.fallinlove.model.MarriageType;
 import com.shan.fallinlove.model.User;
@@ -241,7 +242,7 @@ public class UserManager extends BaseManager{
 		user.setAddress(rs.getString(LoveTable.COLUMN_ADDRESS));
 		user.setCity(rs.getString(LoveTable.COLUMN_CITY));
 		user.setDay(rs.getString(LoveTable.COLUMN_DAY));
-		user.setEducation(rs.getString(LoveTable.COLUMN_EDUCATION));
+		user.setEducation(EducationType.getName(rs.getInt(LoveTable.COLUMN_EDUCATION)));
 		user.setHeight(rs.getString(LoveTable.COLUMN_HEIGHT));
 		user.setIncome(rs.getString(LoveTable.COLUMN_INCOME));
 		user.setMarriage(MarriageType.getName(rs.getInt(LoveTable.COLUMN_MARRIAGE)));

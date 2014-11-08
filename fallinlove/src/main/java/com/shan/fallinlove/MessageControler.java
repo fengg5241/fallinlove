@@ -218,7 +218,7 @@ public class MessageControler {
 				}
 				
 				for (Letter letter : letters) {
-					User toUser = map.get(letter.getFromUserId());
+					User toUser = map.get(letter.getToUserId());
 					
 					LetterDto letterDto = new LetterDto();
 					letterDto.setLetter(letter);

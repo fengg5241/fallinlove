@@ -2117,12 +2117,12 @@ get_app_num();	//获取佳缘应用的数字
 								src="../resources/img/2.png" alt="VIP会员" title="VIP会员">
 							</span> <a class="data"
 								href="http://www.jiayuan.com/msg/showmsg.php?obj_uid_disp=qOLkg9AynjdBIfMjY2FE*LRizXp6IwQaeMNrdZhSPCT9Q4RAHW4C-Fo.&amp;box_type=outbox&amp;msg_type=&amp;sort=201"
-								target="_blank">${letter.toUser.age}岁，${letter.toUser.marriage}，${letter.toUser.address}，${letter.toUser.education},${letter.fromUser.salary}</a>
+								target="_blank">${letter.toUser.age}岁,${letter.toUser.marriage},${letter.toUser.address},${letter.toUser.education},${letter.toUser.salary}</a>
 						</div>
 						<p class="msg-txt">
 							<a
 								href="http://www.jiayuan.com/msg/showmsg.php?obj_uid_disp=qOLkg9AynjdBIfMjY2FE*LRizXp6IwQaeMNrdZhSPCT9Q4RAHW4C-Fo.&amp;box_type=outbox&amp;msg_type=&amp;sort=201"
-								target="_blank">我：...年29，典型的魔羯...</a>
+								target="_blank">我：...的来信！很高兴能和您...</a>
 							<a class="blue-link"
 								href="http://www.jiayuan.com/msg/showmsg.php?obj_uid_disp=qOLkg9AynjdBIfMjY2FE*LRizXp6IwQaeMNrdZhSPCT9Q4RAHW4C-Fo.&amp;box_type=outbox&amp;msg_type=&amp;sort=201"
 								target="_blank">查看通信记录</a>
@@ -2156,9 +2156,9 @@ get_app_num();	//获取佳缘应用的数字
 					</div>
 					<div class="con-mod">
 						<div class="specific">
-							<a class="name" href="h target="_blank" >天空</a> <span
+							<a class="name" href="h target="_blank" >${letter.toUser.nickname}</a> <span
 								class="icon-box"></span> <a class="data" href=""
-								target="_blank">${letter.toUser.age}岁，${letter.toUser.marriage}，${letter.toUser.address}，${letter.toUser.education}</a>
+								target="_blank">${letter.toUser.age}岁,${letter.toUser.marriage},${letter.toUser.address},${letter.toUser.education},${letter.toUser.salary}</a>
 						</div>
 						<p class="msg-txt">
 							<a
