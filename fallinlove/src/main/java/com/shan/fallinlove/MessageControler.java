@@ -233,5 +233,45 @@ public class MessageControler {
 		
 		return "messageOutbox";
 	}
+	
+	/** ======================================阅读信件功能===================================================*/
+	@RequestMapping(value="/readSendedLetter/{operatingUserId}",method=RequestMethod.GET)
+	public String goToReadLetterPage(Model model,HttpServletRequest request,
+			@PathVariable("operatingUserId") long operatingUserId){
+		long userId = (Long)(request.getSession().getAttribute("userId"));
+		letterManager.getAllHistoryLetters(userId, operatingUserId);
+		List<Letter> letters = letterManager.getLettersToUser(userId);
+		
+//		List<LetterDto> letterDtos = new ArrayList<LetterDto>();
+//		
+//		if (letters != null && letters.size() > 0) {
+//			List<Long> toUserIds = new ArrayList<Long>();
+//			for (Letter letter : letters) {
+//				toUserIds.add(letter.getToUserId());
+//			}
+//			
+//			List<User> toUsers = usermanager.getUsersByIdList(toUserIds);
+//			Map<Long,User> map = new HashMap<Long,User>();
+//			if (toUsers != null && toUsers.size() > 0) {
+//				for (User user : toUsers) {
+//					map.put(user.getUserId(), user);
+//				}
+//				
+//				for (Letter letter : letters) {
+//					User toUser = map.get(letter.getToUserId());
+//					
+//					LetterDto letterDto = new LetterDto();
+//					letterDto.setLetter(letter);
+//					letterDto.setToUser(toUser);
+//					
+//					letterDtos.add(letterDto);
+//				}
+//			}
+//		}
+//		logger.info(letterDtos.size()+"");
+//		model.addAttribute("outboxLetters", letterDtos);
+		
+		return "readLetter";
+	}
 
 }
