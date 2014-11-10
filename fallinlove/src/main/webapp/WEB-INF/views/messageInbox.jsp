@@ -2628,7 +2628,9 @@ get_app_num();	//获取佳缘应用的数字
             </div>
             <!--信件列表-->
             <div id="letter-list" class="letter-list">      
-			<c:forEach var="letter" items="${outboxLetters}" >
+			<c:forEach var="letter" items="${inboxLetters}" >
+			<c:if test="${letter.letter.type == 1}"> <!-- 	普通的信，需要邮票 -->
+			</c:if>
 				<div class="item fn-clear">
 					<div class="input-mod">
 						<input class="m-input" value="${letter.letter.seqId}" admin="1"
@@ -2659,7 +2661,7 @@ get_app_num();	//获取佳缘应用的数字
 								onmousedown="send_jy_pv2('|1015940_23|121261858');">佳缘不堵车，长假畅游！</a>
 						</p>
 						<div class="time">
-							<i></i>10月04日 10:42
+							<i></i>${letter.createTime}
 						</div>
 					</div>
 					<div class="msg-btn gray">
