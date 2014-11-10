@@ -2590,24 +2590,22 @@ get_app_num();	//获取佳缘应用的数字
 						</div>
 						<div class="avatar-pic more-pic">
 							<a class="pay_btn" target="_blank"
-								href="http://www.jiayuan.com/msg/showmsg.php?obj_uid_disp=sIg65rYI2a5UoSSvQCKjrCpPFLi9YdkPp4frT8-PFMi9IWdnpT0QKw..&amp;page_index=x/1/10/1/2&amp;sort=101&amp;box_type=inbox&amp;msg_type="><img
+								href="msg/readUnReadPayLetter/${letter.fromUser.userId}"><img
 								src="../resources/img/fvip_clicked_new_f_s.jpg" alt=""><span
 								class="pic-num" title="对方有真实照片，诚意征友">1</span></a>
 						</div>
 						<div class="con-mod">
 							<div class="specific">
 								<a class="name pay_btn" target="_blank"
-									href="http://www.jiayuan.com/msg/showmsg.php?obj_uid_disp=sIg65rYI2a5UoSSvQCKjrCpPFLi9YdkPp4frT8-PFMi9IWdnpT0QKw..&amp;page_index=x/1/10/1/2&amp;sort=101&amp;box_type=inbox&amp;msg_type="
-									onmousedown="send_jy_pv2('|1015897_19|121261858');">${letter.fromUser.nickname}</a><span
+									href="readUnReadPayLetter/${letter.fromUser.userId}">${letter.fromUser.nickname}</a><span
 									class="icon-box"></span> <a target="_blank"
 									class="data pay_btn"
-									href="http://www.jiayuan.com/msg/showmsg.php?obj_uid_disp=sIg65rYI2a5UoSSvQCKjrCpPFLi9YdkPp4frT8-PFMi9IWdnpT0QKw..&amp;page_index=x/1/10/1/2&amp;sort=101&amp;box_type=inbox&amp;msg_type="
+									href="msg/readUnReadPayLetter/${letter.fromUser.userId}"
 									>${letter.fromUser.age}岁,${letter.fromUser.marriage},${letter.fromUser.address},${letter.fromUser.education},${letter.fromUser.salary}</a>
 							</div>
 							<div class="reason">
 								<a target="_blank" class="pay_btn"
-									href="http://www.jiayuan.com/msg/showmsg.php?obj_uid_disp=sIg65rYI2a5UoSSvQCKjrCpPFLi9YdkPp4frT8-PFMi9IWdnpT0QKw..&amp;page_index=x/1/10/1/2&amp;sort=101&amp;box_type=inbox&amp;msg_type="
-									onmousedown="send_jy_pv2('|1015897_23|121261858');"><i></i>看信理由：不吸烟不喝酒，她是乖乖女</a>
+									href="msg/readUnReadPayLetter/${letter.fromUser.userId}"><i></i>看信理由：也许这是一次缘分</a>
 							</div>
 							<div class="time">
 								<i></i><span>${letter.createTime}</span>
@@ -2615,14 +2613,13 @@ get_app_num();	//获取佳缘应用的数字
 						</div>
 						<div class="msg">
 							<a target="_blank" class="pay_btn"
-								href="http://www.jiayuan.com/msg/showmsg.php?obj_uid_disp=sIg65rYI2a5UoSSvQCKjrCpPFLi9YdkPp4frT8-PFMi9IWdnpT0QKw..&amp;page_index=x/1/10/1/2&amp;sort=101&amp;box_type=inbox&amp;msg_type="
-								onmousedown="send_jy_pv2('|1015897_25|121261858');"><strong
+								href="msg/readUnReadPayLetter/${letter.fromUser.userId}"><strong
 								class="red">1封未读</strong>|<span hx="1">共1封</span></a>
 						</div>
 						<div class="msg-btn orange">
 							<a class="pay_btn" target="_blank"
-								href="http://www.jiayuan.com/msg/showmsg.php?obj_uid_disp=sIg65rYI2a5UoSSvQCKjrCpPFLi9YdkPp4frT8-PFMi9IWdnpT0QKw..&amp;page_index=x/1/10/1/2&amp;sort=101&amp;box_type=inbox&amp;msg_type="
-								onmousedown="send_jy_pv2('|1015897_29|121261858');">看信</a>
+								href="msg/readUnReadPayLetter/${letter.fromUser.userId}"
+								>看信</a>
 							<div class="replay-btn-layer">
 								<span class="tarr-icon"></span>
 								<p>仅需1张邮票</p>
@@ -2639,23 +2636,23 @@ get_app_num();	//获取佳缘应用的数字
 						</div>
 						<div class="avatar-pic ">
 							<a class="pay_btn" target="_blank"
-								href="http://www.jiayuan.com/msg/v6/showmsg_adm.php?msg_id=c5d200000028d257&amp;page_index=x/1/10/1/3&amp;sort=101"
+								href="msg/readUnReadFreeLetter/${letter.fromUser.userId}"
 								><img src="../resources/img/touxiang_da.jpg" alt=""></a>
 						</div>
 						<div class="con-mod">
 							<div class="specific">
 								<a class="name pay_btn" target="_blank"
-									href="http://www.jiayuan.com/msg/v6/showmsg_adm.php?msg_id=c5d200000028d257&amp;page_index=x/1/10/1/3&amp;sort=101"
+									href="msg/readUnReadFreeLetter/${letter.fromUser.userId}"
 									>${letter.fromUser.nickname}</a><span
 									class="icon-box"></span> <a target="_blank"
 									class="data pay_btn"
-									href="http://www.jiayuan.com/msg/showmsg.php?obj_uid_disp=sIg65rYI2a5UoSSvQCKjrCpPFLi9YdkPp4frT8-PFMi9IWdnpT0QKw..&amp;page_index=x/1/10/1/2&amp;sort=101&amp;box_type=inbox&amp;msg_type="
+									href="msg/readUnReadFreeLetter/${letter.fromUser.userId}"
 									>${letter.fromUser.age}岁,${letter.fromUser.marriage},${letter.fromUser.address},${letter.fromUser.education},${letter.fromUser.salary}</a>
 							</div>
 							<div class="reason">
 								<a target="_blank" class="pay_btn"
-									href="http://www.jiayuan.com/msg/v6/showmsg_adm.php?msg_id=c5d200000028d257&amp;page_index=x/1/10/1/3&amp;sort=101"
-									>国庆我佳有大促</a>
+									href="msg/readUnReadFreeLetter/${letter.fromUser.userId}"
+									>看信理由：也许这是一次缘分</a>
 							</div>
 							<div class="time">
 								<i></i><span>${letter.createTime}</span>
@@ -2663,13 +2660,13 @@ get_app_num();	//获取佳缘应用的数字
 						</div>
 						<div class="msg">
 							<a target="_blank" class="pay_btn"
-								href="http://www.jiayuan.com/msg/v6/showmsg_adm.php?msg_id=c5d200000028d257&amp;page_index=x/1/10/1/3&amp;sort=101"
+								href="msg/readUnReadFreeLetter/${letter.fromUser.userId}"
 								><strong
 								class="red">1封未读</strong>|<span hx="1">共1封</span></a>
 						</div>
 						<div class="msg-btn ">
 							<a class="pay_btn" target="_blank"
-								href="http://www.jiayuan.com/msg/v6/showmsg_adm.php?msg_id=c5d200000028d257&amp;page_index=x/1/10/1/3&amp;sort=101"
+								href="msg/readUnReadFreeLetter/${letter.fromUser.userId}"
 								>免费看信</a>
 						</div>
 					</div>

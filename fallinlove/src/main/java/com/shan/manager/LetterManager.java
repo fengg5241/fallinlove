@@ -113,6 +113,24 @@ public class LetterManager extends BaseManager {
 		  }});
 	}
 	
+	public void updateProperties(final Letter letter) {
+		//insert sql
+		String insertSql = "UPDATE " + LoveTable.TABLE_LETTER + " SET "
+				+ LoveTable.COLUMN_WITH_STAMP + "=?," + LoveTable.COLUMN_TYPE
+				+ "=?," + LoveTable.COLUMN_UPDATE_TIME
+				+ "=now(),"+ LoveTable.COLUMN_STATUS + "=? WHERE "
+				+ LoveTable.COLUMN_SEQ_ID + " = ?";
+		
+		getJdbcTemplate().update(insertSql, new PreparedStatementSetter() {  
+		      @Override  
+		      public void setValues(PreparedStatement pstmt) throws SQLException {  
+		          pstmt.setString(1, letter.getWithStamp());  
+		          pstmt.setString(2, letter.getType()); 
+		          pstmt.setString(3, letter.getStatus()); 
+		          pstmt.setObject(4, letter.getSeqId());  
+		  }});
+	}
+	
 //	public void deleteLetter(Letter letter){
 //		
 //	}

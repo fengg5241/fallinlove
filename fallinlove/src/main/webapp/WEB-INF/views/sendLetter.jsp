@@ -105,6 +105,9 @@ function check_content(anniu_id, if_click_mobile){
 		    	   if(count > 0){
 		    		   get_id("stampCount").value = count;
 		    		   do_no_tanchu(anniu_id);
+		    	   }else {
+		    			JY_Alert('温馨提示','您目前没有邮票了，请充值或者购买会员');
+		    			return false;
 		    	   }
 		       }  
 		}); 

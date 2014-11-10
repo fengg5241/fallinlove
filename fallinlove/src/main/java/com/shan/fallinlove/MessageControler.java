@@ -235,6 +235,13 @@ public class MessageControler {
 	}
 	
 	/** ======================================阅读信件功能===================================================*/
+	/**
+	 * 查看自己发过的信
+	 * @param model
+	 * @param request
+	 * @param operatingUserId
+	 * @return
+	 */
 	@RequestMapping(value="/readSendedLetter/{operatingUserId}",method=RequestMethod.GET)
 	public String goToReadLetterPage(Model model,HttpServletRequest request,
 			@PathVariable("operatingUserId") long operatingUserId){
@@ -256,6 +263,78 @@ public class MessageControler {
 		model.addAttribute("operatingLetter", letter);
 		
 		logger.info(historyLetters.toString());
+		return "readLetter";
+	}
+	
+	/**
+	 * 阅读在收件箱未读的收费的信
+	 * @param model
+	 * @param request
+	 * @param operatingUserId
+	 * @return
+	 */
+	@RequestMapping(value="/readUnReadPayLetter/{operatingUserId}",method=RequestMethod.GET)
+	public String goToReadLetterPageFromPayMessageBox(Model model,HttpServletRequest request,
+			@PathVariable("operatingUserId") long operatingUserId){
+		long userId = (Long)(request.getSession().getAttribute("userId"));
+		User operatingUser = usermanager.getUserBasicInfoById(operatingUserId);
+		model.addAttribute("operatingUser", operatingUser);
+		
+		//check user have enough stamps or not
+		long stampCount = usermanager.getStampCount(userId);
+		if (stampCount <= 0) {
+			return "../noStampError";
+		}
+		
+		List<Letter> historyLetters = letterManager.getAllHistoryLetters(userId, operatingUserId);
+		model.addAttribute("historyLetters", historyLetters);
+		//cost one stamp
+		usermanager.updateStampCount(userId, stampCount - 1);
+		
+		//TODO check historyLetters is null or not
+		//update letter status;
+		Letter latesteLetter = historyLetters.get(historyLetters.size() - 1);
+		latesteLetter.setWithStamp("2");
+		latesteLetter.setType(Constant.LETTER_TYPE_STAMP);
+		latesteLetter.setStatus("2");
+		letterManager.updateProperties(latesteLetter);
+		
+		Letter letter = new Letter();
+		letter.setType(Constant.LETTER_TYPE_STAMP);
+		model.addAttribute("operatingLetter", letter);
+		
+		return "readLetter";
+	}
+	
+	/**
+	 * 阅读在收件箱未读的免费的信
+	 * @param model
+	 * @param request
+	 * @param operatingUserId
+	 * @return
+	 */
+	@RequestMapping(value="/readUnReadFreeLetter/{operatingUserId}",method=RequestMethod.GET)
+	public String goToReadLetterPageFromFreeMessageBox(Model model,HttpServletRequest request,
+			@PathVariable("operatingUserId") long operatingUserId){
+		long userId = (Long)(request.getSession().getAttribute("userId"));
+		User operatingUser = usermanager.getUserBasicInfoById(operatingUserId);
+		model.addAttribute("operatingUser", operatingUser);
+		
+		List<Letter> historyLetters = letterManager.getAllHistoryLetters(userId, operatingUserId);
+		model.addAttribute("historyLetters", historyLetters);
+		
+		//TODO check historyLetters is null or not
+		//update letter status;
+		Letter latesteLetter = historyLetters.get(historyLetters.size() - 1);
+		latesteLetter.setWithStamp("1");
+		latesteLetter.setType(Constant.LETTER_TYPE_STAMP);
+		latesteLetter.setStatus("2");
+		letterManager.updateProperties(latesteLetter);
+		
+		Letter letter = new Letter();
+		letter.setType(Constant.LETTER_TYPE_STAMP);
+		model.addAttribute("operatingLetter", letter);
+		
 		return "readLetter";
 	}
 
