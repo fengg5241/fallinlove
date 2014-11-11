@@ -1376,7 +1376,7 @@ function get_app_num()
 // 				}
 // 			}
 // 		}
-// 	}
+ 	}
 // 	xmlHttp.open("GET", url, true);
 // 	xmlHttp.send(null);
 }
@@ -2629,56 +2629,65 @@ get_app_num();	//获取佳缘应用的数字
             <!--信件列表-->
             <div id="letter-list" class="letter-list">      
 			<c:forEach var="letter" items="${inboxLetters}" >
-			<c:if test="${letter.letter.type == 1}"> <!-- 	普通的信，需要邮票 -->
-			</c:if>
-				<div class="item fn-clear">
-					<div class="input-mod">
-						<input class="m-input" value="${letter.letter.seqId}" admin="1"
-							type="checkbox">
-					</div>
-					<div class="avatar-pic">
-						<a
-							href="http://www.jiayuan.com/msg/v6/showmsg_adm.php?msg_id=c5d200000028a57f&amp;box_type=inbox&amp;msg_type=2663807&amp;sort=110"
-							target="_blank"
-							onmousedown="send_jy_pv2('|1015940_17|121261858');"><img
-							src="../resources/img/touxiang_da.jpg"></a>
-					</div>
-					<div class="con-mod">
-						<div class="specific">
-							<a class="name"
-								href="http://www.jiayuan.com/msg/v6/showmsg_adm.php?msg_id=c5d200000028a57f&amp;box_type=inbox&amp;msg_type=2663807&amp;sort=110"
-								target="_blank"
-								onmousedown="send_jy_pv2('|1015940_19|121261858');">世纪佳缘</a>
-							<span class="icon-box"></span><a class="data"
-								href="http://www.jiayuan.com/msg/v6/showmsg_adm.php?msg_id=c5d200000028a57f&amp;box_type=inbox&amp;msg_type=2663807&amp;sort=110"
-								target="_blank"
-								onmousedown="send_jy_pv2('|1015940_21|121261858');"></a>
+			<c:if test="${letter.letter.type == 2}"> <!-- 	在看过的收件箱里面的信肯定都是用过邮票的 -->
+							<div class="item fn-clear">
+					<div class="item fn-clear">
+						<div class="input-mod">
+							<input class="m-input" value="${letter.letter.seqId}" admin="0"
+								type="checkbox">
 						</div>
-						<p class="msg-txt">
+						<div class="avatar-pic more-pic">
 							<a
-								href="http://www.jiayuan.com/msg/v6/showmsg_adm.php?msg_id=c5d200000028a57f&amp;box_type=inbox&amp;msg_type=2663807&amp;sort=110"
+								href="msg/readReadedLetter/${letter.fromUser.userId}"
+								target="_blank"><img
+								src="../resources/img/59064b09c_1_avatar_p.jpg"><span
+								title="对方有真实照片，诚意征友" class="pic-num">2</span></a>
+						</div>
+						<div class="con-mod">
+							<div class="specific">
+								<a class="name"
+									href="msg/readReadedLetter/${letter.fromUser.userId}"
+									target="_blank">${letter.fromUser.nickname}</a>
+								<span class="icon-box"></span><a class="data"
+									href="msg/readReadedLetter/${letter.fromUser.userId}"
+									target="_blank">${letter.fromUser.age}岁,${letter.fromUser.marriage},${letter.fromUser.address},${letter.fromUser.education},${letter.fromUser.salary}</a>
+							</div>
+							<p class="msg-txt">
+								<a
+									href="msg/readReadedLetter/${letter.fromUser.userId}"
+									target="_blank">...爱情就是在对的时间遇见对的人...</a>
+							</p>
+							<div class="time">
+								<i></i>${letter.createTime}
+							</div>
+						</div>
+						<div class="msg">
+							<a
+								href="msg/readReadedLetter/${letter.fromUser.userId}"
 								target="_blank"
-								onmousedown="send_jy_pv2('|1015940_23|121261858');">佳缘不堵车，长假畅游！</a>
-						</p>
-						<div class="time">
-							<i></i>${letter.createTime}
+								onmousedown="send_jy_pv2('|1015940_25|121261858');"><strong
+								class="blue">未回信</strong></a>
+						</div>
+						<div class="msg-btn">
+							<a
+								href="msg/readReadedLetter/${letter.fromUser.userId}"
+								target="_blank"
+								onmousedown="send_jy_pv2('|1015940_41|121261858');">回信</a><a
+								style="display: none;" class="refusal" href="javascript:;"
+								onmousedown="send_jy_pv2('|1015940_43|121261858');">礼貌拒绝</a>
 						</div>
 					</div>
-					<div class="msg-btn gray">
-						<a
-							href="http://www.jiayuan.com/msg/v6/showmsg_adm.php?msg_id=c5d200000028a57f&amp;box_type=inbox&amp;msg_type=2663807&amp;sort=110"
-							target="_blank"
-							onmousedown="send_jy_pv2('|1015940_45|121261858');">查看</a>
-					</div>
-				</div>
+								</div>
+			</c:if>
+
 							</c:forEach>
-            <div class="item fn-clear"><div class="input-mod"><input class="m-input" value="c5d200000028a57f" admin="1" type="checkbox"></div><div class="avatar-pic"><a href="http://www.jiayuan.com/msg/v6/showmsg_adm.php?msg_id=c5d200000028a57f&amp;box_type=inbox&amp;msg_type=2663807&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_17|121261858');"><img src="../resources/img/touxiang_da.jpg"></a></div><div class="con-mod"><div class="specific"><a class="name" href="http://www.jiayuan.com/msg/v6/showmsg_adm.php?msg_id=c5d200000028a57f&amp;box_type=inbox&amp;msg_type=2663807&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_19|121261858');">世纪佳缘</a> <span class="icon-box"></span><a class="data" href="http://www.jiayuan.com/msg/v6/showmsg_adm.php?msg_id=c5d200000028a57f&amp;box_type=inbox&amp;msg_type=2663807&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_21|121261858');"></a></div><p class="msg-txt"><a href="http://www.jiayuan.com/msg/v6/showmsg_adm.php?msg_id=c5d200000028a57f&amp;box_type=inbox&amp;msg_type=2663807&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_23|121261858');">佳缘不堵车，长假畅游！</a></p><div class="time"><i></i>10月04日 10:42</div></div><div class="msg-btn gray"><a href="http://www.jiayuan.com/msg/v6/showmsg_adm.php?msg_id=c5d200000028a57f&amp;box_type=inbox&amp;msg_type=2663807&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_45|121261858');">查看</a></div></div>
-            <div class="item fn-clear"><div class="input-mod"><input class="m-input" value="34307408" admin="0" type="checkbox"></div><div class="avatar-pic more-pic"><a href="http://www.jiayuan.com/msg/showmsg.php?obj_uid_disp=wCglPI2xGru2Jr1XSwOvGi1J2xfDXV8cZBPbgs65qYNp3BYxASVQCg..&amp;box_type=inbox&amp;msg_type=&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_17|121261858');"><img src="../resources/img/59064b09c_1_avatar_p.jpg"><span title="对方有真实照片，诚意征友" class="pic-num">2</span></a></div><div class="con-mod"><div class="specific"><a class="name" href="http://www.jiayuan.com/msg/showmsg.php?obj_uid_disp=wCglPI2xGru2Jr1XSwOvGi1J2xfDXV8cZBPbgs65qYNp3BYxASVQCg..&amp;box_type=inbox&amp;msg_type=&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_19|121261858');">天空</a> <span class="icon-box"></span><a class="data" href="http://www.jiayuan.com/msg/showmsg.php?obj_uid_disp=wCglPI2xGru2Jr1XSwOvGi1J2xfDXV8cZBPbgs65qYNp3BYxASVQCg..&amp;box_type=inbox&amp;msg_type=&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_21|121261858');">27岁，未婚，其他国家，10000～20000元，政府机关</a></div><p class="msg-txt"><a href="http://www.jiayuan.com/msg/showmsg.php?obj_uid_disp=wCglPI2xGru2Jr1XSwOvGi1J2xfDXV8cZBPbgs65qYNp3BYxASVQCg..&amp;box_type=inbox&amp;msg_type=&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_23|121261858');">她：...爱情就是在对的时间遇...</a></p><div class="time"><i></i>10月23日 19:42</div></div><div class="msg"><a href="http://www.jiayuan.com/msg/showmsg.php?obj_uid_disp=wCglPI2xGru2Jr1XSwOvGi1J2xfDXV8cZBPbgs65qYNp3BYxASVQCg..&amp;box_type=inbox&amp;msg_type=&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_25|121261858');"><strong class="blue">未回信</strong></a></div><div class="msg-btn"><a href="http://www.jiayuan.com/msg/showmsg.php?obj_uid_disp=wCglPI2xGru2Jr1XSwOvGi1J2xfDXV8cZBPbgs65qYNp3BYxASVQCg..&amp;box_type=inbox&amp;msg_type=&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_41|121261858');">回信</a><a style="display: none;" class="refusal" href="javascript:;" onmousedown="send_jy_pv2('|1015940_43|121261858');">礼貌拒绝</a></div></div>
-            <div class="item fn-clear on"><div class="input-mod visible"><input class="m-input" value="120512658" admin="0" type="checkbox"></div><div class="avatar-pic more-pic"><a href="http://www.jiayuan.com/msg/showmsg.php?obj_uid_disp=TpV7ftRTWZfFpn0J71dKmAtH6PAanhUD2rajvlKP4c6aSN6Au2vFDv0.&amp;box_type=inbox&amp;msg_type=&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_17|121261858');"><img src="../resources/img/63f1052ba_1_avatar_p.jpg"><span title="对方有真实照片，诚意征友" class="pic-num">2</span></a></div><div class="con-mod"><div class="specific"><a class="name" href="http://www.jiayuan.com/msg/showmsg.php?obj_uid_disp=TpV7ftRTWZfFpn0J71dKmAtH6PAanhUD2rajvlKP4c6aSN6Au2vFDv0.&amp;box_type=inbox&amp;msg_type=&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_19|121261858');">佳缘会员</a> <span class="icon-box"></span><a class="data" href="http://www.jiayuan.com/msg/showmsg.php?obj_uid_disp=TpV7ftRTWZfFpn0J71dKmAtH6PAanhUD2rajvlKP4c6aSN6Au2vFDv0.&amp;box_type=inbox&amp;msg_type=&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_21|121261858');">31岁，未婚，其他国家，本科，汉族</a></div><p class="msg-txt"><a href="http://www.jiayuan.com/msg/showmsg.php?obj_uid_disp=TpV7ftRTWZfFpn0J71dKmAtH6PAanhUD2rajvlKP4c6aSN6Au2vFDv0.&amp;box_type=inbox&amp;msg_type=&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_23|121261858');">我：...的来信！很高兴能和您...</a></p><div class="time"><i></i>10月04日 10:43</div></div><div class="msg"><a href="http://www.jiayuan.com/msg/showmsg.php?obj_uid_disp=TpV7ftRTWZfFpn0J71dKmAtH6PAanhUD2rajvlKP4c6aSN6Au2vFDv0.&amp;box_type=inbox&amp;msg_type=&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_27|121261858');"><strong>已回信</strong></a></div><div class="msg-btn gray"><a href="http://www.jiayuan.com/msg/showmsg.php?obj_uid_disp=TpV7ftRTWZfFpn0J71dKmAtH6PAanhUD2rajvlKP4c6aSN6Au2vFDv0.&amp;box_type=inbox&amp;msg_type=&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_45|121261858');">查看</a></div></div>
-            <div class="item fn-clear"><div class="input-mod"><input class="m-input" value="116877509" admin="0" type="checkbox"></div><div class="avatar-pic more-pic"><a href="http://www.jiayuan.com/msg/showmsg.php?obj_uid_disp=eNpEGoytng3YSrJBhAvCehprMIFf55htzPhYyR2gJV5GHtceJ1KW4LY.&amp;box_type=inbox&amp;msg_type=&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_17|121261858');"><img src="../resources/img/22bf99f99_3_avatar_p.jpg"><span title="对方有真实照片，诚意征友" class="pic-num">7</span></a></div><div class="con-mod"><div class="specific"><a class="name" href="http://www.jiayuan.com/msg/showmsg.php?obj_uid_disp=eNpEGoytng3YSrJBhAvCehprMIFf55htzPhYyR2gJV5GHtceJ1KW4LY.&amp;box_type=inbox&amp;msg_type=&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_19|121261858');">韩小爱。</a> <span class="icon-box"><img src="../resources/img/cx.gif" alt="诚信会员" title="诚信会员"> </span><a class="data" href="http://www.jiayuan.com/msg/showmsg.php?obj_uid_disp=eNpEGoytng3YSrJBhAvCehprMIFf55htzPhYyR2gJV5GHtceJ1KW4LY.&amp;box_type=inbox&amp;msg_type=&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_21|121261858');">23岁，未婚，江苏，汉族，170cm</a></div><p class="msg-txt"><a href="http://www.jiayuan.com/msg/showmsg.php?obj_uid_disp=eNpEGoytng3YSrJBhAvCehprMIFf55htzPhYyR2gJV5GHtceJ1KW4LY.&amp;box_type=inbox&amp;msg_type=&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_23|121261858');">她：...的资料，觉得共同点不...</a></p><div class="time"><i></i>09月21日 18:38</div></div><div class="msg"><a href="http://www.jiayuan.com/msg/showmsg.php?obj_uid_disp=eNpEGoytng3YSrJBhAvCehprMIFf55htzPhYyR2gJV5GHtceJ1KW4LY.&amp;box_type=inbox&amp;msg_type=&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_25|121261858');"><strong class="blue">未回信</strong></a></div><div class="msg-btn"><a href="http://www.jiayuan.com/msg/showmsg.php?obj_uid_disp=eNpEGoytng3YSrJBhAvCehprMIFf55htzPhYyR2gJV5GHtceJ1KW4LY.&amp;box_type=inbox&amp;msg_type=&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_41|121261858');">回信</a><a style="display: none;" class="refusal" href="javascript:;" onmousedown="send_jy_pv2('|1015940_43|121261858');">礼貌拒绝</a></div></div>
-            <div class="item fn-clear"><div class="input-mod"><input class="m-input" value="c5d2000000284885" admin="1" type="checkbox"></div><div class="avatar-pic"><a href="http://www.jiayuan.com/msg/v6/showmsg_adm.php?msg_id=c5d2000000284885&amp;box_type=inbox&amp;msg_type=2640005&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_17|121261858');"><img src="../resources/img/touxiang_da.jpg"></a></div><div class="con-mod"><div class="specific"><a class="name" href="http://www.jiayuan.com/msg/v6/showmsg_adm.php?msg_id=c5d2000000284885&amp;box_type=inbox&amp;msg_type=2640005&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_19|121261858');">世纪佳缘</a> <span class="icon-box"></span><a class="data" href="http://www.jiayuan.com/msg/v6/showmsg_adm.php?msg_id=c5d2000000284885&amp;box_type=inbox&amp;msg_type=2640005&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_21|121261858');"></a></div><p class="msg-txt"><a href="http://www.jiayuan.com/msg/v6/showmsg_adm.php?msg_id=c5d2000000284885&amp;box_type=inbox&amp;msg_type=2640005&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_23|121261858');">提高账号安全，奖励看信邮票</a></p><div class="time"><i></i>09月21日 09:26</div></div><div class="msg-btn gray"><a href="http://www.jiayuan.com/msg/v6/showmsg_adm.php?msg_id=c5d2000000284885&amp;box_type=inbox&amp;msg_type=2640005&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_45|121261858');">查看</a></div></div>
-            <div class="item fn-clear"><div class="input-mod"><input class="m-input" value="c5d2000000283f8f" admin="1" type="checkbox"></div><div class="avatar-pic"><a href="http://www.jiayuan.com/msg/v6/showmsg_adm.php?msg_id=c5d2000000283f8f&amp;box_type=inbox&amp;msg_type=2637711&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_17|121261858');"><img src="../resources/img/touxiang_da.jpg"></a></div><div class="con-mod"><div class="specific"><a class="name" href="http://www.jiayuan.com/msg/v6/showmsg_adm.php?msg_id=c5d2000000283f8f&amp;box_type=inbox&amp;msg_type=2637711&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_19|121261858');">世纪佳缘</a> <span class="icon-box"></span><a class="data" href="http://www.jiayuan.com/msg/v6/showmsg_adm.php?msg_id=c5d2000000283f8f&amp;box_type=inbox&amp;msg_type=2637711&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_21|121261858');"></a></div><p class="msg-txt"><a href="http://www.jiayuan.com/msg/v6/showmsg_adm.php?msg_id=c5d2000000283f8f&amp;box_type=inbox&amp;msg_type=2637711&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_23|121261858');">【限时】做新手任务，领新手礼包</a></p><div class="time"><i></i>09月20日 00:35</div></div><div class="msg-btn gray"><a href="http://www.jiayuan.com/msg/v6/showmsg_adm.php?msg_id=c5d2000000283f8f&amp;box_type=inbox&amp;msg_type=2637711&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_45|121261858');">查看</a></div></div>
-            <div class="item fn-clear"><div class="input-mod"><input class="m-input" value="c5d2000000283f83" admin="1" type="checkbox"></div><div class="avatar-pic"><a href="http://www.jiayuan.com/msg/v6/showmsg_adm.php?msg_id=c5d2000000283f83&amp;box_type=inbox&amp;msg_type=2637699&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_17|121261858');"><img src="../resources/img/touxiang_da.jpg"></a></div><div class="con-mod"><div class="specific"><a class="name" href="http://www.jiayuan.com/msg/v6/showmsg_adm.php?msg_id=c5d2000000283f83&amp;box_type=inbox&amp;msg_type=2637699&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_19|121261858');">世纪佳缘</a> <span class="icon-box"></span><a class="data" href="http://www.jiayuan.com/msg/v6/showmsg_adm.php?msg_id=c5d2000000283f83&amp;box_type=inbox&amp;msg_type=2637699&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_21|121261858');"></a></div><p class="msg-txt"><a href="http://www.jiayuan.com/msg/v6/showmsg_adm.php?msg_id=c5d2000000283f83&amp;box_type=inbox&amp;msg_type=2637699&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_23|121261858');">世纪佳缘-网上交友安全指南（务必阅读）</a></p><div class="time"><i></i>09月20日 00:30</div></div><div class="msg-btn gray"><a href="http://www.jiayuan.com/msg/v6/showmsg_adm.php?msg_id=c5d2000000283f83&amp;box_type=inbox&amp;msg_type=2637699&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_45|121261858');">查看</a></div></div></div>
+<!--             <div class="item fn-clear"><div class="input-mod"><input class="m-input" value="c5d200000028a57f" admin="1" type="checkbox"></div><div class="avatar-pic"><a href="http://www.jiayuan.com/msg/v6/showmsg_adm.php?msg_id=c5d200000028a57f&amp;box_type=inbox&amp;msg_type=2663807&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_17|121261858');"><img src="../resources/img/touxiang_da.jpg"></a></div><div class="con-mod"><div class="specific"><a class="name" href="http://www.jiayuan.com/msg/v6/showmsg_adm.php?msg_id=c5d200000028a57f&amp;box_type=inbox&amp;msg_type=2663807&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_19|121261858');">世纪佳缘</a> <span class="icon-box"></span><a class="data" href="http://www.jiayuan.com/msg/v6/showmsg_adm.php?msg_id=c5d200000028a57f&amp;box_type=inbox&amp;msg_type=2663807&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_21|121261858');"></a></div><p class="msg-txt"><a href="http://www.jiayuan.com/msg/v6/showmsg_adm.php?msg_id=c5d200000028a57f&amp;box_type=inbox&amp;msg_type=2663807&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_23|121261858');">佳缘不堵车，长假畅游！</a></p><div class="time"><i></i>10月04日 10:42</div></div><div class="msg-btn gray"><a href="http://www.jiayuan.com/msg/v6/showmsg_adm.php?msg_id=c5d200000028a57f&amp;box_type=inbox&amp;msg_type=2663807&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_45|121261858');">查看</a></div></div> -->
+<!--             <div class="item fn-clear"><div class="input-mod"><input class="m-input" value="34307408" admin="0" type="checkbox"></div><div class="avatar-pic more-pic"><a href="http://www.jiayuan.com/msg/showmsg.php?obj_uid_disp=wCglPI2xGru2Jr1XSwOvGi1J2xfDXV8cZBPbgs65qYNp3BYxASVQCg..&amp;box_type=inbox&amp;msg_type=&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_17|121261858');"><img src="../resources/img/59064b09c_1_avatar_p.jpg"><span title="对方有真实照片，诚意征友" class="pic-num">2</span></a></div><div class="con-mod"><div class="specific"><a class="name" href="http://www.jiayuan.com/msg/showmsg.php?obj_uid_disp=wCglPI2xGru2Jr1XSwOvGi1J2xfDXV8cZBPbgs65qYNp3BYxASVQCg..&amp;box_type=inbox&amp;msg_type=&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_19|121261858');">天空</a> <span class="icon-box"></span><a class="data" href="http://www.jiayuan.com/msg/showmsg.php?obj_uid_disp=wCglPI2xGru2Jr1XSwOvGi1J2xfDXV8cZBPbgs65qYNp3BYxASVQCg..&amp;box_type=inbox&amp;msg_type=&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_21|121261858');">27岁，未婚，其他国家，10000～20000元，政府机关</a></div><p class="msg-txt"><a href="http://www.jiayuan.com/msg/showmsg.php?obj_uid_disp=wCglPI2xGru2Jr1XSwOvGi1J2xfDXV8cZBPbgs65qYNp3BYxASVQCg..&amp;box_type=inbox&amp;msg_type=&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_23|121261858');">她：...爱情就是在对的时间遇...</a></p><div class="time"><i></i>10月23日 19:42</div></div><div class="msg"><a href="http://www.jiayuan.com/msg/showmsg.php?obj_uid_disp=wCglPI2xGru2Jr1XSwOvGi1J2xfDXV8cZBPbgs65qYNp3BYxASVQCg..&amp;box_type=inbox&amp;msg_type=&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_25|121261858');"><strong class="blue">未回信</strong></a></div><div class="msg-btn"><a href="http://www.jiayuan.com/msg/showmsg.php?obj_uid_disp=wCglPI2xGru2Jr1XSwOvGi1J2xfDXV8cZBPbgs65qYNp3BYxASVQCg..&amp;box_type=inbox&amp;msg_type=&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_41|121261858');">回信</a><a style="display: none;" class="refusal" href="javascript:;" onmousedown="send_jy_pv2('|1015940_43|121261858');">礼貌拒绝</a></div></div> -->
+<!--             <div class="item fn-clear on"><div class="input-mod visible"><input class="m-input" value="120512658" admin="0" type="checkbox"></div><div class="avatar-pic more-pic"><a href="http://www.jiayuan.com/msg/showmsg.php?obj_uid_disp=TpV7ftRTWZfFpn0J71dKmAtH6PAanhUD2rajvlKP4c6aSN6Au2vFDv0.&amp;box_type=inbox&amp;msg_type=&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_17|121261858');"><img src="../resources/img/63f1052ba_1_avatar_p.jpg"><span title="对方有真实照片，诚意征友" class="pic-num">2</span></a></div><div class="con-mod"><div class="specific"><a class="name" href="http://www.jiayuan.com/msg/showmsg.php?obj_uid_disp=TpV7ftRTWZfFpn0J71dKmAtH6PAanhUD2rajvlKP4c6aSN6Au2vFDv0.&amp;box_type=inbox&amp;msg_type=&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_19|121261858');">佳缘会员</a> <span class="icon-box"></span><a class="data" href="http://www.jiayuan.com/msg/showmsg.php?obj_uid_disp=TpV7ftRTWZfFpn0J71dKmAtH6PAanhUD2rajvlKP4c6aSN6Au2vFDv0.&amp;box_type=inbox&amp;msg_type=&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_21|121261858');">31岁，未婚，其他国家，本科，汉族</a></div><p class="msg-txt"><a href="http://www.jiayuan.com/msg/showmsg.php?obj_uid_disp=TpV7ftRTWZfFpn0J71dKmAtH6PAanhUD2rajvlKP4c6aSN6Au2vFDv0.&amp;box_type=inbox&amp;msg_type=&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_23|121261858');">我：...的来信！很高兴能和您...</a></p><div class="time"><i></i>10月04日 10:43</div></div><div class="msg"><a href="http://www.jiayuan.com/msg/showmsg.php?obj_uid_disp=TpV7ftRTWZfFpn0J71dKmAtH6PAanhUD2rajvlKP4c6aSN6Au2vFDv0.&amp;box_type=inbox&amp;msg_type=&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_27|121261858');"><strong>已回信</strong></a></div><div class="msg-btn gray"><a href="http://www.jiayuan.com/msg/showmsg.php?obj_uid_disp=TpV7ftRTWZfFpn0J71dKmAtH6PAanhUD2rajvlKP4c6aSN6Au2vFDv0.&amp;box_type=inbox&amp;msg_type=&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_45|121261858');">查看</a></div></div> -->
+<!--             <div class="item fn-clear"><div class="input-mod"><input class="m-input" value="116877509" admin="0" type="checkbox"></div><div class="avatar-pic more-pic"><a href="http://www.jiayuan.com/msg/showmsg.php?obj_uid_disp=eNpEGoytng3YSrJBhAvCehprMIFf55htzPhYyR2gJV5GHtceJ1KW4LY.&amp;box_type=inbox&amp;msg_type=&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_17|121261858');"><img src="../resources/img/22bf99f99_3_avatar_p.jpg"><span title="对方有真实照片，诚意征友" class="pic-num">7</span></a></div><div class="con-mod"><div class="specific"><a class="name" href="http://www.jiayuan.com/msg/showmsg.php?obj_uid_disp=eNpEGoytng3YSrJBhAvCehprMIFf55htzPhYyR2gJV5GHtceJ1KW4LY.&amp;box_type=inbox&amp;msg_type=&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_19|121261858');">韩小爱。</a> <span class="icon-box"><img src="../resources/img/cx.gif" alt="诚信会员" title="诚信会员"> </span><a class="data" href="http://www.jiayuan.com/msg/showmsg.php?obj_uid_disp=eNpEGoytng3YSrJBhAvCehprMIFf55htzPhYyR2gJV5GHtceJ1KW4LY.&amp;box_type=inbox&amp;msg_type=&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_21|121261858');">23岁，未婚，江苏，汉族，170cm</a></div><p class="msg-txt"><a href="http://www.jiayuan.com/msg/showmsg.php?obj_uid_disp=eNpEGoytng3YSrJBhAvCehprMIFf55htzPhYyR2gJV5GHtceJ1KW4LY.&amp;box_type=inbox&amp;msg_type=&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_23|121261858');">她：...的资料，觉得共同点不...</a></p><div class="time"><i></i>09月21日 18:38</div></div><div class="msg"><a href="http://www.jiayuan.com/msg/showmsg.php?obj_uid_disp=eNpEGoytng3YSrJBhAvCehprMIFf55htzPhYyR2gJV5GHtceJ1KW4LY.&amp;box_type=inbox&amp;msg_type=&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_25|121261858');"><strong class="blue">未回信</strong></a></div><div class="msg-btn"><a href="http://www.jiayuan.com/msg/showmsg.php?obj_uid_disp=eNpEGoytng3YSrJBhAvCehprMIFf55htzPhYyR2gJV5GHtceJ1KW4LY.&amp;box_type=inbox&amp;msg_type=&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_41|121261858');">回信</a><a style="display: none;" class="refusal" href="javascript:;" onmousedown="send_jy_pv2('|1015940_43|121261858');">礼貌拒绝</a></div></div> -->
+<!--             <div class="item fn-clear"><div class="input-mod"><input class="m-input" value="c5d2000000284885" admin="1" type="checkbox"></div><div class="avatar-pic"><a href="http://www.jiayuan.com/msg/v6/showmsg_adm.php?msg_id=c5d2000000284885&amp;box_type=inbox&amp;msg_type=2640005&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_17|121261858');"><img src="../resources/img/touxiang_da.jpg"></a></div><div class="con-mod"><div class="specific"><a class="name" href="http://www.jiayuan.com/msg/v6/showmsg_adm.php?msg_id=c5d2000000284885&amp;box_type=inbox&amp;msg_type=2640005&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_19|121261858');">世纪佳缘</a> <span class="icon-box"></span><a class="data" href="http://www.jiayuan.com/msg/v6/showmsg_adm.php?msg_id=c5d2000000284885&amp;box_type=inbox&amp;msg_type=2640005&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_21|121261858');"></a></div><p class="msg-txt"><a href="http://www.jiayuan.com/msg/v6/showmsg_adm.php?msg_id=c5d2000000284885&amp;box_type=inbox&amp;msg_type=2640005&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_23|121261858');">提高账号安全，奖励看信邮票</a></p><div class="time"><i></i>09月21日 09:26</div></div><div class="msg-btn gray"><a href="http://www.jiayuan.com/msg/v6/showmsg_adm.php?msg_id=c5d2000000284885&amp;box_type=inbox&amp;msg_type=2640005&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_45|121261858');">查看</a></div></div> -->
+<!--             <div class="item fn-clear"><div class="input-mod"><input class="m-input" value="c5d2000000283f8f" admin="1" type="checkbox"></div><div class="avatar-pic"><a href="http://www.jiayuan.com/msg/v6/showmsg_adm.php?msg_id=c5d2000000283f8f&amp;box_type=inbox&amp;msg_type=2637711&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_17|121261858');"><img src="../resources/img/touxiang_da.jpg"></a></div><div class="con-mod"><div class="specific"><a class="name" href="http://www.jiayuan.com/msg/v6/showmsg_adm.php?msg_id=c5d2000000283f8f&amp;box_type=inbox&amp;msg_type=2637711&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_19|121261858');">世纪佳缘</a> <span class="icon-box"></span><a class="data" href="http://www.jiayuan.com/msg/v6/showmsg_adm.php?msg_id=c5d2000000283f8f&amp;box_type=inbox&amp;msg_type=2637711&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_21|121261858');"></a></div><p class="msg-txt"><a href="http://www.jiayuan.com/msg/v6/showmsg_adm.php?msg_id=c5d2000000283f8f&amp;box_type=inbox&amp;msg_type=2637711&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_23|121261858');">【限时】做新手任务，领新手礼包</a></p><div class="time"><i></i>09月20日 00:35</div></div><div class="msg-btn gray"><a href="http://www.jiayuan.com/msg/v6/showmsg_adm.php?msg_id=c5d2000000283f8f&amp;box_type=inbox&amp;msg_type=2637711&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_45|121261858');">查看</a></div></div> -->
+<!--             <div class="item fn-clear"><div class="input-mod"><input class="m-input" value="c5d2000000283f83" admin="1" type="checkbox"></div><div class="avatar-pic"><a href="http://www.jiayuan.com/msg/v6/showmsg_adm.php?msg_id=c5d2000000283f83&amp;box_type=inbox&amp;msg_type=2637699&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_17|121261858');"><img src="../resources/img/touxiang_da.jpg"></a></div><div class="con-mod"><div class="specific"><a class="name" href="http://www.jiayuan.com/msg/v6/showmsg_adm.php?msg_id=c5d2000000283f83&amp;box_type=inbox&amp;msg_type=2637699&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_19|121261858');">世纪佳缘</a> <span class="icon-box"></span><a class="data" href="http://www.jiayuan.com/msg/v6/showmsg_adm.php?msg_id=c5d2000000283f83&amp;box_type=inbox&amp;msg_type=2637699&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_21|121261858');"></a></div><p class="msg-txt"><a href="http://www.jiayuan.com/msg/v6/showmsg_adm.php?msg_id=c5d2000000283f83&amp;box_type=inbox&amp;msg_type=2637699&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_23|121261858');">世纪佳缘-网上交友安全指南（务必阅读）</a></p><div class="time"><i></i>09月20日 00:30</div></div><div class="msg-btn gray"><a href="http://www.jiayuan.com/msg/v6/showmsg_adm.php?msg_id=c5d2000000283f83&amp;box_type=inbox&amp;msg_type=2637699&amp;sort=110" target="_blank" onmousedown="send_jy_pv2('|1015940_45|121261858');">查看</a></div></div></div> -->
            
             <div style="display: none;" id="letter-loading" class="letter-loading">
                 <i></i><span>正在加载<font id="page_tip"></font>...</span>
@@ -2719,147 +2728,147 @@ get_app_num();	//获取佳缘应用的数字
                     do_delete();
                 });
 
-                //条件搜索
-                $('.condition-btn').click(function(){
-                                        $('.ly-tips').show();
-                    return false;
-                                    });
+//                 //条件搜索
+//                 $('.condition-btn').click(function(){
+//                                         $('.ly-tips').show();
+//                     return false;
+//                                     });
 
-                $('.sort-mod li.condition').click(function(){
-                    $('.search-txt').val('');
-                });
+//                 $('.sort-mod li.condition').click(function(){
+//                     $('.search-txt').val('');
+//                 });
 
-                $('.sort-mod li:not(".condition")').click(function(){
-                    $('.ly-close').click();
-                });
+//                 $('.sort-mod li:not(".condition")').click(function(){
+//                     $('.ly-close').click();
+//                 });
 
                 //搜索
                 $('.search-txt').keydown(function(e){
                     if(e.keyCode == 13) $('.search-btn').click();
                 });
 
-                send_jy_pv2('|1015940_0|121261858');
+//                 send_jy_pv2('|1015940_0|121261858');
                 
             });
 
             //获取信件列表
             function get_list(type, page){
                 
-                var $url = '';
-                var $data = {};
-                $page.click = 1;
-                $page.prev = $page.now;
-                if($page.type != type) $page.load = 0;
-                $page.type = type;
-                $page.now = page;
+//                 var $url = '';
+//                 var $data = {};
+//                 $page.click = 1;
+//                 $page.prev = $page.now;
+//                 if($page.type != type) $page.load = 0;
+//                 $page.type = type;
+//                 $page.now = page;
 
-                if(type == 'uids'){
-                    //UID搜索
-                    var uids = '';
-                    if(!uids){
-                        JY_Alert('温馨提示', '没有要找的用户！');
-                        return false;
-                    }
-                    $url = 'search.php';
-                    $data = {'uids':uids, 'page':1};
-                }
-                else if(type == 'nickname'){
-                    //昵称搜索
-                    var search_txt = $('.search-txt').val();
-                    if(!search_txt || search_txt == '请输入对方昵称或ID'){
-                        JY_Alert('温馨提示', '请输入对方昵称或ID');
-                        return false;
-                    }
-                    $url = 'search.php';
-                    $data = {'nickname':search_txt, 'page':page};
-                    if($page.search == 1){
-                        JY_Alert('温馨提示', '正在搜索中，请稍后再试！');
-                        return false;
-                    }
-                    $page.search = 1;
+//                 if(type == 'uids'){
+//                     //UID搜索
+//                     var uids = '';
+//                     if(!uids){
+//                         JY_Alert('温馨提示', '没有要找的用户！');
+//                         return false;
+//                     }
+//                     $url = 'search.php';
+//                     $data = {'uids':uids, 'page':1};
+//                 }
+//                 else if(type == 'nickname'){
+//                     //昵称搜索
+//                     var search_txt = $('.search-txt').val();
+//                     if(!search_txt || search_txt == '请输入对方昵称或ID'){
+//                         JY_Alert('温馨提示', '请输入对方昵称或ID');
+//                         return false;
+//                     }
+//                     $url = 'search.php';
+//                     $data = {'nickname':search_txt, 'page':page};
+//                     if($page.search == 1){
+//                         JY_Alert('温馨提示', '正在搜索中，请稍后再试！');
+//                         return false;
+//                     }
+//                     $page.search = 1;
 
-                    //uid搜索
-                    if(!isNaN(search_txt) && parseInt(search_txt) > 1000000){
-                        $data = {'suid':search_txt, 'page':page};
-                    }
-                }
-                else if(type == 'condition'){
-                    //条件搜索
-                    $url = 'search.php';
-                    $data = {
-                        'work_location' : $('.work_location').val(),
-                        'marriage' : $('.marriage').val(),
-                        'min_age' : $('.min_age').val(),
-                        'max_age' : $('.max_age').val(),
-                        'min_height' : $('.min_height').val(),
-                        'max_height' : $('.max_height').val(),
-                        'education' : $('.education').val(),
-                        'income' : $('.income').val(),
-                        'income_more_than' : $('.income_more_than').attr('checked') == 'checked' ? 1 : 0,
-                        'house' : $('.house').val(),
-                        'auto' : $('.auto').val(),
-                        'page':page
-                    };
-                }
-                else{
-                    //默认列表
-                    $url = 'list.php';
-                    $data = {'type':type, 'page':page};
-                }
+//                     //uid搜索
+//                     if(!isNaN(search_txt) && parseInt(search_txt) > 1000000){
+//                         $data = {'suid':search_txt, 'page':page};
+//                     }
+//                 }
+//                 else if(type == 'condition'){
+//                     //条件搜索
+//                     $url = 'search.php';
+//                     $data = {
+//                         'work_location' : $('.work_location').val(),
+//                         'marriage' : $('.marriage').val(),
+//                         'min_age' : $('.min_age').val(),
+//                         'max_age' : $('.max_age').val(),
+//                         'min_height' : $('.min_height').val(),
+//                         'max_height' : $('.max_height').val(),
+//                         'education' : $('.education').val(),
+//                         'income' : $('.income').val(),
+//                         'income_more_than' : $('.income_more_than').attr('checked') == 'checked' ? 1 : 0,
+//                         'house' : $('.house').val(),
+//                         'auto' : $('.auto').val(),
+//                         'page':page
+//                     };
+//                 }
+//                 else{
+//                     //默认列表
+//                     $url = 'list.php';
+//                     $data = {'type':type, 'page':page};
+//                 }
 
-                if($page.load < 3 && page == $page.prev+1){
-                    $('#page_tip').html('下一页');
-                }
-                else{
-                    $('#letter-list').html('');
-                    if($(window).scrollTop() > 130) $("html,body").animate({scrollTop:$(".floatright").offset().top},500);
-                }
+//                 if($page.load < 3 && page == $page.prev+1){
+//                     $('#page_tip').html('下一页');
+//                 }
+//                 else{
+//                     $('#letter-list').html('');
+//                     if($(window).scrollTop() > 130) $("html,body").animate({scrollTop:$(".floatright").offset().top},500);
+//                 }
                 
-                $('#letter-nodata, #letter-nodata2, #letter-nodata3').hide();
-                $('#letter-loading, #letter_page').show();
+//                 $('#letter-nodata, #letter-nodata2, #letter-nodata3').hide();
+//                 $('#letter-loading, #letter_page').show();
 
-                if($page.search == 1){
-                    $('#page_tip').html('搜索结果');
-                }
+//                 if($page.search == 1){
+//                     $('#page_tip').html('搜索结果');
+//                 }
 
-                $.ajax({
-                    url : $url,
-                    data : $data,
-                    type : 'POST',
-                    timeout : 20000,
-                    error : function(e){
-                        $page.search = 0;
-                        if(e.statusText == 'timeout'){
-                            JY_Alert('温馨提示', '加载超时，请重试');
-                            $('#JY_alert_btn img').click(function(){get_list(type, page)});
-                            return false;
-                        }
-                        else{
-                            JY_Alert('温馨提示', '加载失败，请重试');
-                            $('#JY_alert_btn img').click(function(){get_list(type, page)});
-                            return false;
-                        }
-                    },
-                    success : function(response){
-                        var result = $.parseJSON(response);
-                        show_result_error(result.recode);
-	                    if(parseInt(result.total) > 0){
-                            show_result(result);
-                            get_list_page_v2(type, page, result.total, 10, 'get_list');
-                            show_button();
-                        }else{
-                            $('#letter-loading, #letter-nodata').toggle();
-                            $('#letter_page').hide();
-                            if($page.search == 1) $('#letter-nodata, #letter-nodata3').toggle();
-                        }
-                        $page.click = 0;
-                        $page.load=page;
-                        $('#page_tip').html('');
-                        //if($('.page li.on').next().length == 0) $page.load = 0;
-                        //if($page.prev_click == 1) $page.load = $page.prev_click = 2;
-                        $page.search = 0;
-                    }
-                });
+//                 $.ajax({
+//                     url : $url,
+//                     data : $data,
+//                     type : 'POST',
+//                     timeout : 20000,
+//                     error : function(e){
+//                         $page.search = 0;
+//                         if(e.statusText == 'timeout'){
+//                             JY_Alert('温馨提示', '加载超时，请重试');
+//                             $('#JY_alert_btn img').click(function(){get_list(type, page)});
+//                             return false;
+//                         }
+//                         else{
+//                             JY_Alert('温馨提示', '加载失败，请重试');
+//                             $('#JY_alert_btn img').click(function(){get_list(type, page)});
+//                             return false;
+//                         }
+//                     },
+//                     success : function(response){
+//                         var result = $.parseJSON(response);
+//                         show_result_error(result.recode);
+// 	                    if(parseInt(result.total) > 0){
+//                             show_result(result);
+//                             get_list_page_v2(type, page, result.total, 10, 'get_list');
+//                             show_button();
+//                         }else{
+//                             $('#letter-loading, #letter-nodata').toggle();
+//                             $('#letter_page').hide();
+//                             if($page.search == 1) $('#letter-nodata, #letter-nodata3').toggle();
+//                         }
+//                         $page.click = 0;
+//                         $page.load=page;
+//                         $('#page_tip').html('');
+//                         //if($('.page li.on').next().length == 0) $page.load = 0;
+//                         //if($page.prev_click == 1) $page.load = $page.prev_click = 2;
+//                         $page.search = 0;
+//                     }
+//                 });
             }
 
             //展示结果

@@ -651,7 +651,7 @@ head_user_nickname	= '';
             <p class="memberIcon iconS1" id="head_user_level"><a onmousedown="jy_head_function.click_pv('|head_club_level|122261858');" title="S1会员" href="http://www.jiayuan.com/club/" target="_blank">S1会员</a></p>
             <p id="head_user_bean">金豆<a onmousedown="jy_head_function.click_pv('|head_club_bean|122261858');" href="http://www.jiayuan.com/club/" class="color_fff" target="_blank">600</a></p>
             <p id="head_user_uid">佳缘ID<a class="color_fff" target="_blank" href="http://www.jiayuan.com/122261858">122261858</a></p>
-            <p id="head_user_logout"><a class="color_fff" href="http://login.jiayuan.com/logout2.php">退出</a></p>
+            <p id="head_user_logout"><a class="color_fff" href="../logout">退出</a></p>
         </div>
         <div class="jycm_top_right">
             <div id="jycm_top_inform" class="jycm_top_inform">
@@ -2590,7 +2590,7 @@ get_app_num();	//获取佳缘应用的数字
 						</div>
 						<div class="avatar-pic more-pic">
 							<a class="pay_btn" target="_blank"
-								href="msg/readUnReadPayLetter/${letter.fromUser.userId}"><img
+								href="readUnReadPayLetter/${letter.fromUser.userId}"><img
 								src="../resources/img/fvip_clicked_new_f_s.jpg" alt=""><span
 								class="pic-num" title="对方有真实照片，诚意征友">1</span></a>
 						</div>
@@ -2600,25 +2600,25 @@ get_app_num();	//获取佳缘应用的数字
 									href="readUnReadPayLetter/${letter.fromUser.userId}">${letter.fromUser.nickname}</a><span
 									class="icon-box"></span> <a target="_blank"
 									class="data pay_btn"
-									href="msg/readUnReadPayLetter/${letter.fromUser.userId}"
+									href="readUnReadPayLetter/${letter.fromUser.userId}"
 									>${letter.fromUser.age}岁,${letter.fromUser.marriage},${letter.fromUser.address},${letter.fromUser.education},${letter.fromUser.salary}</a>
 							</div>
 							<div class="reason">
 								<a target="_blank" class="pay_btn"
-									href="msg/readUnReadPayLetter/${letter.fromUser.userId}"><i></i>看信理由：也许这是一次缘分</a>
+									href="readUnReadPayLetter/${letter.fromUser.userId}"><i></i>看信理由：也许这是一次缘分</a>
 							</div>
 							<div class="time">
-								<i></i><span>${letter.createTime}</span>
+								<i></i><span>${letter.letter.createTime}</span>
 							</div>
 						</div>
 						<div class="msg">
 							<a target="_blank" class="pay_btn"
-								href="msg/readUnReadPayLetter/${letter.fromUser.userId}"><strong
+								href="readUnReadPayLetter/${letter.fromUser.userId}"><strong
 								class="red">1封未读</strong>|<span hx="1">共1封</span></a>
 						</div>
 						<div class="msg-btn orange">
 							<a class="pay_btn" target="_blank"
-								href="msg/readUnReadPayLetter/${letter.fromUser.userId}"
+								href="readUnReadPayLetter/${letter.fromUser.userId}"
 								>看信</a>
 							<div class="replay-btn-layer">
 								<span class="tarr-icon"></span>
@@ -2636,37 +2636,37 @@ get_app_num();	//获取佳缘应用的数字
 						</div>
 						<div class="avatar-pic ">
 							<a class="pay_btn" target="_blank"
-								href="msg/readUnReadFreeLetter/${letter.fromUser.userId}"
+								href="readUnReadFreeLetter/${letter.fromUser.userId}"
 								><img src="../resources/img/touxiang_da.jpg" alt=""></a>
 						</div>
 						<div class="con-mod">
 							<div class="specific">
 								<a class="name pay_btn" target="_blank"
-									href="msg/readUnReadFreeLetter/${letter.fromUser.userId}"
+									href="readUnReadFreeLetter/${letter.fromUser.userId}"
 									>${letter.fromUser.nickname}</a><span
 									class="icon-box"></span> <a target="_blank"
 									class="data pay_btn"
-									href="msg/readUnReadFreeLetter/${letter.fromUser.userId}"
+									href="readUnReadFreeLetter/${letter.fromUser.userId}"
 									>${letter.fromUser.age}岁,${letter.fromUser.marriage},${letter.fromUser.address},${letter.fromUser.education},${letter.fromUser.salary}</a>
 							</div>
 							<div class="reason">
 								<a target="_blank" class="pay_btn"
-									href="msg/readUnReadFreeLetter/${letter.fromUser.userId}"
+									href="readUnReadFreeLetter/${letter.fromUser.userId}"
 									>看信理由：也许这是一次缘分</a>
 							</div>
 							<div class="time">
-								<i></i><span>${letter.createTime}</span>
+								<i></i><span>${letter.letter.createTime}</span>
 							</div>
 						</div>
 						<div class="msg">
 							<a target="_blank" class="pay_btn"
-								href="msg/readUnReadFreeLetter/${letter.fromUser.userId}"
+								href="readUnReadFreeLetter/${letter.fromUser.userId}"
 								><strong
 								class="red">1封未读</strong>|<span hx="1">共1封</span></a>
 						</div>
 						<div class="msg-btn ">
 							<a class="pay_btn" target="_blank"
-								href="msg/readUnReadFreeLetter/${letter.fromUser.userId}"
+								href="readUnReadFreeLetter/${letter.fromUser.userId}"
 								>免费看信</a>
 						</div>
 					</div>
@@ -3155,7 +3155,8 @@ get_app_num();	//获取佳缘应用的数字
                 </ul>
     </div>
 </div></div>
-				<script src="../resources/js/dyn_search.js" type="text/javascript"></script>
+<!-- shanf -->
+<!-- 				<script src="../resources/js/dyn_search.js" type="text/javascript"></script> -->
 			</div>
 			<div class="recharge">
 				<h2 class="title"><a href="http://www.jiayuan.com/usercp/center/charge.php?src_key=msg_quickpay" target="_blank">其他方式</a>佳缘邮票快速充值</h2>
