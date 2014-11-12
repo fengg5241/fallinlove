@@ -35,6 +35,8 @@ public class MyselfController {
 		
 		long userId = (Long)(request.getSession().getAttribute("userId"));
 		User user = usermanager.getUserBasicInfoById(userId);
+		request.getSession().setAttribute("loginUser", user);
+		model.put("loginUser", user);
 		//search all the see me users
 		List<User> seeMeUsers = usermanager.getSeeMeUsersById(userId);
 		for (User user2 : seeMeUsers) {

@@ -1411,7 +1411,7 @@ DD_belatedPNG.fix(".fix-png");
         <div class="cp-menu-card-link">
             <a class="menu" href="http://www.jiayuan.com/122261858#cp_kpd" title="立刻提升" target="_blank" onmousedown="send_jy_pv2('|cp_menu_card_kpd|122261858');">靠谱度综合评分:3.1分</a>
             <a class="menu cp-menu-ico-jiang" href="http://www.jiayuan.com/wenda/?from=ucp" target="_blank" onclick="send_jy_pv2('|cp_menu_card_wenda|122261858')">婚恋个性匹配问答</a>
-                            <a class="menu" href="http://www.jiayuan.com/usercp/profile.php?action=base" onmousedown="send_jy_pv2('|cp_menu_card_mdy|122261858');" target="_blank">我的资料50分</a>
+                            <a class="menu" href="user/selfBasic/${loginUser.userId}" target="_blank">我的资料50分</a>
                 [<a class="menu" href="http://www.jiayuan.com/122261858" onmousedown="send_jy_pv2('|cp_menu_card_pre|122261858');" target="_blank">预览</a>]
                     </div>
         <div class="cp-menu-card-mail fn-clear">
@@ -2043,8 +2043,10 @@ DD_belatedPNG.fix(".fix-png");
 </div>
 <script type="text/javascript">
 /*
-*/
-get_app_num();	//获取佳缘应用的数字
+ * shanf
+ */
+
+//get_app_num();	//获取佳缘应用的数字
 </script>
 <!--左侧栏目 结束--> 
 <!-- 左侧菜单 结束--> 
@@ -2058,12 +2060,12 @@ get_app_num();	//获取佳缘应用的数字
 		<!--信件导航 B-->
 				<div class="letter-nav">
 			<ul class="fn-clear">
-				<li><a href="http://www.jiayuan.com/msg/" onmousedown="send_jy_pv2('|1015897_2|121261858');">未读信<i class="number">18</i></a></li>
-				<li><a href="http://www.jiayuan.com/msg/inbox" onmousedown="send_jy_pv2('|1015940_2|121261858');">已读信<i class="number"></i></a></li>
-				<li class="selected"><a href="http://www.jiayuan.com/msg/outbox" onmousedown="send_jy_pv2('|1015946_2|121261858');">已发信<i class="number"></i></a></li>
-				<li><a href="http://www.jiayuan.com/msg/recover">信件后悔药<i class="number"></i></a></li>
-				<li><a href="http://www.jiayuan.com/msg/admin">管理员信<i class="number">1</i></a></li>
-				<li><a href="http://www.jiayuan.com/helpcenter/postmail2.php?refresh=1&amp;pid=249" target="_blank">我要反馈<i class="number"></i></a></li>
+				<li><a href="notRead" onmousedown="send_jy_pv2('|1015897_2|121261858');">未读信<i class="number"></i></a></li>
+				<li><a href="inbox">已读信<i class="number"></i></a></li>
+				<li class="selected"><a>已发信<i class="number"></i></a></li>
+<!-- 				<li><a href="http://www.jiayuan.com/msg/recover">信件后悔药<i class="number"></i></a></li> -->
+<!-- 				<li><a href="http://www.jiayuan.com/msg/admin">管理员信<i class="number">1</i></a></li> -->
+<!-- 				<li><a href="http://www.jiayuan.com/helpcenter/postmail2.php?refresh=1&amp;pid=249" target="_blank">我要反馈<i class="number"></i></a></li> -->
 			</ul>
 		</div>		<!--信件导航 E-->
 		<!--信件 B-->
@@ -2073,21 +2075,21 @@ get_app_num();	//获取佳缘应用的数字
 				<a class="close" href="javascript:;" title="关闭"></a>
 				<p>最近3天，您发出了0封信。为了不降低您的征友效果，建议您坚持每日发信。</p>
 			</div>
-			<!--分类导航-->
+			<!--分类导航shanf-->
 			<div class="sort-nav fn-clear">
-				<div class="sort-area fn-clear">
-					<ul class="sort-mod fn-clear">
-						<li class="selected"><a href="javascript:;" onclick="get_list('all', 1);" onmousedown="send_jy_pv2('|1015946_5|');">全部</a></li>
-						<li><a href="javascript:;" onclick="get_list('unread', 1);" onmousedown="send_jy_pv2('|1015946_7|');">未贴邮票她未看信</a></li>
-						<li><a href="javascript:;" onclick="get_list('noread', 1);" onmousedown="send_jy_pv2('|1015946_9|');">她未看信</a></li>
-						<li><a href="javascript:;" onclick="get_list('read', 1);" onmousedown="send_jy_pv2('|1015946_11|');">她已看信</a></li>
-						<li class="bdr-none"><a href="javascript:;" onclick="get_list('reply', 1);" onmousedown="send_jy_pv2('|1015946_13|');">她已回信</a></li>
-					</ul>
-					<div class="search">
-						<a class="search-btn" href="javascript:;" onclick="get_list('nickname', 1);"></a>
-						<input class="search-txt" value="请输入对方昵称或ID" type="text">
-					</div>
-				</div>
+<!-- 				<div class="sort-area fn-clear"> -->
+<!-- 					<ul class="sort-mod fn-clear"> -->
+<!-- 						<li class="selected"><a href="javascript:;" onclick="get_list('all', 1);" onmousedown="send_jy_pv2('|1015946_5|');">全部</a></li> -->
+<!-- 						<li><a href="javascript:;" onclick="get_list('unread', 1);" onmousedown="send_jy_pv2('|1015946_7|');">未贴邮票她未看信</a></li> -->
+<!-- 						<li><a href="javascript:;" onclick="get_list('noread', 1);" onmousedown="send_jy_pv2('|1015946_9|');">她未看信</a></li> -->
+<!-- 						<li><a href="javascript:;" onclick="get_list('read', 1);" onmousedown="send_jy_pv2('|1015946_11|');">她已看信</a></li> -->
+<!-- 						<li class="bdr-none"><a href="javascript:;" onclick="get_list('reply', 1);" onmousedown="send_jy_pv2('|1015946_13|');">她已回信</a></li> -->
+<!-- 					</ul> -->
+<!-- 					<div class="search"> -->
+<!-- 						<a class="search-btn" href="javascript:;" onclick="get_list('nickname', 1);"></a> -->
+<!-- 						<input class="search-txt" value="请输入对方昵称或ID" type="text"> -->
+<!-- 					</div> -->
+<!-- 				</div> -->
 				<div class="line"></div>
 			</div>
 			

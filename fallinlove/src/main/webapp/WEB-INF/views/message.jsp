@@ -647,30 +647,30 @@ head_user_nickname	= '';
 <div id="jycm_top" class="jycm_top">
     <div class="w1000" id="head_login" style="">
         <div class="jycm_top_wel">
-            <p id="head_user_nickname">Hi，<a class="color_fff" target="_blank" href="http://www.jiayuan.com/122261858">老公1111</a></p>
-            <p class="memberIcon iconS1" id="head_user_level"><a onmousedown="jy_head_function.click_pv('|head_club_level|122261858');" title="S1会员" href="http://www.jiayuan.com/club/" target="_blank">S1会员</a></p>
-            <p id="head_user_bean">金豆<a onmousedown="jy_head_function.click_pv('|head_club_bean|122261858');" href="http://www.jiayuan.com/club/" class="color_fff" target="_blank">600</a></p>
-            <p id="head_user_uid">佳缘ID<a class="color_fff" target="_blank" href="http://www.jiayuan.com/122261858">122261858</a></p>
+            <p id="head_user_nickname">Hi，<a class="color_fff" target="_blank" href="user/selfBasic/${loginUser.userId}">${loginUser.nickname}</a></p>
+<!--             <p class="memberIcon iconS1" id="head_user_level"><a onmousedown="jy_head_function.click_pv('|head_club_level|122261858');" title="S1会员" href="http://www.jiayuan.com/club/" target="_blank">S1会员</a></p> -->
+<!--             <p id="head_user_bean">金豆<a onmousedown="jy_head_function.click_pv('|head_club_bean|122261858');" href="http://www.jiayuan.com/club/" class="color_fff" target="_blank">600</a></p> -->
+            <p id="head_user_uid">佳缘ID<a class="color_fff" target="_blank" href="http://www.jiayuan.com/122261858">${loginUser.userId}</a></p>
             <p id="head_user_logout"><a class="color_fff" href="../logout">退出</a></p>
         </div>
         <div class="jycm_top_right">
             <div id="jycm_top_inform" class="jycm_top_inform">
                 <div id="jycm_top_informIcon" class="jycm_top_informIcon">
 <div class="jycm_top_remind">
-<span class="color_fff va_middle"><i class="jy_top_icon jy_icon_remind"></i><strong class="jy_tixing">提醒</strong><i style="display: inline;" id="tips_point"></i></span>
+<!-- <span class="color_fff va_middle"><i class="jy_top_icon jy_icon_remind"></i><strong class="jy_tixing">提醒</strong><i style="display: inline;" id="tips_point"></i></span> -->
 </div>
                 </div>
                 <div id="jycm_top_informCn" class="jycm_top_informCn" style="display:none">
                     <ul id="vip_center_all_notes">
                         <li id="visitor_new_num"><a target="_blank" href="http://www.jiayuan.com/usercp/clicked_new.php" onclick="jy_head_function.click_pv('|1013617_6|');"><strong class="fl">谁看过我</strong><span class="fr fr_num"> 45</span></a></li>
-                        <li style="display: none;" id="praise_me_new_num"><a target="_blank" href="http://www.jiayuan.com/usercp/praiseme.php" onclick="jy_head_function.click_pv('|1013617_7|');"><strong class="fl">谁赞过我</strong></a></li>
-                        <li id="fans_new_num"><a target="_blank" href="http://www.jiayuan.com/usercp/myfans.php" onclick="jy_head_function.click_pv('|1013617_8|');"><strong class="fl">谁关注我</strong><span class="fr fr_num"> 1</span></a></li>
+<!--                         <li style="display: none;" id="praise_me_new_num"><a target="_blank" href="http://www.jiayuan.com/usercp/praiseme.php" onclick="jy_head_function.click_pv('|1013617_7|');"><strong class="fl">谁赞过我</strong></a></li> -->
+<!--                         <li id="fans_new_num"><a target="_blank" href="http://www.jiayuan.com/usercp/myfans.php" onclick="jy_head_function.click_pv('|1013617_8|');"><strong class="fl">谁关注我</strong><span class="fr fr_num"> 1</span></a></li> -->
                     </ul>
                 </div>
             </div>
             <p class="jycm_top_jx ">
 <!-- 输出IM链接 -->
-<a class="color_fff va_middle" href="http://im.jiayuan.com/" onclick="jy_head_function.click_pv('|head_navigation_im|');" target="_blank"><i class="jy_top_icon jy_icon_jiaxin"></i>佳缘佳信</a> 
+<!-- <a class="color_fff va_middle" href="http://im.jiayuan.com/" onclick="jy_head_function.click_pv('|head_navigation_im|');" target="_blank"><i class="jy_top_icon jy_icon_jiaxin"></i>佳缘佳信</a>  -->
             </p>
             <div id="jycm_top_izx" class="jycm_top_izx">
                 <div class="jycm_top_izxTit">
@@ -1988,7 +1988,7 @@ DD_belatedPNG.fix(".fix-png");
 <script type="text/javascript">
 /*
 */
-get_app_num();	//获取佳缘应用的数字
+//get_app_num();	//获取佳缘应用的数字
 </script>
 <!--左侧栏目 结束--> 
 <!-- 左侧菜单 结束--> 
@@ -2002,7 +2002,7 @@ get_app_num();	//获取佳缘应用的数字
 		<!--信件导航 B-->
 				<div class="letter-nav">
 			<ul class="fn-clear">
-				<li class="selected"><a>未读信<i class="number">13</i></a></li>
+				<li class="selected"><a>未读信<i class="number"></i></a></li>
 				<li><a href="inbox" >已读信<i class="number"></i></a></li>
 				<li><a href="outbox" >已发信<i class="number"></i></a></li>
 <!-- 				<li><a href="http://www.jiayuan.com/msg/recover">信件后悔药<i class="number"></i></a></li> -->

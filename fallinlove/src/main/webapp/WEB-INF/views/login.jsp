@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="resources/css/base.css">
     <link rel="stylesheet" href="resources/css/login.css">
     <script src="resources/js/beacon.js"></script>
-    <script src="resources/js/head_common.js"></script>
+<!--     <script src="resources/js/head_common.js"></script> -->
     <script src="resources/js/jiayuan_logo_config.js"></script>
     <script type="text/javascript">
 
@@ -478,7 +478,9 @@ common_nav_array[current_nav_flag] = 'head_nav_cur';
         <div class="shareXF">
           <a href="http://xingfu.jiayuan.com/" onmousedown="javascript:send_jy_pv2('log_m_to_xingfu');" target="_blank">我已成功征友，我要晒幸福</a>
         </div>
-        <script type="text/javascript" src="resources/js/w4-simple.js"></script><style type="text/css">
+<!--         shanf -->
+<!--         <script type="text/javascript" src="resources/js/w4-simple.js"></script> -->
+        <style type="text/css">
 *{padding:0;margin:0}
 .hf_wapper {width:950px;margin:0 auto;clear:both;font-family:SimSun,Arial,Helvetica,sans-serif}
 .hf_wapper img, .hf_wapper img a{border:none}

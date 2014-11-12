@@ -661,24 +661,24 @@ head_user_nickname	= '';
 <div id="jycm_top" class="jycm_top">
     <div class="w1000" id="head_login" style="">
         <div class="jycm_top_wel">
-            <p id="head_user_nickname">Hi，<a class="color_fff" target="_blank" href="http://www.jiayuan.com/122261858">老公</a></p>
-            <p class="memberIcon iconS1" id="head_user_level"><a onmousedown="jy_head_function.click_pv('|head_club_level|122261858');" title="S1会员" href="http://www.jiayuan.com/club/" target="_blank">S1会员</a></p>
-            <p id="head_user_bean">金豆<a onmousedown="jy_head_function.click_pv('|head_club_bean|122261858');" href="http://www.jiayuan.com/club/" class="color_fff" target="_blank">600</a></p>
-            <p id="head_user_uid">佳缘ID<a class="color_fff" target="_blank" href="http://www.jiayuan.com/122261858">122261858</a></p>
-            <p id="head_user_logout"><a class="color_fff" href="http://login.jiayuan.com/logout2.php">退出</a></p>
+            <p id="head_user_nickname">Hi，<a class="color_fff" target="_blank" href="http://www.jiayuan.com/122261858">${loginUser.nickname}</a></p>
+<!--             <p class="memberIcon iconS1" id="head_user_level"><a onmousedown="jy_head_function.click_pv('|head_club_level|122261858');" title="S1会员" href="http://www.jiayuan.com/club/" target="_blank">S1会员</a></p> -->
+<!--             <p id="head_user_bean">金豆<a onmousedown="jy_head_function.click_pv('|head_club_bean|122261858');" href="http://www.jiayuan.com/club/" class="color_fff" target="_blank">600</a></p> -->
+            <p id="head_user_uid">佳缘ID<a class="color_fff" target="_blank" href="http://www.jiayuan.com/122261858">>${loginUser.userId}</a></p>
+            <p id="head_user_logout"><a class="color_fff" href="../logout">退出</a></p>
         </div>
         <div class="jycm_top_right">
             <div id="jycm_top_inform" class="jycm_top_inform">
                 <div id="jycm_top_informIcon" class="jycm_top_informIcon">
 <div class="jycm_top_remind">
-<span class="color_fff va_middle"><i class="jy_top_icon jy_icon_remind"></i><strong class="jy_tixing">提醒</strong><i style="display: inline;" id="tips_point"></i></span>
+<!-- <span class="color_fff va_middle"><i class="jy_top_icon jy_icon_remind"></i><strong class="jy_tixing">提醒</strong><i style="display: inline;" id="tips_point"></i></span> -->
 </div>
                 </div>
                 <div id="jycm_top_informCn" class="jycm_top_informCn" style="display:none">
                     <ul id="vip_center_all_notes">
                         <li id="visitor_new_num"><a target="_blank" href="http://www.jiayuan.com/usercp/clicked_new.php" onclick="jy_head_function.click_pv('|1013617_6|');"><strong class="fl">谁看过我</strong><span class="fr fr_num"> 60</span></a></li>
-                        <li style="display: none;" id="praise_me_new_num"><a target="_blank" href="http://www.jiayuan.com/usercp/praiseme.php" onclick="jy_head_function.click_pv('|1013617_7|');"><strong class="fl">谁赞过我</strong></a></li>
-                        <li id="fans_new_num"><a target="_blank" href="http://www.jiayuan.com/usercp/myfans.php" onclick="jy_head_function.click_pv('|1013617_8|');"><strong class="fl">谁关注我</strong><span class="fr fr_num"> 1</span></a></li>
+<!--                         <li style="display: none;" id="praise_me_new_num"><a target="_blank" href="http://www.jiayuan.com/usercp/praiseme.php" onclick="jy_head_function.click_pv('|1013617_7|');"><strong class="fl">谁赞过我</strong></a></li> -->
+<!--                         <li id="fans_new_num"><a target="_blank" href="http://www.jiayuan.com/usercp/myfans.php" onclick="jy_head_function.click_pv('|1013617_8|');"><strong class="fl">谁关注我</strong><span class="fr fr_num"> 1</span></a></li> -->
                     </ul>
                 </div>
             </div>
@@ -1407,7 +1407,7 @@ DD_belatedPNG.fix(".fix-png");
         <div class="cp-menu-card-link">
             <a class="menu" href="http://www.jiayuan.com/122261858#cp_kpd" title="立刻提升" target="_blank" onmousedown="send_jy_pv2('|cp_menu_card_kpd|122261858');">靠谱度综合评分:3.1分</a>
             <a class="menu cp-menu-ico-jiang" href="http://www.jiayuan.com/wenda/?from=ucp" target="_blank" onclick="send_jy_pv2('|cp_menu_card_wenda|122261858')">婚恋个性匹配问答</a>
-                            <a class="menu" href="http://www.jiayuan.com/usercp/profile.php?action=base" onmousedown="send_jy_pv2('|cp_menu_card_mdy|122261858');" target="_blank">我的资料50分</a>
+                            <a class="menu" href="user/selfBasic/${loginUser.userId}" target="_blank">我的资料50分</a>
                 [<a class="menu" href="http://www.jiayuan.com/122261858" onmousedown="send_jy_pv2('|cp_menu_card_pre|122261858');" target="_blank">预览</a>]
                     </div>
         <div class="cp-menu-card-mail fn-clear">
@@ -1867,7 +1867,7 @@ DD_belatedPNG.fix(".fix-png");
                             		                                          
                   						                               	                
                                         <li class=" ">
-                                <a class="menu" id="info_1" target="_blank" href="http://www.jiayuan.com/usercp/profile.php?action=base" onmousedown="send_jy_pv2('Usercpn_info_0');">
+                                <a class="menu" id="info_1" target="_blank" href="user/selfBasic/${loginUser.userId}">
                                 		                                    <div class="cp-menu-item-name">我的资料</div>	                                    <div class="cp-menu-item-number">	                                        <div class="cp-menu-radius fn-right">
                                         	                                            <div id="0" class="cp-menu-radius-num" style="display:none"></div>
                                         </div>
@@ -1881,7 +1881,7 @@ DD_belatedPNG.fix(".fix-png");
                             		                                          
                   						                               	                
                                         <li class=" ">
-                                <a class="menu" id="info_1_1" target="_blank" href="http://www.jiayuan.com/usercp/photo.php?from=menu" onmousedown="send_jy_pv2('Usercpn_info_0_0');">
+                                <a class="menu" id="info_1_1" target="_blank" href="user/myphoto/${loginUser.userId}" onmousedown="send_jy_pv2('Usercpn_info_0_0');">
                                 		                                    <div class="cp-menu-item-name">我的相册</div>	                                    <div class="cp-menu-item-number">	                                        <div class="cp-menu-radius fn-right">
                                         	                                            <div id="0" class="cp-menu-radius-num" style="display:none"></div>
                                         </div>
@@ -2054,498 +2054,498 @@ get_app_num();	//获取佳缘应用的数字
         <!--信件导航 B-->
         		<div class="letter-nav">
 			<ul class="fn-clear">
-				<li><a href="http://www.jiayuan.com/msg/" onmousedown="send_jy_pv2('|1015897_2|121261858');">未读信<i class="number">18</i></a></li>
-				<li class="selected"><a href="http://www.jiayuan.com/msg/inbox" onmousedown="send_jy_pv2('|1015940_2|121261858');">已读信<i class="number"></i></a></li>
-				<li><a href="http://www.jiayuan.com/msg/outbox" onmousedown="send_jy_pv2('|1015946_2|121261858');">已发信<i class="number"></i></a></li>
-				<li><a href="http://www.jiayuan.com/msg/recover">信件后悔药<i class="number"></i></a></li>
-				<li><a href="http://www.jiayuan.com/msg/admin">管理员信<i class="number">1</i></a></li>
-				<li><a href="http://www.jiayuan.com/helpcenter/postmail2.php?refresh=1&amp;pid=249" target="_blank">我要反馈<i class="number"></i></a></li>
+				<li><a href="notRead">未读信<i class="number">18</i></a></li>
+				<li class="selected"><a>已读信<i class="number"></i></a></li>
+				<li><a href="outbox">已发信<i class="number"></i></a></li>
+<!-- 				<li><a href="http://www.jiayuan.com/msg/recover">信件后悔药<i class="number"></i></a></li> -->
+<!-- 				<li><a href="http://www.jiayuan.com/msg/admin">管理员信<i class="number">1</i></a></li> -->
+<!-- 				<li><a href="http://www.jiayuan.com/helpcenter/postmail2.php?refresh=1&amp;pid=249" target="_blank">我要反馈<i class="number"></i></a></li> -->
 			</ul>
 		</div>        <!--信件导航 E-->
         <!--信件 B-->
         <div class="letter-mod">
-                        <!--分类导航-->
+                        <!--分类导航shanf-->
             <div class="sort-nav fn-clear">
-                <div class="sort-area fn-clear">
-                    <ul class="sort-mod fn-clear">
-                        <li class="selected"><a href="javascript:;" onclick="get_list('all', 1);" onmousedown="send_jy_pv2('|1015940_5|');">全部</a></li>
-                        <li><a href="javascript:;" onclick="get_list('noreply', 1);" onmousedown="send_jy_pv2('|1015940_7|');">我未回信</a></li>
-                        <li><a href="javascript:;" onclick="get_list('reply', 1);" onmousedown="send_jy_pv2('|1015940_9|');">我已回信</a></li>
-                        <li><a href="javascript:;" onclick="get_list('nofirst', 1);" onmousedown="send_jy_pv2('|1015940_11|');">多次来信</a></li>
-                         <li><a href="javascript:;" onclick="get_list('star', 1);" onmousedown="send_jy_pv2('|1015940_11|');">星标信件</a></li>
-                        <!-- <li><a href="javascript:;" onclick="get_list('time', 1);" onmousedown="send_jy_pv2('|1015940_13|');">按时间</a></li> -->
-                        <li class="condition bdr-none"><a href="javascript:;">按条件<i class="icon" onmousedown="send_jy_pv2('|1015940_15|');"></i></a></li>
-                    </ul>
-                    <div class="search">
-                        <a class="search-btn" href="javascript:;" onclick="get_list('nickname', 1);"></a>
-                        <input class="search-txt" value="请输入对方昵称或ID" type="text">
-                    </div>
-                </div>
+<!--                 <div class="sort-area fn-clear"> -->
+<!--                     <ul class="sort-mod fn-clear"> -->
+<!--                         <li class="selected"><a href="javascript:;" onclick="get_list('all', 1);" onmousedown="send_jy_pv2('|1015940_5|');">全部</a></li> -->
+<!--                         <li><a href="javascript:;" onclick="get_list('noreply', 1);" onmousedown="send_jy_pv2('|1015940_7|');">我未回信</a></li> -->
+<!--                         <li><a href="javascript:;" onclick="get_list('reply', 1);" onmousedown="send_jy_pv2('|1015940_9|');">我已回信</a></li> -->
+<!--                         <li><a href="javascript:;" onclick="get_list('nofirst', 1);" onmousedown="send_jy_pv2('|1015940_11|');">多次来信</a></li> -->
+<!--                          <li><a href="javascript:;" onclick="get_list('star', 1);" onmousedown="send_jy_pv2('|1015940_11|');">星标信件</a></li> -->
+<!--                         <li><a href="javascript:;" onclick="get_list('time', 1);" onmousedown="send_jy_pv2('|1015940_13|');">按时间</a></li> -->
+<!--                         <li class="condition bdr-none"><a href="javascript:;">按条件<i class="icon" onmousedown="send_jy_pv2('|1015940_15|');"></i></a></li> -->
+<!--                     </ul> -->
+<!--                     <div class="search"> -->
+<!--                         <a class="search-btn" href="javascript:;" onclick="get_list('nickname', 1);"></a> -->
+<!--                         <input class="search-txt" value="请输入对方昵称或ID" type="text"> -->
+<!--                     </div> -->
+<!--                 </div> -->
                 <div class="line"></div>
                 <!--条件搜索 B-->
-                				<div class="condition-layer">
-					<a class="ly-close" href="javascript:;"></a>
-					<div class="spotlightSelect">
-						<ul class="fn-clear" style="position:relative;z-index:9;">
-							<li>
-								<a class="lightWidth" href="javascript:;"><span>其他国家</span><i class="triangle"></i></a>
-								<div style="display: none;" class="selectPopups">
-									<p>请选择所在地</p>
-									<div class="mt12">
-										<select id="work_location" class="work_location">
-											<option value="0">不限</option>
-																						<option value="11">北京</option>
-																						<option value="12">天津</option>
-																						<option value="13">河北</option>
-																						<option value="14">山西</option>
-																						<option value="15">内蒙古</option>
-																						<option value="21">辽宁</option>
-																						<option value="22">吉林</option>
-																						<option value="23">黑龙江</option>
-																						<option value="31">上海</option>
-																						<option value="32">江苏</option>
-																						<option value="33">浙江</option>
-																						<option value="34">安徽</option>
-																						<option value="35">福建</option>
-																						<option value="36">江西</option>
-																						<option value="37">山东</option>
-																						<option value="41">河南</option>
-																						<option value="42">湖北</option>
-																						<option value="43">湖南</option>
-																						<option value="44">广东</option>
-																						<option value="45">广西</option>
-																						<option value="46">海南</option>
-																						<option value="50">重庆</option>
-																						<option value="51">四川</option>
-																						<option value="52">贵州</option>
-																						<option value="53">云南</option>
-																						<option value="54">西藏</option>
-																						<option value="61">陕西</option>
-																						<option value="62">甘肃</option>
-																						<option value="63">青海</option>
-																						<option value="64">宁夏</option>
-																						<option value="65">新疆</option>
-																						<option value="71">台湾</option>
-																						<option value="81">香港</option>
-																						<option value="82">澳门</option>
-																						<option value="83">钓鱼岛</option>
-																						<option value="98">美国</option>
-																						<option value="99" selected="selected">其他国家</option>
-																					</select>
-									</div>
-									<div class="lySure"><a href="javascript:;">确认</a></div>
-								</div>
-							</li>
-							<li>
-								<a class="lightWidth" href="javascript:;"><span>婚史：不限</span><i class="triangle"></i></a>
-								<div style="display: none;" class="selectPopups">
-									<p>请选择婚史</p>
-									<div class="mt12">
-										<select id="marriage" class="marriage">
-											<option value="0" selected="selected">不限</option>
-											<option value="1">未婚</option>
-										</select>
-									</div>
-									<div class="lySure"><a href="javascript:;">确认</a></div>
-								</div>
-							</li>
-							<li>
-								<a class="lightWidth width68" href="javascript:;"><span>19至29岁</span><i class="triangle"></i></a>
-								<div style="display: none;" class="selectPopups agePopups">
-									<p>请选择年龄</p>
-										<div class="mt12">
-											<select id="min_age" class="min_age">
-												<option value="18">18岁</option>
-												<option value="19" selected="selected">19岁</option>
-												<option value="20">20岁</option>
-												<option value="21">21岁</option>
-												<option value="22">22岁</option>
-												<option value="23">23岁</option>
-												<option value="24">24岁</option>
-												<option value="25">25岁</option>
-												<option value="26">26岁</option>
-												<option value="27">27岁</option>
-												<option value="28">28岁</option>
-												<option value="29">29岁</option>
-												<option value="30">30岁</option>
-												<option value="31">31岁</option>
-												<option value="32">32岁</option>
-												<option value="33">33岁</option>
-												<option value="34">34岁</option>
-												<option value="35">35岁</option>
-												<option value="36">36岁</option>
-												<option value="37">37岁</option>
-												<option value="38">38岁</option>
-												<option value="39">39岁</option>
-												<option value="40">40岁</option>
-												<option value="41">41岁</option>
-												<option value="42">42岁</option>
-												<option value="43">43岁</option>
-												<option value="44">44岁</option>
-												<option value="45">45岁</option>
-												<option value="46">46岁</option>
-												<option value="47">47岁</option>
-												<option value="48">48岁</option>
-												<option value="49">49岁</option>
-												<option value="50">50岁</option>
-												<option value="51">51岁</option>
-												<option value="52">52岁</option>
-												<option value="53">53岁</option>
-												<option value="54">54岁</option>
-												<option value="55">55岁</option>
-												<option value="56">56岁</option>
-												<option value="57">57岁</option>
-												<option value="58">58岁</option>
-												<option value="59">59岁</option>
-												<option value="60">60岁</option>
-												<option value="61">61岁</option>
-												<option value="62">62岁</option>
-												<option value="63">63岁</option>
-												<option value="64">64岁</option>
-												<option value="65">65岁</option>
-												<option value="66">66岁</option>
-												<option value="67">67岁</option>
-												<option value="68">68岁</option>
-												<option value="69">69岁</option>
-												<option value="70">70岁</option>
-												<option value="71">71岁</option>
-												<option value="72">72岁</option>
-												<option value="73">73岁</option>
-												<option value="74">74岁</option>
-												<option value="75">75岁</option>
-												<option value="76">76岁</option>
-												<option value="77">77岁</option>
-												<option value="78">78岁</option>
-												<option value="79">79岁</option>
-												<option value="80">80岁</option>
-												<option value="81">81岁</option>
-												<option value="82">82岁</option>
-												<option value="83">83岁</option>
-												<option value="84">84岁</option>
-												<option value="85">85岁</option>
-												<option value="86">86岁</option>
-												<option value="87">87岁</option>
-												<option value="88">88岁</option>
-												<option value="89">89岁</option>
-												<option value="90">90岁</option>
-												<option value="91">91岁</option>
-												<option value="92">92岁</option>
-												<option value="93">93岁</option>
-												<option value="94">94岁</option>
-												<option value="95">95岁</option>
-												<option value="96">96岁</option>
-												<option value="97">97岁</option>
-												<option value="98">98岁</option>
-												<option value="99">99岁</option>
-											</select>
-											<span class="until">至</span>
-											<select id="max_age" class="max_age">
-												<option value="29" selected="selected">29岁</option>
-												<option value="30">30岁</option>
-												<option value="31">31岁</option>
-												<option value="32">32岁</option>
-												<option value="33">33岁</option>
-												<option value="34">34岁</option>
-												<option value="35">35岁</option>
-												<option value="36">36岁</option>
-												<option value="37">37岁</option>
-												<option value="38">38岁</option>
-												<option value="39">39岁</option>
-												<option value="40">40岁</option>
-												<option value="41">41岁</option>
-												<option value="42">42岁</option>
-												<option value="43">43岁</option>
-												<option value="44">44岁</option>
-												<option value="45">45岁</option>
-												<option value="46">46岁</option>
-												<option value="47">47岁</option>
-												<option value="48">48岁</option>
-												<option value="49">49岁</option>
-												<option value="50">50岁</option>
-												<option value="51">51岁</option>
-												<option value="52">52岁</option>
-												<option value="53">53岁</option>
-												<option value="54">54岁</option>
-												<option value="55">55岁</option>
-												<option value="56">56岁</option>
-												<option value="57">57岁</option>
-												<option value="58">58岁</option>
-												<option value="59">59岁</option>
-												<option value="60">60岁</option>
-												<option value="61">61岁</option>
-												<option value="62">62岁</option>
-												<option value="63">63岁</option>
-												<option value="64">64岁</option>
-												<option value="65">65岁</option>
-												<option value="66">66岁</option>
-												<option value="67">67岁</option>
-												<option value="68">68岁</option>
-												<option value="69">69岁</option>
-												<option value="70">70岁</option>
-												<option value="71">71岁</option>
-												<option value="72">72岁</option>
-												<option value="73">73岁</option>
-												<option value="74">74岁</option>
-												<option value="75">75岁</option>
-												<option value="76">76岁</option>
-												<option value="77">77岁</option>
-												<option value="78">78岁</option>
-												<option value="79">79岁</option>
-												<option value="80">80岁</option>
-												<option value="81">81岁</option>
-												<option value="82">82岁</option>
-												<option value="83">83岁</option>
-												<option value="84">84岁</option>
-												<option value="85">85岁</option>
-												<option value="86">86岁</option>
-												<option value="87">87岁</option>
-												<option value="88">88岁</option>
-												<option value="89">89岁</option>
-												<option value="90">90岁</option>
-												<option value="91">91岁</option>
-												<option value="92">92岁</option>
-												<option value="93">93岁</option>
-												<option value="94">94岁</option>
-												<option value="95">95岁</option>
-												<option value="96">96岁</option>
-												<option value="97">97岁</option>
-												<option value="98">98岁</option>
-												<option value="99">99岁</option>
-											</select>
-										</div>
-									<div class="lySure"><a href="javascript:;">确认</a></div>
-								</div>
-							</li>
-							<li>
-								<a class="lightWidth width94" href="javascript:;" onmousedown="send_jy_pv2('|1014108_16|89251048')"><span>155至180厘米</span><i class="triangle"></i></a>
-								<div style="display: none;" class="selectPopups heightPopups">
-									<p>请选择身高</p>
-									<div class="mt12">
-										<select id="min_height" class="min_height">
-											<option value="140">140厘米</option>
-			                                <option value="141">141厘米</option>
-			                                <option value="142">142厘米</option>
-			                                <option value="143">143厘米</option>
-			                                <option value="144">144厘米</option>
-			                                <option value="145">145厘米</option>
-			                                <option value="146">146厘米</option>
-			                                <option value="147">147厘米</option>
-			                                <option value="148">148厘米</option>
-			                                <option value="149">149厘米</option>
-			                                <option value="150">150厘米</option>
-			                                <option value="151">151厘米</option>
-			                                <option value="152">152厘米</option>
-			                                <option value="153">153厘米</option>
-			                                <option value="154">154厘米</option>
-			                                <option selected="selected" value="155">155厘米</option>
-			                                <option value="156">156厘米</option>
-			                                <option value="157">157厘米</option>
-			                                <option value="158">158厘米</option>
-			                                <option value="159">159厘米</option>
-			                                <option value="160">160厘米</option>
-			                                <option value="161">161厘米</option>
-			                                <option value="162">162厘米</option>
-			                                <option value="163">163厘米</option>
-			                                <option value="164">164厘米</option>
-			                                <option value="165">165厘米</option>
-			                                <option value="166">166厘米</option>
-			                                <option value="167">167厘米</option>
-			                                <option value="168">168厘米</option>
-			                                <option value="169">169厘米</option>
-			                                <option value="170">170厘米</option>
-			                                <option value="171">171厘米</option>
-			                                <option value="172">172厘米</option>
-			                                <option value="173">173厘米</option>
-			                                <option value="174">174厘米</option>
-			                                <option value="175">175厘米</option>
-			                                <option value="176">176厘米</option>
-			                                <option value="177">177厘米</option>
-			                                <option value="178">178厘米</option>
-			                                <option value="179">179厘米</option>
-			                                <option value="180">180厘米</option>
-			                                <option value="181">181厘米</option>
-			                                <option value="182">182厘米</option>
-			                                <option value="183">183厘米</option>
-			                                <option value="184">184厘米</option>
-			                                <option value="185">185厘米</option>
-			                                <option value="186">186厘米</option>
-			                                <option value="187">187厘米</option>
-			                                <option value="188">188厘米</option>
-			                                <option value="189">189厘米</option>
-			                                <option value="190">190厘米</option>
-			                                <option value="191">191厘米</option>
-			                                <option value="192">192厘米</option>
-			                                <option value="193">193厘米</option>
-			                                <option value="194">194厘米</option>
-			                                <option value="195">195厘米</option>
-			                                <option value="196">196厘米</option>
-			                                <option value="197">197厘米</option>
-			                                <option value="198">198厘米</option>
-			                                <option value="199">199厘米</option>
-			                                <option value="200">200厘米</option>
-			                                <option value="201">201厘米</option>
-			                                <option value="202">202厘米</option>
-			                                <option value="203">203厘米</option>
-			                                <option value="204">204厘米</option>
-			                                <option value="205">205厘米</option>
-			                                <option value="206">206厘米</option>
-			                                <option value="207">207厘米</option>
-			                                <option value="208">208厘米</option>
-			                                <option value="209">209厘米</option>
-			                                <option value="210">210厘米</option>
-			                                <option value="211">211厘米</option>
-			                                <option value="212">212厘米</option>
-			                                <option value="213">213厘米</option>
-			                                <option value="214">214厘米</option>
-			                                <option value="215">215厘米</option>
-			                                <option value="216">216厘米</option>
-			                                <option value="217">217厘米</option>
-			                                <option value="218">218厘米</option>
-			                                <option value="219">219厘米</option>
-			                                <option value="220">220厘米</option>
-										</select>
+<!--                 				<div class="condition-layer"> -->
+<!-- 					<a class="ly-close" href="javascript:;"></a> -->
+<!-- 					<div class="spotlightSelect"> -->
+<!-- 						<ul class="fn-clear" style="position:relative;z-index:9;"> -->
+<!-- 							<li> -->
+<!-- 								<a class="lightWidth" href="javascript:;"><span>其他国家</span><i class="triangle"></i></a> -->
+<!-- 								<div style="display: none;" class="selectPopups"> -->
+<!-- 									<p>请选择所在地</p> -->
+<!-- 									<div class="mt12"> -->
+<!-- 										<select id="work_location" class="work_location"> -->
+<!-- 											<option value="0">不限</option> -->
+<!-- 																						<option value="11">北京</option> -->
+<!-- 																						<option value="12">天津</option> -->
+<!-- 																						<option value="13">河北</option> -->
+<!-- 																						<option value="14">山西</option> -->
+<!-- 																						<option value="15">内蒙古</option> -->
+<!-- 																						<option value="21">辽宁</option> -->
+<!-- 																						<option value="22">吉林</option> -->
+<!-- 																						<option value="23">黑龙江</option> -->
+<!-- 																						<option value="31">上海</option> -->
+<!-- 																						<option value="32">江苏</option> -->
+<!-- 																						<option value="33">浙江</option> -->
+<!-- 																						<option value="34">安徽</option> -->
+<!-- 																						<option value="35">福建</option> -->
+<!-- 																						<option value="36">江西</option> -->
+<!-- 																						<option value="37">山东</option> -->
+<!-- 																						<option value="41">河南</option> -->
+<!-- 																						<option value="42">湖北</option> -->
+<!-- 																						<option value="43">湖南</option> -->
+<!-- 																						<option value="44">广东</option> -->
+<!-- 																						<option value="45">广西</option> -->
+<!-- 																						<option value="46">海南</option> -->
+<!-- 																						<option value="50">重庆</option> -->
+<!-- 																						<option value="51">四川</option> -->
+<!-- 																						<option value="52">贵州</option> -->
+<!-- 																						<option value="53">云南</option> -->
+<!-- 																						<option value="54">西藏</option> -->
+<!-- 																						<option value="61">陕西</option> -->
+<!-- 																						<option value="62">甘肃</option> -->
+<!-- 																						<option value="63">青海</option> -->
+<!-- 																						<option value="64">宁夏</option> -->
+<!-- 																						<option value="65">新疆</option> -->
+<!-- 																						<option value="71">台湾</option> -->
+<!-- 																						<option value="81">香港</option> -->
+<!-- 																						<option value="82">澳门</option> -->
+<!-- 																						<option value="83">钓鱼岛</option> -->
+<!-- 																						<option value="98">美国</option> -->
+<!-- 																						<option value="99" selected="selected">其他国家</option> -->
+<!-- 																					</select> -->
+<!-- 									</div> -->
+<!-- 									<div class="lySure"><a href="javascript:;">确认</a></div> -->
+<!-- 								</div> -->
+<!-- 							</li> -->
+<!-- 							<li> -->
+<!-- 								<a class="lightWidth" href="javascript:;"><span>婚史：不限</span><i class="triangle"></i></a> -->
+<!-- 								<div style="display: none;" class="selectPopups"> -->
+<!-- 									<p>请选择婚史</p> -->
+<!-- 									<div class="mt12"> -->
+<!-- 										<select id="marriage" class="marriage"> -->
+<!-- 											<option value="0" selected="selected">不限</option> -->
+<!-- 											<option value="1">未婚</option> -->
+<!-- 										</select> -->
+<!-- 									</div> -->
+<!-- 									<div class="lySure"><a href="javascript:;">确认</a></div> -->
+<!-- 								</div> -->
+<!-- 							</li> -->
+<!-- 							<li> -->
+<!-- 								<a class="lightWidth width68" href="javascript:;"><span>19至29岁</span><i class="triangle"></i></a> -->
+<!-- 								<div style="display: none;" class="selectPopups agePopups"> -->
+<!-- 									<p>请选择年龄</p> -->
+<!-- 										<div class="mt12"> -->
+<!-- 											<select id="min_age" class="min_age"> -->
+<!-- 												<option value="18">18岁</option> -->
+<!-- 												<option value="19" selected="selected">19岁</option> -->
+<!-- 												<option value="20">20岁</option> -->
+<!-- 												<option value="21">21岁</option> -->
+<!-- 												<option value="22">22岁</option> -->
+<!-- 												<option value="23">23岁</option> -->
+<!-- 												<option value="24">24岁</option> -->
+<!-- 												<option value="25">25岁</option> -->
+<!-- 												<option value="26">26岁</option> -->
+<!-- 												<option value="27">27岁</option> -->
+<!-- 												<option value="28">28岁</option> -->
+<!-- 												<option value="29">29岁</option> -->
+<!-- 												<option value="30">30岁</option> -->
+<!-- 												<option value="31">31岁</option> -->
+<!-- 												<option value="32">32岁</option> -->
+<!-- 												<option value="33">33岁</option> -->
+<!-- 												<option value="34">34岁</option> -->
+<!-- 												<option value="35">35岁</option> -->
+<!-- 												<option value="36">36岁</option> -->
+<!-- 												<option value="37">37岁</option> -->
+<!-- 												<option value="38">38岁</option> -->
+<!-- 												<option value="39">39岁</option> -->
+<!-- 												<option value="40">40岁</option> -->
+<!-- 												<option value="41">41岁</option> -->
+<!-- 												<option value="42">42岁</option> -->
+<!-- 												<option value="43">43岁</option> -->
+<!-- 												<option value="44">44岁</option> -->
+<!-- 												<option value="45">45岁</option> -->
+<!-- 												<option value="46">46岁</option> -->
+<!-- 												<option value="47">47岁</option> -->
+<!-- 												<option value="48">48岁</option> -->
+<!-- 												<option value="49">49岁</option> -->
+<!-- 												<option value="50">50岁</option> -->
+<!-- 												<option value="51">51岁</option> -->
+<!-- 												<option value="52">52岁</option> -->
+<!-- 												<option value="53">53岁</option> -->
+<!-- 												<option value="54">54岁</option> -->
+<!-- 												<option value="55">55岁</option> -->
+<!-- 												<option value="56">56岁</option> -->
+<!-- 												<option value="57">57岁</option> -->
+<!-- 												<option value="58">58岁</option> -->
+<!-- 												<option value="59">59岁</option> -->
+<!-- 												<option value="60">60岁</option> -->
+<!-- 												<option value="61">61岁</option> -->
+<!-- 												<option value="62">62岁</option> -->
+<!-- 												<option value="63">63岁</option> -->
+<!-- 												<option value="64">64岁</option> -->
+<!-- 												<option value="65">65岁</option> -->
+<!-- 												<option value="66">66岁</option> -->
+<!-- 												<option value="67">67岁</option> -->
+<!-- 												<option value="68">68岁</option> -->
+<!-- 												<option value="69">69岁</option> -->
+<!-- 												<option value="70">70岁</option> -->
+<!-- 												<option value="71">71岁</option> -->
+<!-- 												<option value="72">72岁</option> -->
+<!-- 												<option value="73">73岁</option> -->
+<!-- 												<option value="74">74岁</option> -->
+<!-- 												<option value="75">75岁</option> -->
+<!-- 												<option value="76">76岁</option> -->
+<!-- 												<option value="77">77岁</option> -->
+<!-- 												<option value="78">78岁</option> -->
+<!-- 												<option value="79">79岁</option> -->
+<!-- 												<option value="80">80岁</option> -->
+<!-- 												<option value="81">81岁</option> -->
+<!-- 												<option value="82">82岁</option> -->
+<!-- 												<option value="83">83岁</option> -->
+<!-- 												<option value="84">84岁</option> -->
+<!-- 												<option value="85">85岁</option> -->
+<!-- 												<option value="86">86岁</option> -->
+<!-- 												<option value="87">87岁</option> -->
+<!-- 												<option value="88">88岁</option> -->
+<!-- 												<option value="89">89岁</option> -->
+<!-- 												<option value="90">90岁</option> -->
+<!-- 												<option value="91">91岁</option> -->
+<!-- 												<option value="92">92岁</option> -->
+<!-- 												<option value="93">93岁</option> -->
+<!-- 												<option value="94">94岁</option> -->
+<!-- 												<option value="95">95岁</option> -->
+<!-- 												<option value="96">96岁</option> -->
+<!-- 												<option value="97">97岁</option> -->
+<!-- 												<option value="98">98岁</option> -->
+<!-- 												<option value="99">99岁</option> -->
+<!-- 											</select> -->
+<!-- 											<span class="until">至</span> -->
+<!-- 											<select id="max_age" class="max_age"> -->
+<!-- 												<option value="29" selected="selected">29岁</option> -->
+<!-- 												<option value="30">30岁</option> -->
+<!-- 												<option value="31">31岁</option> -->
+<!-- 												<option value="32">32岁</option> -->
+<!-- 												<option value="33">33岁</option> -->
+<!-- 												<option value="34">34岁</option> -->
+<!-- 												<option value="35">35岁</option> -->
+<!-- 												<option value="36">36岁</option> -->
+<!-- 												<option value="37">37岁</option> -->
+<!-- 												<option value="38">38岁</option> -->
+<!-- 												<option value="39">39岁</option> -->
+<!-- 												<option value="40">40岁</option> -->
+<!-- 												<option value="41">41岁</option> -->
+<!-- 												<option value="42">42岁</option> -->
+<!-- 												<option value="43">43岁</option> -->
+<!-- 												<option value="44">44岁</option> -->
+<!-- 												<option value="45">45岁</option> -->
+<!-- 												<option value="46">46岁</option> -->
+<!-- 												<option value="47">47岁</option> -->
+<!-- 												<option value="48">48岁</option> -->
+<!-- 												<option value="49">49岁</option> -->
+<!-- 												<option value="50">50岁</option> -->
+<!-- 												<option value="51">51岁</option> -->
+<!-- 												<option value="52">52岁</option> -->
+<!-- 												<option value="53">53岁</option> -->
+<!-- 												<option value="54">54岁</option> -->
+<!-- 												<option value="55">55岁</option> -->
+<!-- 												<option value="56">56岁</option> -->
+<!-- 												<option value="57">57岁</option> -->
+<!-- 												<option value="58">58岁</option> -->
+<!-- 												<option value="59">59岁</option> -->
+<!-- 												<option value="60">60岁</option> -->
+<!-- 												<option value="61">61岁</option> -->
+<!-- 												<option value="62">62岁</option> -->
+<!-- 												<option value="63">63岁</option> -->
+<!-- 												<option value="64">64岁</option> -->
+<!-- 												<option value="65">65岁</option> -->
+<!-- 												<option value="66">66岁</option> -->
+<!-- 												<option value="67">67岁</option> -->
+<!-- 												<option value="68">68岁</option> -->
+<!-- 												<option value="69">69岁</option> -->
+<!-- 												<option value="70">70岁</option> -->
+<!-- 												<option value="71">71岁</option> -->
+<!-- 												<option value="72">72岁</option> -->
+<!-- 												<option value="73">73岁</option> -->
+<!-- 												<option value="74">74岁</option> -->
+<!-- 												<option value="75">75岁</option> -->
+<!-- 												<option value="76">76岁</option> -->
+<!-- 												<option value="77">77岁</option> -->
+<!-- 												<option value="78">78岁</option> -->
+<!-- 												<option value="79">79岁</option> -->
+<!-- 												<option value="80">80岁</option> -->
+<!-- 												<option value="81">81岁</option> -->
+<!-- 												<option value="82">82岁</option> -->
+<!-- 												<option value="83">83岁</option> -->
+<!-- 												<option value="84">84岁</option> -->
+<!-- 												<option value="85">85岁</option> -->
+<!-- 												<option value="86">86岁</option> -->
+<!-- 												<option value="87">87岁</option> -->
+<!-- 												<option value="88">88岁</option> -->
+<!-- 												<option value="89">89岁</option> -->
+<!-- 												<option value="90">90岁</option> -->
+<!-- 												<option value="91">91岁</option> -->
+<!-- 												<option value="92">92岁</option> -->
+<!-- 												<option value="93">93岁</option> -->
+<!-- 												<option value="94">94岁</option> -->
+<!-- 												<option value="95">95岁</option> -->
+<!-- 												<option value="96">96岁</option> -->
+<!-- 												<option value="97">97岁</option> -->
+<!-- 												<option value="98">98岁</option> -->
+<!-- 												<option value="99">99岁</option> -->
+<!-- 											</select> -->
+<!-- 										</div> -->
+<!-- 									<div class="lySure"><a href="javascript:;">确认</a></div> -->
+<!-- 								</div> -->
+<!-- 							</li> -->
+<!-- 							<li> -->
+<!-- 								<a class="lightWidth width94" href="javascript:;" onmousedown="send_jy_pv2('|1014108_16|89251048')"><span>155至180厘米</span><i class="triangle"></i></a> -->
+<!-- 								<div style="display: none;" class="selectPopups heightPopups"> -->
+<!-- 									<p>请选择身高</p> -->
+<!-- 									<div class="mt12"> -->
+<!-- 										<select id="min_height" class="min_height"> -->
+<!-- 											<option value="140">140厘米</option> -->
+<!-- 			                                <option value="141">141厘米</option> -->
+<!-- 			                                <option value="142">142厘米</option> -->
+<!-- 			                                <option value="143">143厘米</option> -->
+<!-- 			                                <option value="144">144厘米</option> -->
+<!-- 			                                <option value="145">145厘米</option> -->
+<!-- 			                                <option value="146">146厘米</option> -->
+<!-- 			                                <option value="147">147厘米</option> -->
+<!-- 			                                <option value="148">148厘米</option> -->
+<!-- 			                                <option value="149">149厘米</option> -->
+<!-- 			                                <option value="150">150厘米</option> -->
+<!-- 			                                <option value="151">151厘米</option> -->
+<!-- 			                                <option value="152">152厘米</option> -->
+<!-- 			                                <option value="153">153厘米</option> -->
+<!-- 			                                <option value="154">154厘米</option> -->
+<!-- 			                                <option selected="selected" value="155">155厘米</option> -->
+<!-- 			                                <option value="156">156厘米</option> -->
+<!-- 			                                <option value="157">157厘米</option> -->
+<!-- 			                                <option value="158">158厘米</option> -->
+<!-- 			                                <option value="159">159厘米</option> -->
+<!-- 			                                <option value="160">160厘米</option> -->
+<!-- 			                                <option value="161">161厘米</option> -->
+<!-- 			                                <option value="162">162厘米</option> -->
+<!-- 			                                <option value="163">163厘米</option> -->
+<!-- 			                                <option value="164">164厘米</option> -->
+<!-- 			                                <option value="165">165厘米</option> -->
+<!-- 			                                <option value="166">166厘米</option> -->
+<!-- 			                                <option value="167">167厘米</option> -->
+<!-- 			                                <option value="168">168厘米</option> -->
+<!-- 			                                <option value="169">169厘米</option> -->
+<!-- 			                                <option value="170">170厘米</option> -->
+<!-- 			                                <option value="171">171厘米</option> -->
+<!-- 			                                <option value="172">172厘米</option> -->
+<!-- 			                                <option value="173">173厘米</option> -->
+<!-- 			                                <option value="174">174厘米</option> -->
+<!-- 			                                <option value="175">175厘米</option> -->
+<!-- 			                                <option value="176">176厘米</option> -->
+<!-- 			                                <option value="177">177厘米</option> -->
+<!-- 			                                <option value="178">178厘米</option> -->
+<!-- 			                                <option value="179">179厘米</option> -->
+<!-- 			                                <option value="180">180厘米</option> -->
+<!-- 			                                <option value="181">181厘米</option> -->
+<!-- 			                                <option value="182">182厘米</option> -->
+<!-- 			                                <option value="183">183厘米</option> -->
+<!-- 			                                <option value="184">184厘米</option> -->
+<!-- 			                                <option value="185">185厘米</option> -->
+<!-- 			                                <option value="186">186厘米</option> -->
+<!-- 			                                <option value="187">187厘米</option> -->
+<!-- 			                                <option value="188">188厘米</option> -->
+<!-- 			                                <option value="189">189厘米</option> -->
+<!-- 			                                <option value="190">190厘米</option> -->
+<!-- 			                                <option value="191">191厘米</option> -->
+<!-- 			                                <option value="192">192厘米</option> -->
+<!-- 			                                <option value="193">193厘米</option> -->
+<!-- 			                                <option value="194">194厘米</option> -->
+<!-- 			                                <option value="195">195厘米</option> -->
+<!-- 			                                <option value="196">196厘米</option> -->
+<!-- 			                                <option value="197">197厘米</option> -->
+<!-- 			                                <option value="198">198厘米</option> -->
+<!-- 			                                <option value="199">199厘米</option> -->
+<!-- 			                                <option value="200">200厘米</option> -->
+<!-- 			                                <option value="201">201厘米</option> -->
+<!-- 			                                <option value="202">202厘米</option> -->
+<!-- 			                                <option value="203">203厘米</option> -->
+<!-- 			                                <option value="204">204厘米</option> -->
+<!-- 			                                <option value="205">205厘米</option> -->
+<!-- 			                                <option value="206">206厘米</option> -->
+<!-- 			                                <option value="207">207厘米</option> -->
+<!-- 			                                <option value="208">208厘米</option> -->
+<!-- 			                                <option value="209">209厘米</option> -->
+<!-- 			                                <option value="210">210厘米</option> -->
+<!-- 			                                <option value="211">211厘米</option> -->
+<!-- 			                                <option value="212">212厘米</option> -->
+<!-- 			                                <option value="213">213厘米</option> -->
+<!-- 			                                <option value="214">214厘米</option> -->
+<!-- 			                                <option value="215">215厘米</option> -->
+<!-- 			                                <option value="216">216厘米</option> -->
+<!-- 			                                <option value="217">217厘米</option> -->
+<!-- 			                                <option value="218">218厘米</option> -->
+<!-- 			                                <option value="219">219厘米</option> -->
+<!-- 			                                <option value="220">220厘米</option> -->
+<!-- 										</select> -->
 
-										<span class="until">至</span>
-										<select id="max_height" class="max_height">
-			                                <option value="155">155厘米</option>
-			                                <option value="156">156厘米</option>
-			                                <option value="157">157厘米</option>
-			                                <option value="158">158厘米</option>
-			                                <option value="159">159厘米</option>
-			                                <option value="160">160厘米</option>
-			                                <option value="161">161厘米</option>
-			                                <option value="162">162厘米</option>
-			                                <option value="163">163厘米</option>
-			                                <option value="164">164厘米</option>
-			                                <option value="165">165厘米</option>
-			                                <option value="166">166厘米</option>
-			                                <option value="167">167厘米</option>
-			                                <option value="168">168厘米</option>
-			                                <option value="169">169厘米</option>
-			                                <option value="170">170厘米</option>
-			                                <option value="171">171厘米</option>
-			                                <option value="172">172厘米</option>
-			                                <option value="173">173厘米</option>
-			                                <option value="174">174厘米</option>
-			                                <option value="175">175厘米</option>
-			                                <option value="176">176厘米</option>
-			                                <option value="177">177厘米</option>
-			                                <option value="178">178厘米</option>
-			                                <option value="179">179厘米</option>
-			                                <option selected="selected" value="180">180厘米</option>
-			                                <option value="181">181厘米</option>
-			                                <option value="182">182厘米</option>
-			                                <option value="183">183厘米</option>
-			                                <option value="184">184厘米</option>
-			                                <option value="185">185厘米</option>
-			                                <option value="186">186厘米</option>
-			                                <option value="187">187厘米</option>
-			                                <option value="188">188厘米</option>
-			                                <option value="189">189厘米</option>
-			                                <option value="190">190厘米</option>
-			                                <option value="191">191厘米</option>
-			                                <option value="192">192厘米</option>
-			                                <option value="193">193厘米</option>
-			                                <option value="194">194厘米</option>
-			                                <option value="195">195厘米</option>
-			                                <option value="196">196厘米</option>
-			                                <option value="197">197厘米</option>
-			                                <option value="198">198厘米</option>
-			                                <option value="199">199厘米</option>
-			                                <option value="200">200厘米</option>
-			                                <option value="201">201厘米</option>
-			                                <option value="202">202厘米</option>
-			                                <option value="203">203厘米</option>
-			                                <option value="204">204厘米</option>
-			                                <option value="205">205厘米</option>
-			                                <option value="206">206厘米</option>
-			                                <option value="207">207厘米</option>
-			                                <option value="208">208厘米</option>
-			                                <option value="209">209厘米</option>
-			                                <option value="210">210厘米</option>
-			                                <option value="211">211厘米</option>
-			                                <option value="212">212厘米</option>
-			                                <option value="213">213厘米</option>
-			                                <option value="214">214厘米</option>
-			                                <option value="215">215厘米</option>
-			                                <option value="216">216厘米</option>
-			                                <option value="217">217厘米</option>
-			                                <option value="218">218厘米</option>
-			                                <option value="219">219厘米</option>
-			                                <option value="220">220厘米</option>
-										</select>
-									</div>
-									<div class="lySure"><a href="javascript:;">确认</a></div>
-								</div>
-							</li>							
-							<li>
-								<a class="lightWidth width83" href="javascript:;"><span>本科及以上</span><i class="triangle"></i></a>
-								<div style="display: none;" class="selectPopups eduPopups">
-									<p>请选择学历</p>
-									<div class="mt12">
-										<select id="education" class="education">
-											<option value="10">中专相当学历及以上</option>
-											<option value="20">大专及以上</option>
-											<option value="30" selected="selected">本科及以上</option>
-											<option value="50">硕士及以上</option>
-											<option value="60">博士及以上</option>
-										</select>
-									</div>
-									<div class="lySure"><a href="javascript:;">确认</a></div>
-								</div>
-							</li>
-							<li>
-								<a class="lightWidth width112" href="javascript:;"><span>2000～5000元</span><i class="triangle"></i></a>
-								<div style="display: none;" class="selectPopups salaryPopups">
-									<p>请选择月薪</p>
-									<div class="mt12">
-										<select id="salary" class="income">
-											<option value="10">2000元以下</option>
-											<option value="20" selected="selected">2000～5000元</option>
-											<option value="30">5000～10000元</option>
-											<option value="40">10000～20000元</option>
-											<option value="50">20000元以上</option>
-										</select>
-										<label class="above"><input name="income_more_than" id="select-sal" class="income_more_than" checked="checked" type="checkbox"><span>以上</span>
-										</label>
-									</div>
-									<div class="lySure"><a href="javascript:;">确认</a></div>
-								</div>
-							</li>
-							<li>
-								<a class="lightWidth" href="javascript:;"><span>购房：不限</span><i class="triangle"></i></a>
-								<div class="selectPopups" style="display:none">
-									<p>请选择购房情况</p>
-									<div class="mt12">
-										<select class="house">
-											<option value="0" selected="selected">不限</option>
-											<option value="2">已购房</option>
-										</select>
-									</div>
-									<div class="lySure"><a href="javascript:;">确认</a></div>
-								</div>
-							</li>
-							<li>
-								<a class="lightWidth" href="javascript:;"><span>购车：不限</span><i class="triangle"></i></a>
-								<div style="display: none;" class="selectPopups">
-									<p>请选择购车情况</p>
-									<div class="mt12">
-										<select class="auto">
-											<option value="0" selected="selected">不限</option>
-											<option value="2">已购车</option>
-										</select>
-									</div>
-									<div class="lySure"><a href="javascript:;">确认</a></div>
-								</div>
-							</li>
+<!-- 										<span class="until">至</span> -->
+<!-- 										<select id="max_height" class="max_height"> -->
+<!-- 			                                <option value="155">155厘米</option> -->
+<!-- 			                                <option value="156">156厘米</option> -->
+<!-- 			                                <option value="157">157厘米</option> -->
+<!-- 			                                <option value="158">158厘米</option> -->
+<!-- 			                                <option value="159">159厘米</option> -->
+<!-- 			                                <option value="160">160厘米</option> -->
+<!-- 			                                <option value="161">161厘米</option> -->
+<!-- 			                                <option value="162">162厘米</option> -->
+<!-- 			                                <option value="163">163厘米</option> -->
+<!-- 			                                <option value="164">164厘米</option> -->
+<!-- 			                                <option value="165">165厘米</option> -->
+<!-- 			                                <option value="166">166厘米</option> -->
+<!-- 			                                <option value="167">167厘米</option> -->
+<!-- 			                                <option value="168">168厘米</option> -->
+<!-- 			                                <option value="169">169厘米</option> -->
+<!-- 			                                <option value="170">170厘米</option> -->
+<!-- 			                                <option value="171">171厘米</option> -->
+<!-- 			                                <option value="172">172厘米</option> -->
+<!-- 			                                <option value="173">173厘米</option> -->
+<!-- 			                                <option value="174">174厘米</option> -->
+<!-- 			                                <option value="175">175厘米</option> -->
+<!-- 			                                <option value="176">176厘米</option> -->
+<!-- 			                                <option value="177">177厘米</option> -->
+<!-- 			                                <option value="178">178厘米</option> -->
+<!-- 			                                <option value="179">179厘米</option> -->
+<!-- 			                                <option selected="selected" value="180">180厘米</option> -->
+<!-- 			                                <option value="181">181厘米</option> -->
+<!-- 			                                <option value="182">182厘米</option> -->
+<!-- 			                                <option value="183">183厘米</option> -->
+<!-- 			                                <option value="184">184厘米</option> -->
+<!-- 			                                <option value="185">185厘米</option> -->
+<!-- 			                                <option value="186">186厘米</option> -->
+<!-- 			                                <option value="187">187厘米</option> -->
+<!-- 			                                <option value="188">188厘米</option> -->
+<!-- 			                                <option value="189">189厘米</option> -->
+<!-- 			                                <option value="190">190厘米</option> -->
+<!-- 			                                <option value="191">191厘米</option> -->
+<!-- 			                                <option value="192">192厘米</option> -->
+<!-- 			                                <option value="193">193厘米</option> -->
+<!-- 			                                <option value="194">194厘米</option> -->
+<!-- 			                                <option value="195">195厘米</option> -->
+<!-- 			                                <option value="196">196厘米</option> -->
+<!-- 			                                <option value="197">197厘米</option> -->
+<!-- 			                                <option value="198">198厘米</option> -->
+<!-- 			                                <option value="199">199厘米</option> -->
+<!-- 			                                <option value="200">200厘米</option> -->
+<!-- 			                                <option value="201">201厘米</option> -->
+<!-- 			                                <option value="202">202厘米</option> -->
+<!-- 			                                <option value="203">203厘米</option> -->
+<!-- 			                                <option value="204">204厘米</option> -->
+<!-- 			                                <option value="205">205厘米</option> -->
+<!-- 			                                <option value="206">206厘米</option> -->
+<!-- 			                                <option value="207">207厘米</option> -->
+<!-- 			                                <option value="208">208厘米</option> -->
+<!-- 			                                <option value="209">209厘米</option> -->
+<!-- 			                                <option value="210">210厘米</option> -->
+<!-- 			                                <option value="211">211厘米</option> -->
+<!-- 			                                <option value="212">212厘米</option> -->
+<!-- 			                                <option value="213">213厘米</option> -->
+<!-- 			                                <option value="214">214厘米</option> -->
+<!-- 			                                <option value="215">215厘米</option> -->
+<!-- 			                                <option value="216">216厘米</option> -->
+<!-- 			                                <option value="217">217厘米</option> -->
+<!-- 			                                <option value="218">218厘米</option> -->
+<!-- 			                                <option value="219">219厘米</option> -->
+<!-- 			                                <option value="220">220厘米</option> -->
+<!-- 										</select> -->
+<!-- 									</div> -->
+<!-- 									<div class="lySure"><a href="javascript:;">确认</a></div> -->
+<!-- 								</div> -->
+<!-- 							</li>							 -->
+<!-- 							<li> -->
+<!-- 								<a class="lightWidth width83" href="javascript:;"><span>本科及以上</span><i class="triangle"></i></a> -->
+<!-- 								<div style="display: none;" class="selectPopups eduPopups"> -->
+<!-- 									<p>请选择学历</p> -->
+<!-- 									<div class="mt12"> -->
+<!-- 										<select id="education" class="education"> -->
+<!-- 											<option value="10">中专相当学历及以上</option> -->
+<!-- 											<option value="20">大专及以上</option> -->
+<!-- 											<option value="30" selected="selected">本科及以上</option> -->
+<!-- 											<option value="50">硕士及以上</option> -->
+<!-- 											<option value="60">博士及以上</option> -->
+<!-- 										</select> -->
+<!-- 									</div> -->
+<!-- 									<div class="lySure"><a href="javascript:;">确认</a></div> -->
+<!-- 								</div> -->
+<!-- 							</li> -->
+<!-- 							<li> -->
+<!-- 								<a class="lightWidth width112" href="javascript:;"><span>2000～5000元</span><i class="triangle"></i></a> -->
+<!-- 								<div style="display: none;" class="selectPopups salaryPopups"> -->
+<!-- 									<p>请选择月薪</p> -->
+<!-- 									<div class="mt12"> -->
+<!-- 										<select id="salary" class="income"> -->
+<!-- 											<option value="10">2000元以下</option> -->
+<!-- 											<option value="20" selected="selected">2000～5000元</option> -->
+<!-- 											<option value="30">5000～10000元</option> -->
+<!-- 											<option value="40">10000～20000元</option> -->
+<!-- 											<option value="50">20000元以上</option> -->
+<!-- 										</select> -->
+<!-- 										<label class="above"><input name="income_more_than" id="select-sal" class="income_more_than" checked="checked" type="checkbox"><span>以上</span> -->
+<!-- 										</label> -->
+<!-- 									</div> -->
+<!-- 									<div class="lySure"><a href="javascript:;">确认</a></div> -->
+<!-- 								</div> -->
+<!-- 							</li> -->
+<!-- 							<li> -->
+<!-- 								<a class="lightWidth" href="javascript:;"><span>购房：不限</span><i class="triangle"></i></a> -->
+<!-- 								<div class="selectPopups" style="display:none"> -->
+<!-- 									<p>请选择购房情况</p> -->
+<!-- 									<div class="mt12"> -->
+<!-- 										<select class="house"> -->
+<!-- 											<option value="0" selected="selected">不限</option> -->
+<!-- 											<option value="2">已购房</option> -->
+<!-- 										</select> -->
+<!-- 									</div> -->
+<!-- 									<div class="lySure"><a href="javascript:;">确认</a></div> -->
+<!-- 								</div> -->
+<!-- 							</li> -->
+<!-- 							<li> -->
+<!-- 								<a class="lightWidth" href="javascript:;"><span>购车：不限</span><i class="triangle"></i></a> -->
+<!-- 								<div style="display: none;" class="selectPopups"> -->
+<!-- 									<p>请选择购车情况</p> -->
+<!-- 									<div class="mt12"> -->
+<!-- 										<select class="auto"> -->
+<!-- 											<option value="0" selected="selected">不限</option> -->
+<!-- 											<option value="2">已购车</option> -->
+<!-- 										</select> -->
+<!-- 									</div> -->
+<!-- 									<div class="lySure"><a href="javascript:;">确认</a></div> -->
+<!-- 								</div> -->
+<!-- 							</li> -->
 						
-						</ul>
-					</div>
-					<div class="ly-btn-mod">
-						<a class="ly-con-btn condition-btn" href="javascript:;" onmousedown="send_jy_pv2('|1015925_8|');">按以上条件看信</a>
-						<span class="ly-tips" style="display:none">提示：开通<a class="blue" href="http://www.jiayuan.com/usercp/service/bmsg_tg2.php" target="_blank">钻石会员</a>，马上使用本功能</span>
-					</div>
-				</div>
+<!-- 						</ul> -->
+<!-- 					</div> -->
+<!-- 					<div class="ly-btn-mod"> -->
+<!-- 						<a class="ly-con-btn condition-btn" href="javascript:;" onmousedown="send_jy_pv2('|1015925_8|');">按以上条件看信</a> -->
+<!-- 						<span class="ly-tips" style="display:none">提示：开通<a class="blue" href="http://www.jiayuan.com/usercp/service/bmsg_tg2.php" target="_blank">钻石会员</a>，马上使用本功能</span> -->
+<!-- 					</div> -->
+<!-- 				</div> -->
 
 				<script type="text/javascript">
 				$(function (){
@@ -2658,7 +2658,7 @@ get_app_num();	//获取佳缘应用的数字
 									target="_blank">...爱情就是在对的时间遇见对的人...</a>
 							</p>
 							<div class="time">
-								<i></i>${letter.createTime}
+								<i></i>${letter.letter.createTime}
 							</div>
 						</div>
 						<div class="msg">

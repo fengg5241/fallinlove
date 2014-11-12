@@ -254,29 +254,29 @@
 <div id="jycm_top" class="jycm_top">
     <div class="w1000" id="head_login" style="">
         <div class="jycm_top_wel">
-            <p id="head_user_nickname">Hi，<a class="color_fff" target="_blank" href="http://www.jiayuan.com/122261858">老公</a></p>
-            <p class="memberIcon iconS1" id="head_user_level"><a onmousedown="jy_head_function.send_jy_nav_pv('|head_club_level|122261858');" title="S1会员" href="http://www.jiayuan.com/club/" target="_blank">S1会员</a></p>
-            <p id="head_user_bean">金豆<a onmousedown="jy_head_function.send_jy_nav_pv('|head_club_bean|122261858');" href="http://www.jiayuan.com/club/" class="color_fff" target="_blank">450</a></p>
-            <p id="head_user_uid">佳缘ID<a class="color_fff" target="_blank" href="http://www.jiayuan.com/122261858">122261858</a></p>
-            <p id="head_user_logout"><a class="color_fff" href="http://login.jiayuan.com/logout2.php">退出</a></p>
+            <p id="head_user_nickname">Hi，<a class="color_fff" target="_blank" href="user/selfBasic/${loginUser.userId}">${loginUser.nickname}</a></p>
+<!--             <p class="memberIcon iconS1" id="head_user_level"><a onmousedown="jy_head_function.send_jy_nav_pv('|head_club_level|122261858');" title="S1会员" href="http://www.jiayuan.com/club/" target="_blank">S1会员</a></p> -->
+<!--             <p id="head_user_bean">金豆<a onmousedown="jy_head_function.send_jy_nav_pv('|head_club_bean|122261858');" href="http://www.jiayuan.com/club/" class="color_fff" target="_blank">450</a></p> -->
+            <p id="head_user_uid">佳缘ID<a class="color_fff" target="_blank" href="user/selfBasic/${loginUser.userId}">${loginUser.userId}</a></p>
+            <p id="head_user_logout"><a class="color_fff" href="logout">退出</a></p>
         </div>
         <div class="jycm_top_right">
             <div id="jycm_top_inform" class="jycm_top_inform">
                 <div id="jycm_top_informIcon" class="jycm_top_informIcon">
 <div class="jycm_top_remind">
-<span class="color_fff va_middle"><i class="jy_top_icon jy_icon_remind"></i><strong class="jy_tixing">提醒</strong><i id="tips_point"></i></span>
+<!-- <span class="color_fff va_middle"><i class="jy_top_icon jy_icon_remind"></i><strong class="jy_tixing">提醒</strong><i id="tips_point"></i></span> -->
 </div>
                 </div>
                 <div id="jycm_top_informCn" class="jycm_top_informCn" style="display:none">
                     <ul id="vip_center_all_notes">
-                        <li style="display: none;" id="visitor_new_num"><a target="_blank" href="http://www.jiayuan.com/usercp/clicked_new.php" onclick="jy_head_function.send_jy_nav_pv('|1013617_6|');"><strong class="fl">谁看过我</strong><span class="fr">查看</span></a></li>
-                        <li style="display: none;" id="praise_me_new_num"><a target="_blank" href="http://www.jiayuan.com/usercp/praiseme.php" onclick="jy_head_function.send_jy_nav_pv('|1013617_7|');"><strong class="fl">谁赞过我</strong><span class="fr">查看</span></a></li>
-                        <li style="display: none;" id="fans_new_num"><a target="_blank" href="http://www.jiayuan.com/usercp/myfans.php" onclick="jy_head_function.send_jy_nav_pv('|1013617_8|');"><strong class="fl">谁关注我</strong><span class="fr">查看</span></a></li>
+                        <li style="display: none;" id="visitor_new_num"><a><strong class="fl">谁看过我</strong><span class="fr">查看</span></a></li>
+<!--                         <li style="display: none;" id="praise_me_new_num"><a target="_blank" href="http://www.jiayuan.com/usercp/praiseme.php" onclick="jy_head_function.send_jy_nav_pv('|1013617_7|');"><strong class="fl">谁赞过我</strong><span class="fr">查看</span></a></li> -->
+<!--                         <li style="display: none;" id="fans_new_num"><a target="_blank" href="http://www.jiayuan.com/usercp/myfans.php" onclick="jy_head_function.send_jy_nav_pv('|1013617_8|');"><strong class="fl">谁关注我</strong><span class="fr">查看</span></a></li> -->
                     </ul>
                 </div>
             </div>
             <p class="jycm_top_jx ">
-<a class="color_fff va_middle" href="http://im.jiayuan.com/" ><i class="jy_top_icon jy_icon_jiaxin"></i>佳缘佳信</a>
+<!-- <a class="color_fff va_middle" href="http://im.jiayuan.com/" ><i class="jy_top_icon jy_icon_jiaxin"></i>佳缘佳信</a> -->
             </p>
             <div id="jycm_top_izx" class="jycm_top_izx">
                 <div class="jycm_top_izxTit">
@@ -632,7 +632,7 @@ DD_belatedPNG.fix(".fix-png");
         <div class="cp-menu-card-link">
             <a class="menu" href="http://www.jiayuan.com/122261858#cp_kpd" title="立刻提升" target="_blank" >靠谱度综合评分:3分</a>
             <a class="menu cp-menu-ico-jiang" href="http://www.jiayuan.com/wenda/?from=ucp" target="_blank" >婚恋个性匹配问答</a>
-            <a class="menu" href="user/selfBasic"  target="_blank">我的资料50分</a>
+            <a class="menu" href="user/selfBasic/${loginUser.userId}"  target="_blank">我的资料50分</a>
                 [<a class="menu" href="http://www.jiayuan.com/122261858" target="_blank">预览</a>]
                     </div>
         <div class="cp-menu-card-mail fn-clear">
@@ -1092,7 +1092,7 @@ DD_belatedPNG.fix(".fix-png");
                             		                                          
                   						                               	                
                                         <li class=" ">
-                                <a class="menu" id="info_1" target="_blank" href="http://www.jiayuan.com/usercp/profile.php?action=base" >
+                                <a class="menu" id="info_1" target="_blank" href="user/selfBasic/${loginUser.userId}" >
                                 		                                    <div class="cp-menu-item-name">我的资料</div>	                                    <div class="cp-menu-item-number">	                                        <div class="cp-menu-radius fn-right">
                                         	                                            <div id="0" class="cp-menu-radius-num" style="display:none"></div>
                                         </div>
@@ -1106,7 +1106,7 @@ DD_belatedPNG.fix(".fix-png");
                             		                                          
                   						                               	                
                                         <li class=" ">
-                                <a class="menu" id="info_1_1" target="_blank" href="http://www.jiayuan.com/usercp/photo.php?from=menu" >
+                                <a class="menu" id="info_1_1" target="_blank" href="user/myphoto/${loginUser.userId}" >
                                 		                                    <div class="cp-menu-item-name">我的相册</div>	                                    <div class="cp-menu-item-number">	                                        <div class="cp-menu-radius fn-right">
                                         	                                            <div id="0" class="cp-menu-radius-num" style="display:none"></div>
                                         </div>
