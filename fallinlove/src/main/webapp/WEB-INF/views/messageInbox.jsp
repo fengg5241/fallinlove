@@ -1402,7 +1402,7 @@ DD_belatedPNG.fix(".fix-png");
 		<!--会员介绍-->
     <div class="cp-menu-card-user">
         <div class="menu-avatar menu-avatar-110x168">
-                        	<a href="http://www.jiayuan.com/usercp/photo.php" onmousedown="send_jy_pv2('|cp_menu_photo_upload|122261858');" target="_blank"><img src="../resources/img/lksczp_m.jpg" id="user_avatar" height="135" width="110"></a>
+                        	<a href="uploadHeadPic"  target="_blank"><img src="../resources/img/lksczp_m.jpg" id="user_avatar" height="135" width="110"></a>
                     </div>
         <div class="cp-menu-card-link">
             <a class="menu" href="http://www.jiayuan.com/122261858#cp_kpd" title="立刻提升" target="_blank" onmousedown="send_jy_pv2('|cp_menu_card_kpd|122261858');">靠谱度综合评分:3.1分</a>
@@ -1411,10 +1411,10 @@ DD_belatedPNG.fix(".fix-png");
                 [<a class="menu" href="http://www.jiayuan.com/122261858" onmousedown="send_jy_pv2('|cp_menu_card_pre|122261858');" target="_blank">预览</a>]
                     </div>
         <div class="cp-menu-card-mail fn-clear">
-        	<a class="menu menu-left" href="http://www.jiayuan.com/msg/?from=menu" onmousedown="send_jy_pv2('|cp_menu_area_msg|122261858');" title="未读信件18封">
+        	<a class="menu menu-left" href="../msg/notRead" title="未读信件">
                 <span>收件箱</span>
                 <div class="cp-menu-radius number fn-right">
-                	<div class="cp-menu-radius-num">18</div>
+                	<div class="cp-menu-radius-num"></div>
                 </div>
             </a>
             <a class="menu menu-right" href="http://www.jiayuan.com/usercp/clicked_new.php" onmousedown="send_jy_pv2('|cp_menu_area_lookedme|122261858');">

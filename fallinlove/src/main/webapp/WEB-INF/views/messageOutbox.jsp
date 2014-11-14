@@ -661,11 +661,11 @@ head_user_nickname	= '';
 <div id="jycm_top" class="jycm_top">
     <div class="w1000" id="head_login" style="">
         <div class="jycm_top_wel">
-            <p id="head_user_nickname">Hi，<a class="color_fff" target="_blank" href="http://www.jiayuan.com/122261858">老公</a></p>
-            <p class="memberIcon iconS1" id="head_user_level"><a onmousedown="jy_head_function.click_pv('|head_club_level|122261858');" title="S1会员" href="http://www.jiayuan.com/club/" target="_blank">S1会员</a></p>
-            <p id="head_user_bean">金豆<a onmousedown="jy_head_function.click_pv('|head_club_bean|122261858');" href="http://www.jiayuan.com/club/" class="color_fff" target="_blank">600</a></p>
-            <p id="head_user_uid">佳缘ID<a class="color_fff" target="_blank" href="http://www.jiayuan.com/122261858">122261858</a></p>
-            <p id="head_user_logout"><a class="color_fff" href="http://login.jiayuan.com/logout2.php">退出</a></p>
+            <p id="head_user_nickname">Hi，<a class="color_fff" target="_blank" href="user/selfBasic/${loginUser.userId}">${loginUser.nickname}</a></p>
+<!--             <p class="memberIcon iconS1" id="head_user_level"><a onmousedown="jy_head_function.click_pv('|head_club_level|122261858');" title="S1会员" href="http://www.jiayuan.com/club/" target="_blank">S1会员</a></p> -->
+<!--             <p id="head_user_bean">金豆<a onmousedown="jy_head_function.click_pv('|head_club_bean|122261858');" href="http://www.jiayuan.com/club/" class="color_fff" target="_blank">600</a></p> -->
+            <p id="head_user_uid">佳缘ID<a class="color_fff" target="_blank" href="user/selfBasic/${loginUser.userId}">122261858</a></p>
+            <p id="head_user_logout"><a class="color_fff" href="../logout">退出</a></p>
         </div>
         <div class="jycm_top_right">
             <div id="jycm_top_inform" class="jycm_top_inform">
@@ -1406,19 +1406,19 @@ DD_belatedPNG.fix(".fix-png");
 		<!--会员介绍-->
     <div class="cp-menu-card-user">
         <div class="menu-avatar menu-avatar-110x168">
-                        	<a href="http://www.jiayuan.com/usercp/photo.php" onmousedown="send_jy_pv2('|cp_menu_photo_upload|122261858');" target="_blank"><img src="../resources/img/lksczp_m.jpg" id="user_avatar" height="135" width="110"></a>
+                        	<a href="uploadHeadPic"  target="_blank"><img src="../resources/img/lksczp_m.jpg" id="user_avatar" height="135" width="110"></a>
                     </div>
         <div class="cp-menu-card-link">
             <a class="menu" href="http://www.jiayuan.com/122261858#cp_kpd" title="立刻提升" target="_blank" onmousedown="send_jy_pv2('|cp_menu_card_kpd|122261858');">靠谱度综合评分:3.1分</a>
             <a class="menu cp-menu-ico-jiang" href="http://www.jiayuan.com/wenda/?from=ucp" target="_blank" onclick="send_jy_pv2('|cp_menu_card_wenda|122261858')">婚恋个性匹配问答</a>
                             <a class="menu" href="user/selfBasic/${loginUser.userId}" target="_blank">我的资料50分</a>
-                [<a class="menu" href="http://www.jiayuan.com/122261858" onmousedown="send_jy_pv2('|cp_menu_card_pre|122261858');" target="_blank">预览</a>]
+                [<a class="menu" href="user/selfBasic/${loginUser.userId}" onmousedown="send_jy_pv2('|cp_menu_card_pre|122261858');" target="_blank">预览</a>]
                     </div>
         <div class="cp-menu-card-mail fn-clear">
-        	<a class="menu menu-left" href="http://www.jiayuan.com/msg/?from=menu" onmousedown="send_jy_pv2('|cp_menu_area_msg|122261858');" title="未读信件18封">
+        	<a class="menu menu-left" href="../msg/notRead" title="未读信件">
                 <span>收件箱</span>
                 <div class="cp-menu-radius number fn-right">
-                	<div class="cp-menu-radius-num">18</div>
+                	<div class="cp-menu-radius-num"></div>
                 </div>
             </a>
             <a class="menu menu-right" href="http://www.jiayuan.com/usercp/clicked_new.php" onmousedown="send_jy_pv2('|cp_menu_area_lookedme|122261858');">

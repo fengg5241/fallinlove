@@ -885,7 +885,7 @@
 					target="_blank">爱真心</a></li>
 			</ul>
 			<div class="jycm_zt_login" id="head_white_user">
-				老公&nbsp;|&nbsp;<a href="http://login.jiayuan.com/logout2.php">退出</a>
+				${loginUser.nickname}&nbsp;|&nbsp;<a href="../logout">退出</a>
 			</div>
 		</div>
 	</div>

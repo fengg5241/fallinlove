@@ -636,10 +636,10 @@ DD_belatedPNG.fix(".fix-png");
                 [<a class="menu" href="http://www.jiayuan.com/122261858" target="_blank">预览</a>]
                     </div>
         <div class="cp-menu-card-mail fn-clear">
-        	<a class="menu menu-left" href="../msg/notRead"  title="未读信件6封">
+        	<a class="menu menu-left" href="../msg/notRead"  title="未读信件">
                 <span>收件箱</span>
                 <div class="cp-menu-radius number fn-right">
-                	<div class="cp-menu-radius-num">6</div>
+                	<div class="cp-menu-radius-num"></div>
                 </div>
             </a>
             <a class="menu menu-right" href="http://www.jiayuan.com/usercp/clicked_new.php">

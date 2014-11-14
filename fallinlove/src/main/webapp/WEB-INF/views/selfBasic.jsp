@@ -990,7 +990,7 @@ head_user_uid	= 0;
             <p class="memberIcon iconS1" id="head_user_level"><a onmousedown="jy_head_function.click_pv('|head_club_level|122261858');" title="S1会员" href="http://www.jiayuan.com/club/" target="_blank">S1会员</a></p>
             <p id="head_user_bean">金豆<a onmousedown="jy_head_function.click_pv('|head_club_bean|122261858');" href="http://www.jiayuan.com/club/" class="color_fff" target="_blank">600</a></p>
             <p id="head_user_uid">佳缘ID<a class="color_fff" target="_blank" href="http://www.jiayuan.com/122261858">122261858</a></p>
-            <p id="head_user_logout"><a class="color_fff" href="http://login.jiayuan.com/logout2.php">退出</a></p>
+            <p id="head_user_logout"><a class="color_fff" href="../logout">退出</a></p>
         </div>
         <div class="jycm_top_right">
             <div id="jycm_top_inform" class="jycm_top_inform">

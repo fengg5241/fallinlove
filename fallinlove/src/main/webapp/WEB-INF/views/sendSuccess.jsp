@@ -447,7 +447,7 @@ common_nav_array[current_nav_flag] = 'head_nav_cur';
 <a href="http://vip.jiayuan.com/" onclick="jy_head_function.click_pv('|head_navigation_liehun|');" target="_blank">红娘一对一</a><span class="sep">|</span>
 <a href="http://www.izhenxin.com/login/getSign/?url=http%3A%2F%2Fwww.jiayuan.com%2Fusercp%2Fiz_login.php%3Furl%3Dhttp%253A%252F%252Fwww.izhenxin.com%252F&amp;from=JYDH" onclick="jy_head_function.click_pv('|head_navigation_izhenxin|');" target="_blank">爱真心</a>
 </div>
-<div class="headRight" id="head_red_simple_user" style="display:none"><span>老公</span><span class="sep">|</span><a href="http://login.jiayuan.com/logout2.php" class="link">退出</a></div>
+<div class="headRight" id="head_red_simple_user" style="display:none"><span>${loginUser.nickname}</span><span class="sep">|</span><a href="../logout" class="link">退出</a></div>
 </div>
 </div>
 <script type="text/javascript">

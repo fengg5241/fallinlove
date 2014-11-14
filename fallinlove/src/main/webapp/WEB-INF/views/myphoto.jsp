@@ -1182,11 +1182,11 @@ head_user_nickname	= '';
 <div id="jycm_top" class="jycm_top">
     <div class="w1000" id="head_login" style="">
         <div class="jycm_top_wel">
-            <p id="head_user_nickname">Hi，<a class="color_fff" target="_blank" href="http://www.jiayuan.com/122261858">老公</a></p>
-            <p class="memberIcon iconS1" id="head_user_level"><a onmousedown="jy_head_function.click_pv('|head_club_level|122261858');" title="S1会员" href="http://www.jiayuan.com/club/" target="_blank">S1会员</a></p>
-            <p id="head_user_bean">金豆<a onmousedown="jy_head_function.click_pv('|head_club_bean|122261858');" href="http://www.jiayuan.com/club/" class="color_fff" target="_blank">600</a></p>
-            <p id="head_user_uid">佳缘ID<a class="color_fff" target="_blank" href="http://www.jiayuan.com/122261858">122261858</a></p>
-            <p id="head_user_logout"><a class="color_fff" href="http://login.jiayuan.com/logout2.php">退出</a></p>
+            <p id="head_user_nickname">Hi，<a class="color_fff" target="_blank" href="user/selfBasic/${loginUser.userId}">${loginUser.nickname}</a></p>
+<!--             <p class="memberIcon iconS1" id="head_user_level"><a onmousedown="jy_head_function.click_pv('|head_club_level|122261858');" title="S1会员" href="http://www.jiayuan.com/club/" target="_blank">S1会员</a></p> -->
+<!--             <p id="head_user_bean">金豆<a onmousedown="jy_head_function.click_pv('|head_club_bean|122261858');" href="http://www.jiayuan.com/club/" class="color_fff" target="_blank">600</a></p> -->
+            <p id="head_user_uid">佳缘ID<a class="color_fff" target="_blank" href="user/selfBasic/${loginUser.userId}">122261858</a></p>
+            <p id="head_user_logout"><a class="color_fff" href="../logout">退出</a></p>
         </div>
         <div class="jycm_top_right">
             <div id="jycm_top_inform" class="jycm_top_inform">
@@ -1808,7 +1808,7 @@ document.all?window.external.AddFavorite(a,b):window.sidebar&&window.sidebar.add
 		<div class="info_right">
 			<h2>资料完整度：<span class="span101203_1">50分</span></h2>
 			<div class="integrality"><div class="plan" style="width:50%;">&nbsp;</div></div>
-			<div class="preview"><a href="http://www.jiayuan.com/122261858" onmousedown="send_jy_pv2('editprofile|my_profile|m|122261858');" target="_blank">预览资料</a></div>
+			<div class="preview"><a href="user/selfBasic/${loginUser.userId}" target="_blank">预览资料</a></div>
 			<div class="why">
 				<h3>为什么要上传照片？</h3>
 <p>世纪佳缘统计，有照片的会员征友成功率是无照片会员的<strong style="color:red;"><span style="font-size: 14px;">6</span>倍</strong>！ 清晰生动的照片能为您吸引更多的目光，让更多的异性关注您。</p>
