@@ -667,80 +667,80 @@ head_user_nickname	= '';
             <p id="head_user_uid">佳缘ID<a class="color_fff" target="_blank" href="user/selfBasic/${loginUser.userId}">122261858</a></p>
             <p id="head_user_logout"><a class="color_fff" href="../logout">退出</a></p>
         </div>
-        <div class="jycm_top_right">
-            <div id="jycm_top_inform" class="jycm_top_inform">
-                <div id="jycm_top_informIcon" class="jycm_top_informIcon">
-<div class="jycm_top_remind">
-<span class="color_fff va_middle"><i class="jy_top_icon jy_icon_remind"></i><strong class="jy_tixing">提醒</strong><i style="display: inline;" id="tips_point"></i></span>
-</div>
-                </div>
-                <div id="jycm_top_informCn" class="jycm_top_informCn" style="display:none">
-                    <ul id="vip_center_all_notes">
-                        <li id="visitor_new_num"><a target="_blank" href="http://www.jiayuan.com/usercp/clicked_new.php" onclick="jy_head_function.click_pv('|1013617_6|');"><strong class="fl">谁看过我</strong><span class="fr fr_num"> 60</span></a></li>
-                        <li style="display: none;" id="praise_me_new_num"><a target="_blank" href="http://www.jiayuan.com/usercp/praiseme.php" onclick="jy_head_function.click_pv('|1013617_7|');"><strong class="fl">谁赞过我</strong></a></li>
-                        <li id="fans_new_num"><a target="_blank" href="http://www.jiayuan.com/usercp/myfans.php" onclick="jy_head_function.click_pv('|1013617_8|');"><strong class="fl">谁关注我</strong><span class="fr fr_num"> 1</span></a></li>
-                    </ul>
-                </div>
-            </div>
-            <p class="jycm_top_jx ">
-            	<script type="text/javascript">
-//输出IM链接
-document.write('<a class="color_fff va_middle" href="'+common_nav_array['im_url']+'" onclick="jy_head_function.click_pv(\'|head_navigation_im|\');" target="_blank"><i class="jy_top_icon jy_icon_jiaxin"></i>'+common_nav_array['im_tag']+'</a>');
-                </script><a class="color_fff va_middle" href="http://im.jiayuan.com/" onclick="jy_head_function.click_pv('|head_navigation_im|');" target="_blank"><i class="jy_top_icon jy_icon_jiaxin"></i>佳缘佳信</a>
-            </p>
-            <div id="jycm_top_izx" class="jycm_top_izx">
-                <div class="jycm_top_izxTit">
-                	<script type="text/javascript">
-//输出爱真心链接
-                	document.write('<a id="jy_top_izhenxin_url" class="color_fff fn-clear" onclick="jy_head_function.click_pv(\'|head_navigation_mobile|\');" href="'+common_nav_array['extend_url3']+'" target="_blank"><i class="jy_top_icon icon_izx"></i><span class="jy_txt">'+common_nav_array['extend_tag']+'</span><i id="izx_point"></i></a>');
-</script><a id="jy_top_izhenxin_url" class="color_fff fn-clear" onclick="jy_head_function.click_pv('|head_navigation_mobile|');" href="http://www.izhenxin.com/register/landingpagetw" target="_blank"><i class="jy_top_icon icon_izx"></i><span class="jy_txt">爱真心</span><i id="izx_point"></i></a>
-                </div>
-                <div class="jycm_top_izxCn">
-                    <ul>
-                    	<li id="jy_nav_izhenxin_url"></li>
-                    </ul>
-                </div>
-                <div class="jycm_top_izxCn2" id="jy_top_izx_jihuo">
-                	<script type="text/javascript">
-//输出爱真心激活链接
-                    document.write('<a href="'+common_nav_array['extend_url']+'" target="_blank" onclick="jy_head_function.click_pv(\'|1013850_9|'+head_user_uid+'\');"><span>激活爱真心帐号</span></a>');
-</script><a href="http://www.izhenxin.com/login/getSign/?url=http%3A%2F%2Fwww.jiayuan.com%2Fusercp%2Fiz_login.php%3Furl%3Dhttp%253A%252F%252Fwww.izhenxin.com%252F&amp;from=top" target="_blank" onclick="jy_head_function.click_pv('|1013850_9|122261858');"><span>激活爱真心帐号</span></a>
-                    <a class="jycm_top_izxClose" style="cursor:pointer">关闭</a><i class="point_top"></i>
-                </div>
-            </div>
-            <p class="jycm_top_collect ">
-            	<a id="jycm_top_collect_1" class="color_fff va_middle" onclick="jycm_addFav();" href="javascript:;"><i class="jy_top_icon jy_icon_collect"></i>收藏本站</a>
-            </p>
-            <p class="jycm_top_zx " id="vip_area_tel" style=""><i class="jy_top_icon jy_icon_tel"></i><span class="jy_txt"><span>红娘专线</span><strong>400-7701-520</strong></span></p>
-        </div>
+<!--         <div class="jycm_top_right"> -->
+<!--             <div id="jycm_top_inform" class="jycm_top_inform"> -->
+<!--                 <div id="jycm_top_informIcon" class="jycm_top_informIcon"> -->
+<!-- <div class="jycm_top_remind"> -->
+<!-- <span class="color_fff va_middle"><i class="jy_top_icon jy_icon_remind"></i><strong class="jy_tixing">提醒</strong><i style="display: inline;" id="tips_point"></i></span> -->
+<!-- </div> -->
+<!--                 </div> -->
+<!--                 <div id="jycm_top_informCn" class="jycm_top_informCn" style="display:none"> -->
+<!--                     <ul id="vip_center_all_notes"> -->
+<!--                         <li id="visitor_new_num"><a target="_blank" href="http://www.jiayuan.com/usercp/clicked_new.php" onclick="jy_head_function.click_pv('|1013617_6|');"><strong class="fl">谁看过我</strong><span class="fr fr_num"> 60</span></a></li> -->
+<!--                         <li style="display: none;" id="praise_me_new_num"><a target="_blank" href="http://www.jiayuan.com/usercp/praiseme.php" onclick="jy_head_function.click_pv('|1013617_7|');"><strong class="fl">谁赞过我</strong></a></li> -->
+<!--                         <li id="fans_new_num"><a target="_blank" href="http://www.jiayuan.com/usercp/myfans.php" onclick="jy_head_function.click_pv('|1013617_8|');"><strong class="fl">谁关注我</strong><span class="fr fr_num"> 1</span></a></li> -->
+<!--                     </ul> -->
+<!--                 </div> -->
+<!--             </div> -->
+<!--             <p class="jycm_top_jx "> -->
+<!--             	<script type="text/javascript"> -->
+<!-- // //输出IM链接 -->
+<!-- // document.write('<a class="color_fff va_middle" href="'+common_nav_array['im_url']+'" onclick="jy_head_function.click_pv(\'|head_navigation_im|\');" target="_blank"><i class="jy_top_icon jy_icon_jiaxin"></i>'+common_nav_array['im_tag']+'</a>'); -->
+<!--                 </script><a class="color_fff va_middle" href="http://im.jiayuan.com/" onclick="jy_head_function.click_pv('|head_navigation_im|');" target="_blank"><i class="jy_top_icon jy_icon_jiaxin"></i>佳缘佳信</a> -->
+<!--             </p> -->
+<!--             <div id="jycm_top_izx" class="jycm_top_izx"> -->
+<!--                 <div class="jycm_top_izxTit"> -->
+<!--                 	<script type="text/javascript"> -->
+<!-- // //输出爱真心链接 -->
+<!-- //                 	document.write('<a id="jy_top_izhenxin_url" class="color_fff fn-clear" onclick="jy_head_function.click_pv(\'|head_navigation_mobile|\');" href="'+common_nav_array['extend_url3']+'" target="_blank"><i class="jy_top_icon icon_izx"></i><span class="jy_txt">'+common_nav_array['extend_tag']+'</span><i id="izx_point"></i></a>'); -->
+<!-- </script><a id="jy_top_izhenxin_url" class="color_fff fn-clear" onclick="jy_head_function.click_pv('|head_navigation_mobile|');" href="http://www.izhenxin.com/register/landingpagetw" target="_blank"><i class="jy_top_icon icon_izx"></i><span class="jy_txt">爱真心</span><i id="izx_point"></i></a> -->
+<!--                 </div> -->
+<!--                 <div class="jycm_top_izxCn"> -->
+<!--                     <ul> -->
+<!--                     	<li id="jy_nav_izhenxin_url"></li> -->
+<!--                     </ul> -->
+<!--                 </div> -->
+<!--                 <div class="jycm_top_izxCn2" id="jy_top_izx_jihuo"> -->
+<!--                 	<script type="text/javascript"> -->
+<!-- // //输出爱真心激活链接 -->
+<!-- //                     document.write('<a href="'+common_nav_array['extend_url']+'" target="_blank" onclick="jy_head_function.click_pv(\'|1013850_9|'+head_user_uid+'\');"><span>激活爱真心帐号</span></a>'); -->
+<!-- </script><a href="http://www.izhenxin.com/login/getSign/?url=http%3A%2F%2Fwww.jiayuan.com%2Fusercp%2Fiz_login.php%3Furl%3Dhttp%253A%252F%252Fwww.izhenxin.com%252F&amp;from=top" target="_blank" onclick="jy_head_function.click_pv('|1013850_9|122261858');"><span>激活爱真心帐号</span></a> -->
+<!--                     <a class="jycm_top_izxClose" style="cursor:pointer">关闭</a><i class="point_top"></i> -->
+<!--                 </div> -->
+<!--             </div> -->
+<!--             <p class="jycm_top_collect "> -->
+<!--             	<a id="jycm_top_collect_1" class="color_fff va_middle" onclick="jycm_addFav();" href="javascript:;"><i class="jy_top_icon jy_icon_collect"></i>收藏本站</a> -->
+<!--             </p> -->
+<!--             <p class="jycm_top_zx " id="vip_area_tel" style=""><i class="jy_top_icon jy_icon_tel"></i><span class="jy_txt"><span>红娘专线</span><strong>400-7701-520</strong></span></p> -->
+<!--         </div> -->
     </div>
-    <div class="w1000" id="head_nologin" style="display:none">
-        <div class="jycm_top_login">
-            <iframe id="hder_hid_login_win" name="hder_hid_login_win" style="display:none" height="50" width="100%"></iframe>
-            <form class="jycm_top_form" id="hder_login_form" target="hder_hid_login_win" action="" method="post">
-                <input name="channel" value="200" type="hidden">
-                <input name="position" value="201" type="hidden">
-                <p class="jycm_top_zh"><span>帐号</span><input id="jycm_zh_input" name="name" value="邮箱/手机/ID" type="text"></p>
-                <p class="jycm_top_mm"><span>密码</span><input id="jycm_pass_input" autocomplete="off" name="password" type="password"></p>
-                <p class="jycm_top_zddl"><label><input onclick="head_login_save_me(this);" checked="checked" type="checkbox">自动登录</label></p>
-                <input class="jycm_top_btn_dl" value="登录" type="submit">
-                <p class="jycm_top_login2">
-<span class="qita_login">其他登录</span><a target="_blank" class="openid_qq" href="http://www.jiayuan.com/general/t/?forward=qqAware&amp;c=10&amp;p=1"></a><a target="_blank" class="openid_weibo" href="http://www.jiayuan.com/general/t/?forward=sinaAware&amp;c=10&amp;p=2"></a><a target="_blank" class="openid_baidu" href="http://www.jiayuan.com/general/t/?forward=baiduOauth&amp;c=10&amp;p=5"></a><a target="_blank" class="openid_alipay" href="http://www.jiayuan.com/general/t/?forward=alipayOauth&amp;c=10&amp;p=7"></a>
-</p>
-                <p class="jycm_top_reg">
-                	<script type="text/javascript">
-//输出忘记密码和注册链接
-                    document.write('<a class="color_fff" href="'+common_nav_array['login_url']+'validate.php" target="_blank">忘记密码</a><a class="color_fff" href="'+common_nav_array['reg_url']+'?bd=9528" onclick="jy_head_function.click_pv(\'|head_navigation_reg|\');" target="_blank">免费注册</a>');
-</script><a class="color_fff" href="http://login.jiayuan.com/validate.php" target="_blank">忘记密码</a><a class="color_fff" href="http://reg.jiayuan.com/?bd=9528" onclick="jy_head_function.click_pv('|head_navigation_reg|');" target="_blank">免费注册</a>
-                </p>
-            </form>
-        </div>
-        <div class="jycm_top_right">
-            <p class="jycm_top_collect ">
-            	<a id="jycm_top_collect_2" class="color_fff va_middle" onclick="jycm_addFav();" href="javascript:;"><i class="jy_top_icon jy_icon_collect"></i>收藏本站</a>
-            </p>
-        </div>
-    </div>
+<!--     <div class="w1000" id="head_nologin" style="display:none"> -->
+<!--         <div class="jycm_top_login"> -->
+<!--             <iframe id="hder_hid_login_win" name="hder_hid_login_win" style="display:none" height="50" width="100%"></iframe> -->
+<!--             <form class="jycm_top_form" id="hder_login_form" target="hder_hid_login_win" action="" method="post"> -->
+<!--                 <input name="channel" value="200" type="hidden"> -->
+<!--                 <input name="position" value="201" type="hidden"> -->
+<!--                 <p class="jycm_top_zh"><span>帐号</span><input id="jycm_zh_input" name="name" value="邮箱/手机/ID" type="text"></p> -->
+<!--                 <p class="jycm_top_mm"><span>密码</span><input id="jycm_pass_input" autocomplete="off" name="password" type="password"></p> -->
+<!--                 <p class="jycm_top_zddl"><label><input onclick="head_login_save_me(this);" checked="checked" type="checkbox">自动登录</label></p> -->
+<!--                 <input class="jycm_top_btn_dl" value="登录" type="submit"> -->
+<!--                 <p class="jycm_top_login2"> -->
+<!-- <span class="qita_login">其他登录</span><a target="_blank" class="openid_qq" href="http://www.jiayuan.com/general/t/?forward=qqAware&amp;c=10&amp;p=1"></a><a target="_blank" class="openid_weibo" href="http://www.jiayuan.com/general/t/?forward=sinaAware&amp;c=10&amp;p=2"></a><a target="_blank" class="openid_baidu" href="http://www.jiayuan.com/general/t/?forward=baiduOauth&amp;c=10&amp;p=5"></a><a target="_blank" class="openid_alipay" href="http://www.jiayuan.com/general/t/?forward=alipayOauth&amp;c=10&amp;p=7"></a> -->
+<!-- </p> -->
+<!--                 <p class="jycm_top_reg"> -->
+<!--                 	<script type="text/javascript"> -->
+<!-- // //输出忘记密码和注册链接 -->
+<!-- //                     document.write('<a class="color_fff" href="'+common_nav_array['login_url']+'validate.php" target="_blank">忘记密码</a><a class="color_fff" href="'+common_nav_array['reg_url']+'?bd=9528" onclick="jy_head_function.click_pv(\'|head_navigation_reg|\');" target="_blank">免费注册</a>'); -->
+<!-- </script><a class="color_fff" href="http://login.jiayuan.com/validate.php" target="_blank">忘记密码</a><a class="color_fff" href="http://reg.jiayuan.com/?bd=9528" onclick="jy_head_function.click_pv('|head_navigation_reg|');" target="_blank">免费注册</a> -->
+<!--                 </p> -->
+<!--             </form> -->
+<!--         </div> -->
+<!--         <div class="jycm_top_right"> -->
+<!--             <p class="jycm_top_collect "> -->
+<!--             	<a id="jycm_top_collect_2" class="color_fff va_middle" onclick="jycm_addFav();" href="javascript:;"><i class="jy_top_icon jy_icon_collect"></i>收藏本站</a> -->
+<!--             </p> -->
+<!--         </div> -->
+<!--     </div> -->
 </div>
 <!--登录区域 end-->
 <div id="jycm_head" class="jycm_head fn-clear">
@@ -817,20 +817,20 @@ document.write('<a class="color_fff va_middle" href="'+common_nav_array['im_url'
 //头部计时调用
 function head_wait(cond, exec){setTimeout(function(){if(!cond()){setTimeout(arguments.callee, 25);return;}exec();}, 0);}
 //获取导航链接信息替换显示
-document.getElementById('jycm_head_nav_links').innerHTML = jy_head_function.format_tpl(document.getElementById('jycm_head_nav_links').innerHTML);	//导航信息
-document.getElementById('jycm_head_nav_links').style.display = "";
-if(HEAD_USER.uid > 0){
-//写登录信息
-if(jy_head_function.strlen_ch(head_user_nickname) > 8){
-head_user_nickname = jy_head_function.substr_ch(head_user_nickname, 6) + '...';
-}
-document.getElementById('head_user_uid').innerHTML = '佳缘ID<a class="color_fff" target="_blank" href="' + common_nav_array['www_url'] + head_user_uid + '">' + head_user_uid + '</a>';
-document.getElementById('head_user_nickname').innerHTML = 'Hi，<a class="color_fff" target="_blank" href="' + common_nav_array['www_url'] + head_user_uid + '">' + head_user_nickname + '</a>';
-document.getElementById('head_user_level').className = 'memberIcon iconS' + HEAD_USER.level;
-document.getElementById('head_user_level').innerHTML = '<a onmousedown="jy_head_function.click_pv(\'|head_club_level|' + head_user_uid + '\');" title="S' + HEAD_USER.level + '会员" href="http://' + mydomain + '/club/" target="_blank">S' + HEAD_USER.level + '会员</a>';
-document.getElementById('head_user_bean').innerHTML = '金豆<a onmousedown="jy_head_function.click_pv(\'|head_club_bean|' + head_user_uid + '\');" href="http://' + mydomain + '/club/" class="color_fff" target="_blank">' + HEAD_USER.bean + '</a>';
-document.getElementById('head_user_logout').innerHTML = '<a class="color_fff" href="' + common_nav_array['login_url'] + 'logout2.php">退出</a>';
-}
+// document.getElementById('jycm_head_nav_links').innerHTML = jy_head_function.format_tpl(document.getElementById('jycm_head_nav_links').innerHTML);	//导航信息
+// document.getElementById('jycm_head_nav_links').style.display = "";
+// if(HEAD_USER.uid > 0){
+// //写登录信息
+// if(jy_head_function.strlen_ch(head_user_nickname) > 8){
+// head_user_nickname = jy_head_function.substr_ch(head_user_nickname, 6) + '...';
+// }
+// document.getElementById('head_user_uid').innerHTML = '佳缘ID<a class="color_fff" target="_blank" href="' + common_nav_array['www_url'] + head_user_uid + '">' + head_user_uid + '</a>';
+// document.getElementById('head_user_nickname').innerHTML = 'Hi，<a class="color_fff" target="_blank" href="' + common_nav_array['www_url'] + head_user_uid + '">' + head_user_nickname + '</a>';
+// document.getElementById('head_user_level').className = 'memberIcon iconS' + HEAD_USER.level;
+// document.getElementById('head_user_level').innerHTML = '<a onmousedown="jy_head_function.click_pv(\'|head_club_level|' + head_user_uid + '\');" title="S' + HEAD_USER.level + '会员" href="http://' + mydomain + '/club/" target="_blank">S' + HEAD_USER.level + '会员</a>';
+// document.getElementById('head_user_bean').innerHTML = '金豆<a onmousedown="jy_head_function.click_pv(\'|head_club_bean|' + head_user_uid + '\');" href="http://' + mydomain + '/club/" class="color_fff" target="_blank">' + HEAD_USER.bean + '</a>';
+// document.getElementById('head_user_logout').innerHTML = '<a class="color_fff" href="' + common_nav_array['login_url'] + 'logout2.php">退出</a>';
+// }
 //去空格函数
 String.prototype.trim = function()
 {
@@ -944,8 +944,8 @@ this.style.color='#aaa';
 }
 }
 }
-placeholder('jycm_zh_input','defText');
-placeholder('jycm_pass_input','defPass');
+// placeholder('jycm_zh_input','defText');
+// placeholder('jycm_pass_input','defPass');
 //设置VIP通知中心默认效果
 function set_vip_center_default(visitor_new_num, praise_me_new_num, fans_new_num)
 {
@@ -1013,7 +1013,7 @@ jQuery("#fans_new_num").html(str_fans_txt);
 //VIP通知中心有数字，值为0表示所有分类一条新通知都没有
 vip_center_all_num = 1;
 //登录处理
-head_wait(function(){return typeof JY != "undefined"}, function(){
+/* head_wait(function(){return typeof JY != "undefined"}, function(){
 //登录后回调函数
 function header_login_call(user){
 if(user && user['uid'] > 0){
@@ -1048,21 +1048,21 @@ jy_head_include_doc.appendChild(jy_head_include_js);
 if(document.all){//如果是IE
 jy_head_include_js.onreadystatechange = function(){
 if(jy_head_include_js.readyState == 'loaded' || jy_head_include_js.readyState == 'complete'){
-get_jiayuan_contacts();
+//get_jiayuan_contacts();
 }
 }
 }else{
 jy_head_include_js.onload = function(){
-get_jiayuan_contacts();
+//get_jiayuan_contacts();
 }
 }
 }else{
-get_jiayuan_contacts();
+//get_jiayuan_contacts();
 }
-document.getElementById("head_login").style.display = "";
+// document.getElementById("head_login").style.display = "";
 }else{
-document.getElementById("head_nologin").style.display = "";
-document.getElementById("head_login").style.display = "none";
+// document.getElementById("head_nologin").style.display = "";
+// document.getElementById("head_login").style.display = "none";
 }
 //登录表单，绑定提交事件
 document.getElementById("hder_login_form").onsubmit = function(){
@@ -1084,7 +1084,7 @@ this.action = common_nav_array['login_url']+'dologin.php';	//修改action提交�
 JY.login.submit(this, header_login_call);
 return false;
 };
-});
+}); */
 //设置LOGO
 function set_head_logo()
 {
@@ -1417,9 +1417,9 @@ DD_belatedPNG.fix(".fix-png");
         <div class="cp-menu-card-mail fn-clear">
         	<a class="menu menu-left" href="../msg/notRead" title="未读信件">
                 <span>收件箱</span>
-                <div class="cp-menu-radius number fn-right">
-                	<div class="cp-menu-radius-num"></div>
-                </div>
+<!--                 <div class="cp-menu-radius number fn-right"> -->
+<!--                 	<div class="cp-menu-radius-num"></div> -->
+<!--                 </div> -->
             </a>
             <a class="menu menu-right" href="http://www.jiayuan.com/usercp/clicked_new.php" onmousedown="send_jy_pv2('|cp_menu_area_lookedme|122261858');">
                 <span>谁看过我</span>
@@ -3133,7 +3133,7 @@ DD_belatedPNG.fix('.fixPNG');
 <![endif]-->
 <!-- released time 2014-10-20 18:24:31 -->
 	<style type="text/css"> 	*{margin:0;padding:0;}	.winpopfoot{width:284px;height:203px;overflow:hidden;word-wrap:break-word;word-break:break-all;font-size:12px;font-family:Arial,SimSun;color:#636363;}	.pngforsjjy{behavior:expression((T=this,T.runtimeStyle.behavior="none")&&(T.p?0:((T.runtimeStyle.backgroundImage = "none",T.runtimeStyle.filter ="progid:DXImageTransform.Microsoft.AlphaImageLoader(src='"+T.src+"',sizingMethod='image')",T.src = "http://images.jiayuan.com/w3/global/i/bg.gif")),T.p=1));}	.winpopfoot em,.winpopfoot span,.winpopfoot strong{font-weight:normal;font-style:normal;font-size:12px;}	.winpopfoot_box{position:absolute;top:8px;left:10px;width:264px;height:192px;overflow:hidden;border-bottom:3px solid #E876B2;background:url(http://images1.jyimg.com/w4/index/i/bg100804_02.gif) repeat-x 0 -100px;}	.winpopfoot_t{width:264px;height:30px;overflow:hidden;}	.winpopfoot_t em{float:left;width:67px;height:25px;overflow:hidden;margin:5px 0 0 10px;cursor:pointer;}	.winpopfoot_t em strong{width:67px;height:25px;display:block;line-height:25px;font-weight:bold;text-align:center;}	.winpopfoot_t em strong.str2{position:relative;}	.winpopfoot_t em.on{background:url(http://images1.jyimg.com/w4/index/i/bg100804_01.gif) no-repeat 0 0;}	.winpopfoot_t em.on strong.str1{color:#DCDCDC;}	.winpopfoot_t em.on strong.str2{top:-26px;color:#444444;}	.winpopfoot_t em.over strong.str1{color:#C23174;}	.winpopfoot_t em.over strong.str2{top:-24px;color:#FFFFFF;}	.winpopfoot_t span{float:right;width:18px;height:18px;overflow:hidden;margin:7px 5px 0 0;cursor:pointer;background-image:url(http://images1.jyimg.com/w4/index/i/bg100804_01.gif);}	.winpopfoot_t span.sp1{background-position:-70px 0;}	.winpopfoot_t span.sp2{background-position:-90px 0;}	.winpopfoot_t span.sp3{background-position:-110px 0;}	.winpopfoot_c{width:258px;height:162px;overflow:hidden;margin:0 auto;background:#FFFDFD;}	.winpopfoot_c dl{width:228px;height:140px;margin:10px auto 0;overflow:hidden;line-height:20px;}	.winpopfoot_c dd{width:100%;text-align:left;}	.winpopfoot_c dd.martop15{margin-top:15px;}	.winpopfoot_c dd span{float:right;width:100%;text-align:right;}	.winpopfoot_c dd a,.winpopfoot_c dd a:hover{color:#BC0073;text-decoration:underline;}	.winpopfoot_c dd img{display:block;margin:0 auto;border:none;}	</style>		<div style="position: absolute; z-index: 99999; overflow: hidden; border-width: 0px; width: 280px; height: 0px; right: 0px; bottom: 0px; display: none; top: 903px; left: 1263px;" id="bulletin"> 		<div class="winpopfoot" style="position:absolute;z-index:2;left:0;" id="pop_div"> 	<img src="../resources/img/bg100804.png" class="pngforsjjy"> 	<div class="winpopfoot_box"> 	<div class="winpopfoot_t"> 	<span class="sp2" title="关闭" onclick="_close();" id="closeButton"></span> 	<span class="sp3" title="最大化" onclick="_mini();" id="switchButton"></span> 	<em id="div_1" class="on"><div><div id="link_1"><strong class="str1">互动消息</strong><strong class="str2">互动消息</strong></div></div></em> 	<em id="div_3" class="over"><div><div id="link_3"><strong class="str1">最新活动</strong><strong class="str2">最新活动</strong></div></div></em> 	</div>	<div class="winpopfoot_c"> 	<dl> 	<dd style="" id="con_1" class="martop15"><img src="../resources/img/logo_prompt_002.jpg"></dd> 	<dd style="display: none;" id="con_2" class="martop15"></dd> 	<dd style="display: none;" id="con_3"><img src="../resources/img/logo_prompt_002.jpg"></dd> 	</dl> 	<iframe scrolling="no" id="run_fra" name="run_fra" src="" frameborder="0" height="0" width="0"></iframe> 	</div> 	 	</div> 	</div> 	 	</div> 	<script type="text/javascript" src="../resources/js/pop.js"></script><div id="bgdiv_foot" style="position:absolute;display:none; left:0px; top:0px; width:100%; height:100%; filter:alpha(opacity=30); opacity:0.3; background-color:#000000; z-index:12000;"></div> <div class="dragdiv" id="bg_div_float_foot" style="z-index:12001;position:absolute;top:0px;left:0px;display:none"></div><script src="../resources/js/pop_template.php"></script><script src="../resources/js/jyim2.js"></script><link href="../resources/css/jyim3.css" type="text/css" rel="stylesheet">
-	<audio preload="auto" id="audio_131723"><source src="sendedLetterhtm_files/msg1.mp3" type="audio/mpeg"><source src="sendedLetterhtm_files/msg1.ogg" type="audio/ogg"></audio><div class="im_bar_min" style="display: block;" id="im_bar"><div t="#im_friend" id="contact" class="im_btn fr im_btn_last oneCity pr im_attached_pop"><a class="im_inner_btn">联系人</a><span style="display: none;" class="amount fl"><span class="amount_leftBg fl"></span><span class="amount_centerBg fl">0</span><span class="amount_rightBg fl"></span></span><div id="im_friend" class="im_win im_samecity_div"><div class="pr im_win_title webimTop"><ul><li class="oning">初次联系</li><li>关注</li><li>好友</li></ul><div class="im_t_close webimClose"></div></div><div class="im_list"><div class="webimZaixian"><div class="webimZaixianRS">在线（<span></span><span></span><span></span>）</div><div class="webimCakanquanbu"><a href="###">查看全部&gt;&gt;</a></div></div><div class="webimList"><ul></ul><ul></ul><ul></ul></div><div class="im_loading"><table><tbody><tr><td><img src="../resources/img/loading.gif"><span>正在加载，请稍候</span></td></tr></tbody></table></div><div class="webimListAnzhuang"><a href="#">安装佳缘佳信3.0，与她免费视频聊天</a></div></div></div></div><div t="#im_chatx" id="onlineTalk" class="im_btn fr im_btn_second onlineTalk pr im_attached_pop"><a class="im_inner_btn">聊天</a><span style="display: none;" class="amount fl"><span class="amount_leftBg fl"></span><span class="amount_centerBg fl">0</span><span class="amount_rightBg fl"></span></span><div id="im_chatx" class="im_win onlineTalk_content"><div class="pr im_win_title onlineTalk_content_title"><div class="title_leftBg fl"></div><h1 class="title_centerBg">聊天</h1><div class="title_rightBg fl"><a class="pr im_t_close"></a><a target="_blank" href="http://webim.jiayuan.com/messages.php" class="notes">查看全部聊天记录</a></div></div><div class="im_list"><div id="im_rec_chat_con"><span class="im_list_no_chat">暂无未读消息</span><div class="im_rec_chat"><img><span>和我聊天</span></div><div class="im_rec_chat"><img><span>和我聊天</span></div><div class="im_rec_chat"><img><span>和我聊天</span></div></div></div></div></div><div t="#im_msgx" class="im_btn fr im_btn_first message pr im_attached_pop"><a class="im_inner_btn">消息</a><span style="display: none;" class="amount fl"><span class="amount_leftBg fl"></span><span class="amount_centerBg fl">0</span><span class="amount_rightBg fl"></span></span><div id="im_msgx" class="im_win message_content"><div class="pr im_win_title message_content_title"><div class="title_leftBg fl"></div><h1 class="title_centerBg">消息</h1><div class="title_rightBg fl"><a class="pr im_t_close"></a></div></div><div class="im_list"><img class="im_jy_logo" src="../resources/img/logo_prompt.jpg"></div></div></div><div class="im_btn fr letter"><a class="im_inner_btn">收件箱</a><span style="display: inline;" class="amount fl"><span class="amount_leftBg fl"></span><span class="amount_centerBg fl">19</span><span class="amount_rightBg fl"></span></span></div><div style="display: none;" id="im_pop_win" class="pa im_win"><div class="im_title"><div class="im_t_tab">互动消息</div><div class="im_t_tab">交友活动</div><div class="title_rightBg fr im_t_close"></div></div><div class="im_pop_content"><img src="../resources/img/logo_prompt.jpg"></div><div class="im_pop_content"><img src="../resources/img/logo_prompt.jpg"></div></div><div style="display: none;" class="im_yfms_tpl0" id="im_yfms"></div><div style="display: none;" id="im_chat_pop_win" class="pa im_win"><div class="im_chat_win_title"><div class="im_chat_win_nick"></div><div class="fr im_t_close"></div></div><div class="im_chat_win_content  im_pop_content"><div><span></span><span><a class="im_tosee_chatmsg">查看详情</a></span></div></div></div><div style="display: none;" id="im_zhuanti"></div><div style="display: none;" id="im_profile_pop_win"><div class="dzhLayer"><div class="dzhLayer_top"><a href="javascript:void(0);" class="im_t_close dzhLayer_close">&nbsp;</a><div class="dzhLayer_set"><a href="javascript:void(0);" class="dzhLayer_bxs" style="display: none;">今日不再提醒</a></div></div><div class="dzhLayer_text"><p>对方在线，和TA聊聊吧</p></div><div class="dzhLayer_icon"><div class="dzhLayer_iconImg"><a href="javascript:void(0);" class="hi"><span></span><div class="tishilayer1"><p class="tishilayer_hi">想了解你更多,可以聊聊么?</p></div></a><a href="javascript:void(0);" class="face"><span></span><div class="tishilayer2"><p class="tishilayer_face">想了解你更多,可以聊聊么?</p></div></a><a href="javascript:void(0);" class="flower"><span></span><div class="tishilayer3"><p class="tishilayer_flower">想了解你更多,可以聊聊么?</p></div></a><a href="javascript:void(0);" class="heart"><span></span><div class="tishilayer4"><p class="tishilayer_xin">想了解你更多,可以聊聊么?</p></div></a></div><div class="dzhLayer_loading"><img src="../resources/img/jx3_loading.gif">发送中...</div><div class="dzhLayer_loaded"><img src="../resources/img/send_ok.gif">发送成功</div></div></div></div><div style="display: none;" id="im_jiaxin_pop_win"><div class="jx3_0_1_adv jx3_0_1_adv1"><div class="jx3_0_1_advTop"><a href="javascript:void(0);" class="im_t_close jx3_0_1_advClose">&nbsp;</a></div><div class="jx3_0_1_advBody"><a href="http://im.jiayuan.com/?from=rightbottom" target="_blank" class="jx3_0_1_advButton">&nbsp;</a></div></div></div><div t="#im_myjy" class="im_btn fl myJiayuan pr im_attached_pop"><a class="im_inner_btn">我的服务</a><div id="im_myjy" class="im_win myjiayuan_content"><div class="pr im_win_title myjiayuan_content_title"><div class="title_leftBg fl"></div><h1 class="title_centerBg">我的服务</h1><div class="title_rightBg fl"><a class="pr im_t_close"></a></div></div><div class="im_list"></div></div></div><ul class="fl im_service_list" id="service_list"><li class="jystamp" title="佳缘邮票"><a target="_blank" href="http://www.jiayuan.com/usercp/center/index.php">佳缘邮票</a></li><li class="speedpost" title="特快专递"><a target="_blank" href="http://www.jiayuan.com/msgapp/ems/?a=info">特快专递</a></li><li class="diamond_g" title="钻石会员"><a target="_blank" href="http://www.jiayuan.com/usercp/service/bmsg_tg2.php">钻石会员</a></li><li class="vip_g" title="VIP会员"><a target="_blank" href="http://www.jiayuan.com/usercp/service/upgrade.php">VIP会员</a></li><li class="readmail_g" title="看信包月"><a target="_blank" href="http://www.jiayuan.com/usercp/service/bmsg.php">看信包月</a></li><li class="forground_g" title="排名提前"><a target="_blank" href="http://www.jiayuan.com/usercp/service/priority.php">排名提前</a></li><li class="express_g" title="超级聚光灯"><a target="_blank" href="http://www.jiayuan.com/usercp/fate_express.php">超级聚光灯</a></li></ul><div t="#im_jyapp" class="im_btn fl jiayuanCenter pr im_attached_pop"><a class="im_inner_btn">佳缘应用</a><div id="im_jyapp" class="im_win jiayuanCenter_content"><div class="pr im_win_title jiayuanCenter_content_title"><div class="title_leftBg fl"></div><h1 class="title_centerBg">佳缘应用</h1><div class="title_rightBg fl"><a class="pr im_t_close"></a></div></div><div class="im_list"></div></div></div><div style="display: none;" class="im_btn fl brand_mid not_hover"><a style="width: 300px;" class="im_inner_btn">专享特惠--钻石会员立减200元！仅298元/年！马上开通&gt;&gt;</a></div><div style="display: none;" class="im_btn fl brand_mid not_hover"><a style="width: 300px;" class="im_inner_btn">亲，教你淘最佳配偶！试下“超级聚光灯”</a></div><div style="display: block;" class="im_btn fl brand_mid not_hover"><a style="width: 300px;" class="im_inner_btn">做大富翁，赢大奖！</a></div><div style="display: none;" class="im_btn fl brand_mid not_hover"><a style="width: 300px;" class="im_inner_btn">选对“真像”，爱情“不在囧途”</a></div><div style="display: none;" class="im_btn fl brand_mid not_hover"><a style="width: 300px;" class="im_inner_btn">帮你快速精准锁定心仪异性，快来看看！</a></div></div><script type="text/javascript" src="../resources/js/pop_freq.js"></script><script type="text/javascript" src="../resources/js/popupLogin_v2.js"></script>
+	<audio preload="auto" id="audio_131723"><source src="sendedLetterhtm_files/msg1.mp3" type="audio/mpeg"><source src="sendedLetterhtm_files/msg1.ogg" type="audio/ogg"></audio><div class="im_bar_min" style="display: block;" id="im_bar"><div t="#im_friend" id="contact" class="im_btn fr im_btn_last oneCity pr im_attached_pop"><a class="im_inner_btn">联系人</a><span style="display: none;" class="amount fl"><span class="amount_leftBg fl"></span><span class="amount_centerBg fl">0</span><span class="amount_rightBg fl"></span></span><div id="im_friend" class="im_win im_samecity_div"><div class="pr im_win_title webimTop"><ul><li class="oning">初次联系</li><li>关注</li><li>好友</li></ul><div class="im_t_close webimClose"></div></div><div class="im_list"><div class="webimZaixian"><div class="webimZaixianRS">在线（<span></span><span></span><span></span>）</div><div class="webimCakanquanbu"><a href="###">查看全部&gt;&gt;</a></div></div><div class="webimList"><ul></ul><ul></ul><ul></ul></div><div class="im_loading"><table><tbody><tr><td><img src="../resources/img/loading.gif"><span>正在加载，请稍候</span></td></tr></tbody></table></div><div class="webimListAnzhuang"><a href="#">安装佳缘佳信3.0，与她免费视频聊天</a></div></div></div></div><div t="#im_chatx" id="onlineTalk" class="im_btn fr im_btn_second onlineTalk pr im_attached_pop"><a class="im_inner_btn">聊天</a><span style="display: none;" class="amount fl"><span class="amount_leftBg fl"></span><span class="amount_centerBg fl">0</span><span class="amount_rightBg fl"></span></span><div id="im_chatx" class="im_win onlineTalk_content"><div class="pr im_win_title onlineTalk_content_title"><div class="title_leftBg fl"></div><h1 class="title_centerBg">聊天</h1><div class="title_rightBg fl"><a class="pr im_t_close"></a><a target="_blank" href="http://webim.jiayuan.com/messages.php" class="notes">查看全部聊天记录</a></div></div><div class="im_list"><div id="im_rec_chat_con"><span class="im_list_no_chat">暂无未读消息</span><div class="im_rec_chat"><img><span>和我聊天</span></div><div class="im_rec_chat"><img><span>和我聊天</span></div><div class="im_rec_chat"><img><span>和我聊天</span></div></div></div></div></div><div t="#im_msgx" class="im_btn fr im_btn_first message pr im_attached_pop"><a class="im_inner_btn">消息</a><span style="display: none;" class="amount fl"><span class="amount_leftBg fl"></span><span class="amount_centerBg fl">0</span><span class="amount_rightBg fl"></span></span><div id="im_msgx" class="im_win message_content"><div class="pr im_win_title message_content_title"><div class="title_leftBg fl"></div><h1 class="title_centerBg">消息</h1><div class="title_rightBg fl"><a class="pr im_t_close"></a></div></div><div class="im_list"><img class="im_jy_logo" src="../resources/img/logo_prompt.jpg"></div></div></div><div class="im_btn fr letter"><a  href="msg/notRead" target="_blank" class="im_inner_btn">收件箱</a><span style="display: inline;" class="amount fl"><span class="amount_leftBg fl"></span><span class="amount_centerBg fl">19</span><span class="amount_rightBg fl"></span></span></div><div style="display: none;" id="im_pop_win" class="pa im_win"><div class="im_title"><div class="im_t_tab">互动消息</div><div class="im_t_tab">交友活动</div><div class="title_rightBg fr im_t_close"></div></div><div class="im_pop_content"><img src="../resources/img/logo_prompt.jpg"></div><div class="im_pop_content"><img src="../resources/img/logo_prompt.jpg"></div></div><div style="display: none;" class="im_yfms_tpl0" id="im_yfms"></div><div style="display: none;" id="im_chat_pop_win" class="pa im_win"><div class="im_chat_win_title"><div class="im_chat_win_nick"></div><div class="fr im_t_close"></div></div><div class="im_chat_win_content  im_pop_content"><div><span></span><span><a class="im_tosee_chatmsg">查看详情</a></span></div></div></div><div style="display: none;" id="im_zhuanti"></div><div style="display: none;" id="im_profile_pop_win"><div class="dzhLayer"><div class="dzhLayer_top"><a href="javascript:void(0);" class="im_t_close dzhLayer_close">&nbsp;</a><div class="dzhLayer_set"><a href="javascript:void(0);" class="dzhLayer_bxs" style="display: none;">今日不再提醒</a></div></div><div class="dzhLayer_text"><p>对方在线，和TA聊聊吧</p></div><div class="dzhLayer_icon"><div class="dzhLayer_iconImg"><a href="javascript:void(0);" class="hi"><span></span><div class="tishilayer1"><p class="tishilayer_hi">想了解你更多,可以聊聊么?</p></div></a><a href="javascript:void(0);" class="face"><span></span><div class="tishilayer2"><p class="tishilayer_face">想了解你更多,可以聊聊么?</p></div></a><a href="javascript:void(0);" class="flower"><span></span><div class="tishilayer3"><p class="tishilayer_flower">想了解你更多,可以聊聊么?</p></div></a><a href="javascript:void(0);" class="heart"><span></span><div class="tishilayer4"><p class="tishilayer_xin">想了解你更多,可以聊聊么?</p></div></a></div><div class="dzhLayer_loading"><img src="../resources/img/jx3_loading.gif">发送中...</div><div class="dzhLayer_loaded"><img src="../resources/img/send_ok.gif">发送成功</div></div></div></div><div style="display: none;" id="im_jiaxin_pop_win"><div class="jx3_0_1_adv jx3_0_1_adv1"><div class="jx3_0_1_advTop"><a href="javascript:void(0);" class="im_t_close jx3_0_1_advClose">&nbsp;</a></div><div class="jx3_0_1_advBody"><a href="http://im.jiayuan.com/?from=rightbottom" target="_blank" class="jx3_0_1_advButton">&nbsp;</a></div></div></div><div t="#im_myjy" class="im_btn fl myJiayuan pr im_attached_pop"><a class="im_inner_btn">我的服务</a><div id="im_myjy" class="im_win myjiayuan_content"><div class="pr im_win_title myjiayuan_content_title"><div class="title_leftBg fl"></div><h1 class="title_centerBg">我的服务</h1><div class="title_rightBg fl"><a class="pr im_t_close"></a></div></div><div class="im_list"></div></div></div><ul class="fl im_service_list" id="service_list"><li class="jystamp" title="佳缘邮票"><a target="_blank" href="http://www.jiayuan.com/usercp/center/index.php">佳缘邮票</a></li><li class="speedpost" title="特快专递"><a target="_blank" href="http://www.jiayuan.com/msgapp/ems/?a=info">特快专递</a></li><li class="diamond_g" title="钻石会员"><a target="_blank" href="http://www.jiayuan.com/usercp/service/bmsg_tg2.php">钻石会员</a></li><li class="vip_g" title="VIP会员"><a target="_blank" href="http://www.jiayuan.com/usercp/service/upgrade.php">VIP会员</a></li><li class="readmail_g" title="看信包月"><a target="_blank" href="http://www.jiayuan.com/usercp/service/bmsg.php">看信包月</a></li><li class="forground_g" title="排名提前"><a target="_blank" href="http://www.jiayuan.com/usercp/service/priority.php">排名提前</a></li><li class="express_g" title="超级聚光灯"><a target="_blank" href="http://www.jiayuan.com/usercp/fate_express.php">超级聚光灯</a></li></ul><div t="#im_jyapp" class="im_btn fl jiayuanCenter pr im_attached_pop"><a class="im_inner_btn">佳缘应用</a><div id="im_jyapp" class="im_win jiayuanCenter_content"><div class="pr im_win_title jiayuanCenter_content_title"><div class="title_leftBg fl"></div><h1 class="title_centerBg">佳缘应用</h1><div class="title_rightBg fl"><a class="pr im_t_close"></a></div></div><div class="im_list"></div></div></div><div style="display: none;" class="im_btn fl brand_mid not_hover"><a style="width: 300px;" class="im_inner_btn">专享特惠--钻石会员立减200元！仅298元/年！马上开通&gt;&gt;</a></div><div style="display: none;" class="im_btn fl brand_mid not_hover"><a style="width: 300px;" class="im_inner_btn">亲，教你淘最佳配偶！试下“超级聚光灯”</a></div><div style="display: block;" class="im_btn fl brand_mid not_hover"><a style="width: 300px;" class="im_inner_btn">做大富翁，赢大奖！</a></div><div style="display: none;" class="im_btn fl brand_mid not_hover"><a style="width: 300px;" class="im_inner_btn">选对“真像”，爱情“不在囧途”</a></div><div style="display: none;" class="im_btn fl brand_mid not_hover"><a style="width: 300px;" class="im_inner_btn">帮你快速精准锁定心仪异性，快来看看！</a></div></div><script type="text/javascript" src="../resources/js/pop_freq.js"></script><script type="text/javascript" src="../resources/js/popupLogin_v2.js"></script>
 <!-- <script type='text/javascript' src='http://ads.jiayuan.com/ad.php?pd_id=41'></script> -->
 <script type="text/javascript">
 <!--

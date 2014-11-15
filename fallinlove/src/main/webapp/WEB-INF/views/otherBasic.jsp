@@ -4274,7 +4274,7 @@ DD_belatedPNG.fix('.fixPNG');
 				</div>
 			</div>
 			<div class="im_btn fr letter">
-				<a class="im_inner_btn">收件箱</a><span style="display: inline;"
+				<a  href="msg/notRead" target="_blank" class="im_inner_btn">收件箱</a><span style="display: inline;"
 					class="amount fl"><span class="amount_leftBg fl"></span><span
 					class="amount_centerBg fl">10</span><span class="amount_rightBg fl"></span></span>
 			</div>

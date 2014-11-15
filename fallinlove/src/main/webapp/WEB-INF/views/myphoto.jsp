@@ -1188,7 +1188,7 @@ head_user_nickname	= '';
             <p id="head_user_uid">佳缘ID<a class="color_fff" target="_blank" href="user/selfBasic/${loginUser.userId}">122261858</a></p>
             <p id="head_user_logout"><a class="color_fff" href="../logout">退出</a></p>
         </div>
-        <div class="jycm_top_right">
+    <!--     <div class="jycm_top_right">
             <div id="jycm_top_inform" class="jycm_top_inform">
                 <div id="jycm_top_informIcon" class="jycm_top_informIcon">
 <div class="jycm_top_remind">
@@ -1233,9 +1233,9 @@ document.write('<a class="color_fff va_middle" href="'+common_nav_array['im_url'
             	<a id="jycm_top_collect_1" class="color_fff va_middle" onclick="jycm_addFav();" href="javascript:;"><i class="jy_top_icon jy_icon_collect"></i>收藏本站</a>
             </p>
             <p class="jycm_top_zx " id="vip_area_tel" style=""><i class="jy_top_icon jy_icon_tel"></i><span class="jy_txt"><span>红娘专线</span><strong>400-7701-520</strong></span></p>
-        </div>
+        </div> -->
     </div>
-    <div class="w1000" id="head_nologin" style="display:none">
+   <!--  <div class="w1000" id="head_nologin" style="display:none">
         <div class="jycm_top_login">
             <iframe id="hder_hid_login_win" name="hder_hid_login_win" style="display:none" height="50" width="100%"></iframe>
             <form class="jycm_top_form" id="hder_login_form" target="hder_hid_login_win" action="" method="post">
@@ -1261,7 +1261,7 @@ document.write('<a class="color_fff va_middle" href="'+common_nav_array['im_url'
             	<a id="jycm_top_collect_2" class="color_fff va_middle" onclick="jycm_addFav();" href="javascript:;"><i class="jy_top_icon jy_icon_collect"></i>收藏本站</a>
             </p>
         </div>
-    </div>
+    </div> -->
 </div>
 <!--登录区域 end-->
 <div id="jycm_head" class="jycm_head fn-clear">
@@ -1457,8 +1457,8 @@ this.style.color='#aaa';
 }
 }
 }
-placeholder('jycm_zh_input','defText');
-placeholder('jycm_pass_input','defPass');
+// placeholder('jycm_zh_input','defText');
+// placeholder('jycm_pass_input','defPass');
 //设置VIP通知中心默认效果
 function set_vip_center_default(visitor_new_num, praise_me_new_num, fans_new_num)
 {
@@ -1526,7 +1526,7 @@ jQuery("#fans_new_num").html(str_fans_txt);
 //VIP通知中心有数字，值为0表示所有分类一条新通知都没有
 vip_center_all_num = 1;
 //登录处理
-head_wait(function(){return typeof JY != "undefined"}, function(){
+/* head_wait(function(){return typeof JY != "undefined"}, function(){
 //登录后回调函数
 function header_login_call(user){
 if(user && user['uid'] > 0){
@@ -1561,21 +1561,21 @@ jy_head_include_doc.appendChild(jy_head_include_js);
 if(document.all){//如果是IE
 jy_head_include_js.onreadystatechange = function(){
 if(jy_head_include_js.readyState == 'loaded' || jy_head_include_js.readyState == 'complete'){
-get_jiayuan_contacts();
+//get_jiayuan_contacts();
 }
 }
 }else{
 jy_head_include_js.onload = function(){
-get_jiayuan_contacts();
+//get_jiayuan_contacts();
 }
 }
 }else{
-get_jiayuan_contacts();
+//get_jiayuan_contacts();
 }
-document.getElementById("head_login").style.display = "";
+// document.getElementById("head_login").style.display = "";
 }else{
-document.getElementById("head_nologin").style.display = "";
-document.getElementById("head_login").style.display = "none";
+// document.getElementById("head_nologin").style.display = "";
+// document.getElementById("head_login").style.display = "none";
 }
 //登录表单，绑定提交事件
 document.getElementById("hder_login_form").onsubmit = function(){
@@ -1597,7 +1597,7 @@ this.action = common_nav_array['login_url']+'dologin.php';	//修改action提交�
 JY.login.submit(this, header_login_call);
 return false;
 };
-});
+}); */
 //设置LOGO
 function set_head_logo()
 {
