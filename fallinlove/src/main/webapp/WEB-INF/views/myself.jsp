@@ -330,7 +330,7 @@
                    <a href="http://www.jiayuan.com/club/"  target="_blank">俱乐部</a>
                 </li>
                 <li class="">
-                    <a href="http://search.jiayuan.com/v2/"  target="_blank">搜索</a>
+                    <a href="userSearch"  target="_blank">搜索</a>
                 </li>
                 <li class="">
                     <a href="http://search.jiayuan.com/v2/new.php"  target="_blank">新会员</a>

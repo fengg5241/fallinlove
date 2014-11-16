@@ -140,5 +140,5 @@ loc_domain = 'www.jiayuan.com';break;
 		pop_arr[62] = new Array('once','120','','1,2,5,6,10,','13','1304',contetn,'pop_1411035520', '0');
 				contetn = "\u3010\u79e6\u7687\u5c9b\u4e3b\u9898\u4ea4\u53cb\u3011 \u201c\u6211\u7231\u4f60\uff0c\u4f46\u662f\u4f60\u77e5\u9053\u5417\uff1f\u201d\u2014\u2014\u89c5\u7231\u4e4b\u65c5\u4ea4\u53cb\u6d3e\u5bf9\uff08\u62a5\u540d\u4eba\u6570\u5230\u8fbe200\u4eba\u4e3e\u529e\uff09<a href=\"http:\/\/party.jiayuan.com\/party_info.php?pid=7627\"target=\"_blank\">\u67e5\u770b\u8be6\u60c5<\/a>\u3010\u5546\u52a1\u5408\u4f5c\u70ed\u7ebf\uff1a4000602029\u62160311-69031979\u3011".replace(/{pop_domain}/g,loc_domain);
 		pop_arr[63] = new Array('once','120','','1,2,5,6,10,','13','1303',contetn,'pop_1411035599', '0');
-			insert_con();
+			//insert_con();
 	

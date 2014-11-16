@@ -523,17 +523,17 @@ function searchResult(pageFlag,flag,pageAttation,delay){
         var del_nick = $('#nick_condi').val();
         if(pageAttation == 'from_nick'){
             var head_type = $('#head_type').val();
-            window.location.href="./index.php?key="+keyword+'&ht='+head_type;
+            //window.location.href="./index.php?key="+keyword+'&ht='+head_type;
         }else if(del_nick != ''){
             keyword = '';
-            window.location.href=encodeURI("./index.php?key="+keyword+"&osex="+sex+'&nc='+del_nick+'&onick='+pageAttation);
+           // window.location.href=encodeURI("./index.php?key="+keyword+"&osex="+sex+'&nc='+del_nick+'&onick='+pageAttation);
         }else if( nick != ''){
             var j_url = encodeURI("./index.php?key="+keyword+"&sex="+sex+"&stc="+selectedMark+"&sn="+orderType+"&sv="+orderValue+"&p="+realPage+"&pt="+pageTotal+"&ft="+singleFilter+"&f="+flag+'&mt='+mt+"&nick="+nick);
             window.location.href=j_url;
         }else if(sTId == 0 && sTName == ''){
-            window.location.href="./index.php?key="+keyword+"&sex="+sex+"&stc="+selectedMark+"&sn="+orderType+"&sv="+orderValue+"&p="+realPage+"&pt="+pageTotal+"&ft="+singleFilter+"&f="+flag+'&mt='+mt;
+            //window.location.href="./index.php?key="+keyword+"&sex="+sex+"&stc="+selectedMark+"&sn="+orderType+"&sv="+orderValue+"&p="+realPage+"&pt="+pageTotal+"&ft="+singleFilter+"&f="+flag+'&mt='+mt;
         }else{
-            window.location.href="./index.php?key="+keyword+"&sex="+sex+"&stc="+selectedMark+"&sn="+orderType+"&sv="+orderValue+"&p="+realPage+"&sTId="+sTId+"&sTName="+sTName+"&pt="+pageTotal+"&ft="+singleFilter+"&f="+flag+'&mt='+mt;
+            //window.location.href="./index.php?key="+keyword+"&sex="+sex+"&stc="+selectedMark+"&sn="+orderType+"&sv="+orderValue+"&p="+realPage+"&sTId="+sTId+"&sTName="+sTName+"&pt="+pageTotal+"&ft="+singleFilter+"&f="+flag+'&mt='+mt;
         }
         return false;
     });
@@ -1426,7 +1426,7 @@ $(document).ready(function(){
         $(this).attr('title',close_title);
     });
     //初始化查询
-    getSearchResult("ini");
+    //getSearchResult("ini");
     //性别选择标签
     /* 2013-12-2改
     $("#sex_select li").bind('click', function() {
