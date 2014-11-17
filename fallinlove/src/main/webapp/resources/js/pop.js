@@ -292,7 +292,8 @@ window.pop = pop;
 
 var	poped	=	false;
 
-var pop_str	=	readCookie('pop_str');
+//shanf
+/*var pop_str	=	readCookie('pop_str');
 //pop_str	=	'最美的平凡|9a860d0b4cbae435d23efc56ffcc2c1e|88|31018633||';
 if(pop_str) {
 	pop_relation(pop_str);
@@ -302,7 +303,7 @@ if(pop_str) {
 	//TODO 测试，原本使用timepop(true);
 	timepop(true);
 	//pop_content("<div>aaa</div>");
-}
+}*/
 
 
 

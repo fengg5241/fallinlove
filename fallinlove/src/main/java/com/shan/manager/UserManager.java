@@ -208,6 +208,36 @@ public class UserManager extends BaseManager{
 		long count = getJdbcTemplate().queryForLong(sql);
 		return count;
 	}
+	
+	/**
+	 * 搜索所有用户
+	 * @param userId
+	 * @return
+	 */
+	public List<User> searchAllUser(long userId){
+		String sql = "SELECT * FROM " + 
+				LoveTable.TABLE_USER +" WHERE " + LoveTable.COLUMN_USER_ID + " != "+ userId;
+		List<User> users = getJdbcTemplate().query(sql, userRowMapper);
+		return users;
+	}
+	
+	public List<User> defaultSearchWomen(long userId){
+		String sql = "SELECT * FROM " + LoveTable.TABLE_USER +" WHERE " + LoveTable.COLUMN_SEX + " = '1' AND " +
+						LoveTable.COLUMN_USER_ID + " != "+ userId + " AND " +
+						LoveTable.COLUMN_YEAR + ">= '1985' AND " + LoveTable.COLUMN_YEAR + "<= '1993' AND " + 
+						LoveTable.COLUMN_HEIGHT + ">= '155厘米' AND " + LoveTable.COLUMN_HEIGHT + "<= '170厘米'"	;
+		List<User> users = getJdbcTemplate().query(sql, userRowMapper);
+		return users;
+	}
+	
+	public List<User> defaultSearchMen(long userId){
+		String sql = "SELECT * FROM " + LoveTable.TABLE_USER +" WHERE " + LoveTable.COLUMN_SEX + " = '1' AND " +
+				LoveTable.COLUMN_USER_ID + " != "+ userId + " AND " +
+				LoveTable.COLUMN_YEAR + ">= '1985' AND " + LoveTable.COLUMN_YEAR + "<= '1993' AND " + 
+				LoveTable.COLUMN_HEIGHT + ">= '165厘米' AND " + LoveTable.COLUMN_HEIGHT + "<= '180厘米'"	;
+		List<User> users = getJdbcTemplate().query(sql, userRowMapper);
+		return users;
+	}
 
 	/**
 	 * Maps a row returned from a query of LOGIN_USER to a Restaurant object.
