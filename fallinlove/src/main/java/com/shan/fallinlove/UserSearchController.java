@@ -1,6 +1,8 @@
 package com.shan.fallinlove;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -50,6 +52,9 @@ public class UserSearchController {
 		}else {
 			searchUsers = usermanager.defaultSearchMen(userId);
 		}
+		
+		Map<String, String> map = new HashMap<String,String>();
+		
 //		"1:99|2:22.30|3:155.170|23:1"
 		model.addAttribute("searchUsers", searchUsers);
 		return "userSearch";
