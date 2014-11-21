@@ -521,6 +521,27 @@ function searchResult(pageFlag,flag,pageAttation,delay){
         //uid直接搜索入口
         var nick = $('#s_nick').val();
         var del_nick = $('#nick_condi').val();
+        
+		 $.ajax({type : "POST",  
+		       url : "user/searchUserByCondition",   
+		       contentType : 'application/json',
+		       data : {time : new Date()},
+		       dataType : 'json',  
+		       success : function (data){
+//		    	   var count = 0;
+//		    	   if(data != null){
+//		    		   count = data["count"];
+//		    	   }
+//		    	   if(count > 0){
+//		    		   get_id("stampCount").value = count;
+//		    		   do_no_tanchu(anniu_id);
+//		    	   }else {
+//		    			JY_Alert('温馨提示','您目前没有邮票了，请充值或者购买会员');
+//		    			return false;
+//		    	   }
+		       }  
+		})
+		
         if(pageAttation == 'from_nick'){
             var head_type = $('#head_type').val();
             //window.location.href="./index.php?key="+keyword+'&ht='+head_type;
