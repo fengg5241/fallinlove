@@ -742,7 +742,7 @@ loginWindow.onOpen = function(){
                         <h6>请选择地区</h6>
                         <div class="JY-sp-i clear">
                             <select name="dq-Province">
-                                                                                                        <option value="11">北京</option>
+                                                                                            ""            <option value="11">北京</option>
                                                                         
                                                                     <option value="12">天津</option>
                                                                         
