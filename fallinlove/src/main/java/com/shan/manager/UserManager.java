@@ -222,19 +222,21 @@ public class UserManager extends BaseManager{
 	}
 	
 	public List<User> defaultSearchWomen(long userId){
-		String sql = "SELECT * FROM " + LoveTable.TABLE_USER +" WHERE " + LoveTable.COLUMN_SEX + " = '1' AND " +
-						LoveTable.COLUMN_USER_ID + " != "+ userId + " AND " +
-						LoveTable.COLUMN_YEAR + ">= '1985' AND " + LoveTable.COLUMN_YEAR + "<= '1993' AND " + 
-						LoveTable.COLUMN_HEIGHT + ">= '155厘米' AND " + LoveTable.COLUMN_HEIGHT + "<= '170厘米'"	;
+//		String sql = "SELECT * FROM " + LoveTable.TABLE_USER +" WHERE " + LoveTable.COLUMN_SEX + " = '1' AND " +
+//						LoveTable.COLUMN_USER_ID + " != "+ userId + " AND " +
+//						LoveTable.COLUMN_YEAR + ">= '1985' AND " + LoveTable.COLUMN_YEAR + "<= '1993' AND " + 
+//						LoveTable.COLUMN_HEIGHT + ">= '155厘米' AND " + LoveTable.COLUMN_HEIGHT + "<= '170厘米'"	;
+		String sql = "SELECT * FROM " + LoveTable.TABLE_USER 	;
 		List<User> users = getJdbcTemplate().query(sql, userRowMapper);
 		return users;
 	}
 	
 	public List<User> defaultSearchMen(long userId){
-		String sql = "SELECT * FROM " + LoveTable.TABLE_USER +" WHERE " + LoveTable.COLUMN_SEX + " = '1' AND " +
-				LoveTable.COLUMN_USER_ID + " != "+ userId + " AND " +
-				LoveTable.COLUMN_YEAR + ">= '1985' AND " + LoveTable.COLUMN_YEAR + "<= '1993' AND " + 
-				LoveTable.COLUMN_HEIGHT + ">= '165厘米' AND " + LoveTable.COLUMN_HEIGHT + "<= '180厘米'"	;
+//		String sql = "SELECT * FROM " + LoveTable.TABLE_USER +" WHERE " + LoveTable.COLUMN_SEX + " = '1' AND " +
+//				LoveTable.COLUMN_USER_ID + " != "+ userId + " AND " +
+//				LoveTable.COLUMN_YEAR + ">= '1985' AND " + LoveTable.COLUMN_YEAR + "<= '1993' AND " + 
+//				LoveTable.COLUMN_HEIGHT + ">= '165厘米' AND " + LoveTable.COLUMN_HEIGHT + "<= '180厘米'"	;
+		String sql = "SELECT * FROM " + LoveTable.TABLE_USER ;
 		List<User> users = getJdbcTemplate().query(sql, userRowMapper);
 		return users;
 	}
