@@ -522,10 +522,20 @@ function searchResult(pageFlag,flag,pageAttation,delay){
         var nick = $('#s_nick').val();
         var del_nick = $('#nick_condi').val();
         
-		 $.ajax({type : "POST",  
-		       url : "user/searchUserByCondition",   
+        $.getJSON("searchUserByCondition", 
+        		{ time: new Date(),'condition':selectedMark}, 
+        		function(data) {
+            if (data) {
+            	JY_Alert('温馨提示',data);
+            } else {
+            	JY_Alert('温馨提示',"出错了!");
+            }
+        });
+        
+/*		 $.ajax({type : "POST",  
+		       url : "searchUserByCondition",   
 		       contentType : 'application/json',
-		       data : {time : new Date()},
+		       data : {time: '1'},
 		       dataType : 'json',  
 		       success : function (data){
 //		    	   var count = 0;
@@ -539,8 +549,9 @@ function searchResult(pageFlag,flag,pageAttation,delay){
 //		    			JY_Alert('温馨提示','您目前没有邮票了，请充值或者购买会员');
 //		    			return false;
 //		    	   }
+		    	   JY_Alert('温馨提示',data);
 		       }  
-		})
+		})*/
 		
         if(pageAttation == 'from_nick'){
             var head_type = $('#head_type').val();

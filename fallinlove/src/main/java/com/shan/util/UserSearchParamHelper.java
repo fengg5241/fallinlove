@@ -1,15 +1,28 @@
 package com.shan.util;
 
 import java.util.Calendar;
+import java.util.HashMap;
+import java.util.Map;
 
 import com.google.common.collect.ImmutableTable;
 import com.google.common.collect.Table;
 
 public class UserSearchParamHelper {
 
-	private static int curYear = Calendar.getInstance().YEAR;
+	private static int curYear = Calendar.getInstance().get(Calendar.YEAR);
 	
-	private static final Table<String, String, String> userSearchParam = new ImmutableTable.Builder<String, String, String>()
+	public static Map<String, String> getParamKeyColumnMap(){
+		Map<String, String> paramKeyColumnMap = new HashMap<String, String>();
+		paramKeyColumnMap.put("1", LoveTable.COLUMN_ADDRESS);
+		paramKeyColumnMap.put("2", LoveTable.COLUMN_YEAR);
+		paramKeyColumnMap.put("3", LoveTable.COLUMN_HEIGHT);
+		paramKeyColumnMap.put("5", LoveTable.COLUMN_EDUCATION);
+		paramKeyColumnMap.put("6", LoveTable.COLUMN_SALARY);
+		return paramKeyColumnMap;
+	}
+	
+			
+	public static final Table<String, String, String> userSearchParam = new ImmutableTable.Builder<String, String, String>()
 			.put("1", "11", "北京").put("1", "12", "天津").put("1", "13", "河北")
 			.put("1", "14", "山西").put("1", "15", "内蒙古").put("1", "21", "辽宁")
 			.put("1", "22", "吉林").put("1", "23", "黑龙江").put("1", "31", "上海")
@@ -105,8 +118,8 @@ public class UserSearchParamHelper {
 			.put("3", "254", "254厘米").put("3", "255", "255厘米").put("3", "256", "256厘米")
 			.put("3", "257", "257厘米").put("3", "258", "258厘米").put("3", "259", "259厘米")
 			.put("3", "260", "260厘米")
-			.put("5", "20", "大专").put("5", "30", "本科").put("5", "40", "双学士")
-			.put("5", "50", "硕士").put("5", "60", "博士").put("5", "70", "博士后")
+			.put("5", "20", "20").put("5", "30", "30").put("5", "40", "40")
+			.put("5", "50", "60").put("5", "60", "60").put("5", "70", "70")
 			.put("6", "10", "2000元以下").put("6", "20", "2000～5000元").put("6", "30", "5000～10000元")
 			.put("6", "40", "10000～20000元").put("6", "50", "20000元以上")
 			.build();
