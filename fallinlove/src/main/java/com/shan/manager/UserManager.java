@@ -21,6 +21,7 @@ import com.shan.fallinlove.model.LoginForm;
 import com.shan.fallinlove.model.MarriageType;
 import com.shan.fallinlove.model.User;
 import com.shan.util.LoveTable;
+import com.shan.util.UserSearchParamHelper;
 @Component("usermanager")
 public class UserManager extends BaseManager{
 	
@@ -242,6 +243,64 @@ public class UserManager extends BaseManager{
 	}
 
 	/**
+	 * @param condition
+	 * @param sex
+	 * @return
+	 */
+	public List<User> searchByConditions(String[] condition, String sex) {
+		String sql = "SELECT * FROM " + LoveTable.TABLE_USER + "WHERE ";
+//		"1:99|2:22.30|3:155.170|23:1"
+		if (condition.length > 0) {
+			for (String cond : condition) {
+				String[] splitCond = cond.split(":");
+				String key = splitCond[0];
+				String value = splitCond[1];
+
+				System.out.println("condition: "+cond);
+				System.out.println("==column:"+UserSearchParamHelper.getParamKeyColumnMap().get(key));
+				if ("1".equals(key)) {		//means search conditions include address
+					if (key.length() > 3) { //means search by actual city
+						key += "city";
+					}else {
+						key += "province";
+					}
+				}
+				
+				String column = UserSearchParamHelper.getParamKeyColumnMap().get(key);
+				if (value.contains(".")) {
+					String[] splitValue = value.split("\\.");
+					String srcVal = splitValue[0];
+					System.out.println("===valueSrc :"+UserSearchParamHelper.userSearchParam.get(key,srcVal));
+					String tarVal = splitValue[1];
+					System.out.println("===valueTar :"+UserSearchParamHelper.userSearchParam.get(key,tarVal));
+					
+					sql += column + ">='" +srcVal+"' AND " + column + "<='" +tarVal+"' AND ";
+				}else {
+					String equalValue = null;
+					if ("1".equals(key)) {
+						equalValue = value;
+					}else {
+						equalValue = UserSearchParamHelper.userSearchParam.get(key,value);
+					}
+					sql += column + "='" +equalValue+"' AND ";
+					System.out.println("===value:"+equalValue);
+				}
+			}
+
+		}
+		
+		if (sex.equals('0')) {
+			sql += LoveTable.COLUMN_SEX + " = '1'";
+		}else {
+			sql += LoveTable.COLUMN_SEX + " = '0'";
+		}
+		
+		List<User> users = getJdbcTemplate().query(sql, userRowMapper);
+		
+		return users;
+	}
+	
+	/**
 	 * Maps a row returned from a query of LOGIN_USER to a Restaurant object.
 	 * 
 	 * @param rs the result set with its cursor positioned at the current row
@@ -353,4 +412,5 @@ public class UserManager extends BaseManager{
 		int num = month * 2 - (day < arr[month - 1] ? 2 : 0);
 		return s.substring(num, num + 2);
 	}
+
 }

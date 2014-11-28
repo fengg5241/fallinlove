@@ -13,7 +13,8 @@ public class UserSearchParamHelper {
 	
 	public static Map<String, String> getParamKeyColumnMap(){
 		Map<String, String> paramKeyColumnMap = new HashMap<String, String>();
-		paramKeyColumnMap.put("1", LoveTable.COLUMN_ADDRESS);
+		paramKeyColumnMap.put("1city", LoveTable.COLUMN_CITY);
+		paramKeyColumnMap.put("1province", LoveTable.COLUMN_PROVINCE);
 		paramKeyColumnMap.put("2", LoveTable.COLUMN_YEAR);
 		paramKeyColumnMap.put("3", LoveTable.COLUMN_HEIGHT);
 		paramKeyColumnMap.put("5", LoveTable.COLUMN_EDUCATION);

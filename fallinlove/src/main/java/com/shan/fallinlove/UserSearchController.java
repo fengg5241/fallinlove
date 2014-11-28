@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.shan.fallinlove.model.User;
 import com.shan.manager.UserManager;
+import com.shan.util.LoveTable;
 import com.shan.util.UserSearchParamHelper;
 
 @Controller
@@ -50,36 +51,11 @@ public class UserSearchController {
 			@RequestParam String[] condition) {
 		long userId = (Long)(request.getSession().getAttribute("userId"));
 		User loginUser = (User)(request.getSession().getAttribute("loginUser"));
-		List<User> searchUsers = null;
-		if (loginUser.getSex().equals('0')) {
-			searchUsers = usermanager.defaultSearchWomen(userId);
-		}else {
-			searchUsers = usermanager.defaultSearchMen(userId);
-		}
 		
 		System.out.println("year: "+Calendar.getInstance().YEAR);
-//		"1:99|2:22.30|3:155.170|23:1"
-		if (condition.length > 0) {
-			for (String cond : condition) {
-				String[] splitCond = cond.split(":");
-				String key = splitCond[0];
-				String value = splitCond[1];
-				System.out.println("condition: "+cond);
-				System.out.println("==column:"+UserSearchParamHelper.getParamKeyColumnMap().get(key));
-				if (value.contains(".")) {
-					String[] splitValue = value.split("\\.");
-					String srcVal = splitValue[0];
-					System.out.println("===valueSrc :"+UserSearchParamHelper.userSearchParam.get(key,srcVal));
-					String tarVal = splitValue[1];
-					System.out.println("===valueTar :"+UserSearchParamHelper.userSearchParam.get(key,tarVal));
-				}else {
-					System.out.println("===value:"+UserSearchParamHelper.userSearchParam.get(key,value));
-				}
-			}
-		}
+		List<User> searchUsers = usermanager.searchByConditions(condition,loginUser.getSex());
 
 		System.out.println("condition: "+condition[0]);
-
 		Map<String,List<User>> map =new HashMap<String,List<User>>();
 		map.put("userlist", searchUsers);
 		return map;
