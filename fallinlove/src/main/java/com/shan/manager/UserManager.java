@@ -274,7 +274,7 @@ public class UserManager extends BaseManager{
 					String tarVal = splitValue[1];
 					System.out.println("===valueTar :"+UserSearchParamHelper.userSearchParam.get(key,tarVal));
 					
-					sql += column + ">='" +srcVal+"' AND " + column + "<='" +tarVal+"' AND ";
+					sql += column + " >= '" +srcVal+"' AND " + column + " <= '" +tarVal+"' AND ";
 				}else {
 					String equalValue = null;
 					if ("1".equals(key)) {
@@ -283,7 +283,7 @@ public class UserManager extends BaseManager{
 						equalValue = UserSearchParamHelper.userSearchParam.get(key,value);
 					}
 					sql += column + "='" +equalValue+"' AND ";
-					System.out.println("===value:"+equalValue);
+					
 				}
 			}
 
@@ -294,7 +294,7 @@ public class UserManager extends BaseManager{
 		}else {
 			sql += LoveTable.COLUMN_SEX + " = '0'";
 		}
-		
+		System.out.println("===sql:"+sql);
 		List<User> users = getJdbcTemplate().query(sql, userRowMapper);
 		
 		return users;
