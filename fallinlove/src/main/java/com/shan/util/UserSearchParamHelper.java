@@ -17,8 +17,8 @@ public class UserSearchParamHelper {
 		paramKeyColumnMap.put("1province", LoveTable.COLUMN_PROVINCE);
 		paramKeyColumnMap.put("2", LoveTable.COLUMN_YEAR);
 		paramKeyColumnMap.put("3", LoveTable.COLUMN_HEIGHT);
-		paramKeyColumnMap.put("5", LoveTable.COLUMN_EDUCATION);
-		paramKeyColumnMap.put("6", LoveTable.COLUMN_SALARY);
+		paramKeyColumnMap.put("4", LoveTable.COLUMN_EDUCATION);
+		paramKeyColumnMap.put("5", LoveTable.COLUMN_INCOME);
 		return paramKeyColumnMap;
 	}
 	
@@ -119,10 +119,10 @@ public class UserSearchParamHelper {
 			.put("3", "254", "254厘米").put("3", "255", "255厘米").put("3", "256", "256厘米")
 			.put("3", "257", "257厘米").put("3", "258", "258厘米").put("3", "259", "259厘米")
 			.put("3", "260", "260厘米")
-			.put("5", "20", "20").put("5", "30", "30").put("5", "40", "40")
-			.put("5", "50", "60").put("5", "60", "60").put("5", "70", "70")
-			.put("6", "10", "2000元以下").put("6", "20", "2000～5000元").put("6", "30", "5000～10000元")
-			.put("6", "40", "10000～20000元").put("6", "50", "20000元以上")
+			.put("4", "10", "10").put("4", "20", "20").put("4", "30", "30").put("4", "40", "40")
+			.put("4", "50", "60").put("4", "60", "60").put("4", "70", "70")
+			.put("5", "10", "10").put("5", "20", "20").put("5", "30", "30")
+			.put("5", "40", "40").put("5", "50", "50")
 			.build();
 			
 }

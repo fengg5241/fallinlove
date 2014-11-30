@@ -526,7 +526,24 @@ function searchResult(pageFlag,flag,pageAttation,delay){
         		{ time: new Date(),'condition':selectedMark}, 
         		function(data) {
             if (data) {
-            	JY_Alert('温馨提示',data);
+            	var usersHtml = "";
+            	for ( var i = 0; i < data["userlist"].length; i++) {
+					var user = data["userlist"][i];
+            		usersHtml += 
+                		'<li style="z-index: 1;"><div class="hy_box">'+
+                		   '<a class="openBox" href="user/search/'+user["userId"] + '" target="_blank">'+
+                			'<img src="resources/img/e97ac6fbe_1_avatar_p.jpg"></a>'+
+                				'<div class="user_name">'+
+                					'<a href="user/search/'+user["userId"] + '" title="'+user["nickname"] + '">'+user["nickname"] + '</a></div>'+
+                				'<p class="user_info">'+user["age"] + ' '+user["address"] + '</p>'+
+                				'<p class="zhufang">'+
+                					'<span>'+user["height"] + '</span></p>'+
+                				'<div class="zh_btn">'+
+                					'<a target="_blank" foo="0" class="dzh" href="msg/send/'+user["userId"] + '"><span class="dzh_text1">发信</span></a></div>'+
+                				'<div class="hy_box_bg"></div><div class="hy_box_bg2"></div></div></li>';
+				}
+            	
+            	$("#normal_user_container").html(usersHtml);
             } else {
             	JY_Alert('温馨提示',"出错了!");
             }
@@ -2325,10 +2342,10 @@ $(function(){
         //把照片放到最后一个
         var zpHtml = '';
         var zpDiv = $(".JY-selected-list").find('#ihasPhoto');
-        if(parseInt(zpDiv.attr('info')) == 23){
-            zpHtml = zpDiv.clone();
-            zpDiv.remove();
-        }
+//        if(parseInt(zpDiv.attr('info')) == 23){
+//            zpHtml = zpDiv.clone();
+//            zpDiv.remove();
+//        }
         //end
         $(".JY-selected-list").append(pHtml);
         $(".JY-selected-list").append(zpHtml);
@@ -3168,7 +3185,7 @@ function init_show(){
         r = r['r'];
         //有照片初始化
         if(r[23]){
-            pushMark(23,1);
+            //pushMark(23,1);
             //$('#pho').attr('checked','checked');
         }else{
             if($('#flag').val() == ''){
@@ -3293,9 +3310,9 @@ function allSelectUp(ids,sort_arr){
         }
     }
     //照片放最后
-    if(sort[23]){
-        $(".JY-selected-list").append(sort[23]);
-    }
+//    if(sort[23]){
+//        $(".JY-selected-list").append(sort[23]);
+//    }
     //年龄，身高联动
     //年龄
         var val1 = $("select[name='age1']").val(),
@@ -3360,9 +3377,9 @@ function findEasyItem(selectedMark){
         var selectedMarkKeyArr   = selectedMarkArr[i].split(":");
         if(selectedMarkKeyArr[0]){
             stc_arr['r'][selectedMarkKeyArr[0]] = selectedMarkKeyArr[1];
-            if(selectedMarkKeyArr[0] != 23){ //照片特殊处理
-                stc_arr['s'][i] = selectedMarkKeyArr[0];
-            }
+//            if(selectedMarkKeyArr[0] != 23){ //照片特殊处理
+//                stc_arr['s'][i] = selectedMarkKeyArr[0];
+//            }
             
         }
     }
@@ -3388,7 +3405,7 @@ function nickSearchItem(){
 function nickSearch(){
     var def = '请输入佳缘昵称';
     var nick = $('#nick_txt').val();
-    search_send_pv('tonick','new');
+    //search_send_pv('tonick','new');
     nick = delHtmlTag(nick);
     if(nick == '' || nick == def){
         $('#nick_txt').val(def);

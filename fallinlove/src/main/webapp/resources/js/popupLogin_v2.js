@@ -451,11 +451,11 @@ var loginWindow = (function() {
             q("http://www.jiayuan.com/general/?m=oauthDisplayCb&domid=oauthDisplayCb&cb=display_pop_div");
             window.display_pop_div = function(D) {
                 var E = C.key;
-                if (D) {
-                    document.getElementById("pop_display_show_" + E).style.display = "block"
-                } else {
-                    document.getElementById("pop_display_hidden_" + E).style.display = "block"
-                }
+//                if (D) {
+//                    document.getElementById("pop_display_show_" + E).style.display = "block"
+//                } else {
+//                    document.getElementById("pop_display_hidden_" + E).style.display = "block"
+//                }
             }
         },onLoad: function() {
             v.call(this, 2)

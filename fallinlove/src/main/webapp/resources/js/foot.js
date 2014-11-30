@@ -197,10 +197,10 @@ if(is_popup_show) {
 	//jyim stop
 //	document.write('<script type="text/javascript" src="http://images1.jyimg.com/w3/global/j/pop_freq.js"></script>');
     //加载新的弹出登录层
-	if(typeof loginWindow != 'object')
-	{
-       document.write('<script type="text/javascript" src="http://images1.jyimg.com/w4/login/j/popupLogin_v2.js?d=1227"></script>');
-	}
+//	if(typeof loginWindow != 'object')
+//	{
+//       document.write('<script type="text/javascript" src="http://images1.jyimg.com/w4/login/j/popupLogin_v2.js?d=1227"></script>');
+//	}
 }
 
 /*

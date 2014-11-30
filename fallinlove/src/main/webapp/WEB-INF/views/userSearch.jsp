@@ -612,7 +612,7 @@ loginWindow.onOpen = function(){
 <input name="pageCache" id="pageCache" value="1" type="hidden">
 <input name="pageTotal" id="pageTotal" value="250" type="hidden">
 <input name="flag" id="flag" value="" type="hidden">
-<input name="selectedCondition" id="selectedMark" value="1:99,2:22.30,3:155.170,23:1" type="hidden">
+<input name="selectedCondition" id="selectedMark" value="1:99,2:22.30,3:155.170" type="hidden">
 <input name="work" id="work_hidden" value="其他国家" type="hidden">
 <input name="ageHidden" class="ageHidden" value="open" type="hidden">
 <input name="heightHidden" class="heightHidden" value="open" type="hidden">
@@ -713,7 +713,7 @@ loginWindow.onOpen = function(){
             <dt class="JY-lt">您已选择：</dt>
             <dd class="JY-selected-list clear">
                 <!--性别-->
-                <div class="JY-item JY-def" data-index="1" data-type="xb">
+<!--                 <div class="JY-item JY-def" data-index="1" data-type="xb">
                     <span class="JY-title">
                         <b class="JY-title-val">女</b>
                         <i class="JY-item-arr"></i>
@@ -730,7 +730,7 @@ loginWindow.onOpen = function(){
                         </div>
                         <button class="JY-sp-b" info="xb">确认</button>
                     </div>
-                </div>
+                </div> -->
                 <!--/性别-->
                             <div class="JY-item" data-index="2" data-type="dq">
                     <span class="JY-title">
@@ -1256,22 +1256,24 @@ loginWindow.onOpen = function(){
                         </div>
                         <button class="JY-sp-b" info="sg">确认</button>
                     </div>
-                </div><div id="ihasPhoto" info="23" class="JY-item" data-index="23" data-type="zp">
-                    <span class="JY-title">
-                        <b class="JY-title-val">有照片</b>
-                        <i class="JY-item-arr"></i>
-                    </span>
-                    <span title="点击&quot;x&quot;取消此项限制" class="JY-close" onclick="deleteResult('zp')"></span>
-                    <div style="display: none;" class="JY-sp">
-                        <h6>请选择照片</h6>
-                        <div class="JY-sp-i clear">
-                            <select name="hasPhoto">
-                                <option value="1" selected="selected">有照片</option>
-                            </select>
-                        </div>
-                        <button class="JY-sp-b" info="zp">确认</button>
-                    </div>
-                </div></dd>
+                </div>
+<!--                 <div id="ihasPhoto" info="23" class="JY-item" data-index="23" data-type="zp"> -->
+<!--                     <span class="JY-title"> -->
+<!--                         <b class="JY-title-val">有照片</b> -->
+<!--                         <i class="JY-item-arr"></i> -->
+<!--                     </span> -->
+<!--                     <span title="点击&quot;x&quot;取消此项限制" class="JY-close" onclick="deleteResult('zp')"></span> -->
+<!--                     <div style="display: none;" class="JY-sp"> -->
+<!--                         <h6>请选择照片</h6> -->
+<!--                         <div class="JY-sp-i clear"> -->
+<!--                             <select name="hasPhoto"> -->
+<!--                                 <option value="1" selected="selected">有照片</option> -->
+<!--                             </select> -->
+<!--                         </div> -->
+<!--                         <button class="JY-sp-b" info="zp">确认</button> -->
+<!--                     </div> -->
+<!--                 </div> -->
+                </dd>
             <dd style="display: block;" class="mb10">
                 <a id="JY-more" class="JY-add" href="#">设置更多条件</a>
             </dd>
@@ -1291,32 +1293,32 @@ loginWindow.onOpen = function(){
                 
                 <!--/身高-->
                 <!--婚史-->
-                <div class="JY-item" data-index="5" data-type="hs">
-                    <span class="JY-title">
-                        <b class="JY-title-val">婚史</b>
-                        <i class="JY-item-arr"></i>
-                    </span>
-                    <span title="点击&quot;x&quot;取消此项限制" class="JY-close" onclick="deleteResult('hs')"></span>
-                    <div class="JY-sp">
-                        <h6>请选择婚史</h6>
-                        <div class="JY-sp-i clear">
-                            <select name="Marital">
-                                                                                                        <option selected="selected" value="1">未婚</option>
+<!--                 <div class="JY-item" data-index="5" data-type="hs"> -->
+<!--                     <span class="JY-title"> -->
+<!--                         <b class="JY-title-val">婚史</b> -->
+<!--                         <i class="JY-item-arr"></i> -->
+<!--                     </span> -->
+<!--                     <span title="点击&quot;x&quot;取消此项限制" class="JY-close" onclick="deleteResult('hs')"></span> -->
+<!--                     <div class="JY-sp"> -->
+<!--                         <h6>请选择婚史</h6> -->
+<!--                         <div class="JY-sp-i clear"> -->
+<!--                             <select name="Marital"> -->
+<!--                                                                                                         <option selected="selected" value="1">未婚</option> -->
                                                                         
-                                                                    <option value="2">离异</option>
+<!--                                                                     <option value="2">离异</option> -->
                                                                         
-                                                                    <option value="3">丧偶</option>
+<!--                                                                     <option value="3">丧偶</option> -->
                                                                         
-                                                                    <option value="4">未婚、离异</option>
+<!--                                                                     <option value="4">未婚、离异</option> -->
                                                                         
-                                                                    <option value="5">未婚、丧偶</option>
+<!--                                                                     <option value="5">未婚、丧偶</option> -->
                                                                         
-                                                                    <option value="6">离异、丧偶</option>
-                                                                                                </select>
-                        </div>
-                        <button class="JY-sp-b" info="hs">确认</button>
-                    </div>
-                </div>
+<!--                                                                     <option value="6">离异、丧偶</option> -->
+<!--                                                                                                 </select> -->
+<!--                         </div> -->
+<!--                         <button class="JY-sp-b" info="hs">确认</button> -->
+<!--                     </div> -->
+<!--                 </div> -->
                 <!--/婚史-->
                 <!--学历-->
                      <div class="JY-item" data-index="6" data-type="xl">
@@ -1385,7 +1387,7 @@ loginWindow.onOpen = function(){
                 </div>
                 <!--/月薪-->
                 <!--住房-->
-                    <div class="JY-item" data-index="8" data-type="zf">
+<!--                     <div class="JY-item" data-index="8" data-type="zf">
                         <span class="JY-title">
                             <b class="JY-title-val">住房</b>
                             <i class="JY-item-arr"></i>
@@ -1414,10 +1416,10 @@ loginWindow.onOpen = function(){
                             </div>
                             <button class="JY-sp-b" info="zf">确认</button>
                         </div>
-                    </div>
+                    </div> -->
                 <!--/住房-->
                 <!--购车-->
-                <div class="JY-item" data-index="9" data-type="gc">
+                <!-- <div class="JY-item" data-index="9" data-type="gc">
                     <span class="JY-title">
                         <b class="JY-title-val">购车</b>
                         <i class="JY-item-arr"></i>
@@ -1435,8 +1437,8 @@ loginWindow.onOpen = function(){
                         <button class="JY-sp-b" info="gc">确认</button>
                     </div>
                 </div>
-                <!--/购车-->
-                <!--有无子女-->
+                /购车
+                有无子女
                 <div class="JY-item" data-index="10" data-type="ywzn">
                     <span class="JY-title">
                         <b class="JY-title-val">有无子女</b>
@@ -1457,8 +1459,8 @@ loginWindow.onOpen = function(){
                         <button class="JY-sp-b" info="ywzn">确认</button>
                     </div>
                 </div>
-                <!--/有无子女-->
-                <!--职业-->
+                /有无子女
+                职业
                 <div class="JY-item" data-index="11" data-type="zy">
                     <span class="JY-title">
                         <b class="JY-title-val">职业</b>
@@ -1559,8 +1561,8 @@ loginWindow.onOpen = function(){
                         <button class="JY-sp-b" info="zy">确认</button>
                     </div>
                 </div>
-                <!--/职业-->
-                <!--公司类型-->
+                /职业
+                公司类型
                 <div class="JY-item" data-index="12" data-type="gslx">
                     <span class="JY-title">
                         <b class="JY-title-val">公司类型</b>
@@ -1590,10 +1592,10 @@ loginWindow.onOpen = function(){
                         </div>
                         <button class="JY-sp-b" info="gslx">确认</button>
                     </div>
-                </div>
+                </div> -->
                 <!--/公司类型-->
                 <!--户口地区-->
-                <div class="JY-item" data-index="13" data-type="hkdq">
+                <!-- <div class="JY-item" data-index="13" data-type="hkdq">
                     <span class="JY-title">
                         <b class="JY-title-val">户口地区</b>
                         <i class="JY-item-arr"></i>
@@ -1682,8 +1684,8 @@ loginWindow.onOpen = function(){
                         <button class="JY-sp-b" info="hkdq">确认</button>
                     </div>
                 </div>
-                <!--/户口地区-->
-                <!--籍贯-->
+                /户口地区
+                籍贯
                 <div class="JY-item" data-index="14" data-type="jg">
                     <span class="JY-title">
                         <b class="JY-title-val">籍贯</b>
@@ -1772,10 +1774,10 @@ loginWindow.onOpen = function(){
                         </div>
                         <button class="JY-sp-b" info="jg">确认</button>
                     </div>
-                </div>
+                </div> -->
                 <!--/籍贯-->
                 <!--民族-->
-                <div class="JY-item" data-index="15" data-type="mz">
+               <!--  <div class="JY-item" data-index="15" data-type="mz">
                     <span class="JY-title">
                         <b class="JY-title-val">民族</b>
                         <i class="JY-item-arr"></i>
@@ -1810,10 +1812,10 @@ loginWindow.onOpen = function(){
                         </div>
                         <button class="JY-sp-b" info="mz">确认</button>
                     </div>
-                </div>
+                </div> -->
                 <!--/民族-->
                 <!--血型-->
-                    <div class="JY-item" data-index="16" data-type="xx">
+                    <!-- <div class="JY-item" data-index="16" data-type="xx">
                         <span class="JY-title">
                             <b class="JY-title-val">血型</b>
                             <i class="JY-item-arr"></i>
@@ -1839,8 +1841,8 @@ loginWindow.onOpen = function(){
                             <button class="JY-sp-b" info="xx">确认</button>
                         </div>
                     </div>
-                <!--/血型-->
-                <!--生肖-->
+                /血型
+                生肖
                 <div id="sel_sx" class="JY-item" data-index="17" data-type="sx">
                     <span class="JY-title">
                         <b class="JY-title-val">生肖</b>
@@ -1853,8 +1855,8 @@ loginWindow.onOpen = function(){
                         <button class="JY-sp-b" info="sx">确认</button>
                     </div>
                 </div>
-                <!--/生肖-->
-                <!--星座-->
+                /生肖
+                星座
                     <div class="JY-item" data-index="18" data-type="xz">
                         <span class="JY-title">
                             <b class="JY-title-val">星座</b>
@@ -1880,8 +1882,8 @@ loginWindow.onOpen = function(){
                             <button class="JY-sp-b" info="xz">确认</button>
                         </div>
                     </div>
-                <!--/星座-->
-                <!--宗教信仰-->
+                /星座
+                宗教信仰
                 <div class="JY-item" data-index="19" data-type="zjxy">
                     <span class="JY-title">
                         <b class="JY-title-val">宗教信仰</b>
@@ -1930,8 +1932,8 @@ loginWindow.onOpen = function(){
                         <button class="JY-sp-b" info="zjxy">确认</button>
                     </div>
                 </div>
-                <!--/宗教信仰-->
-                <!--诚信等级-->
+                /宗教信仰
+                诚信等级
                 <div class="JY-item" data-index="20" data-type="cxdj">
                     <span class="JY-title">
                         <b class="JY-title-val">诚信等级</b>
@@ -1955,7 +1957,7 @@ loginWindow.onOpen = function(){
                         </div>
                         <button class="JY-sp-b" info="cxdj">确认</button>
                     </div>
-                </div>
+                </div> -->
                 <!--/诚信等级-->
                 <!-- 有无照片-->
                 
@@ -2259,8 +2261,10 @@ loginWindow.onOpen = function(){
 <div class="fixed_heigh" style="height:1483px;">
 <ul class="user_list fn-clear" id="normal_user_container" style="position: relative; z-index: 1;">
 	<c:forEach var="user" items="${searchUsers}" >
-		<li style="z-index: 1;"><div class="hy_box"
-			onclick="dzhsingleSel(this,'parent');">
+		<li style="z-index: 1;">
+		<div class="hy_box">
+<!-- 			onclick="dzhsingleSel(this,'parent');" -->
+			
 <!-- 			onmouseover="userDivOver('chatbut_125431349',0);" -->
 <!-- 			onmouseout="userDivOut('chatbut_125431349',0)"> -->
 <!-- 			<div class="search_userHead" onmouseover="show_face_jump(this);" -->

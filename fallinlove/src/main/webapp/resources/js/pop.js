@@ -187,8 +187,9 @@ pop.extend(pop, {//{{{
 			x=window.scrollX;
 		}
 		// 小能工具条的占位
-		if(im_userInfo.isshowtoolbar)
-			y -=  27;
+		//shanf
+//		if(im_userInfo.isshowtoolbar)
+//			y -=  27;
 		pop.bulletin_div.style.top = h + y - pop.bulletin_div.offsetHeight + "px"; 
 		pop.bulletin_div.style.left = w + x - pop.bulletin_div.offsetWidth + "px"; 
 	}

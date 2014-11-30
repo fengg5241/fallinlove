@@ -248,12 +248,15 @@ public class UserManager extends BaseManager{
 	 * @return
 	 */
 	public List<User> searchByConditions(String[] condition, String sex) {
-		String sql = "SELECT * FROM " + LoveTable.TABLE_USER + "WHERE ";
+		String sql = "SELECT * FROM " + LoveTable.TABLE_USER + " WHERE ";
 //		"1:99|2:22.30|3:155.170|23:1"
 		if (condition.length > 0) {
 			for (String cond : condition) {
 				String[] splitCond = cond.split(":");
 				String key = splitCond[0];
+				if ("23".equals(key)) {
+					continue;
+				}
 				String value = splitCond[1];
 
 				System.out.println("condition: "+cond);
@@ -270,14 +273,26 @@ public class UserManager extends BaseManager{
 				if (value.contains(".")) {
 					String[] splitValue = value.split("\\.");
 					String srcVal = splitValue[0];
-					System.out.println("===valueSrc :"+UserSearchParamHelper.userSearchParam.get(key,srcVal));
 					String tarVal = splitValue[1];
-					System.out.println("===valueTar :"+UserSearchParamHelper.userSearchParam.get(key,tarVal));
+					String smallVal = UserSearchParamHelper.userSearchParam.get(key,srcVal);
+					String bigVal = UserSearchParamHelper.userSearchParam.get(key,tarVal);
 					
-					sql += column + " >= '" +srcVal+"' AND " + column + " <= '" +tarVal+"' AND ";
+					if ("4".equals(key) || "5".equals(key)){ // means education or salary
+						if (tarVal.equals("0")) { // 不查询以上
+							sql += column + " = '" + smallVal+"' AND ";
+						}else {
+							sql += column + " >= '" + smallVal+"' AND ";
+						}
+					}else {
+						if ("2".equals(key)) {		//means age
+							sql += column + " >= '" +bigVal+"' AND " + column + " <= '" +smallVal+"' AND ";
+						}else {
+							sql += column + " >= '" +smallVal+"' AND " + column + " <= '" +bigVal+"' AND ";
+						}
+					}
 				}else {
 					String equalValue = null;
-					if ("1".equals(key)) {
+					if ("1city".equals(key) || "1province".equals(key)) {
 						equalValue = value;
 					}else {
 						equalValue = UserSearchParamHelper.userSearchParam.get(key,value);

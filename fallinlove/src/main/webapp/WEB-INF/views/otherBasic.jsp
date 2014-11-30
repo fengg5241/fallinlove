@@ -202,8 +202,8 @@
 
 	<link type="text/css"
 		href="../../resources/css/popupLogin_20110321.css" rel="stylesheet">
-	<script src="../../resources/js/popupLogin_v2.js"
-		type="text/javascript"></script>
+<!-- 	<script src="../../resources/js/popupLogin_v2.js" -->
+<!-- 		type="text/javascript"></script> -->
 	<script src="../../resources/js/pv.js" type="text/javascript"></script>
 	<script type="text/javascript">
 		function clear_text(obj) {
@@ -218,9 +218,9 @@
 		}
 		var base_css_url = 'http://images.jiayuan.com/w4/login/i/dch_2.jpg'
 
-		function popup_count(flag) {
-			send_jy_pv2('new_popup_open_' + flag);
-		}
+// 		function popup_count(flag) {
+// 			send_jy_pv2('new_popup_open_' + flag);
+// 		}
 	</script>
 
 
@@ -228,14 +228,14 @@
 	<iframe src="" name="login_run" style="display: none" height="0"
 		width="0"></iframe>
 	<!--alert 1 -->
-	<div id="login" style="display: none;">
-		<!-- alert 2 -->
+	<!-- <div id="login" style="display: none;">
+		alert 2
 		<script language="JavaScript">
 		<!--
 			loginWindow.onOpen = function() {
 				popup_count(2);
 			}
-		//-->
+		
 		</script>
 		<div>
 			<div class="alert_bg2">
@@ -326,10 +326,10 @@
 			</div>
 
 		</div>
-	</div>
+	</div> -->
 
-	<script type="text/javascript">
-	<!--
+<!-- 	<script type="text/javascript">
+	
 		function display_div(data) {
 			if (data) {
 				document.getElementById("display_show").style.display = "block";
@@ -337,9 +337,9 @@
 				document.getElementById("display_hidden").style.display = "block";
 			}
 		}
-	//-->
+	
 	</script>
-	<script src="../../resources/html/a.htm" type="text/javascript"></script>
+	<script src="../../resources/html/a.htm" type="text/javascript"></script> -->
 
 
 
@@ -885,14 +885,17 @@
 					target="_blank">爱真心</a></li>
 			</ul>
 			<div class="jycm_zt_login" id="head_white_user">
-				${loginUser.nickname}&nbsp;|&nbsp;<a href="../logout">退出</a>
+				${loginUser.nickname}&nbsp;|&nbsp;<a href="logout">退出</a>
 			</div>
 		</div>
 	</div>
-	<script type="text/javascript">
+	<!-- <script type="text/javascript">
 		document.getElementById('head_white_nav').innerHTML = jy_head_function
 				.format_tpl(document.getElementById('head_white_nav').innerHTML); //导航信息
 		document.getElementById('head_white_nav').style.display = "";
+				//shanf
+				var loginstr = HEAD_USER.nickname
+					+ '&nbsp;|&nbsp;<a href="'+common_nav_array['login_url']+'logout2.php">退出</a>';
 		if (HEAD_USER.uid > 0) {
 			var loginstr = HEAD_USER.nickname
 					+ '&nbsp;|&nbsp;<a href="'+common_nav_array['login_url']+'logout2.php">退出</a>';
@@ -907,7 +910,7 @@
 					+ '?bd=212" class="link" onclick="jy_head_function.click_pv(\'|head_navigation_reg|\');" target="_blank">注册</a>';
 		}
 		document.getElementById('head_white_user').innerHTML = loginstr;
-	</script>
+	</script> -->
 	<!-- released time 2014-09-28 12:41:56 -->
 
 	<div id="bg" style="display: none; width: 1263px; height: 2321px;"></div>

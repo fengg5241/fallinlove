@@ -1615,9 +1615,9 @@ jy_foot_bar.common_guide();
 jy_foot_bar.common_guide();
 }
 //==以下登录弹层相关==
-if(typeof loginWindow != 'object'){
-document.write('<script type="text\/javascript" src="http:\/\/images1.jyimg.com\/w4\/login\/j\/popupLogin_v2.js"><\/script>');
-}
+// if(typeof loginWindow != 'object'){
+// document.write('<script type="text\/javascript" src="http:\/\/images1.jyimg.com\/w4\/login\/j\/popupLogin_v2.js"><\/script>');
+// }
 //usercp,msg,login,party相关页面不设置定时弹出登录层。
 var login_window_not_allow_channel = ['www_index','usercp','usercp_o','msg','login','party'];
 if(!jy_head_function.in_array(login_window_not_allow_channel, common_bot_sub_domain)){
