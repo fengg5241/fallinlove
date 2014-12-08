@@ -1290,7 +1290,7 @@ $(function (){
 <a name="foot_nav_link" href="http://www.jiayuan.com/guard/" target="_blank">安全中心</a>
 </p>
 <p id="bottom_site_copyright" style="">
-<a class="bot_link_none">中文实名：世纪佳缘</a>
+<a class="bot_link_none">中文实名：爱一起</a>
 <a class="bot_link_none">ICP证书：沪B2-20100074</a>
 <a href="http://www.jiayuan.com/certificate/zengzhi.html" target="_blank">增值电信业务经营许可证：沪B2-20070313</a>
 <a href="http://www.jiayuan.com/certificate/iso.html" target="_blank">ISO9001质量体系认证</a>

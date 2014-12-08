@@ -4,8 +4,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
 <meta name="keywords" content="交友,交友网,征婚交友,网上交友,征婚,征婚网,征婚交友网,交友中心,婚恋交友">
-<meta name="description" content="青春不常在，抓紧谈恋爱！缘分可遇也可求，该出手时就出手。世纪佳缘是严肃婚恋的交友平台，提供丰富多彩的交友征婚活动，1亿会员，让缘分千万里挑一！">
-<title>我的相册_世纪佳缘交友网</title>
+<meta name="description" content="青春不常在，抓紧谈恋爱！缘分可遇也可求，该出手时就出手。爱一起是严肃婚恋的交友平台，提供丰富多彩的交友征婚活动，1亿会员，让缘分千万里挑一！">
+<title>我的相册_爱一起交友网</title>
 <link href="../../resources/css/style.css" type="text/css" rel="stylesheet">
 <link type="text/css" rel="stylesheet" href="../../resources/css/jy_ad.css">
 <link rel="stylesheet" type="text/css" href="../../resources/css/jquery_002.css" media="screen">
@@ -1267,7 +1267,7 @@ document.write('<a class="color_fff va_middle" href="'+common_nav_array['im_url'
 <div id="jycm_head" class="jycm_head fn-clear">
     <div class="jycm_head_top">
         <h1 class="logo">
-        	<a id="jy_head_logo" style="" href="http://www.jiayuan.com/"><img src="../../resources/img/logo_new.png" alt="世纪佳缘" height="70"></a>
+        	<a id="jy_head_logo" style="" href="http://www.jiayuan.com/"><img src="../../resources/img/logo_new.png" alt="爱一起" height="70"></a>
         </h1>
         <div id="jy_head_city_select"></div>
         <div class="jycm_head_ad">
@@ -1603,7 +1603,7 @@ function set_head_logo()
 {
 document.getElementById('jy_head_logo').href = common_nav_array['www_url'];	//给LOGO链接复制地址	
 if(typeof head_logo_config != 'undefined'){
-document.getElementById('jy_head_logo').innerHTML = '<img height="70" src="'+head_logo_config['main_logo']+'" alt="世纪佳缘" />';
+document.getElementById('jy_head_logo').innerHTML = '<img height="70" src="'+head_logo_config['main_logo']+'" alt="爱一起" />';
 document.getElementById('jy_head_logo').style.display = '';
 }else{
 //如果LOGO配置的JS文件没有加载完成或者没有加载成功，则动态加载
@@ -1615,13 +1615,13 @@ jy_head_include_doc.appendChild(jy_head_include_js);
 if(document.all){//如果是IE
 jy_head_include_js.onreadystatechange = function(){
 if(jy_head_include_js.readyState == 'loaded' || jy_head_include_js.readyState == 'complete'){
-document.getElementById('jy_head_logo').innerHTML = '<img height="70" src="'+head_logo_config['main_logo']+'" alt="世纪佳缘" />';
+document.getElementById('jy_head_logo').innerHTML = '<img height="70" src="'+head_logo_config['main_logo']+'" alt="爱一起" />';
 document.getElementById('jy_head_logo').style.display = '';
 }
 }
 }else{
 jy_head_include_js.onload = function(){
-document.getElementById('jy_head_logo').innerHTML = '<img height="70" src="'+head_logo_config['main_logo']+'" alt="世纪佳缘" />';
+document.getElementById('jy_head_logo').innerHTML = '<img height="70" src="'+head_logo_config['main_logo']+'" alt="爱一起" />';
 document.getElementById('jy_head_logo').style.display = '';
 }
 }
@@ -1630,7 +1630,7 @@ document.getElementById('jy_head_logo').style.display = '';
 //收藏
 function jycm_addFav()
 {
-var a = "http://www.jiayuan.com/",b="世纪佳缘";
+var a = "http://www.jiayuan.com/",b="爱一起";
 head_alert = [];
 head_alert = document.all?window.alert:Window.prototype.alert;
 document.all?window.external.AddFavorite(a,b):window.sidebar&&window.sidebar.addPanel?window.sidebar.addPanel(b,a,""):head_alert("对不起，您的浏览器不支持此操作!\n请您使用菜单栏或Ctrl+D收藏本站。");
@@ -1811,8 +1811,8 @@ document.all?window.external.AddFavorite(a,b):window.sidebar&&window.sidebar.add
 			<div class="preview"><a href="user/selfBasic/${loginUser.userId}" target="_blank">预览资料</a></div>
 			<div class="why">
 				<h3>为什么要上传照片？</h3>
-<p>世纪佳缘统计，有照片的会员征友成功率是无照片会员的<strong style="color:red;"><span style="font-size: 14px;">6</span>倍</strong>！ 清晰生动的照片能为您吸引更多的目光，让更多的异性关注您。</p>
-<p>头像照是您在世纪佳缘上最常被其他异性看到的头像照片，90%的会员在搜索时会选择有头像照的会员进行联系。您的头像照会出现在：搜索结果里、信件正文里、异性的佳缘首页里、在线聊天频道里、礼物附言里等等，是异性了解您、进而联系您最为关键的第一印象。</p>
+<p>爱一起统计，有照片的会员征友成功率是无照片会员的<strong style="color:red;"><span style="font-size: 14px;">6</span>倍</strong>！ 清晰生动的照片能为您吸引更多的目光，让更多的异性关注您。</p>
+<p>头像照是您在爱一起上最常被其他异性看到的头像照片，90%的会员在搜索时会选择有头像照的会员进行联系。您的头像照会出现在：搜索结果里、信件正文里、异性的佳缘首页里、在线聊天频道里、礼物附言里等等，是异性了解您、进而联系您最为关键的第一印象。</p>
 
 			</div>
 			<div class="whybg"></div>
@@ -1879,7 +1879,7 @@ document.all?window.external.AddFavorite(a,b):window.sidebar&&window.sidebar.add
 					<strong>温馨提示：</strong>
 					<p>1、照片支持格式：jpg、jpeg、gif、png。</p>
 					<p>2、您最多可上传<font style="color:#dd4083; font-weight:bold;">6</font>张照片，每张照片大小不要超过<font style="color:#dd4083; font-weight:bold;">5M</font>，如果您的照片过大不能上传，请点击<a href="http://www.jiayuan.com/helpcenter/list.php?type1=1&amp;type2=1&amp;type3=18#art420" target="_blank">这里</a>。</p>
-					<p>3、已通过手机号认证的会员，可将照片添加至彩信内容，在主题或文字处输入世纪佳缘，发送到10663355即可(仅限中国移动用户)。</p>
+					<p>3、已通过手机号认证的会员，可将照片添加至彩信内容，在主题或文字处输入爱一起，发送到10663355即可(仅限中国移动用户)。</p>
 					<p>4、请勿上传：非本人、背影、与现年龄不符、裸露、军装照和带有政治色彩的照片，否则将予以删除，并将取消赠送看信专用邮票。</p>
 					<p>5、为获得更好的征友效果，建议您上传正面或微侧面能够完整露出脸庞的照片，不要让墨镜、帽子或头发挡住脸庞。</p>
 				</div>
@@ -2342,7 +2342,7 @@ function setDomainForIframe(){
 <a name="foot_nav_link" href="http://www.jiayuan.com/guard/" target="_blank">安全中心</a>
 </p>
 <p id="bottom_site_copyright" style="">
-<a class="bot_link_none">中文实名：世纪佳缘</a>
+<a class="bot_link_none">中文实名：爱一起</a>
 <a class="bot_link_none">ICP证书：沪B2-20100074</a>
 <a href="http://www.jiayuan.com/certificate/zengzhi.html" target="_blank">增值电信业务经营许可证：沪B2-20070313</a>
 <a href="http://www.jiayuan.com/certificate/iso.html" target="_blank">ISO9001质量体系认证</a>

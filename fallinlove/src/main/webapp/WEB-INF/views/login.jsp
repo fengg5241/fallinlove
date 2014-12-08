@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="keywords" content="交友,交友网,征婚交友,网上交友,征婚,征婚网,征婚交友网,交友中心,婚恋交友">
-    <meta name="description" content="青春不常在，抓紧谈恋爱！缘分可遇也可求，该出手时就出手。世纪佳缘是严肃婚恋的交友平台，提供丰富多彩的交友征婚活动，1亿会员，让缘分千万里挑一！">
+    <meta name="description" content="青春不常在，抓紧谈恋爱！缘分可遇也可求，该出手时就出手。爱一起是严肃婚恋的交友平台，提供丰富多彩的交友征婚活动，1亿会员，让缘分千万里挑一！">
     <title>登录</title>
     <link rel="stylesheet" href="resources/css/base.css">
     <link rel="stylesheet" href="resources/css/login.css">
@@ -404,8 +404,8 @@ common_nav_array[current_nav_flag] = 'head_nav_cur';
         <div class="w fn-clear">
           <h1 class="logo">
            <script type="text/javascript">
-            document.write('<a class="logo" href="http://www.jiayuan.com/"><img height="70" src="'+head_logo_config['index_logo']+'" alt="世纪佳缘" border="0" /></a>');
-          </script><a class="logo" href="http://www.jiayuan.com/" onmousedown="javascript:send_jy_pv2('log_m_to_jy');"><img src="resources/img/logo_1395045365.png" alt="世纪佳缘" border="0" height="70"></a>
+            document.write('<a class="logo" href="http://www.jiayuan.com/"><img height="70" src="'+head_logo_config['index_logo']+'" alt="爱一起" border="0" /></a>');
+          </script><a class="logo" href="http://www.jiayuan.com/" onmousedown="javascript:send_jy_pv2('log_m_to_jy');"><img src="resources/img/logo_1395045365.png" alt="爱一起" border="0" height="70"></a>
             <span><img src="resources/img/logo_txt.png" alt="严肃婚恋网站，美国纳斯达克上市"></span>
           </h1>
         </div>
@@ -454,21 +454,21 @@ common_nav_array[current_nav_flag] = 'head_nav_cur';
                 <input name="position" value="0" type="hidden">
               </form:form>
               <div class="openId">
-                <p>
-                  <span class="lTit">其他帐号登录</span>
-                  <a class="openId_qq" href="http://www.jiayuan.com/general/t/?forward=qqAware&amp;c=12&amp;url=http://www.jiayuan.com/usercp&amp;p=1"><i class="icon_openId icon_qq"></i>QQ帐号</a>
-                  <a class="openId_sina" href="http://www.jiayuan.com/general/t/?forward=sinaAware&amp;c=12&amp;url=http://www.jiayuan.com/usercp&amp;p=2"><i class="icon_openId icon_sina"></i>新浪微博</a>
-                  <a class="openId_baidu" href="http://www.jiayuan.com/general/t/?forward=baiduOauth&amp;c=12&amp;url=http://www.jiayuan.com/usercp&amp;p=5"><i class="icon_openId icon_baidu"></i>百度</a>
-                </p>
-                <p class="mT5">
-                  <a class="openId_rr" href="http://www.jiayuan.com/general/t/?forward=renrenAware&amp;c=12&amp;url=http://www.jiayuan.com/usercp&amp;p=3" title="人人网"><i class="icon_openId icon_rr"></i><span>人人网</span></a>
-                  <!-- <a class="openId_db" href="http://www.jiayuan.com/general/t/?forward=doubanAware&amp;c=12&amp;url=http://www.jiayuan.com/usercp&amp;p=6" title="豆瓣"><i class="icon_openId icon_db"></i><span>豆瓣</span></a> -->
-                  <a class="openId_kxw" href="http://www.jiayuan.com/general/t/?forward=kaixinAware&amp;c=12&amp;url=http://www.jiayuan.com/usercp&amp;p=4" title="开心网"><i class="icon_openId icon_kxw"></i><span>开心网</span></a>
-                  <a class="openId_zfb" href="http://www.jiayuan.com/general/t/?forward=alipayOauth&amp;c=12&amp;url=http://www.jiayuan.com/usercp&amp;p=7" title="支付宝"><i class="icon_openId icon_zfb"></i><span>支付宝</span></a>
-                </p>
+<!--                 <p> -->
+<!--                   <span class="lTit">其他帐号登录</span> -->
+<!--                   <a class="openId_qq" href="http://www.jiayuan.com/general/t/?forward=qqAware&amp;c=12&amp;url=http://www.jiayuan.com/usercp&amp;p=1"><i class="icon_openId icon_qq"></i>QQ帐号</a> -->
+<!--                   <a class="openId_sina" href="http://www.jiayuan.com/general/t/?forward=sinaAware&amp;c=12&amp;url=http://www.jiayuan.com/usercp&amp;p=2"><i class="icon_openId icon_sina"></i>新浪微博</a> -->
+<!--                   <a class="openId_baidu" href="http://www.jiayuan.com/general/t/?forward=baiduOauth&amp;c=12&amp;url=http://www.jiayuan.com/usercp&amp;p=5"><i class="icon_openId icon_baidu"></i>百度</a> -->
+<!--                 </p> -->
+<!--                 <p class="mT5"> -->
+<!--                   <a class="openId_rr" href="http://www.jiayuan.com/general/t/?forward=renrenAware&amp;c=12&amp;url=http://www.jiayuan.com/usercp&amp;p=3" title="人人网"><i class="icon_openId icon_rr"></i><span>人人网</span></a> -->
+<!--                   <a class="openId_db" href="http://www.jiayuan.com/general/t/?forward=doubanAware&amp;c=12&amp;url=http://www.jiayuan.com/usercp&amp;p=6" title="豆瓣"><i class="icon_openId icon_db"></i><span>豆瓣</span></a> -->
+<!--                   <a class="openId_kxw" href="http://www.jiayuan.com/general/t/?forward=kaixinAware&amp;c=12&amp;url=http://www.jiayuan.com/usercp&amp;p=4" title="开心网"><i class="icon_openId icon_kxw"></i><span>开心网</span></a> -->
+<!--                   <a class="openId_zfb" href="http://www.jiayuan.com/general/t/?forward=alipayOauth&amp;c=12&amp;url=http://www.jiayuan.com/usercp&amp;p=7" title="支付宝"><i class="icon_openId icon_zfb"></i><span>支付宝</span></a> -->
+<!--                 </p> -->
               </div>
               <p class="goReg">
-                <a href="http://reg.jiayuan.com/?bd=9527" onmousedown="javascript:send_jy_pv2('log_m_to_reg');">还不是会员？立即注册</a>
+                <a href="register">还不是会员？立即注册</a>
               </p>
             </div>
           </div>
@@ -493,24 +493,24 @@ common_nav_array[current_nav_flag] = 'head_nav_cur';
 <div class="hf_wapper">
     <div class="hf_foot" id="common_footer">
     <p id="bottom_nav_link">
-<a name="foot_nav_link" href="http://www.jiayuan.com/helpcenter/postmail.php" target="_blank">联系客服</a>
-<a name="foot_nav_link" href="http://www.jiayuan.com/bottom/index.html" target="_blank">关于我们</a>
-<a name="foot_nav_link" href="http://www.jiayuan.com/bottom/connect.html" target="_blank">联系我们</a>
-<a name="foot_nav_link" href="http://www.jiayuan.com/bottom/business.html" target="_blank">无线业务</a>
-<a name="foot_nav_link" href="http://www.jiayuan.com/bottom/declare.html" target="_blank">注册条款</a>
-<a name="foot_nav_link" href="http://www.jiayuan.com/bottom/links.php" target="_blank">友情链接</a>
-<a name="foot_nav_link" href="http://www.jiayuan.com/bottom/jobs.html" target="_blank">招聘信息</a>
-<a name="foot_nav_link" href="http://www.jiayuan.com/bottom/notice.html" target="_blank">交友信息</a>
-<a name="foot_nav_link" href="http://www.jiayuan.com/bottom/private.html" target="_blank">隐私保护</a>
-<a name="foot_nav_link" href="http://www.jiayuan.com/helpcenter/" target="_blank">帮助中心</a>
-<a name="foot_nav_link" href="http://www.jiayuan.com/guard/" target="_blank">安全中心</a>
+<!-- <a name="foot_nav_link" href="http://www.jiayuan.com/helpcenter/postmail.php" target="_blank">联系客服</a> -->
+<!-- <a name="foot_nav_link" href="http://www.jiayuan.com/bottom/index.html" target="_blank">关于我们</a> -->
+<!-- <a name="foot_nav_link" href="http://www.jiayuan.com/bottom/connect.html" target="_blank">联系我们</a> -->
+<!-- <a name="foot_nav_link" href="http://www.jiayuan.com/bottom/business.html" target="_blank">无线业务</a> -->
+<!-- <a name="foot_nav_link" href="http://www.jiayuan.com/bottom/declare.html" target="_blank">注册条款</a> -->
+<!-- <a name="foot_nav_link" href="http://www.jiayuan.com/bottom/links.php" target="_blank">友情链接</a> -->
+<!-- <a name="foot_nav_link" href="http://www.jiayuan.com/bottom/jobs.html" target="_blank">招聘信息</a> -->
+<!-- <a name="foot_nav_link" href="http://www.jiayuan.com/bottom/notice.html" target="_blank">交友信息</a> -->
+<!-- <a name="foot_nav_link" href="http://www.jiayuan.com/bottom/private.html" target="_blank">隐私保护</a> -->
+<!-- <a name="foot_nav_link" href="http://www.jiayuan.com/helpcenter/" target="_blank">帮助中心</a> -->
+<!-- <a name="foot_nav_link" href="http://www.jiayuan.com/guard/" target="_blank">安全中心</a> -->
 </p>
 <p id="bottom_site_copyright" style="">
-<a class="bot_link_none">中文实名：世纪佳缘</a>
-<a class="bot_link_none">ICP证书：沪B2-20100074</a>
-<a href="http://www.jiayuan.com/certificate/zengzhi.html" target="_blank">增值电信业务经营许可证：沪B2-20070313</a>
-<a href="http://www.jiayuan.com/certificate/iso.html" target="_blank">ISO9001质量体系认证</a>
-<a href="http://www.jiayuan.com/certificate/license.html" target="_blank">沪网文[2012]0720-106号</a>
+<a class="bot_link_none">中文实名：爱一起</a>
+<!-- <a class="bot_link_none">ICP证书：沪B2-20100074</a> -->
+<!-- <a href="http://www.jiayuan.com/certificate/zengzhi.html" target="_blank">增值电信业务经营许可证：沪B2-20070313</a> -->
+<!-- <a href="http://www.jiayuan.com/certificate/iso.html" target="_blank">ISO9001质量体系认证</a> -->
+<!-- <a href="http://www.jiayuan.com/certificate/license.html" target="_blank">沪网文[2012]0720-106号</a> -->
 </p>
 <p>
 ©&nbsp;&nbsp;2003-2014&nbsp;版权所有&nbsp;&nbsp;&nbsp;&nbsp;京公网安备110105002124号&nbsp;&nbsp;&nbsp;&nbsp;不良和违法信息举报专线：010-57835066

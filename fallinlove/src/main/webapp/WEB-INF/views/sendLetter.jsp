@@ -1108,7 +1108,7 @@ document.getElementById('head_red_simple_user').innerHTML = loginstr;	//会员�
 <a name="foot_nav_link" href="http://www.jiayuan.com/guard/" target="_blank">安全中心</a>
 </p>
 <p id="bottom_site_copyright" style="">
-<a class="bot_link_none">中文实名：世纪佳缘</a>
+<a class="bot_link_none">中文实名：爱一起</a>
 <a class="bot_link_none">ICP证书：沪B2-20100074</a>
 <a href="http://www.jiayuan.com/certificate/zengzhi.html" target="_blank">增值电信业务经营许可证：沪B2-20070313</a>
 <a href="http://www.jiayuan.com/certificate/iso.html" target="_blank">ISO9001质量体系认证</a>
@@ -1507,7 +1507,7 @@ DD_belatedPNG.fix('.fixPNG');
 			<li><a target="_blank" href="http://www.jiayuan.com/helpcenter/">帮助中心</a></li>
 			<li><a target="_blank" href="http://www.jiayuan.com/wap/clients/">手机版</a></li>
 		</ul>
-		<p>中文实名：　世纪佳缘　ICP证书：沪B2-20040371　Copyright　2003-2012 　版权所有</p>
+		<p>中文实名：　爱一起　ICP证书：沪B2-20040371　Copyright　2003-2012 　版权所有</p>
   </div> -->
  
   <script type="text/javascript">var gFrame = 1; var gContentId = "f_content"; //OutputEditorLoading();</script>

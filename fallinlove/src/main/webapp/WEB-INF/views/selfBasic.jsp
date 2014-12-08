@@ -4,8 +4,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
 <meta name="keywords" content="交友,交友网,征婚交友,网上交友,征婚,征婚网,征婚交友网,交友中心,婚恋交友">
-<meta name="description" content="青春不常在，抓紧谈恋爱！缘分可遇也可求，该出手时就出手。世纪佳缘是严肃婚恋的交友平台，提供丰富多彩的交友征婚活动，1亿会员，让缘分千万里挑一！">
-<title>基本资料_世纪佳缘交友网</title>
+<meta name="description" content="青春不常在，抓紧谈恋爱！缘分可遇也可求，该出手时就出手。爱一起是严肃婚恋的交友平台，提供丰富多彩的交友征婚活动，1亿会员，让缘分千万里挑一！">
+<title>基本资料_爱一起交友网</title>
 <link href="../../resources/css/style.css" type="text/css" rel="stylesheet">
 <link type="text/css" rel="stylesheet" href="../../resources/css/jy_ad.css">
 
@@ -1071,7 +1071,7 @@ head_user_uid	= 0;
 <div id="jycm_head" class="jycm_head fn-clear">
     <div class="jycm_head_top">
         <h1 class="logo">
-        	<a id="jy_head_logo" style="" href="http://www.jiayuan.com/"><img src="../../resources/img/logo_new.png" alt="世纪佳缘" height="70"></a>
+        	<a id="jy_head_logo" style="" href="http://www.jiayuan.com/"><img src="../../resources/img/logo_new.png" alt="爱一起" height="70"></a>
         </h1>
         <div id="jy_head_city_select"></div>
         <div class="jycm_head_ad">
@@ -1407,7 +1407,7 @@ function set_head_logo()
 {
 document.getElementById('jy_head_logo').href = common_nav_array['www_url'];	//给LOGO链接复制地址	
 if(typeof head_logo_config != 'undefined'){
-document.getElementById('jy_head_logo').innerHTML = '<img height="70" src="'+head_logo_config['main_logo']+'" alt="世纪佳缘" />';
+document.getElementById('jy_head_logo').innerHTML = '<img height="70" src="'+head_logo_config['main_logo']+'" alt="爱一起" />';
 document.getElementById('jy_head_logo').style.display = '';
 }else{
 //如果LOGO配置的JS文件没有加载完成或者没有加载成功，则动态加载
@@ -1419,13 +1419,13 @@ jy_head_include_doc.appendChild(jy_head_include_js);
 if(document.all){//如果是IE
 jy_head_include_js.onreadystatechange = function(){
 if(jy_head_include_js.readyState == 'loaded' || jy_head_include_js.readyState == 'complete'){
-document.getElementById('jy_head_logo').innerHTML = '<img height="70" src="'+head_logo_config['main_logo']+'" alt="世纪佳缘" />';
+document.getElementById('jy_head_logo').innerHTML = '<img height="70" src="'+head_logo_config['main_logo']+'" alt="爱一起" />';
 document.getElementById('jy_head_logo').style.display = '';
 }
 }
 }else{
 jy_head_include_js.onload = function(){
-document.getElementById('jy_head_logo').innerHTML = '<img height="70" src="'+head_logo_config['main_logo']+'" alt="世纪佳缘" />';
+document.getElementById('jy_head_logo').innerHTML = '<img height="70" src="'+head_logo_config['main_logo']+'" alt="爱一起" />';
 document.getElementById('jy_head_logo').style.display = '';
 }
 }
@@ -1434,7 +1434,7 @@ document.getElementById('jy_head_logo').style.display = '';
 //收藏
 function jycm_addFav()
 {
-var a = "http://www.jiayuan.com/",b="世纪佳缘";
+var a = "http://www.jiayuan.com/",b="爱一起";
 head_alert = [];
 head_alert = document.all?window.alert:Window.prototype.alert;
 document.all?window.external.AddFavorite(a,b):window.sidebar&&window.sidebar.addPanel?window.sidebar.addPanel(b,a,""):head_alert("对不起，您的浏览器不支持此操作!\n请您使用菜单栏或Ctrl+D收藏本站。");
@@ -1869,7 +1869,7 @@ document.all?window.external.AddFavorite(a,b):window.sidebar&&window.sidebar.add
 			<div class="why">
 				<h3>填写基本资料的重要性</h3>
 <p> 您在注册过程中已经填写了大部分的基本资料，只需要将空白内容填写完整，就可以获得20%的资料完整度。完整的基本资料是会员搜索到您的重要保证，更是让异性能够初步了解您的基础。</p>
-<p> 我们建议您将联系方式填写完整，这部分信息仅在世纪佳缘客服与您联系和邮寄礼品时使用，不会展示在任何公开页面上。</p>
+<p> 我们建议您将联系方式填写完整，这部分信息仅在爱一起客服与您联系和邮寄礼品时使用，不会展示在任何公开页面上。</p>
 
 			</div>
 			<div class="whybg"></div>
@@ -1908,7 +1908,7 @@ document.all?window.external.AddFavorite(a,b):window.sidebar&&window.sidebar.add
 <a name="foot_nav_link" href="http://www.jiayuan.com/guard/" target="_blank">安全中心</a>
 </p>
 <p id="bottom_site_copyright" style="">
-<a class="bot_link_none">中文实名：世纪佳缘</a>
+<a class="bot_link_none">中文实名：爱一起</a>
 <a class="bot_link_none">ICP证书：沪B2-20100074</a>
 <a href="http://www.jiayuan.com/certificate/zengzhi.html" target="_blank">增值电信业务经营许可证：沪B2-20070313</a>
 <a href="http://www.jiayuan.com/certificate/iso.html" target="_blank">ISO9001质量体系认证</a>

@@ -3,9 +3,9 @@
 <!DOCTYPE html><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="Content-Language" content="zh-cn">
-<meta name="keywords" content="世纪佳缘注册,世纪佳缘网注册,世纪佳缘会员注册">
-<meta name="description" content="青春不常在，抓紧谈恋爱！免费注册世纪佳缘交友网会员。现1亿注册会员，让缘分千万里挑一！世纪佳缘交友网：纳斯达克股票代码DATE。">
-<title>上传照片_世纪佳缘交友网</title>
+<meta name="keywords" content="爱一起注册,爱一起网注册,爱一起会员注册">
+<meta name="description" content="青春不常在，抓紧谈恋爱！免费注册爱一起交友网会员。现1亿注册会员，让缘分千万里挑一！爱一起交友网：纳斯达克股票代码DATE。">
+<title>上传照片_爱一起交友网</title>
 <meta http-equiv="Cache-Control" content="no-cache, must-revalidate"> 
 <meta http-equiv="expires" content="0">
 <link type="text/css" href="resources/css/jquery_002.css" rel="stylesheet" media="all">
@@ -1108,8 +1108,8 @@ document.getElementById('head_red_simple_nav').style.display = 'none';
 <div class="wxts">
 	<h3>温馨提示：</h3>
 	<ul class="change_pic_tips">
-	  <li>1.请上传您的单人真实照片，要求五官清晰。中伦文德律师事务所提醒您：请勿上传明星、名人或他人照片，您将对此负法律责任。如果您的照片被会员投诉为假照片，经查实会将您列入网站黑名单，以后都将无法注册和登录世纪佳缘。</li>
-	  <li>2.已通过手机号认证的会员，可将照片添加至彩信内容，在主题或文字处输入世纪佳缘，发送到10663355即可(仅限中国移动用户)。</li>
+	  <li>1.请上传您的单人真实照片，要求五官清晰。中伦文德律师事务所提醒您：请勿上传明星、名人或他人照片，您将对此负法律责任。如果您的照片被会员投诉为假照片，经查实会将您列入网站黑名单，以后都将无法注册和登录爱一起。</li>
+	  <li>2.已通过手机号认证的会员，可将照片添加至彩信内容，在主题或文字处输入爱一起，发送到10663355即可(仅限中国移动用户)。</li>
 	</ul>
 </div>
 </div>
@@ -1141,7 +1141,7 @@ document.getElementById('head_red_simple_nav').style.display = 'none';
 <a name="foot_nav_link" href="http://www.jiayuan.com/guard/" target="_blank">安全中心</a>
 </p>
 <p id="bottom_site_copyright" style="">
-<a class="bot_link_none">中文实名：世纪佳缘</a>
+<a class="bot_link_none">中文实名：爱一起</a>
 <a class="bot_link_none">ICP证书：沪B2-20100074</a>
 <a href="http://www.jiayuan.com/certificate/zengzhi.html" target="_blank">增值电信业务经营许可证：沪B2-20070313</a>
 <a href="http://www.jiayuan.com/certificate/iso.html" target="_blank">ISO9001质量体系认证</a>

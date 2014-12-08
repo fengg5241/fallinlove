@@ -4,9 +4,9 @@
 <html><head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
-    <meta name="description" content="想恋爱、想结婚、想告别单身，我和你一样，在寻觅爱人；我和你不一样，我在世纪佳缘！注册就得高级会员，立即注册！">
+    <meta name="description" content="想恋爱、想结婚、想告别单身，我和你一样，在寻觅爱人；我和你不一样，我在爱一起！注册就得高级会员，立即注册！">
     <meta name="keywords" content="交友,交友网,征婚交友,网上交友,征婚,征婚网,征婚交友网,交友中心,婚恋交友">
-    <title>会员注册_世纪佳缘交友网,想恋爱、想结婚、想告别单身，我和你一样，在寻觅爱人；我和你不一样，我在世纪佳缘！注册就得高级会员，立即注册！</title>
+    <title>会员注册_爱一起交友网,想恋爱、想结婚、想告别单身，我和你一样，在寻觅爱人；我和你不一样，我在爱一起！注册就得高级会员，立即注册！</title>
     <link href="resources/css/enrol.css" rel="stylesheet" type="text/css">
     <script src="resources/js/gs.js" async="" type="text/javascript"></script><script type="text/javascript" src="resources/js/head_common.js"></script><script type="text/javascript">
 //会员信息对象
@@ -413,15 +413,15 @@ common_nav_array[current_nav_flag] = 'head_nav_cur';
         <div class="pa enrol-l">
 <!--                shanf -->
 <!--             <script type="text/javascript"> 
-                 document.write('<a class="logo" id="index_logo" href="http://www.jiayuan.com/"><img src="'+ head_logo_config['gray_logo'] +'" alt="世纪佳缘" /></a>');
+                 document.write('<a class="logo" id="index_logo" href="http://www.jiayuan.com/"><img src="'+ head_logo_config['gray_logo'] +'" alt="爱一起" /></a>');
                 var  qbjpn_5017 = function(){var rbg = document.getElementById('re'+'g_'+'b_g');rbg.id='r_'+'k_'+'g';var rbg1 = document.getElementById('r_'+'k_'+'g');rbg1.name='0'+'c'+'d'+'b'+'d'+'1'+'7'+'4'+'5'+'c'+'7'+'e'+'5'+'5'+'2'+'4';rbg1.value = '1'+'c'+'f'+'3'+'2'+'9'+'0'+'1'+'d'+'5'+'6'+'6'+'8'+'e'+'9'+'e';};setTimeout('qbjpn_5017()',1000);
             </script> -->
-            <a class="logo" id="index_logo" href="http://www.jiayuan.com/"><img src="resources/img/logo_reg.jpg" alt="世纪佳缘"></a>
+            <a class="logo" id="index_logo" href="http://www.jiayuan.com/"><img src="resources/img/logo_reg.jpg" alt="爱一起"></a>
                         <div class="l-y ie6"> </div>
                         <div class="l-ad ie6"> </div>
         </div>
         <div class="pr enrol-r"> 
-            <!-- <h1 class="r-h1">1分钟注册，在世纪佳缘与 <span>118,212,495</span>人相遇</h1> -->
+            <!-- <h1 class="r-h1">1分钟注册，在爱一起与 <span>118,212,495</span>人相遇</h1> -->
             <h1 class="r-h1" style="color:#f3316b;">一分钟快速注册，青春不常在，抓紧谈恋爱</h1>
             <span class="pa deo-l ie6"> </span>
             <span class="pa deo-r ie6"> </span> 
@@ -1017,7 +1017,7 @@ common_nav_array[current_nav_flag] = 'head_nav_cur';
                     </p>
                     <p class="d">我承诺年满18岁、单身、抱着严肃的态度，真诚寻找另一半</p>
                     <div id="azx-con" class="azx-exp"> 
-                        爱真心是世纪佳缘旗下全认证婚恋网站，<br>100%用户完成身份和手机认证，会员真诚优质。 
+                        爱真心是爱一起旗下全认证婚恋网站，<br>100%用户完成身份和手机认证，会员真诚优质。 
                         <i> </i> 
                     </div>
                 </div>
@@ -1025,7 +1025,7 @@ common_nav_array[current_nav_flag] = 'head_nav_cur';
             </form:form> 
         </div>
         <div class="footer">
-            <p>中文实名：世纪佳缘 ICP证书：沪B2-20100074 Copyright © 2003-2014 版权所有</p>
+            <p>中文实名：爱一起 ICP证书：沪B2-20100074 Copyright © 2003-2014 版权所有</p>
         </div>  
         
         <div class="member-login ie6">
@@ -1054,7 +1054,7 @@ common_nav_array[current_nav_flag] = 'head_nav_cur';
                 </h1>
                 <div class="op_main">
                     <p>
-                        <strong>世纪佳缘作为一个海量信息平台，从技术上和成本上，皆无法确保每一条信息的真实性，也无法确保每一个会员的人品及其对待感情的态度，为了您的征友安全，请您承诺做到如下两点：</strong>
+                        <strong>爱一起作为一个海量信息平台，从技术上和成本上，皆无法确保每一条信息的真实性，也无法确保每一个会员的人品及其对待感情的态度，为了您的征友安全，请您承诺做到如下两点：</strong>
                     </p>
                     <p>
                         1、不借钱给任何会员，也不与对方发生任何形式的经济关系。

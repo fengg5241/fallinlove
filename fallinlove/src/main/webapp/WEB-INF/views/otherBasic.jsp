@@ -72,7 +72,7 @@
 	<script type="text/javascript" src="../../resources/js/jquery-1.js"></script>
 	<script type="text/javascript"
 		src="../../resources/html/profile_icon.htm"></script>
-	<title>个人资料_Icey～豆豆（佳缘ID:104159755）的个人空间_世纪佳缘交友网</title>
+	<title>个人资料_Icey～豆豆（佳缘ID:104159755）的个人空间_爱一起交友网</title>
 	<!--[if lte IE 6]>
      <script type="text/javascript" src="http://images1.jyimg.com/w4/msg/js/dd_belatedpng.js"></script>
      <script>
@@ -1175,7 +1175,7 @@
 }
 </style>
 						<div>
-							<h2>关注世纪佳缘</h2>
+							<h2>关注爱一起</h2>
 							<div class="jy-attention">
 								<div class="con fn-clear">
 									<!--     shanf -->
@@ -1190,7 +1190,7 @@
 										<img src="../../resources/img/er.png" alt="" height="147"
 											width="147">
 										<p>微信扫描</p>
-										<p>添加世纪佳缘官方微信</p>
+										<p>添加爱一起官方微信</p>
 									</div>
 								</div>
 							</div>
@@ -3365,7 +3365,7 @@ height="90px"> </iframe> -->
 						href="http://www.jiayuan.com/guard/" target="_blank">安全中心</a>
 				</p>
 				<p id="bottom_site_copyright" style="">
-					<a class="bot_link_none">中文实名：世纪佳缘</a> <a class="bot_link_none">ICP证书：沪B2-20100074</a>
+					<a class="bot_link_none">中文实名：爱一起</a> <a class="bot_link_none">ICP证书：沪B2-20100074</a>
 					<a href="http://www.jiayuan.com/certificate/zengzhi.html"
 						target="_blank">增值电信业务经营许可证：沪B2-20070313</a> <a
 						href="http://www.jiayuan.com/certificate/iso.html" target="_blank">ISO9001质量体系认证</a>

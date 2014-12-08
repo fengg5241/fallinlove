@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>自己</title>
 <meta name="keywords" content="交友,交友网,征婚交友,网上交友,征婚,征婚网,征婚交友网,交友中心,婚恋交友">
-<meta name="description" content="青春不常在，抓紧谈恋爱！缘分可遇也可求，该出手时就出手。世纪佳缘是严肃婚恋的交友平台，提供丰富多彩的交友征婚活动，1亿会员，让缘分千万里挑一！">
+<meta name="description" content="青春不常在，抓紧谈恋爱！缘分可遇也可求，该出手时就出手。爱一起是严肃婚恋的交友平台，提供丰富多彩的交友征婚活动，1亿会员，让缘分千万里挑一！">
 <link href="resources/css/reset.css" rel="stylesheet" type="text/css">
 <style>
 .b1{ background:#fff;}
@@ -307,7 +307,7 @@
 <div id="jycm_head" class="jycm_head fn-clear">
     <div class="jycm_head_top">
         <h1 class="logo">
-        	<a id="jy_head_logo" style="" href="http://www.jiayuan.com/"><img src="resources/img/logo_new.png" alt="世纪佳缘" height="70"></a>
+        	<a id="jy_head_logo" style="" href="http://www.jiayuan.com/"><img src="resources/img/logo_new.png" alt="爱一起" height="70"></a>
         </h1>
         <div id="jy_head_city_select"></div>
         <div class="jycm_head_ad">
@@ -1378,7 +1378,7 @@ DD_belatedPNG.fix(".fix-png");
 <a name="foot_nav_link" href="http://www.jiayuan.com/guard/" target="_blank">安全中心</a>
 </p>
 <p id="bottom_site_copyright" style="">
-<a class="bot_link_none">中文实名：世纪佳缘</a>
+<a class="bot_link_none">中文实名：爱一起</a>
 <a class="bot_link_none">ICP证书：沪B2-20100074</a>
 <a href="http://www.jiayuan.com/certificate/zengzhi.html" target="_blank">增值电信业务经营许可证：沪B2-20070313</a>
 <a href="http://www.jiayuan.com/certificate/iso.html" target="_blank">ISO9001质量体系认证</a>

@@ -2,7 +2,7 @@
 <!DOCTYPE >
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>发送成功_世纪佳缘交友网</title>
+    <title>发送成功_爱一起交友网</title>
     <meta name="author" content="dell">
     <link rel="stylesheet" href="sendSuccess_files/base.css">
     <link rel="stylesheet" href="sendSuccess_files/sendok.css">
@@ -822,7 +822,7 @@ document.getElementById('head_red_simple_user').innerHTML = loginstr;	//会员�
 <a name="foot_nav_link" href="http://www.jiayuan.com/guard/" target="_blank">安全中心</a>
 </p>
 <p id="bottom_site_copyright" style="">
-<a class="bot_link_none">中文实名：世纪佳缘</a>
+<a class="bot_link_none">中文实名：爱一起</a>
 <a class="bot_link_none">ICP证书：沪B2-20100074</a>
 <a href="http://www.jiayuan.com/certificate/zengzhi.html" target="_blank">增值电信业务经营许可证：沪B2-20070313</a>
 <a href="http://www.jiayuan.com/certificate/iso.html" target="_blank">ISO9001质量体系认证</a>
@@ -1349,7 +1349,7 @@ DD_belatedPNG.fix('.fixPNG');
                     if(data.is_all == 1){
                         setTimeout("next_page()",1000);
                     }else if(data.is_all == 2){
-                        alert("世纪佳缘不提倡广种薄收的策略，每天只能和200个会员建立联系关系,已经联系过的会员不在此限制。");
+                        alert("爱一起不提倡广种薄收的策略，每天只能和200个会员建立联系关系,已经联系过的会员不在此限制。");
                     }
                 }
             });
