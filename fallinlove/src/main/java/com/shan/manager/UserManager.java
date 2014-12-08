@@ -350,6 +350,7 @@ public class UserManager extends BaseManager{
 		user.setDay(rs.getString(LoveTable.COLUMN_DAY));
 		user.setEducation(EducationType.getName(rs.getInt(LoveTable.COLUMN_EDUCATION)));
 		user.setHeight(rs.getString(LoveTable.COLUMN_HEIGHT));
+		user.setHeadPic(rs.getString(LoveTable.COLUMN_HEAD_PIC));
 		user.setIncome(rs.getString(LoveTable.COLUMN_INCOME));
 		user.setMarriage(MarriageType.getName(rs.getInt(LoveTable.COLUMN_MARRIAGE)));
 		user.setMobile(rs.getString(LoveTable.COLUMN_MOBILE));

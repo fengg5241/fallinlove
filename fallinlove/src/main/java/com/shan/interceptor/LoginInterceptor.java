@@ -31,7 +31,7 @@ public class LoginInterceptor extends HandlerInterceptorAdapter{
 			HttpServletResponse response, Object handler) throws Exception {
 		StringBuffer requestURL = request.getRequestURL();
 		if (requestURL.indexOf("/resources/") != -1 || requestURL.indexOf(".js") != -1 
-				|| requestURL.indexOf(".png") != -1) {
+				|| requestURL.indexOf(".png") != -1|| requestURL.indexOf(".jpg") != -1) {
 			return true;
 		}
 		if (request.getRequestURL().indexOf("login") != -1 || request.getRequestURL().indexOf("register") != -1) {

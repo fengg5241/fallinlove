@@ -604,7 +604,7 @@ DD_belatedPNG.fix(".fix-png");
 		<!--会员介绍-->
     <div class="cp-menu-card-user">
         <div class="menu-avatar menu-avatar-110x168">
-                        	<a href="uploadHeadPic"  target="_blank"><img src="resources/img/lksczp_m.jpg" id="user_avatar" height="135" width="110"></a>
+                        	<a href="uploadHeadPic"  target="_blank"><img src="resources/headpic/${loginUser.headPic}" id="user_avatar" height="135" width="110"></a>
                     </div>
         <div class="cp-menu-card-link">
             <a class="menu" href="http://www.jiayuan.com/122261858#cp_kpd" title="立刻提升" target="_blank" >靠谱度综合评分:3分</a>

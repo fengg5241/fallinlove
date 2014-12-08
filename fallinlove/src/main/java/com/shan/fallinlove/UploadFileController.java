@@ -89,7 +89,7 @@ public class UploadFileController {
 				String dateString = formatter.format(currentTime);
 				
 				System.out.println("size::" + file.getSize());
-				fileName = request.getRealPath("") + "/images/" + dateString
+				fileName = request.getRealPath("") + "/resources/headpic/" + dateString
 						+ file.getOriginalFilename();
 //				outputStream = new FileOutputStream(fileName);
 //				int readBytes = 0;
@@ -100,12 +100,12 @@ public class UploadFileController {
 //				outputStream.close();
 //				inputStream.close();
 				//在服务器路径生成文件
-				File uploadFile = new File(fileName + file.getOriginalFilename());  
+				File uploadFile = new File(fileName);  
 	            FileCopyUtils.copy(file.getBytes(), uploadFile); 
 	            
 //	            long userId = (Long)(request.getSession().getAttribute("userId"));
 	            long userId = 5L;
-	            usermanager.updateUserHeadPic(fileName,userId);
+	            usermanager.updateUserHeadPic(dateString + file.getOriginalFilename(),userId);
 	            
 	            System.out.println("fileName:" + file.getOriginalFilename());
 	            System.out.println("getPath:" + uploadFile.getPath());
