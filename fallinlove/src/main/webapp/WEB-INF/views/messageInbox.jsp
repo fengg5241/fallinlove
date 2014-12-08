@@ -2641,7 +2641,7 @@ get_app_num();	//获取佳缘应用的数字
 							<a
 								href="msg/readReadedLetter/${letter.fromUser.userId}"
 								target="_blank"><img
-								src="../resources/img/59064b09c_1_avatar_p.jpg"><span
+								src="${letter.fromUser.headPic}"><span
 								title="对方有真实照片，诚意征友" class="pic-num">2</span></a>
 						</div>
 						<div class="con-mod">

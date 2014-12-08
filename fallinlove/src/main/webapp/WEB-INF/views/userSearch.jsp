@@ -2276,7 +2276,7 @@ loginWindow.onOpen = function(){
 					href="user/search/${user.userId}"
 					class="openBox" >
 					<img
-					src="resources/img/e97ac6fbe_1_avatar_p.jpg"></a>
+					src="${user.headPic}"></a>
 <!-- 			</div> -->
 			<div class="user_name">
 				<a   title="kaka"

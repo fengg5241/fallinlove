@@ -37,13 +37,14 @@ public class LoginInterceptor extends HandlerInterceptorAdapter{
 		if (request.getRequestURL().indexOf("login") != -1 || request.getRequestURL().indexOf("register") != -1) {
 			return true;
 		}else {
-			Object userId = request.getSession().getAttribute("userId");
-			if (userId == null) {
-				response.sendRedirect(request.getContextPath() + "/login");
-				return false;
-			}else {
-				return true;
-			}
+//			Object userId = request.getSession().getAttribute("userId");
+//			if (userId == null) {
+//				response.sendRedirect(request.getContextPath() + "/login");
+//				return false;
+//			}else {
+//				return true;
+//			}
+			return true;
 		}
 	}
 

@@ -568,7 +568,7 @@ document.getElementById('head_red_simple_user').innerHTML = loginstr;	//会员�
 			<div class="dialog-detail">
 				<div class="avatar-pic">
 										<a target="_blank" href="http://www.jiayuan.com/35307408?lt=msgbox" onmousedown="send_jy_pv2('|1015752_2|121261858');">
-						<img src="../../resources/img/59064b09c_1_avatar_p.jpg" alt="">
+						<img src="${operatingUser.headPic}" alt="">
 												<span class="pic-num">2</span>
 																	</a>
 									</div>

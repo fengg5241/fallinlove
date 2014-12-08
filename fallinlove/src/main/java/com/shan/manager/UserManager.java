@@ -98,15 +98,15 @@ public class UserManager extends BaseManager{
 	 * 修改头像
 	 * @param user
 	 */
-	public void updateUserHeadPic(final User user){
+	public void updateUserHeadPic(final String picPath, final long userId){
 		
 		String sql = "UPDATE " + LoveTable.TABLE_USER + " SET " + LoveTable.COLUMN_HEAD_PIC + "=? WHERE " + LoveTable.COLUMN_USER_ID + " = ?";
 		
 		getJdbcTemplate().update(sql, new PreparedStatementSetter() {  
 		      @Override  
 		      public void setValues(PreparedStatement pstmt) throws SQLException {  
-		          pstmt.setObject(1, user.getHeadPic());  
-		          pstmt.setLong(2, user.getUserId());  
+		          pstmt.setObject(1, picPath);  
+		          pstmt.setLong(2, userId);  
 		  }});
 	}
 	

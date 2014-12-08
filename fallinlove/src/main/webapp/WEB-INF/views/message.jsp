@@ -2591,7 +2591,7 @@ DD_belatedPNG.fix(".fix-png");
 						<div class="avatar-pic more-pic">
 							<a class="pay_btn" target="_blank"
 								href="readUnReadPayLetter/${letter.fromUser.userId}"><img
-								src="../resources/img/fvip_clicked_new_f_s.jpg" alt=""><span
+								src="${letter.fromUser.headPic}" alt=""><span
 								class="pic-num" title="对方有真实照片，诚意征友">1</span></a>
 						</div>
 						<div class="con-mod">

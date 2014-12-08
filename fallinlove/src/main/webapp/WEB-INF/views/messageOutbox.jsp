@@ -2106,7 +2106,7 @@ DD_belatedPNG.fix(".fix-png");
 							href="readSendedLetter/${letter.toUser.userId}"
 							target="_blank">
 						<img
-							src="../resources/img/97f60e629_1_avatar_p.jpg"><span
+							src="${letter.toUser.headPic}"><span
 							title="对方有真实照片，诚意征友" class="pic-num">3</span></a>
 					</div>
 					<div class="con-mod">
@@ -2153,7 +2153,7 @@ DD_belatedPNG.fix(".fix-png");
 					</div>
 					<div class="avatar-pic more-pic">
 						<a href="" target="_blank"><img
-							src="../resources/img/59064b09c_1_avatar_p.jpg"><span
+							src="${letter.toUser.headPic}"><span
 							title="对方有真实照片，诚意征友" class="pic-num">2</span></a>
 					</div>
 					<div class="con-mod">

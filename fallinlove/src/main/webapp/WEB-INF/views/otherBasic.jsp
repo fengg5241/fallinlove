@@ -988,7 +988,7 @@
 									target="_blank">找像她的人</a>
 								</span> <a target="_blank" id="profile_avatar_scyd"
 									onmousedown="send_jy_pv2('|avatarV1|')" href="javascript:;"><img
-									src="../../resources/img/ec534301f_avatar_p.jpg"></a>
+									src="${operatingUser.headPic}"></a>
 							</div>
 							<div class="fly_degrees">
 								<p>

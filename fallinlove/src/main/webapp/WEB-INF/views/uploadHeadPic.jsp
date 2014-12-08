@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="Content-Language" content="zh-cn">
@@ -518,6 +519,20 @@ $(function(){
 	}else{
 		$("#cxscan").parent().css('width','104px');
 	}
+	
+	function Validate()
+	  {
+//		 var image =document.getElementById("image").value;
+//		 if(image!=''){
+//			  var checkimg = image.toLowerCase();
+//			  if (!checkimg.match(/(\.jpg|\.png|\.JPG|\.PNG|\.jpeg|\.JPEG)$/)){
+//				  alert("Please enter  Image  File Extensions .jpg,.png,.jpeg");
+//				  document.getElementById("image").focus();
+//				  return false;
+//			    }
+//			 }
+		 return true;
+	 }
 });
 </script>
 
@@ -975,20 +990,32 @@ document.getElementById('head_red_simple_nav').style.display = 'none';
 <div class="change_pic_in">
 <h1><img src="resources/img/title.png" class="pngfix" alt="更换头像照"><span>一张清晰美观的头像照，能让更多异性搜素到您，收信效果提高</span><b>4.6</b><span>倍</span></h1>
 <div class="change_pic_upload">
-<form id="Form5" name="Form5" enctype="multipart/form-data" action="http://upload.jiayuan.com//register/step2_run.php?new=1" method="POST" target="run_fra" onsubmit="myreview23();">
+
+<form:form modelAttribute="uploadItem" name="frm" method="post" action="testUpload"
+	enctype="multipart/form-data" onSubmit="return Validate();">		
 <table border="0" cellpadding="0" cellspacing="0">
   <tbody><tr>
     <td><h2>上传新头像：</h2></td>
     <td>
-    <input style="display: inline; width: 230px;" id="upload_photo" onchange="javascript:document.getElementById('picpath').value=this.value;onPhotoChage();" class="file pic"><div style="width: 80px; height: 30px; background: url(&quot;http://images1.jyimg.com/w4/register/i/upload_photo/upload_bg.gif&quot;) no-repeat scroll 0px 0px transparent; display: inline; position: absolute; overflow: hidden;"><input style="position: relative; height: 30px; width: 230px; display: inline; cursor: pointer; opacity: 0; margin-left: -142px;" id="picpath" class="pic" name="upload_photo" type="file"></div>
-    <a href="http://www.jiayuan.com/parties/2010/photo_zt/boy.html" onmousedown="send_jy_pv2('jira3709|usercp_update_photo|m')" class="line" style="margin: 0 10px 0 90px;" target="_blank">如何上传好照片，收获更多信件&gt;&gt;</a></td>
+    <form:input for="fileData" path="fileData" style="display: inline; width: 230px;" id="upload_photo"
+			onchange="javascript:document.getElementById('picpath').value=this.value;onPhotoChage();"
+			class="file pic"/>
+		<div
+				style="width: 80px; height: 30px; background: url(&quot;http://images1.jyimg.com/w4/register/i/upload_photo/upload_bg.gif&quot;) no-repeat scroll 0px 0px transparent; display: inline; position: absolute; overflow: hidden;">
+				<form:input path="fileData"
+					style="position: relative; height: 30px; width: 230px; display: inline; cursor: pointer; opacity: 0; margin-left: -142px;"
+					id="picpath" class="pic" name="upload_photo" type="file"></form:input>
+			</div> 
+			<input type="submit" value="Upload" />
+<!-- 			<a href="http://www.jiayuan.com/parties/2010/photo_zt/boy.html" onmousedown="send_jy_pv2('jira3709|usercp_update_photo|m')" class="line" style="margin: 0 10px 0 90px;" target="_blank">如何上传好照片，收获更多信件&gt;&gt;</a> -->
+			</td>
   </tr>
   <tr>
     <td></td>
     <td><p class="change_pic_size">支持格式：jpg、jpeg、gif、png格式照片，大小0K~5M。 </p></td>
   </tr>
 </tbody></table>
-</form>
+</form:form>
 </div>
 <div class="change_pic_edit">
 	<h2 id="photo_h" style="display:none;">或选择已有照片，设置为头像：</h2>

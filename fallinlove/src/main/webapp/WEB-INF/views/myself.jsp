@@ -1310,7 +1310,7 @@ DD_belatedPNG.fix(".fix-png");
 					<div class="pic">
 						<a href="user/search/${user.userId}" target="_blank">
 <!-- 							onmousedown="send_jy_pv2('|clicked_new_fvip_zpdjrc|');send_jy_pv2('|clicked_new_fvip_zpdjrs|122261858');"> -->
-							<img src="resources/img/a4526fa13_2_avatar_p.jpg"></a>
+							<img src="${user.headPic}"></a>
 						<!--<div class="from_bg ie6png">
 			来自<a href="###">缘分速递</a>
 		</div>-->
